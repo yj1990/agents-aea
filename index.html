@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Home - AEA - Autonomous Economic Agent Framework</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> AEA - Autonomous Economic Agent Framework</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#aea-autonomous-economic-agent-framework">AEA - Autonomous Economic Agent Framework</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#quickstart">Quickstart</a></li>
+        
+            <li><a class="toctree-l3" href="#aea-file-structure">AEA file structure</a></li>
+        
+            <li><a class="toctree-l3" href="#aea-core-components">AEA Core Components</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">CLI</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="cli_overview/">Overview</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Examples</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="ex_rl/">Reinforcement Learning</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">AEA - Autonomous Economic Agent Framework</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="aea-autonomous-economic-agent-framework">AEA - Autonomous Economic Agent Framework</h1>
+<p>The AEA framework allows you to quickly assemble autonomous economic agents. Through its modularity AEAs are easily extenable and highly composable.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p><code>pip install -i https://test.pypi.org/simple/ aea</code></p>
+<ol>
+<li>create a new AEA project</li>
+</ol>
+<p><code>aea create my_first_agent</code></p>
+<ol>
+<li>CD into the project folder and add the echo skill to the agent</li>
+</ol>
+<p><code>aea add skill echo</code></p>
+<ol>
+<li>run the agent on a local network</li>
+</ol>
+<p><code>aea run</code></p>
+<h2 id="aea-file-structure">AEA file structure</h2>
+<p>An agent is structured in a directory with a configuration file, a directory with skills, a directory with protocols, a directory with connections and a main logic file that is used when running aea run.</p>
+<table>
+<thead>
+<tr>
+<th>agentName/</th>
+<th>The root of the agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent.yml</td>
+<td>YAML configuration of the agent</td>
+</tr>
+<tr>
+<td>connections/</td>
+<td>Directory containing all the supported connections</td>
+</tr>
+<tr>
+<td>connection1/</td>
+<td>Connection 1</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>connectionN/</td>
+<td>Connection N</td>
+</tr>
+<tr>
+<td>protocols/</td>
+<td>Directory containing all supported protocols</td>
+</tr>
+<tr>
+<td>protocol1/</td>
+<td>Protocol 1</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>protocolK/</td>
+<td>Protocol K</td>
+</tr>
+<tr>
+<td>skills/</td>
+<td>Directory containing all the skill components</td>
+</tr>
+<tr>
+<td>skill1/</td>
+<td>Skill 1</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>skillN/</td>
+<td>Skill L</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aea-core-components">AEA Core Components</h2>
+<p>The <code>Envelope</code> is the core object which agents use to communicate with each other. An <code>Envelope</code> has four attributes:</p>
+<ul>
+<li>
+<p><code>to</code>: defines the destination address</p>
+</li>
+<li>
+<p><code>sender</code>: defines the sender address</p>
+</li>
+<li>
+<p><code>protocol_id</code>: defines the protocol_id</p>
+</li>
+<li>
+<p><code>message</code>: is a <code>bytes</code> field to hold the message in serialized form.</p>
+</li>
+</ul>
+<h3 id="aea-protocols">AEA Protocols</h3>
+<p>Protocols define how messages are represented and encoded for transport. They also define the rules to which messages have to adhere in a message sequence. For instance, a protocol might have a message of type START and FINISH. Then the rules could prescribe that a message of type FINISH must be preceded by a message of type START.</p>
+<h3 id="aea-connections">AEA Connections</h3>
+<p>A connection allows the AEA to connect to an external service which has a Python SDK or API. A connection wraps an external SDK or API.</p>
+<h3 id="aea-skills">AEA Skills</h3>
+<p>A skill can encapsulate any code and ideally delivers economic value to the AEA. Each skill has at most a single Handler and potentially multiple Behaviours and Tasks. The Handler is responsible for dealing with messages of the protocol type for which this skill is registered, as such it encapsulates <code>reactions</code>. A Behaviour encapsulates <code>actions</code>, that is sequences of interactions with other agents initiated by the AEA. Finally, a Task encapsulates background work which is internal to the AEA.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cli_overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="cli_overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-09-20 13:37:09
+-->
