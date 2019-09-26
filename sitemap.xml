@@ -1,18 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>None</loc>
-     <lastmod>2019-09-20</lastmod>
+     <loc>https://docs.fetch.ai/</loc>
+     <lastmod>2019-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-09-20</lastmod>
+     <loc>https://docs.fetch.ai/architecture/</loc>
+     <lastmod>2019-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-09-20</lastmod>
+     <loc>https://docs.fetch.ai/version/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/quickstart/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/protocol/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/skill/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/scaffolding/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/cli_overview/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/integration/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/gym-skill/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/gym-plugin/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/tac/</loc>
+     <lastmod>2019-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
