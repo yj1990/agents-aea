@@ -21,6 +21,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.fetch.ai/connection/</loc>
+     <lastmod>2019-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.fetch.ai/protocol/</loc>
      <lastmod>2019-09-26</lastmod>
      <changefreq>daily</changefreq>
