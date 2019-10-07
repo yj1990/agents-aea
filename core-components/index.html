@@ -13,7 +13,7 @@
         <meta name="description" content="Everything you need to know about Fetch.AI.">
       
       
-        <link rel="canonical" href="https://docs.fetch.ai/scaffolding/">
+        <link rel="canonical" href="https://docs.fetch.ai/core-components/">
       
       
         <meta name="author" content="katharine.murphy@fetch.ai">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Scaffolding - Fetch.AI Developer Documentation</title>
+        <title>Core components - Fetch.AI Developer Documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#scaffold-generator" tabindex="1" class="md-skip">
+      <a href="#mailbox" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Scaffolding
+                Core components
               
             </span>
           
@@ -276,10 +276,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" checked>
     
     <label class="md-nav__link" for="nav-1-2">
       Architecture
@@ -319,11 +321,114 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../core-components/" title="Core components" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Core components
+      </label>
+    
+    <a href="./" title="Core components" class="md-nav__link md-nav__link--active">
       Core components
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailbox" class="md-nav__link">
+    MailBox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#envelope" class="md-nav__link">
+    Envelope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    Protocol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    Skill
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    Agent
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-loop" class="md-nav__link">
+    Main loop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-maker" class="md-nav__link">
+    Decision maker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    Resource
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -360,12 +465,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
     
     <label class="md-nav__link" for="nav-1-4">
       Developer guide
@@ -429,72 +532,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Scaffolding
-      </label>
-    
-    <a href="./" title="Scaffolding" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../scaffolding/" title="Scaffolding" class="md-nav__link">
       Scaffolding
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#scaffold-generator" class="md-nav__link">
-    Scaffold generator
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scaffold-a-skill" class="md-nav__link">
-    Scaffold a skill
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scaffold-a-protocol" class="md-nav__link">
-    Scaffold a protocol
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scaffold-a-connection" class="md-nav__link">
-    Scaffold a connection
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -707,36 +749,78 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scaffold-generator" class="md-nav__link">
-    Scaffold generator
+  <a href="#mailbox" class="md-nav__link">
+    MailBox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#envelope" class="md-nav__link">
+    Envelope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    Protocol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    Skill
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    Agent
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scaffold-a-skill" class="md-nav__link">
-    Scaffold a skill
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scaffold-a-protocol" class="md-nav__link">
-    Scaffold a protocol
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scaffold-a-connection" class="md-nav__link">
-    Scaffold a connection
+  <a href="#main-loop" class="md-nav__link">
+    Main loop
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-maker" class="md-nav__link">
+    Decision maker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    Resource
+  </a>
   
 </li>
       
@@ -757,31 +841,75 @@
               
                 
                 
-                  <h1>Scaffolding</h1>
+                  <h1>Core components</h1>
                 
-                <h2 id="scaffold-generator">Scaffold generator</h2>
-<p>The scaffold generator builds out the directory structure required when adding new skills, protocols, and connections to the agent.</p>
-<p>For example, create a new AEA project.</p>
-<div class="highlight"><pre><span></span>aea create my_agent
-<span class="nb">cd</span> my_agent
-</pre></div>
-
-<p>Then, cd into your project directory and scaffold your project skill, protocol, or connection.</p>
-<p>You will see the directories filled out with the files required and the skill, protocol, or connection registered in the top level <code>aea-config.yaml</code>.</p>
-<h3 id="scaffold-a-skill">Scaffold a skill</h3>
-<div class="highlight"><pre><span></span>aea scaffold skill my_skill
-</pre></div>
-
-<h3 id="scaffold-a-protocol">Scaffold a protocol</h3>
-<div class="highlight"><pre><span></span>aea scaffold protocol my_protocol
-</pre></div>
-
-<h3 id="scaffold-a-connection">Scaffold a connection</h3>
-<div class="highlight"><pre><span></span>aea scaffold connection my_connection
-</pre></div>
-
-<p>After running the above commands, you will have the fully constructed file system required by the AEA.</p>
-<p><center><img alt="The directories and files created by the scaffolding tool" src="../assets/full-scaffold.png" /></center></p>
+                <h3 id="mailbox">MailBox</h3>
+<p>A <code>MailBox</code> contains <code>InBox</code> and <code>OutBox</code> queues containing <code>Envelopes</code>.</p>
+<h3 id="envelope">Envelope</h3>
+<p>An <code>Envelope</code> is the core object with which agents communicate. It travels from <code>OutBox</code> to another agent. <code>Envelope</code> objects sent from other agents arrive in the <code>InBox</code> via a connection. An <code>Envelope</code> is a vehicle for messages with four attribute parameters:</p>
+<ul>
+<li>
+<p><code>to</code>: defines the destination address.</p>
+</li>
+<li>
+<p><code>sender</code>: defines the sender address.</p>
+</li>
+<li>
+<p><code>protocol_id</code>: defines the id of the protocol.</p>
+</li>
+<li>
+<p><code>message</code>: is a bytes field which holds the message in serialized form.</p>
+</li>
+</ul>
+<h3 id="protocol">Protocol</h3>
+<p>Protocols define how messages are represented and encoded for transport. They also define the rules to which messages have to adhere in a message sequence. </p>
+<p>For instance, a protocol may contain messages of type <code>START</code> and <code>FINISH</code>. From there, the rules may prescribe that a message of type <code>FINISH</code> must be preceded by a message of type <code>START</code>.</p>
+<p>The <code>Message</code> class in the <code>protocols/base.py</code> module provides an abstract class with all the functionality a derived <code>Protocol</code> message class requires for a custom protocol, such as basic message generating and management functions and serialisation details.</p>
+<p>A number of protocols come packaged up with the AEA framework.</p>
+<ul>
+<li><code>default</code>: this protocol provides a bare bones implementation for an AEA protocol which includes a <code>DefaultMessage</code> class and a <code>DefaultSerialization</code> class with functions for managing serialisation. Use this protocol as a starting point for building custom protocols.</li>
+<li><code>oef</code>: this protocol provides the AEA protocol implementation for communication with the OEF including an <code>OEFMessage</code> class for hooking up to OEF services and search agents. Utility classes are available in the <code>models.py</code> module which provides OEF specific requirements such as classes needed to perform querying on the OEF such as <code>Description</code>, <code>Query</code>, and <code>Constraint</code>, to name a few.</li>
+<li><code>fipa</code>: this protocol provides classes and functions needed for AEA agent communication via the FIPA Agent Communication Language. For example, the <code>FIPAMessage</code> class provides negotiation terms such as <code>cfp</code>, <code>propose</code>, <code>decline</code>, <code>accept</code> and <code>match_accept</code>.</li>
+</ul>
+<h3 id="connection">Connection</h3>
+<p>Connections wrap an external SDK or API and manage the messaging. They allow the agent to connect to an external service which has a Python SDK or API. </p>
+<p>The module <code>connections/base.py</code> contains two abstract classes which define a <code>Channel</code> and a <code>Connection</code>. A <code>Connection</code> contains one <code>Channel</code>, which acts as a bridge to the SDK or API to be wrapped. The <code>Channel</code> is responsible for translating between the framework specific <code>Envelope</code> with its contained <code>Message</code> and the external service.</p>
+<p>The framework provides a number of default connections.</p>
+<ul>
+<li><code>local</code>: implements a local node.</li>
+<li><code>oef</code>: wraps the OEF SDK.</li>
+</ul>
+<h3 id="skill">Skill</h3>
+<p>Skills deliver economic value to the AEA by allowing agents to encapsulate and call any kind of code. A skill encapsulates implementations of the abstract base classes <code>Handler</code>, <code>Behaviour</code>, and <code>Task</code>.</p>
+<ul>
+<li><code>Handler</code>: each skill has none, one or more <code>Handler</code> objects responsible for the registered protocol messaging. Handlers implement reactive behaviour. By understanding the requirements contained in an <code>Envelope</code>, the <code>Handler</code> reacts appropriately to message requests. Each <code>Handler</code> is responsible for one and only one protocol.</li>
+<li><code>Behaviour</code>: none, one or more <code>Behaviours</code> encapsulate actions that cause interactions with other agents initiated by the agent. Behaviours implement proactive behaviour.</li>
+<li><code>Task</code>: none, one or more Tasks encapsulate background work internal to the agent.</li>
+</ul>
+<h2 id="agent">Agent</h2>
+<h3 id="main-loop">Main loop</h3>
+<p>The <code>_run_main_loop()</code> function in the <code>Agent</code> class performs a series of activities while the <code>Agent</code> state is not stopped.</p>
+<ul>
+<li><code>act()</code>: this function calls the <code>act()</code> function of all registered Behaviours.</li>
+<li><code>react()</code>: this function grabs all Envelopes waiting in the <code>InBox</code> queue and calls the <code>handle()</code> function for the Handlers currently registered against the protocol of the <code>Envelope</code>.</li>
+<li><code>update()</code>: this function loops through all the Tasks and executes them.</li>
+</ul>
+<h2 id="decision-maker">Decision maker</h2>
+<p>The <code>DecisionMaker</code> component manages global agent state updates proposed by the skills and processes the resulting ledger transactions.</p>
+<p>It is responsible for crypto-economic security and goal management and contains the preference and ownership representation of the agent.</p>
+<h2 id="filter">Filter</h2>
+<p>The <code>Filter</code> routes messages to the correct <code>Handler</code> via the <code>Resource</code> component. It also holds a reference to the currently active <code>Behaviour</code> and <code>Task</code> instances.</p>
+<p>By default each <code>Handler</code>, <code>Behaviour</code> and <code>Task</code> of each skill is registered in the <code>Filter</code>. However, skills can de-register and re-register themselves.</p>
+<h2 id="resource">Resource</h2>
+<p>The <code>Resource</code> component is made up of <code>Registries</code> which contain Resources (<code>Protocol</code>, <code>Handler</code>, <code>Behaviour</code>, <code>Task</code>). There is one Registry for each type of Resource. </p>
+<p>Message Envelopes travel through the <code>Filter</code> which fetches the correct <code>Handler</code> from the <code>Registry</code>.</p>
+<p>Specific <code>Registry</code> classes are in the <code>registries/base.py</code> module.</p>
+<ul>
+<li><code>ProtocolRegistry</code>.</li>
+<li><code>HandlerRegistry</code>. </li>
+<li><code>BehaviourRegistry</code>.</li>
+<li><code>TaskRegistry</code>.</li>
+</ul>
 <p><br /></p>
                 
                   
@@ -803,7 +931,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../connection/" title="Connection" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../diagram/" title="Architectural diagram" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -812,19 +940,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Connection
+                Architectural diagram
               </span>
             </div>
           </a>
         
         
-          <a href="../cli-how-to/" title="CLI tool" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../file-structure/" title="File structure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CLI tool
+                File structure
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

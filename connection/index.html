@@ -83,6 +83,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#configuration" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -245,20 +249,8 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="What is the AEA?" class="md-nav__link">
-      What is the AEA?
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../architecture/" title="Architecture" class="md-nav__link">
-      Architecture
+    <a href=".." title="What is the AEA framework?" class="md-nav__link">
+      What is the AEA framework?
     </a>
   </li>
 
@@ -271,6 +263,78 @@
   <li class="md-nav__item">
     <a href="../version/" title="Version" class="md-nav__link">
       Version
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      Architecture
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        Architecture
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../design-principles/" title="Design principles" class="md-nav__link">
+      Design principles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../diagram/" title="Architectural diagram" class="md-nav__link">
+      Architectural diagram
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../core-components/" title="Core components" class="md-nav__link">
+      Core components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../file-structure/" title="File structure" class="md-nav__link">
+      File structure
     </a>
   </li>
 
@@ -301,14 +365,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
     
-    <label class="md-nav__link" for="nav-1-3">
-      Get developing
+    <label class="md-nav__link" for="nav-1-4">
+      Developer guide
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-3">
-        Get developing
+      <label class="md-nav__title" for="nav-1-4">
+        Developer guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -317,29 +381,10 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Connection" class="md-nav__link md-nav__link--active">
-      Connection
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../protocol/" title="Protocol" class="md-nav__link">
-      Protocol
+    <a href="../steps/" title="Step by step" class="md-nav__link">
+      Step by step
     </a>
   </li>
 
@@ -362,6 +407,173 @@
 
 
   <li class="md-nav__item">
+    <a href="../protocol/" title="Protocol" class="md-nav__link">
+      Protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Connection
+      </label>
+    
+    <a href="./" title="Connection" class="md-nav__link md-nav__link--active">
+      Connection
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel" class="md-nav__link">
+    Channel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sendself-envelope-envelope" class="md-nav__link">
+    send(self, envelope: Envelope)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectself-gt-optionalqueue" class="md-nav__link">
+    connect(self) -&gt; Optional[Queue]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disconnectself" class="md-nav__link">
+    disconnect(self)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    Connection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is_establishedself" class="md-nav__link">
+    is_established(self)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectself" class="md-nav__link">
+    connect(self)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disconnectself_1" class="md-nav__link">
+    disconnect(self)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendself-envelope-envelope_1" class="md-nav__link">
+    send(self, envelope: Envelope)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from_configcls-public_key-str-connection_configuration-connectionconfig" class="md-nav__link">
+    from_config(cls, public_key: str, connection_configuration: ConnectionConfig)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launching-oef-connections" class="md-nav__link">
+    Launching oef connections
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oef-local-node" class="md-nav__link">
+    oef - local node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oef-remote-node" class="md-nav__link">
+    oef - remote node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../scaffolding/" title="Scaffolding" class="md-nav__link">
       Scaffolding
     </a>
@@ -373,10 +585,46 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-6" type="checkbox" id="nav-1-4-6">
+    
+    <label class="md-nav__link" for="nav-1-4-6">
+      CLI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-6">
+        CLI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../cli_overview/" title="CLI commands" class="md-nav__link">
-      CLI commands
+    <a href="../cli-how-to/" title="CLI tool" class="md-nav__link">
+      CLI tool
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli-commands/" title="Commands" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -392,13 +640,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
-    <label class="md-nav__link" for="nav-1-4">
+    <label class="md-nav__link" for="nav-1-5">
       Integration
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-4">
+      <label class="md-nav__title" for="nav-1-5">
         Integration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -428,13 +676,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
     
-    <label class="md-nav__link" for="nav-1-5">
+    <label class="md-nav__link" for="nav-1-6">
       Demos
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-5">
+      <label class="md-nav__title" for="nav-1-6">
         Demos
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -446,8 +694,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../gym-skill/" title="AEA gym skill" class="md-nav__link">
-      AEA gym skill
+    <a href="../gym-plugin/" title="Gym demo" class="md-nav__link">
+      Gym demo
     </a>
   </li>
 
@@ -458,8 +706,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../gym-plugin/" title="Gym efficiency demo" class="md-nav__link">
-      Gym efficiency demo
+    <a href="../gym-skill/" title="Gym skill" class="md-nav__link">
+      Gym skill
     </a>
   </li>
 
@@ -470,8 +718,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../tac/" title="TAC" class="md-nav__link">
-      TAC
+    <a href="../weather-skills/" title="Weather skills" class="md-nav__link">
+      Weather skills
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tac/" title="TAC external app" class="md-nav__link">
+      TAC external app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fipa-skill/" title="FIPA skill" class="md-nav__link">
+      FIPA skill
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tac-skill/" title="TAC skill" class="md-nav__link">
+      TAC skill
     </a>
   </li>
 
@@ -493,6 +777,144 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel" class="md-nav__link">
+    Channel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sendself-envelope-envelope" class="md-nav__link">
+    send(self, envelope: Envelope)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectself-gt-optionalqueue" class="md-nav__link">
+    connect(self) -&gt; Optional[Queue]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disconnectself" class="md-nav__link">
+    disconnect(self)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    Connection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is_establishedself" class="md-nav__link">
+    is_established(self)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectself" class="md-nav__link">
+    connect(self)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disconnectself_1" class="md-nav__link">
+    disconnect(self)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendself-envelope-envelope_1" class="md-nav__link">
+    send(self, envelope: Envelope)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from_configcls-public_key-str-connection_configuration-connectionconfig" class="md-nav__link">
+    from_config(cls, public_key: str, connection_configuration: ConnectionConfig)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launching-oef-connections" class="md-nav__link">
+    Launching oef connections
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oef-local-node" class="md-nav__link">
+    oef - local node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oef-remote-node" class="md-nav__link">
+    oef - remote node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -501,9 +923,130 @@
                 
                   <h1>Connection</h1>
                 
-                <div class="admonition todo">
-<p class="admonition-title">Todo</p>
-</div>
+                <p>A <code>Connection</code> is attached to a <code>MailBox</code> within the AEA framework.</p>
+<p>The <code>connection.py</code> module in the <code>connections</code> directory contains two classes. A <code>Connection</code> object has a reference to a <code>Channel</code>. </p>
+<ul>
+<li><code>Channel</code>: a wrapper for an SDK or API.</li>
+<li><code>Connection</code>: a proxy to the functionality of an SDK or API.</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>The <code>connection.yaml</code> file in the agent directory contains protocol details and connection url and port details. For example, the oef <code>connection.yaml</code> contains the connection class name, supported protocols, and any connection configuration details.</p>
+<div class="highlight"><pre><span></span><span class="err">name:</span> <span class="err">oef</span>
+<span class="err">authors:</span> <span class="err">Fetch.AI</span> <span class="err">Limited</span>
+<span class="err">version:</span> <span class="mf">0.1</span><span class="err">.</span><span class="mi">0</span>
+<span class="err">license:</span> <span class="err">Apache</span> <span class="mf">2.0</span>
+<span class="err">url:</span> <span class="s2">&quot;&quot;</span>
+<span class="err">class_name:</span> <span class="err">OEFConnection</span>
+<span class="err">supported_protocols:</span> <span class="p">[</span><span class="s2">&quot;oef&quot;</span><span class="p">]</span>
+<span class="err">config:</span>
+  <span class="err">addr:</span> <span class="mf">127.0</span><span class="err">.</span><span class="mf">0.1</span>
+  <span class="err">port:</span> <span class="mi">10000</span>
+</pre></div>
+
+<p>The developer is left to implement the methods of both <code>Connection</code> and <code>Channel</code> classes dependent on the protocol type. </p>
+<!--We'll demonstrate implementations from the `oef` connection as an example.-->
+
+<h2 id="channel"><code>Channel</code></h2>
+<h3 id="sendself-envelope-envelope"><code>send(self, envelope: Envelope)</code></h3>
+<!--
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">envelope</span><span class="p">:</span> <span class="n">Envelope</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">envelope</span><span class="o">.</span><span class="n">protocol_id</span> <span class="o">==</span> <span class="s2">&quot;default&quot;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_default_message</span><span class="p">(</span><span class="n">envelope</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">envelope</span><span class="o">.</span><span class="n">protocol_id</span> <span class="o">==</span> <span class="s2">&quot;fipa&quot;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_fipa_message</span><span class="p">(</span><span class="n">envelope</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">envelope</span><span class="o">.</span><span class="n">protocol_id</span> <span class="o">==</span> <span class="s2">&quot;oef&quot;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_oef_message</span><span class="p">(</span><span class="n">envelope</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">envelope</span><span class="o">.</span><span class="n">protocol_id</span> <span class="o">==</span> <span class="s2">&quot;tac&quot;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_default_message</span><span class="p">(</span><span class="n">envelope</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This envelope cannot be sent: protocol_id={}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">envelope</span><span class="o">.</span><span class="n">protocol_id</span><span class="p">))</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot send message.&quot;</span><span class="p">)</span>
+</pre></div>
+-->
+
+<h3 id="connectself-gt-optionalqueue"><code>connect(self) -&gt; Optional[Queue]</code></h3>
+<!--
+<code>Channel.connect() not implemented in oef</code>
+-->
+
+<h3 id="disconnectself"><code>disconnect(self)</code></h3>
+<!--
+<code>Channel.disconnect() not implemented in oef</code>
+-->
+
+<h2 id="connection"><code>Connection</code></h2>
+<h3 id="is_establishedself"><code>is_established(self)</code></h3>
+<!--
+<div class="highlight"><pre><span></span><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">is_established</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connected</span>
+</pre></div>
+-->
+
+<h3 id="connectself"><code>connect(self)</code></h3>
+<!--
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stopped</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connected</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stopped</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_core</span><span class="o">.</span><span class="n">run_threaded</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">connect</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="n">ConnectionError</span><span class="p">(</span><span class="s2">&quot;Cannot connect to OEFChannel.&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_connected</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">out_thread</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_fetch</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">out_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_core</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="k">raise</span> <span class="n">e</span>
+</pre></div>
+-->
+
+<h3 id="disconnectself_1"><code>disconnect(self)</code></h3>
+<!--
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+<span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_thread</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Call connect before disconnect.&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stopped</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connected</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_connected</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_thread</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_core</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stopped</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+-->
+
+<h3 id="sendself-envelope-envelope_1"><code>send(self, envelope: Envelope)</code></h3>
+<!--
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">envelope</span><span class="p">:</span> <span class="n">Envelope</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connected</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">envelope</span><span class="p">)</span>
+</pre></div>
+-->
+
+<h3 id="from_configcls-public_key-str-connection_configuration-connectionconfig"><code>from_config(cls, public_key: str, connection_configuration: ConnectionConfig)</code></h3>
+<!--
+<div class="highlight"><pre><span></span><span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_config</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">public_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">connection_configuration</span><span class="p">:</span> <span class="n">ConnectionConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Connection&#39;</span><span class="p">:</span>
+        <span class="n">oef_addr</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">connection_configuration</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;addr&quot;</span><span class="p">))</span>
+        <span class="n">oef_port</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">connection_configuration</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;port&quot;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">OEFConnection</span><span class="p">(</span><span class="n">public_key</span><span class="p">,</span> <span class="n">oef_addr</span><span class="p">,</span> <span class="n">oef_port</span><span class="p">)</span>
+</pre></div>
+-->
+
+<h2 id="launching-oef-connections">Launching <code>oef</code> connections</h2>
+<h3 id="oef-local-node"><code>oef</code> - local node</h3>
+<p>Download the scripts directory:
+<div class="highlight"><pre><span></span>svn <span class="nb">export</span> https://github.com/fetchai/agents-aea.git/trunk/scripts
+</pre></div></p>
+<p>Then, start an oef from a separate terminal:</p>
+<div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
+</pre></div>
+
+<p>This pulls and runs an <code>oef</code> docker image.</p>
+<p>Now you can run an AEA with an <code>oef</code> connection.</p>
+<h3 id="oef-remote-node"><code>oef</code> - remote node</h3>
+<p>Connect directly to a running <code>oef</code> via a given <code>URL:PORT</code>. Update the configuration of the <code>oef</code> connection in the <code>connection.yaml</code> file.</p>
+<p><br /></p>
                 
                   
                 
@@ -524,7 +1067,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../quickstart/" title="AEA quick start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../protocol/" title="Protocol" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -533,19 +1076,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                AEA quick start
+                Protocol
               </span>
             </div>
           </a>
         
         
-          <a href="../protocol/" title="Protocol" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../scaffolding/" title="Scaffolding" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Protocol
+                Scaffolding
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
