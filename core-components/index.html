@@ -545,15 +545,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../logging/" title="Logging" class="md-nav__link">
+      Logging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-6" type="checkbox" id="nav-1-4-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7" type="checkbox" id="nav-1-4-7">
     
-    <label class="md-nav__link" for="nav-1-4-6">
+    <label class="md-nav__link" for="nav-1-4-7">
       CLI
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-4-6">
+      <label class="md-nav__title" for="nav-1-4-7">
         CLI
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -869,10 +881,10 @@
 <ul>
 <li><code>default</code>: this protocol provides a bare bones implementation for an AEA protocol which includes a <code>DefaultMessage</code> class and a <code>DefaultSerialization</code> class with functions for managing serialisation. Use this protocol as a starting point for building custom protocols.</li>
 <li><code>oef</code>: this protocol provides the AEA protocol implementation for communication with the OEF including an <code>OEFMessage</code> class for hooking up to OEF services and search agents. Utility classes are available in the <code>models.py</code> module which provides OEF specific requirements such as classes needed to perform querying on the OEF such as <code>Description</code>, <code>Query</code>, and <code>Constraint</code>, to name a few.</li>
-<li><code>fipa</code>: this protocol provides classes and functions needed for AEA agent communication via the FIPA Agent Communication Language. For example, the <code>FIPAMessage</code> class provides negotiation terms such as <code>cfp</code>, <code>propose</code>, <code>decline</code>, <code>accept</code> and <code>match_accept</code>.</li>
+<li><code>fipa</code>: this protocol provides classes and functions necessary for communication between AEAs via the <a href="http://www.fipa.org/repository/aclspecs.html">FIPA</a> Agent Communication Language. For example, the <code>FIPAMessage</code> class provides negotiation terms such as <code>cfp</code>, <code>propose</code>, <code>decline</code>, <code>accept</code> and <code>match_accept</code>.</li>
 </ul>
 <h3 id="connection">Connection</h3>
-<p>Connections wrap an external SDK or API and manage the messaging. They allow the agent to connect to an external service which has a Python SDK or API. </p>
+<p>Connections wrap an external SDK or API and manage messaging. As such, they allow the agent to connect to an external service with an exposed Python SDK/API.</p>
 <p>The module <code>connections/base.py</code> contains two abstract classes which define a <code>Channel</code> and a <code>Connection</code>. A <code>Connection</code> contains one <code>Channel</code>, which acts as a bridge to the SDK or API to be wrapped. The <code>Channel</code> is responsible for translating between the framework specific <code>Envelope</code> with its contained <code>Message</code> and the external service.</p>
 <p>The framework provides a number of default connections.</p>
 <ul>
@@ -880,10 +892,16 @@
 <li><code>oef</code>: wraps the OEF SDK.</li>
 </ul>
 <h3 id="skill">Skill</h3>
-<p>Skills deliver economic value to the AEA by allowing agents to encapsulate and call any kind of code. A skill encapsulates implementations of the abstract base classes <code>Handler</code>, <code>Behaviour</code>, and <code>Task</code>.</p>
+<p>Skills are a result of the framework's extensibility. They are atomic capabilities that agents can dynamically take on board, 
+in order to expand their effectiveness in different situations. 
+A skill can be given permission to read the internal state of the the agent, and suggest action(s) to the agent according to its specific logic. 
+As such, more than one skill could exist per protocol, competing with each other in suggesting to the agent the best course of actions to take. </p>
+<p>For instance, an agent who is playing chess, could subscribe to more than one skill, where each skill corresponds to a specific strategy for playing chess. 
+The skills could then read the internal state of the agent, including the agent's observation of the game's state, and suggest a next move to the agent.   </p>
+<p>A skill encapsulates implementations of the abstract base classes <code>Handler</code>, <code>Behaviour</code>, and <code>Task</code>:</p>
 <ul>
-<li><code>Handler</code>: each skill has none, one or more <code>Handler</code> objects responsible for the registered protocol messaging. Handlers implement reactive behaviour. By understanding the requirements contained in an <code>Envelope</code>, the <code>Handler</code> reacts appropriately to message requests. Each <code>Handler</code> is responsible for one and only one protocol.</li>
-<li><code>Behaviour</code>: none, one or more <code>Behaviours</code> encapsulate actions that cause interactions with other agents initiated by the agent. Behaviours implement proactive behaviour.</li>
+<li><code>Handler</code>: each skill has none, one or more <code>Handler</code> objects, each responsible for the registered messaging protocol. Handlers implement agents' reactive behaviour. If the agent understands the protocol referenced in a received <code>Envelope</code>, the <code>Handler</code> reacts appropriately to the corresponding message. Each <code>Handler</code> is responsible for only one protocol.</li>
+<li><code>Behaviour</code>: none, one or more <code>Behaviours</code> encapsulate actions that cause interactions with other agents initiated by the agent. Behaviours implement agents' proactiveness.</li>
 <li><code>Task</code>: none, one or more Tasks encapsulate background work internal to the agent.</li>
 </ul>
 <h2 id="agent">Agent</h2>
@@ -896,13 +914,13 @@
 </ul>
 <h2 id="decision-maker">Decision maker</h2>
 <p>The <code>DecisionMaker</code> component manages global agent state updates proposed by the skills and processes the resulting ledger transactions.</p>
-<p>It is responsible for crypto-economic security and goal management and contains the preference and ownership representation of the agent.</p>
+<p>It is responsible for the agent's crypto-economic security and goal management, and it contains the preference and ownership representation of the agent.</p>
 <h2 id="filter">Filter</h2>
-<p>The <code>Filter</code> routes messages to the correct <code>Handler</code> via the <code>Resource</code> component. It also holds a reference to the currently active <code>Behaviour</code> and <code>Task</code> instances.</p>
-<p>By default each <code>Handler</code>, <code>Behaviour</code> and <code>Task</code> of each skill is registered in the <code>Filter</code>. However, skills can de-register and re-register themselves.</p>
+<p><code>Filter</code> routes messages to the correct <code>Handler</code> via <code>Resource</code>. It also holds a reference to the currently active <code>Behaviour</code> and <code>Task</code> instances.</p>
+<p>By default for every skill, each <code>Handler</code>, <code>Behaviour</code> and <code>Task</code> is registered in the <code>Filter</code>. However, note that skills can de-register and re-register themselves.</p>
 <h2 id="resource">Resource</h2>
-<p>The <code>Resource</code> component is made up of <code>Registries</code> which contain Resources (<code>Protocol</code>, <code>Handler</code>, <code>Behaviour</code>, <code>Task</code>). There is one Registry for each type of Resource. </p>
-<p>Message Envelopes travel through the <code>Filter</code> which fetches the correct <code>Handler</code> from the <code>Registry</code>.</p>
+<p>The <code>Resource</code> component is made up of <code>Registries</code> for each type of resource (e.g. <code>Protocol</code>, <code>Handler</code>, <code>Behaviour</code>, <code>Task</code>). </p>
+<p>Message Envelopes travel through the <code>Filter</code> which in turn fetches the correct <code>Handler</code> from the <code>Registry</code>.</p>
 <p>Specific <code>Registry</code> classes are in the <code>registries/base.py</code> module.</p>
 <ul>
 <li><code>ProtocolRegistry</code>.</li>

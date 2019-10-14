@@ -440,15 +440,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../logging/" title="Logging" class="md-nav__link">
+      Logging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-6" type="checkbox" id="nav-1-4-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7" type="checkbox" id="nav-1-4-7">
     
-    <label class="md-nav__link" for="nav-1-4-6">
+    <label class="md-nav__link" for="nav-1-4-7">
       CLI
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-4-6">
+      <label class="md-nav__title" for="nav-1-4-7">
         CLI
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -925,16 +937,16 @@
 <span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;oef&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;fipa&#39;</span><span class="p p-Indicator">]</span>
 </pre></div>
 
-<p>In it you can see the registered <code>Behaviour</code> class name <code>GoodsRegisterAndSearchBehaviour</code> which implements the AEA agent register and search behaviour for the FIPA skill.</p>
+<p>Above, you can see the registered <code>Behaviour</code> class name <code>GoodsRegisterAndSearchBehaviour</code> which implements register and search behaviour of an AEA for the FIPA skill.</p>
 <p>The <code>FIPANegotiationHandler</code> deals with receiving <code>FIPAMessage</code> types containing FIPA negotiation terms, such as <code>cfp</code>, <code>propose</code>, <code>decline</code>, <code>accept</code> and <code>match_accept</code>.</p>
 <p>The <code>TransactionCleanUpTask</code> takes care of removing potential transaction of different degrees of commitment from the potential transactions list if they are unlikely to be settled.</p>
 <h2 id="shared-classes">Shared classes</h2>
 <p>The <code>shared_classes</code> element in the configuration <code>yaml</code> lists a number of important classes for agents communicating via the FIPA skill.</p>
 <h3 id="search">Search</h3>
-<p>This class abstracts the logic required by agents performing searches for other buyer or seller agents depending on strategy.</p>
+<p>This class abstracts the logic required by agents performing searches for other buying/selling agents according to strategy (see below).</p>
 <h3 id="strategy">Strategy</h3>
 <p>This class defines the strategy behind an agent's activities.</p>
-<p>The class is instantiated with the agent's goals, for example whether it is a buyer looking for sellers, buyers, or both.</p>
+<p>The class is instantiated with the agent's goals, for example whether the agent intends to buy/sell something, and is therefore looking for other sellers, buyers, or both.</p>
 <p>It also provides methods for defining what goods agents are looking for and what goods they may have to sell, for generating proposal queries, and checking whether a proposal is profitable or not.</p>
 <h3 id="dialogue">Dialogue</h3>
 <p><code>Dialogues</code> abstract the negotiations that take place between agents including all negotiation end states, such as accepted, declined, etc. and all the negotiation states in between.</p>
@@ -945,7 +957,7 @@
 <p class="admonition-title">Warn</p>
 <p>Fipa negotiation skill is not fully developed.</p>
 </div>
-<p>Follow the Preliminaries and Installation instructions <a href="../quickstart" target=_blank>here</a>.</p>
+<p>Follow the Preliminaries and Installation instructions <a href="../quickstart">here</a>.</p>
 <p>Then, download the examples and packages directory.
 <div class="highlight"><pre><span></span>svn <span class="nb">export</span> https://github.com/fetchai/agents-aea.git/trunk/packages
 </pre></div></p>

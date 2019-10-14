@@ -441,18 +441,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../logging/" title="Logging" class="md-nav__link">
+      Logging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-6" type="checkbox" id="nav-1-4-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7" type="checkbox" id="nav-1-4-7" checked>
     
-    <label class="md-nav__link" for="nav-1-4-6">
+    <label class="md-nav__link" for="nav-1-4-7">
       CLI
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-4-6">
+      <label class="md-nav__title" for="nav-1-4-7">
         CLI
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -677,19 +689,35 @@
 <tbody>
 <tr>
 <td><code>create [name]</code></td>
-<td>Create a new aea project.</td>
+<td>Create a new aea project called <code>[name]</code>.</td>
+</tr>
+<tr>
+<td><code>fetch [name]</code></td>
+<td>Fetch an aea project called <code>[name]</code>.</td>
 </tr>
 <tr>
 <td><code>scaffold connection/protocol/skill [name]</code></td>
-<td>Scaffold a new connection, protocol, or skill.</td>
+<td>Scaffold a new connection, protocol, or skill called <code>[name]</code>.</td>
 </tr>
 <tr>
 <td><code>add connection/protocol/skill [name]</code></td>
-<td>Add connection, protocol, or skill to agent.</td>
+<td>Add connection, protocol, or skill, called <code>[name]</code>, to the agent.</td>
 </tr>
 <tr>
 <td><code>remove connection/protocol/skill [name]</code></td>
-<td>Remove connection, protocol, or skill from agent.</td>
+<td>Remove connection, protocol, or skill, called <code>[name]</code>, from agent.</td>
+</tr>
+<tr>
+<td><code>install [-r &lt;requirements_file&gt;]</code></td>
+<td>Install the dependencies.</td>
+</tr>
+<tr>
+<td><code>list protocols/connections/skills</code></td>
+<td>List the installed resources.</td>
+</tr>
+<tr>
+<td><code>search protocols/connections/skills</code></td>
+<td>Search for components in the registry.</td>
 </tr>
 <tr>
 <td><code>run {using [connection, ...]}</code></td>
@@ -711,13 +739,16 @@ Command  | Description
 `create [name]` | Create a new aea project.
 `fetch [name]`   | Fetch an aea project.
 `scaffold connection/protocol/skill [name]`  | Scaffold a new connection, protocol, or skill.
-`publish agent/connection/protocol/skill [name]` | Publish agent, connection, protocol, or skill.
+`publish agent/connection/protocol/skill [name]` | Publish agent, connection, protocol, or skill called `[name]`.
 `add connection/protocol/skill [name]`  | Add connection, protocol, or skill to agent.
 `remove connection/protocol/skill [name]` | Remove connection, protocol, or skill from agent.
+`install [-r <requirements_file>]` | Install the dependencies.
+`list protocols/connections/skills` |   List the installed resources.
+`search protocols/connections/skills` | Search for components in the registry.
 `run {using [connection, ...]}`  | Run the agent on the Fetch.AI network with default or specified connections.
 `-v DEBUG run` | Run with debugging.
 `deploy {using [connection, ...]}`  | Deploy the agent to a server and run it on the Fetch.AI network with default or specified connections.
-`delete [name]`  | Delete an aea project. See below for disabling a resource.
+`delete [name]`  | Delete an aea project called `[name]`. See below for disabling a resource.
 
  -->
 
