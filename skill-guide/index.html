@@ -850,7 +850,7 @@
 aea scaffold skill my_search
 </pre></div>
 
-<p>In the following steps, we will replace each one of the scaffolded <code>Behaviour</code>, <code>Handler</code> and <code>Task</code> in <code>my_agent/skills/my_search</code> with our implementation.</p>
+<p>In the following steps, we will replace each one of the scaffolded <code>Behaviour</code>, <code>Handler</code> and <code>Task</code> in <code>my_agent/skills/my_search</code> with our implementation. We will build a simple skill which lets the agent send a search query to the <a href="https://docs.fetch.ai/oef/">OEF</a> and process the resulting response.</p>
 <h2 id="step-2-develop-a-behaviour">Step 2: Develop a Behaviour</h2>
 <p>A <code>Behaviour</code> class contains the business logic specific to initial actions initiated by the agent rather than reactions to other events.</p>
 <p>In this example, we implement a simple search behaviour. Each time, <code>act()</code> gets called by the main agent loop, we will send a search request to the OEF.</p>
