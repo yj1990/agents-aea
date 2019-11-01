@@ -314,18 +314,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../two-layer/" title="Two-layered machine learning" class="md-nav__link">
-      Two-layered machine learning
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -394,30 +382,6 @@
   <li class="md-nav__item">
     <a href="../tac/" title="TAC external app" class="md-nav__link">
       TAC external app
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../fipa-skill/" title="FIPA skill" class="md-nav__link">
-      FIPA skill
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../tac-skill/" title="TAC skill" class="md-nav__link">
-      TAC skill
     </a>
   </li>
 
@@ -712,11 +676,10 @@
                   <h1>Trust issues</h1>
                 
                 <p>AEA applications operate within different orders of trustlessness.</p>
-<p>For example, using the AEA weather skill application without a ledger for transactions means that clients must 100% trust the weather station that any data it sends is sufficient, including no data at all.</p>
-<p>A step up, if you run the weather skill application on a ledger system then the client must again trust the weather station to send sufficient data. However, all transactions are recorded so there is some data verifiability.</p>
-<p>Crucially, the weather station does not need to trust the weather client as it can observe the transaction taking place on the public ledger.</p>
-<p>An app could expand trustlessness even further by implementing a third party escrow contract.</p>
-<p>Finally, in the case of (non-fungible) token transactions where there is an atomic swap, full trustlessness is apparent.</p>
+<p>For example, using the AEA weather skills demo without a ledger means that clients must trust the weather station that any data it sends is sufficient, including no data at all. Similarly, the weather station must trust the weather clients to send payment via some mechanism.</p>
+<p>A step up, if you run the weather skills demo with a ledger (Fetch.ai or Ethereum) then the clients must again trust the weather station to send sufficient data. However, all payment transactions are executed via the public ledger. And so the weather station must no longer trust the weather clients as it can observe the transaction taking place on the public ledger.</p>
+<p>One could expand trustlessness even further by incorporating a third party as an arbitrator or some escrow contract. However, in the weather skills demo there are limits to trustlessness as the station ultimately offers unverifiable data.</p>
+<p>Finally, in the case of (non-fungible) token transactions where there is an atomic swap, full trustlessness is apparent. This is demonstrated in the TAC.</p>
                 
                   
                 
@@ -752,13 +715,13 @@
           </a>
         
         
-          <a href="../two-layer/" title="Two-layered machine learning" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../gym-plugin/" title="Gym demo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Two-layered machine learning
+                Gym demo
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

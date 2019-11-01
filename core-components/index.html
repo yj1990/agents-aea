@@ -309,18 +309,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../two-layer/" title="Two-layered machine learning" class="md-nav__link">
-      Two-layered machine learning
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -389,30 +377,6 @@
   <li class="md-nav__item">
     <a href="../tac/" title="TAC external app" class="md-nav__link">
       TAC external app
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../fipa-skill/" title="FIPA skill" class="md-nav__link">
-      FIPA skill
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../tac-skill/" title="TAC skill" class="md-nav__link">
-      TAC skill
     </a>
   </li>
 
@@ -954,7 +918,7 @@ As such, more than one skill could exist per protocol, competing with each other
 The skills could then read the internal state of the agent, including the agent's observation of the game's state, and suggest a next move to the agent.   </p>
 <p>A skill encapsulates implementations of the abstract base classes <code>Handler</code>, <code>Behaviour</code>, and <code>Task</code>:</p>
 <ul>
-<li><code>Handler</code>: each skill has none, one or more <code>Handler</code> objects, each responsible for the registered messaging protocol. Handlers implement agents' reactive behaviour. If the agent understands the protocol referenced in a received <code>Envelope</code>, the <code>Handler</code> reacts appropriately to the corresponding message. Each <code>Handler</code> is responsible for only one protocol.</li>
+<li><code>Handler</code>: each skill has none, one or more <code>Handler</code> objects, each responsible for the registered messaging protocol. Handlers implement agents' reactive behaviour. If the agent understands the protocol referenced in a received <code>Envelope</code>, the <code>Handler</code> reacts appropriately to the corresponding message. Each <code>Handler</code> is responsible for only one protocol. A <code>Handler</code> is also capable of dealing with internal messages.</li>
 <li><code>Behaviour</code>: none, one or more <code>Behaviours</code> encapsulate actions that cause interactions with other agents initiated by the agent. Behaviours implement agents' proactiveness.</li>
 <li><code>Task</code>: none, one or more Tasks encapsulate background work internal to the agent.</li>
 </ul>
@@ -972,6 +936,7 @@ The skills could then read the internal state of the agent, including the agent'
 <h2 id="filter">Filter</h2>
 <p><code>Filter</code> routes messages to the correct <code>Handler</code> via <code>Resource</code>. It also holds a reference to the currently active <code>Behaviour</code> and <code>Task</code> instances.</p>
 <p>By default for every skill, each <code>Handler</code>, <code>Behaviour</code> and <code>Task</code> is registered in the <code>Filter</code>. However, note that skills can de-register and re-register themselves.</p>
+<p>The <code>Filter</code> also routes internal messages from the <code>DecisionMaker</code> to the respective <code>Handler</code> in the skills.</p>
 <h2 id="resource">Resource</h2>
 <p>The <code>Resource</code> component is made up of <code>Registries</code> for each type of resource (e.g. <code>Protocol</code>, <code>Handler</code>, <code>Behaviour</code>, <code>Task</code>). </p>
 <p>Message Envelopes travel through the <code>Filter</code> which in turn fetches the correct <code>Handler</code> from the <code>Registry</code>.</p>
