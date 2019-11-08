@@ -381,6 +381,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../car-park/" title="Car park agent" class="md-nav__link">
+      Car park agent
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -582,7 +594,7 @@
       
         <li class="md-nav__item">
   <a href="#now-its-your-turn" class="md-nav__link">
-    Now it's your turn:
+    Now it's your turn
   </a>
   
 </li>
@@ -809,7 +821,7 @@
       
         <li class="md-nav__item">
   <a href="#now-its-your-turn" class="md-nav__link">
-    Now it's your turn:
+    Now it's your turn
   </a>
   
 </li>
@@ -833,18 +845,19 @@
                 
                   <h1>Build your own skill</h1>
                 
-                <p>The <a href="../scaffolding/">scaffolding tool</a> allows you create the folder structure required for a skill.</p>
+                <p>The <a href="../scaffolding/">scaffolding tool</a> allows you to create the folder structure required for a skill.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Before developing your first skill, please read the <a href="../skill/">skill guide</a>.</p>
 </div>
 <h2 id="step-1-setup">Step 1: Setup</h2>
-<p>Ensure, you have followed the <a href="../quickstart/">preliminaries and installation</a>. We will first create an agent and add a scaffold skill, which we call <code>my_search</code>:</p>
+<p>Make sure you have followed the <a href="../quickstart/" target=_blank>preliminaries and installation</a> instructions from the quick start. </p>
+<p>We will first create an agent and add a scaffold skill, which we call <code>my_search</code>.</p>
 <div class="highlight"><pre><span></span>aea create my_agent <span class="o">&amp;&amp;</span> <span class="nb">cd</span> my_agent
 aea scaffold skill my_search
 </pre></div>
 
-<p>In the following steps, we will replace each one of the scaffolded <code>Behaviour</code>, <code>Handler</code> and <code>Task</code> in <code>my_agent/skills/my_search</code> with our implementation. We will build a simple skill which lets the agent send a search query to the <a href="https://docs.fetch.ai/oef/">OEF</a> and process the resulting response.</p>
+<p>In the following steps, we replace each one of the scaffolded <code>Behaviour</code>, <code>Handler</code> and <code>Task</code> in <code>my_agent/skills/my_search</code> with our implementation. We will build a simple skill which lets the agent send a search query to the <a href="https://docs.fetch.ai/oef/">OEF</a> and process the resulting response.</p>
 <h2 id="step-2-develop-a-behaviour">Step 2: Develop a Behaviour</h2>
 <p>A <code>Behaviour</code> class contains the business logic specific to initial actions initiated by the agent rather than reactions to other events.</p>
 <p>In this example, we implement a simple search behaviour. Each time, <code>act()</code> gets called by the main agent loop, we will send a search request to the OEF.</p>
@@ -904,7 +917,7 @@ aea scaffold skill my_search
         <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[{}]: tearing down MySearchBehaviour&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">agent_name</span><span class="p">))</span>
 </pre></div>
 
-<p>Searches are proactive and as such well placed in a <code>Behaviour</code>.</p>
+<p>Searches are proactive and, as such, well placed in a <code>Behaviour</code>.</p>
 <p>We place this code in <code>my_agent/skills/my_search/behaviours.py</code>.</p>
 <h2 id="step-3-develop-a-handler">Step 3: Develop a Handler</h2>
 <p>So far, we have tasked the agent with sending search requests to the OEF. However, we have no way of handling the responses sent to the agent by the OEF at the moment. The agent would simply respond to the OEF via the default <code>error</code> skill which sends all unrecognised envelopes back to the sender.</p>
@@ -1005,7 +1018,7 @@ aea scaffold skill my_search
 <p>Note, how we have access to other objects in the skill via <code>self.context</code>.</p>
 <p>We place this code in <code>my_agent/skills/my_search/tasks.py</code>.</p>
 <h2 id="step-5-create-the-config-file">Step 5: Create the config file</h2>
-<p>Based on our skill components above, we create the following config file:</p>
+<p>Based on our skill components above, we create the following config file.</p>
 <div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_search</span>
 <span class="nt">authors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fetch.ai Limited</span>
 <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>
@@ -1031,20 +1044,20 @@ aea scaffold skill my_search
 
 <p>We place this code in <code>my_agent/skills/my_search/skill.yaml</code>.</p>
 <h2 id="step-6-add-the-oef-protocol">Step 6: Add the oef protocol</h2>
-<p>Our agent does not have the oef protocol yet. Hence, we add it like so:
+<p>Our agent does not have the oef protocol yet so let's add it.
 <div class="highlight"><pre><span></span>aea add protocol oef
 </pre></div></p>
 <h2 id="step-7-run-the-agent">Step 7: Run the agent</h2>
-<p>We first start an oef node (see the <a href="../connection/">connection section</a> for more details) in a separate terminal window:</p>
+<p>We first start an oef node (see the <a href="../connection/" target=_blank>connection section</a> for more details) in a separate terminal window.</p>
 <div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
 </pre></div>
 
-<p>We can then launch our agent:
+<p>We can then launch our agent.
 <div class="highlight"><pre><span></span>aea run
 </pre></div></p>
 <p>Stop the agent with <code>CTRL + C</code>.</p>
-<h2 id="now-its-your-turn">Now it's your turn:</h2>
-<p>We hope this step by step introduction has helped you to develop your own skill. We are excited to see what you will build.</p>
+<h2 id="now-its-your-turn">Now it's your turn</h2>
+<p>We hope this step by step introduction has helped you develop your own skill. We are excited to see what you will build.</p>
 <p><br /></p>
                 
                   

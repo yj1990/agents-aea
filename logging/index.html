@@ -377,6 +377,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../car-park/" title="Car park agent" class="md-nav__link">
+      Car park agent
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -675,14 +687,14 @@
                 
                   <h1>Logging</h1>
                 
-                <p>The AEA framework supports flexible logging capabilities with the standard <a href="https://docs.python.org/3/library/logging.html">Python logging library</a>.</p>
-<p>In this tutorial, we will configure logging for an agent.</p>
-<p>First of all, create your agent:</p>
+                <p>The AEA framework supports flexible logging capabilities with the standard <a href="https://docs.python.org/3/library/logging.html" target=_blank>Python logging library</a>.</p>
+<p>In this tutorial, we configure logging for an agent.</p>
+<p>First of all, create your agent.</p>
 <div class="highlight"><pre><span></span>aea create my_agent
 <span class="nb">cd</span> my_agent
 </pre></div>
 
-<p>The <code>aea-config.yaml</code> file should look like:
+<p>The <code>aea-config.yaml</code> file should look like this.</p>
 <div class="highlight"><pre><span></span><span class="nt">aea_version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.6</span>
 <span class="nt">agent_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_agent</span>
 <span class="nt">authors</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
@@ -701,15 +713,13 @@
 <span class="nt">logging_config</span><span class="p">:</span>
   <span class="nt">disable_existing_loggers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
   <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-</pre></div></p>
-<p>By updating the <code>logging_config</code> section, you can configure 
-the loggers of your application.</p>
-<p>The format of this section is specified in the 
-<a href="https://docs.python.org/3/library/logging.config.html"><code>logging.config</code></a>
-module.
-At <a href="https://docs.python.org/3/library/logging.config.html#configuration-dictionary-schema">this section</a> 
+</pre></div>
+
+<p>By updating the <code>logging_config</code> section, you can configure the loggers of your application.</p>
+<p>The format of this section is specified in the <a href="https://docs.python.org/3/library/logging.config.html" target=_blank><code>logging.config</code></a> module.</p>
+<p>At <a href="https://docs.python.org/3/library/logging.config.html#configuration-dictionary-schema" target=_blank>this section</a> 
 you'll find the definition of the configuration dictionary schema.</p>
-<p>An example of <code>logging_config</code> value is reported below:</p>
+<p>Below is an example of the <code>logging_config</code> value.</p>
 <div class="highlight"><pre><span></span><span class="nt">logging_config</span><span class="p">:</span>
   <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
   <span class="nt">disable_existing_loggers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
@@ -735,10 +745,7 @@ you'll find the definition of the configuration dictionary schema.</p>
       <span class="nt">propagate</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 
-<p>This configuration will set up a logger with name <code>aea</code>,
-print both on console (see <code>console</code> handler) and on file
-(see <code>logfile</code> handler) with format specified by the 
-<code>standard</code> formatter.</p>
+<p>This configuration will set up a logger with name <code>aea</code>. It prints both on console and on file with a format specified by the <code>standard</code> formatter.</p>
 <p><br /></p>
                 
                   

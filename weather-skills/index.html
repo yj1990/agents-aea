@@ -402,8 +402,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#launch-the-oef-node-for-search-and-discovery" class="md-nav__link">
-    Launch the OEF Node (for search and discovery):
+  <a href="#launch-an-oef-node" class="md-nav__link">
+    Launch an OEF node
   </a>
   
 </li>
@@ -418,7 +418,7 @@
         
           <li class="md-nav__item">
   <a href="#create-the-weather-station-aea" class="md-nav__link">
-    Create the weather station AEA:
+    Create the weather station AEA
   </a>
   
 </li>
@@ -494,7 +494,7 @@
         
           <li class="md-nav__item">
   <a href="#create-the-weather-client-ledger-version" class="md-nav__link">
-    Create the weather client (ledger version):
+    Create the weather client (ledger version)
   </a>
   
 </li>
@@ -549,7 +549,7 @@
         
           <li class="md-nav__item">
   <a href="#create-the-weather-client-ledger-version_1" class="md-nav__link">
-    Create the weather client (ledger version):
+    Create the weather client (ledger version)
   </a>
   
 </li>
@@ -613,6 +613,18 @@
   <li class="md-nav__item">
     <a href="../tac/" title="TAC external app" class="md-nav__link">
       TAC external app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../car-park/" title="Car park agent" class="md-nav__link">
+      Car park agent
     </a>
   </li>
 
@@ -924,8 +936,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#launch-the-oef-node-for-search-and-discovery" class="md-nav__link">
-    Launch the OEF Node (for search and discovery):
+  <a href="#launch-an-oef-node" class="md-nav__link">
+    Launch an OEF node
   </a>
   
 </li>
@@ -940,7 +952,7 @@
         
           <li class="md-nav__item">
   <a href="#create-the-weather-station-aea" class="md-nav__link">
-    Create the weather station AEA:
+    Create the weather station AEA
   </a>
   
 </li>
@@ -1016,7 +1028,7 @@
         
           <li class="md-nav__item">
   <a href="#create-the-weather-client-ledger-version" class="md-nav__link">
-    Create the weather client (ledger version):
+    Create the weather client (ledger version)
   </a>
   
 </li>
@@ -1071,7 +1083,7 @@
         
           <li class="md-nav__item">
   <a href="#create-the-weather-client-ledger-version_1" class="md-nav__link">
-    Create the weather client (ledger version):
+    Create the weather client (ledger version)
   </a>
   
 </li>
@@ -1135,7 +1147,11 @@
                 
                   <h1>Weather skills</h1>
                 
-                <p>The AEA weather skills demonstrate an interaction between two AEAs; one as the provider of weather data (the weather station), the other as the seller of weather data (the weather client).</p>
+                <p>The AEA weather skills demonstrate an interaction between two AEAs.</p>
+<ul>
+<li>The provider of weather data (the weather station).</li>
+<li>The seller of weather data (the weather client).</li>
+</ul>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Make sure you have the latest <code>aea</code> version.</p>
 <div class="highlight"><pre><span></span>aea --version
@@ -1151,14 +1167,14 @@
 <div class="highlight"><pre><span></span>svn <span class="nb">export</span> https://github.com/fetchai/agents-aea.git/trunk/packages
 svn <span class="nb">export</span> https://github.com/fetchai/agents-aea.git/trunk/scripts
 </pre></div></p>
-<h2 id="launch-the-oef-node-for-search-and-discovery">Launch the OEF Node (for search and discovery):</h2>
-<p>In a separate terminal, launch an OEF node locally:
+<h2 id="launch-an-oef-node">Launch an OEF node</h2>
+<p>In a separate terminal, launch a local OEF node (for search and discovery).
 <div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
 </pre></div></p>
 <p>Keep it running for all the following demos.</p>
 <h2 id="demo-1-no-ledger-payment">Demo 1: no ledger payment</h2>
 <p>The AEAs negotiate and then transfer the data. No payment takes place. This demo serves as a demonstration of the negotiation steps.</p>
-<h3 id="create-the-weather-station-aea">Create the weather station AEA:</h3>
+<h3 id="create-the-weather-station-aea">Create the weather station AEA</h3>
 <p>In the root directory, create the weather station AEA.
 <div class="highlight"><pre><span></span>aea create my_weather_station
 </pre></div></p>
@@ -1195,7 +1211,7 @@ aea delete my_weather_client
 </pre></div>
 
 <h2 id="demo-2-fetchai-ledger-payment">Demo 2: Fetch.ai ledger payment</h2>
-<p>A demo to run the same scenario but with a true ledger transaction on Fetch.ai test net. This demo assumes the weather client trusts the weather station to send the weather data upon successful payment.</p>
+<p>A demo to run the same scenario but with a true ledger transaction on Fetch.ai <code>testnet</code>. This demo assumes the weather client trusts the weather station to send the weather data upon successful payment.</p>
 <h3 id="create-the-weather-station-ledger-version">Create the weather station (ledger version)</h3>
 <p>Create the AEA that will provide weather measurements.</p>
 <div class="highlight"><pre><span></span>aea create my_weather_station 
@@ -1203,19 +1219,19 @@ aea delete my_weather_client
 aea add skill weather_station_ledger
 </pre></div>
 
-<h3 id="create-the-weather-client-ledger-version">Create the weather client (ledger version):</h3>
-<p>In another terminal, create the AEA that will query the weather station</p>
+<h3 id="create-the-weather-client-ledger-version">Create the weather client (ledger version)</h3>
+<p>In another terminal, create the AEA that will query the weather station.</p>
 <div class="highlight"><pre><span></span>aea create my_weather_client 
 <span class="nb">cd</span> my_weather_client 
 aea add skill weather_client_ledger
 </pre></div>
 
-<p>Additionally, create the private key for the weather client AEA
+<p>Additionally, create the private key for the weather client AEA.
 <div class="highlight"><pre><span></span>aea generate-key fetchai
 </pre></div></p>
 <h3 id="update-the-aea-configs">Update the AEA configs</h3>
 <p>Both in <code>weather_station/aea-config.yaml</code> and
-<code>weather_client/aea-config.yaml</code>, replace <code>ledger_apis: []</code> with:</p>
+<code>weather_client/aea-config.yaml</code>, replace <code>ledger_apis: []</code> with the following.</p>
 <div class="highlight"><pre><span></span><span class="nt">ledger_apis</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">ledger_api</span><span class="p">:</span>
       <span class="nt">ledger</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
@@ -1224,16 +1240,16 @@ aea add skill weather_client_ledger
 </pre></div>
 
 <h3 id="fund-the-weather-client-aea">Fund the weather client AEA</h3>
-<p>Create some wealth for your weather client on the Fetch.ai test net (it takes a while):
+<p>Create some wealth for your weather client on the Fetch.ai <code>testnet</code>. (It takes a while).
 <div class="highlight"><pre><span></span><span class="nb">cd</span> ..
 python scripts/fetchai_wealth_generation.py --private-key weather_client/fet_private_key.txt --amount <span class="m">10000000</span> --addr alpha.fetch-ai.com --port <span class="m">80</span>
 <span class="nb">cd</span> my_weather_client
 </pre></div></p>
 <h3 id="run-the-aeas">Run the AEAs</h3>
-<p>Run both AEAs, from their respective terminals
+<p>Run both AEAs from their respective terminals.
 <div class="highlight"><pre><span></span>aea run
 </pre></div></p>
-<p>You will see that the AEAs negotiate and then transact using the Fetch.ai test net.</p>
+<p>You will see that the AEAs negotiate and then transact using the Fetch.ai <code>testnet</code>.</p>
 <h3 id="delete-the-aeas_1">Delete the AEAs</h3>
 <p>When you're done, go up a level and delete the AEAs.</p>
 <div class="highlight"><pre><span></span><span class="nb">cd</span> ..
@@ -1242,7 +1258,7 @@ aea delete my_weather_client
 </pre></div>
 
 <h2 id="demo-3-ethereum-ledger-payment">Demo 3: Ethereum ledger payment</h2>
-<p>A demo to run the same scenario but with a true ledger transaction on Fetch.ai test net. This demo assumes the weather client trusts the weather station to send the weather data upon successful payment.</p>
+<p>A demo to run the same scenario but with a true ledger transaction on the Ethereum Ropsten <code>testnet</code>. This demo assumes the weather client trusts the weather station to send the weather data upon successful payment.</p>
 <h3 id="create-the-weather-station-ledger-version_1">Create the weather station (ledger version)</h3>
 <p>Create the AEA that will provide weather measurements.</p>
 <div class="highlight"><pre><span></span>aea create my_weather_station 
@@ -1250,19 +1266,19 @@ aea delete my_weather_client
 aea add skill weather_station_ledger
 </pre></div>
 
-<h3 id="create-the-weather-client-ledger-version_1">Create the weather client (ledger version):</h3>
-<p>In another terminal, create the AEA that will query the weather station</p>
+<h3 id="create-the-weather-client-ledger-version_1">Create the weather client (ledger version)</h3>
+<p>In another terminal, create the AEA that will query the weather station.</p>
 <div class="highlight"><pre><span></span>aea create my_weather_client 
 <span class="nb">cd</span> my_weather_client 
 aea add skill weather_client_ledger
 </pre></div>
 
-<p>Additionally, create the private key for the weather client AEA
+<p>Additionally, create the private key for the weather client AEA.
 <div class="highlight"><pre><span></span>aea generate-key ethereum
 </pre></div></p>
 <h3 id="update-the-aea-configs_1">Update the AEA configs</h3>
 <p>Both in <code>weather_station/aea-config.yaml</code> and
-<code>weather_client/aea-config.yaml</code>, replace <code>ledger_apis: []</code> with:</p>
+<code>weather_client/aea-config.yaml</code>, replace <code>ledger_apis: []</code> with the following.</p>
 <div class="highlight"><pre><span></span><span class="nt">ledger_apis</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">ledger_api</span><span class="p">:</span>
       <span class="nt">addr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe</span>
@@ -1271,29 +1287,29 @@ aea add skill weather_client_ledger
 </pre></div>
 
 <h3 id="update-the-skill-configs">Update the skill configs</h3>
-<p>In the weather station skill config (<code>my_weather_station/skills/weather_station_ledger/skill.yaml</code>) under strategy change the <code>currency_pbk</code> and <code>ledger_id</code> as follows:
-<div class="highlight"><pre><span></span>currency_pbk: &#39;ETH&#39;
-ledger_id: &#39;ethereum&#39;
+<p>In the weather station skill config (<code>my_weather_station/skills/weather_station_ledger/skill.yaml</code>) under strategy, amend the <code>currency_pbk</code> and <code>ledger_id</code> as follows.
+<div class="highlight"><pre><span></span>currency_pbk: <span class="s1">&#39;ETH&#39;</span>
+ledger_id: <span class="s1">&#39;ethereum&#39;</span>
 </pre></div>
-and under ledgers change to:
-<div class="highlight"><pre><span></span>ledgers: [&#39;ethereum&#39;]
+Amend <code>ledgers</code> to the following.
+<div class="highlight"><pre><span></span>ledgers: <span class="o">[</span><span class="s1">&#39;ethereum&#39;</span><span class="o">]</span>
 </pre></div></p>
-<p>In the weather client skill config (<code>my_weather_client/skills/weather_client_ledger/skill.yaml</code>) under strategy change the <code>currency_pbk</code> and <code>ledger_id</code> as follows:
-<div class="highlight"><pre><span></span>max_buyer_tx_fee: 20000
-currency_pbk: &#39;ETH&#39;
-ledger_id: &#39;ethereum&#39;
+<p>In the weather client skill config (<code>my_weather_client/skills/weather_client_ledger/skill.yaml</code>) under strategy change the <code>currency_pbk</code> and <code>ledger_id</code>.
+<div class="highlight"><pre><span></span>max_buyer_tx_fee: <span class="m">20000</span>
+currency_pbk: <span class="s1">&#39;ETH&#39;</span>
+ledger_id: <span class="s1">&#39;ethereum&#39;</span>
 </pre></div>
-and under ledgers change to:
+Amend <code>ledgers</code> to the following.
 <div class="highlight"><pre><span></span>ledgers: [&#39;ethereum&#39;]
 </pre></div></p>
 <h3 id="fund-the-weather-client-aea_1">Fund the weather client AEA</h3>
-<p>Create some wealth for your weather client on the Ethereum Ropsten test net:</p>
-<p>Go to Metamask <a href="https://faucet.metamask.io">Faucet</a> and request some test ETH for the account your weather client AEA is using (you need to first load your AEAs private key into MetaMask). Your private key is at <code>weather_client/eth_private_key.txt</code>.</p>
+<p>Create some wealth for your weather client on the Ethereum Ropsten test net.</p>
+<p>Go to the <a href="https://faucet.metamask.io/" target=_blank>MetaMask Faucet</a> and request some test ETH for the account your weather client AEA is using (you need to first load your AEAs private key into MetaMask). Your private key is at <code>weather_client/eth_private_key.txt</code>.</p>
 <h3 id="run-the-aeas_1">Run the AEAs</h3>
-<p>Run both AEAs, from their respective terminals
+<p>Run both AEAs, from their respective terminals.
 <div class="highlight"><pre><span></span>aea run
-</pre></div></p>
-<p>You will see that the AEAs negotiate and then transact using the Fetch.ai test net.</p>
+</pre></div>
+You will see that the AEAs negotiate and then transact using the Ethereum <code>testnet</code>.</p>
 <h3 id="delete-the-aeas_2">Delete the AEAs</h3>
 <p>When you're done, go up a level and delete the AEAs.</p>
 <div class="highlight"><pre><span></span><span class="nb">cd</span> ..

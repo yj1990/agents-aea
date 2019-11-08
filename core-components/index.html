@@ -381,6 +381,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../car-park/" title="Car park agent" class="md-nav__link">
+      Car park agent
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -920,7 +932,7 @@ The skills could then read the internal state of the agent, including the agent'
 <ul>
 <li><code>Handler</code>: each skill has none, one or more <code>Handler</code> objects, each responsible for the registered messaging protocol. Handlers implement agents' reactive behaviour. If the agent understands the protocol referenced in a received <code>Envelope</code>, the <code>Handler</code> reacts appropriately to the corresponding message. Each <code>Handler</code> is responsible for only one protocol. A <code>Handler</code> is also capable of dealing with internal messages.</li>
 <li><code>Behaviour</code>: none, one or more <code>Behaviours</code> encapsulate actions that cause interactions with other agents initiated by the agent. Behaviours implement agents' proactiveness.</li>
-<li><code>Task</code>: none, one or more Tasks encapsulate background work internal to the agent.</li>
+<li><code>Task</code>: none, one or more <code>Tasks</code> encapsulate background work internal to the agent.</li>
 </ul>
 <h2 id="agent">Agent</h2>
 <h3 id="main-loop">Main loop</h3>
