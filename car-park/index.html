@@ -397,9 +397,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Car park agent
+      </label>
+    
     <a href="./" title="Car park agent" class="md-nav__link md-nav__link--active">
       Car park agent
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-test-the-aea-functionality-without-the-detection" class="md-nav__link">
+    To test the AEA functionality (without the detection)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -695,6 +724,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-test-the-aea-functionality-without-the-detection" class="md-nav__link">
+    To test the AEA functionality (without the detection)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -708,6 +753,42 @@
                 
                 <h1 id="car-park-agent-application">Car Park Agent Application</h1>
 <p>The Fetch.ai car park agent demo is documented in its own repo <a href="https://github.com/fetchai/carpark_agent">here</a>.</p>
+<h2 id="to-test-the-aea-functionality-without-the-detection">To test the AEA functionality (without the detection)</h2>
+<p>First, create the carpark detection agent:
+<div class="highlight"><pre><span></span>aea create car_detector
+cd car_detector
+aea add skill carpark_detection
+aea install
+</pre></div></p>
+<p>Then, create the carpark client agent:
+<div class="highlight"><pre><span></span>aea create car_data_buyer
+cd car_data_buyer
+aea add skill carpark_client
+aea install
+aea generate-key fetchai
+</pre></div></p>
+<p>Add the ledger info to both aea configs:
+<div class="highlight"><pre><span></span>ledger_apis:
+  - ledger_api:
+      ledger: fetchai
+      addr: alpha.fetch-ai.com
+      port: 80
+</pre></div></p>
+<p>Fund the carpark client agent:
+<div class="highlight"><pre><span></span>cd ..
+python scripts/fetchai_wealth_generation.py --private-key car_data_buyer/fet_private_key.txt --amount 10000000000 --addr alpha.fetch-ai.com --port 80
+</pre></div></p>
+<p>Then, in the carpark detection agent comment out database related settings:
+<div class="highlight"><pre><span></span># db_is_rel_to_cwd: true
+# db_rel_dir: ../temp_files
+</pre></div></p>
+<p>Then, in the client agent do:
+<div class="highlight"><pre><span></span>max_detection_age: 36000000
+</pre></div></p>
+<p>Then, launch an OEF node instance:
+<div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
+</pre></div></p>
+<p>Finally, run both agents with <code>aea run</code>.</p>
 <p><br /></p>
                 
                   
