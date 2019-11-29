@@ -2,137 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://docs.fetch.ai/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/quickstart/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/vision/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/app-areas/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/oef-ledger/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/trust/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/gym-plugin/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/gym-skill/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/weather-skills/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.fetch.ai/tac-skills/</loc>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/tac/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/car-park/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/design-principles/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/diagram/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/core-components/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/file-structure/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/steps/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/skill/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/skill-guide/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/protocol/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/connection/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/scaffolding/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/logging/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/cli-how-to/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/cli-commands/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/cli-gui/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/hacking-an-agent/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.fetch.ai/integration/</loc>
-     <lastmod>2019-11-08</lastmod>
+     <lastmod>2019-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
