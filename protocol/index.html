@@ -435,20 +435,20 @@
 <p>This method checks the message data for consistency and raises an error if necessary.</p>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
-<p>For example.</p>
 </div>
+<p>For example.</p>
 <h3 id="serializerencodeself-msg-message"><code>Serializer.encode(self, msg: Message)</code></h3>
 <p>This method encodes a message object into bytes for passing around.</p>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
-<p>For example.</p>
 </div>
+<p>For example.</p>
 <h3 id="serializerdecodeself-obj-bytes"><code>Serializer.decode(self, obj: bytes)</code></h3>
 <p>This method decodes the byte representation of a message object.</p>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
-<p>For example.</p>
 </div>
+<p>For example.</p>
 <p>Outside of these, the developer is free to implement the agent protocols in any way they see fit.</p>
 <h3 id="rulespy"><code>rules.py</code></h3>
 <div class="admonition note">
@@ -456,14 +456,14 @@
 <p>Coming soon.</p>
 </div>
 <h2 id="oef-protocol"><code>oef</code> protocol</h2>
-<p>The <code>oef</code> helps agents to search for and find other agents and (for now) talk to them via different protocols. </p>
+<p>The <code>oef</code> helps agents to search for and find other agents and (for now) talk to them via different protocols.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In future, the framework will support peer to peer communications.</p>
 </div>
 <p>The <code>oef</code> protocol definition includes an <code>OEFMessage</code> class which gets a <code>protocol_id</code> of <code>oef</code>.</p>
 <p>It defines OEF agent delegation by way of a <code>MessageType</code> Enum.</p>
-<p><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Type</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Type</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
 
     <span class="sd">"""OEF Message types."""</span>
     <span class="n">REGISTER_SERVICE</span> <span class="o">=</span> <span class="s2">"register_service"</span>
@@ -478,8 +478,8 @@
         <span class="sd">"""Get string representation."""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
-It also provides error codes.</p>
-<p><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OEFErrorOperation</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<p>It also provides error codes.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OEFErrorOperation</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
 
     <span class="sd">"""Operation code for the OEF. It is returned in the OEF Error messages."""</span>
     <span class="n">REGISTER_SERVICE</span> <span class="o">=</span> <span class="mi">0</span>
@@ -491,7 +491,7 @@ It also provides error codes.</p>
 
     <span class="n">OTHER</span> <span class="o">=</span> <span class="mi">10000</span>
 </pre></div>
-A <code>models.py</code> module is provided by the <code>oef</code> protocol which includes classes and methods commonly required by OEF agents. These includes a class for serialising json and classes for implementing the OEF query language such as <code>Attribute</code>, <code>Query</code>, etc. </p>
+<p>A <code>models.py</code> module is provided by the <code>oef</code> protocol which includes classes and methods commonly required by OEF agents. These includes a class for serialising json and classes for implementing the OEF query language such as <code>Attribute</code>, <code>Query</code>, etc.</p>
 <h2 id="fipa-protocol"><code>fipa</code> protocol</h2>
 <p>The <code>fipa</code> protocol definition includes a <code>FIPAMessage</code> class which gets a <code>protocol_id</code> of <code>fipa</code>.</p>
 <p>It defines FIPA negotiating terms by way of a <code>Performative(Enum)</code>.</p>
@@ -509,10 +509,10 @@ A <code>models.py</code> module is provided by the <code>oef</code> protocol whi
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
 <p><code>FIPAMessages</code> are constructed with a <code>message_id</code>, a <code>dialogue_id</code>, a <code>target</code> and <code>peformative</code>.</p>
-<p><div class="highlight"><pre><span></span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">message_id</span><span class="p">,</span> <span class="n">dialogue_id</span><span class="o">=</span><span class="n">dialogue_id</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">,</span> 
+<div class="highlight"><pre><span></span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">message_id</span><span class="p">,</span> <span class="n">dialogue_id</span><span class="o">=</span><span class="n">dialogue_id</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">,</span>
     <span class="n">performative</span><span class="o">=</span><span class="n">FIPAMessage</span><span class="o">.</span><span class="n">Performative</span><span class="p">(</span><span class="n">performative</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
-The <code>fipa.proto</code> file then further qualifies the performatives for <code>protobuf</code> messaging.</p>
+<p>The <code>fipa.proto</code> file then further qualifies the performatives for <code>protobuf</code> messaging.</p>
 <div class="highlight"><pre><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">"proto3"</span><span class="p">;</span>
 
 <span class="kn">package</span> <span class="nn">fetch.aea.fipa</span><span class="p">;</span>

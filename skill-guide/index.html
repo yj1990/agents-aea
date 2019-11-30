@@ -604,7 +604,7 @@ aea scaffold skill my_search
 <span class="nt">authors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fetch.ai Limited</span>
 <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>
 <span class="nt">license</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Apache 2.0</span>
-<span class="nt">url</span><span class="p">:</span> <span class="s">""</span>
+<span class="nt">url</span><span class="p">:</span> <span class="s">''</span>
 <span class="nt">description</span><span class="p">:</span> <span class="s">'A</span><span class="nv"> </span><span class="s">simple</span><span class="nv"> </span><span class="s">search</span><span class="nv"> </span><span class="s">skill</span><span class="nv"> </span><span class="s">utilising</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OEF.'</span>
 <span class="nt">behaviours</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">behaviour</span><span class="p">:</span>
@@ -619,21 +619,21 @@ aea scaffold skill my_search
       <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MySearchTask</span>
       <span class="nt">args</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
 <span class="nt">shared_classes</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
-<span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">"oef"</span><span class="p p-Indicator">]</span>
+<span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'oef'</span><span class="p p-Indicator">]</span>
 <span class="nt">dependencies</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 </pre></div>
 <p>We place this code in <code>my_agent/skills/my_search/skill.yaml</code>.</p>
 <h2 id="step-6-add-the-oef-protocol">Step 6: Add the oef protocol</h2>
-<p>Our agent does not have the oef protocol yet so let's add it.
+<p>Our agent does not have the oef protocol yet so let's add it.</p>
 <div class="highlight"><pre><span></span>aea add protocol oef
-</pre></div></p>
+</pre></div>
 <h2 id="step-7-run-the-agent">Step 7: Run the agent</h2>
 <p>We first start an oef node (see the <a href="../connection/" target="_blank">connection section</a> for more details) in a separate terminal window.</p>
 <div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
 </pre></div>
-<p>We can then launch our agent.
+<p>We can then launch our agent.</p>
 <div class="highlight"><pre><span></span>aea run
-</pre></div></p>
+</pre></div>
 <p>Stop the agent with <code>CTRL + C</code>.</p>
 <h2 id="now-its-your-turn">Now it's your turn</h2>
 <p>We hope this step by step introduction has helped you develop your own skill. We are excited to see what you will build.</p>

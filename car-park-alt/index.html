@@ -419,8 +419,8 @@
 <article class="md-content__inner md-typeset">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Work in progress.</p>
 </div>
+<p>Work in progress.</p>
 <h1 id="car-park-agent-application">Car Park Agent Application</h1>
 <p>The Fetch.ai car park agent application is made up of three components:</p>
 <ul>
@@ -445,7 +445,7 @@
 </tbody>
 </table>
 <h2 id="raspberry-pi-hardware-set-up">Raspberry Pi hardware set up</h2>
-<p>The hardware set up is the most time consuming part of these instructions. </p>
+<p>The hardware set up is the most time consuming part of these instructions.</p>
 <p>We assume the developer has some familiarity with Raspberry Pi and refer them to the manufacturer's instructions. However, we do list any problems we encountered and their solutions below.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -460,14 +460,14 @@ sudo apt-get dist-upgrade
 sudo reboot
 </pre></div>
 <h3 id="enable-camera-ssh-and-vnc">Enable camera, ssh, and VNC</h3>
-<p>Click on the Raspberry symbol in the top left of the screen. </p>
+<p>Click on the Raspberry symbol in the top left of the screen.</p>
 <p>Select Preferences then Raspberry Pi Configuration.</p>
 <p><center>
 <img src="../assets/config_nav.png">
 </img></center>
 <br/></p>
-<p>Enable the Camera, SSH, and VNC options.
-<center>
+<p>Enable the Camera, SSH, and VNC options.</p>
+<p><center>
 <img src="../assets/config_dlg.png">
 </img></center></p>
 <h3 id="set-up-camera-module">Set up camera module</h3>
@@ -480,13 +480,13 @@ sudo reboot
 <li>If you install the Pi with a used SD card, you will need to reformat the card with NOOBS: <a href="https://www.raspberrypi.org/downloads/noobs/" target="_blank">https://www.raspberrypi.org/downloads/noobs/</a>.</li>
 <li>Fix the screen resolution issues by editing the configuration.</li>
 </ol>
-<p><div class="highlight"><pre><span></span>sudo raspi-config
+<div class="highlight"><pre><span></span>sudo raspi-config
 </pre></div>
-Select the <code>1920X1080</code> resolution option - number 31. </p>
+<p>Select the <code>1920X1080</code> resolution option - number 31.</p>
 <p>Then update the configuration file as follows. Open it.</p>
-<p><div class="highlight"><pre><span></span>sudo nano /boot/config.txt
+<div class="highlight"><pre><span></span>sudo nano /boot/config.txt
 </pre></div>
-And make sure the following three lines are commented out.</p>
+<p>And make sure the following three lines are commented out.</p>
 <div class="highlight"><pre><span></span><span class="c1"># Enable DRM VC4 V3D driver on top of the dispmanx display stack</span>
 <span class="c1"># dtoverlay=vc4-fkms-v3d</span>
 <span class="c1"># max_framebuffers=2</span>
@@ -500,13 +500,13 @@ git clone https://github.com/fetchai/carpark_agent.git
 </pre></div>
 <h3 id="download-datafile">Download datafile</h3>
 <p>This is required for the machine learning algorithms.</p>
-<p><div class="highlight"><pre><span></span>./car_detection/weights/download_weights.sh
+<div class="highlight"><pre><span></span>./car_detection/weights/download_weights.sh
 </pre></div>
-Install the required libraries.</p>
+<p>Install the required libraries.</p>
 <div class="highlight"><pre><span></span>sudo apt-get install gcc htop vim mc python3-dev ffmpeg virtualenv libatlas-base-dev libsm6 libxext6 clang libblas3 liblapack3 liblapack-dev libblas-dev cython gfortran build-essential libgdal-dev libopenblas-dev liblapack3 liblapacke liblapacke-dev liblcms2-utils liblcms2-2 libwebpdemux2 python3-scipy python3-numpy python3-matplotlib libjasper-dev libqtgui4 libqt4-test protobuf-compiler python3-opencv gpsd gpsd-clients
 </pre></div>
 <h3 id="activate-a-virtual-environment">Activate a virtual environment.</h3>
-<div class="highlight"><pre><span></span>pip3 install virtualenv     
+<div class="highlight"><pre><span></span>pip3 install virtualenv
 ./run_scripts/create_venv.sh
 <span class="nb">source</span> venv/bin/activate
 </pre></div>
@@ -515,31 +515,31 @@ Install the required libraries.</p>
 </pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We recommend that using <code>develop</code> as this creates a link to the code and so any changes you make will take immediate effect when you run the code. </p>
+<p>We recommend that using `develop` as this creates a link to the code and so any changes you make will take immediate effect when you run the code.</p>
 </div>
 <h3 id="run-it">Run it</h3>
-<p><div class="highlight"><pre><span></span>./run_scripts/run_carpark_agent.sh
+<div class="highlight"><pre><span></span>./run_scripts/run_carpark_agent.sh
 </pre></div>
-You should now see the agent running.</p>
+<p>You should now see the agent running.</p>
 <h3 id="ensure-agent-start-on-boot-rpi4-only">Ensure agent start on boot (RPi4 only)</h3>
-<p>Ensure the startup script runs whenever we the Raspberry Pi turns on. </p>
-<p><div class="highlight"><pre><span></span>crontab -e
+<p>Ensure the startup script runs whenever we the Raspberry Pi turns on.</p>
+<div class="highlight"><pre><span></span>crontab -e
 </pre></div>
-Pick an editor which will open a text file. Scroll to the bottom and add the following line.</p>
+<p>Pick an editor which will open a text file. Scroll to the bottom and add the following line.</p>
 <div class="highlight"><pre><span></span>@reboot /home/pi/Desktop/carpark_agent/run_scripts/run_carpark_agent.sh
 </pre></div>
 <p>Save and reboot. The agent should now start automatically on reboot.</p>
 <h3 id="get-the-pis-ip-address">Get the Pi's ip address</h3>
 <p>We will need the ip address of the Raspberry Pi to connect remotely.</p>
-<p><div class="highlight"><pre><span></span>ifconfig
+<div class="highlight"><pre><span></span>ifconfig
 </pre></div>
-Returns something like:
+<p>Returns something like:</p>
 <div class="highlight"><pre><span></span>...
 wlan0: <span class="nv">flags</span><span class="o">=</span><span class="m">4163</span>&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="m">1500</span>
     inet <span class="m">192</span>.168.11.9  netmask <span class="m">255</span>.255.255.0  broadcast <span class="m">192</span>.168.11.255
-... 
+...
 </pre></div>
-The <code>inet</code> value is the Raspberry Pi's ip address.  </p>
+<p>The <code>inet</code> value is the Raspberry Pi's ip address.</p>
 <!--
 ### Get the code
 

@@ -409,7 +409,7 @@
 <span class="nt">authors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fetch.ai Limited</span>
 <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>
 <span class="nt">license</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Apache 2.0</span>
-<span class="nt">url</span><span class="p">:</span> <span class="s">""</span>
+<span class="nt">url</span><span class="p">:</span> <span class="s">''</span>
 <span class="nt">behaviours</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">behaviour</span><span class="p">:</span>
       <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">GoodsRegisterAndSearchBehaviour</span>
@@ -435,7 +435,7 @@
       <span class="nt">args</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
   <span class="p p-Indicator">-</span> <span class="nt">shared_class</span><span class="p">:</span>
       <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Transactions</span>
-      <span class="nt">args</span><span class="p">:</span> 
+      <span class="nt">args</span><span class="p">:</span>
         <span class="nt">pending_transaction_timeout</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
 <span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'oef'</span><span class="p p-Indicator">,</span> <span class="s">'fipa'</span><span class="p p-Indicator">]</span>
 </pre></div>
@@ -455,18 +455,18 @@
 <h3 id="transactions">Transactions</h3>
 <p>This class deals with representing potential transactions between agents.</p>
 <h2 id="demo-instructions">Demo instructions</h2>
-<div class="admonition warn">
-<p class="admonition-title">Warn</p>
-<p>FIPA negotiation skill is not fully developed.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 </div>
+<p>FIPA negotiation skill is not fully developed.</p>
 <p>Follow the Preliminaries and Installation instructions <a href="../quickstart" target="_blank">here</a>.</p>
-<p>Then, download the examples and packages directory.
+<p>Then, download the examples and packages directory.</p>
 <div class="highlight"><pre><span></span>svn <span class="nb">export</span> https://github.com/fetchai/agents-aea.git/trunk/packages
-</pre></div></p>
+</pre></div>
 <h3 id="create-the-agent">Create the agent</h3>
-<p>In the root directory, create the FIPA agent.
+<p>In the root directory, create the FIPA agent.</p>
 <div class="highlight"><pre><span></span>aea create my_fipa_agent
-</pre></div></p>
+</pre></div>
 <h3 id="add-the-fipa-skill">Add the FIPA skill</h3>
 <div class="highlight"><pre><span></span><span class="nb">cd</span> my_fipa_agent
 aea add skill fipa_negotiation
