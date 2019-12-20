@@ -1,0 +1,484 @@
+
+<!DOCTYPE doctype html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Everything you need to know about Fetch.AI." name="description"/>
+<link href="https://docs.fetch.ai/agent-oriented-development/" rel="canonical"/>
+<meta content="diarmid.campbell@fetch.ai" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.5.1" name="generator"/>
+<title>Agent-oriented development - Fetch.AI Developer Documentation</title>
+<link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
+<script src="../assets/javascripts/modernizr.268332fc.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+<link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../css/my-styles.css" rel="stylesheet"/>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#agent-oriented-development" tabindex="1">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="Fetch.AI Developer Documentation">
+<i class="md-icon">code</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              Fetch.AI Developer Documentation
+            </span>
+<span class="md-header-nav__topic">
+              
+                Agent-oriented development
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="..">
+          Autonomous Economic Agent Framework
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" role="main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="https://docs.fetch.ai/" title="Fetch.AI Developer Documentation">
+<i class="md-icon">code</i>
+</a>
+    Fetch.AI Developer Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      Autonomous Economic Agent Framework
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+        Autonomous Economic Agent Framework
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href=".." title="Welcome">
+      Welcome
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Agent-oriented development
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Agent-oriented development">
+      Agent-oriented development
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decentralisation">
+    Decentralisation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conflicting-environment">
+    Conflicting Environment
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asynchronisation">
+    Asynchronisation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#complex-incomplete-inconsistent-and-uncertain">
+    Complex, Incomplete, Inconsistent and Uncertain
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quickstart/" title="AEA quick start">
+      AEA quick start
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../version/" title="Version">
+      Version
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5">
+      The AEA universe
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-5">
+        The AEA universe
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vision/" title="Vision">
+      Vision
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../app-areas/" title="Application areas">
+      Application areas
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../oef-ledger/" title="Relation to OEF and Ledger">
+      Relation to OEF and Ledger
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../trust/" title="Trust issues">
+      Trust issues
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6">
+      Demos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-6">
+        Demos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../car-park/" title="Car park agent">
+      Car park agent
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gym-plugin/" title="Gym demo">
+      Gym demo
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gym-skill/" title="Gym skill">
+      Gym skill
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-skills/" title="ML skills">
+      ML skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tac-skills/" title="TAC skills">
+      TAC skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tac/" title="TAC external app">
+      TAC external app
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../weather-skills/" title="Weather skills">
+      Weather skills
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" id="nav-1-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-7">
+      Architecture
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-7">
+        Architecture
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-principles/" title="Design principles">
+      Design principles
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../diagram/" title="Architectural diagram">
+      Architectural diagram
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../core-components/" title="Core components">
+      Core components
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../file-structure/" title="File structure">
+      File structure
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-8">
+      Developer guide
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-8">
+        Developer guide
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../steps/" title="Step by step">
+      Step by step
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill/" title="Skill">
+      Skill
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill-guide/" title="Build your own skill">
+      Build your own skill
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../protocol/" title="Protocol">
+      Protocol
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../connection/" title="Connection">
+      Connection
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../scaffolding/" title="Scaffolding">
+      Scaffolding
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../logging/" title="Logging">
+      Logging
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-8" id="nav-1-8-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-8-8">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-8-8">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-how-to/" title="CLI tool">
+      CLI tool
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-commands/" title="Commands">
+      Commands
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-gui/" title="GUI">
+      GUI
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hacking-an-agent/" title="Build an AEA using code API">
+      Build an AEA using code API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../integration/" title="Integrate with third parties">
+      Integrate with third parties
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decentralisation">
+    Decentralisation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conflicting-environment">
+    Conflicting Environment
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asynchronisation">
+    Asynchronisation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#complex-incomplete-inconsistent-and-uncertain">
+    Complex, Incomplete, Inconsistent and Uncertain
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="agent-oriented-development">Agent-oriented development</h1>
+<p>In this section, we highlight some of the most fundamental characteristics of the agent-oriented approach to solution development, which might be different from some of the existing paradigms and methodologies you may be used to. We hope that with this, we can guide you towards having the right mindset when you are designing your own agent-based solutions to real world problems. </p>
+<h2 id="decentralisation">Decentralisation</h2>
+<p>Multi-Agent Systems (<strong>MAS</strong>) are inherently decentralised. The vision is, an environment in which every agent is able to directly connect with everyone else and interact with them without having to rely on third-parties to facilitate this. This is in direct contrast to centralised systems in which a single entity is the central point of authority, through which all interactions happen. For example systems based on the client-server architecture, in which clients interact with one another, regarding a specific service (e.g. communication, trade), only through the server.</p>
+<p>Note, this is not to say that facilitators and middlemen have no place in a multi-agent system; rather it is the 'commanding reliance on middlemen' that MAS disagrees with.</p>
+<p><strong>Division of responsibilities:</strong> In a decentralised system, every agent is equally privileged, and (in principle) should be able to interact with any other agent. The idea is very much aligned with the peer-to-peer paradigm, in which it is the voluntary participation and contribution of peers that creates the infrastructure. As such, in a decentralised system, there is no central 'enforcer'. This means all the work that would typically fall under the responsibilities of a central entity must be performed by individual parties in a decentralised system. Blockchain-based cryptocurrencies are a good example of this. People who are getting into cryptocurrencies are often reminded that, due to the lack of a central trusted entity (e.g. a bank), most security precautions related to the handling of digital assets and the execution of transactions fall on individuals themselves. </p>
+<!--Another example is the verification of protocol adherence in regulated systems. Consider the problem of traffic management. The success of such a system relies on its participants (e.g. pedestrians, cars, motorbikes, bicycles, etc) conforming with the traffic management protocol, which specifies, for instance, who has the right of way in a junction. It is trivial, that the continuous functioning of this system does not rest solely on the existence of a protocol; there should also be a mechanism in place that verifies the protocol is followed by the participants. In a central system, verifying whether parties adhere to the system's protocol is often the responsibility of a central unit that checks (some or all) actions of the parties involved. The police could be considered a central entity that enforces traffic protocols and punishes those violating it. However, in a decentralised environment, this burden falls on the parties involved in the interaction themselves. Therefore, one could imagine a self-governing traffic management system whereby individuals on the road enforce protocol adherence on each other and decide on the appropriate method(s) of enforcement (e.g. through collective punishments, sanctions, rewards, ratings, etc).-->
+<p><strong>Decentralisation vs distribution:</strong> It is important to emphasise that by decentralisation we do not mean distribution; although multi-agent systems typically do tend to also be distributed. A distributed system is one whose components are physically located in different places and connected over a network. A fully centralised system, owned and operated by a single entity, may in fact be highly distributed. Google's infrastructure is an example of this, where all of the components are distributed across the globe, yet designed to work together highly efficiently and function in unison. Decentralisation on the other hand refers to a system whose components may be owned, operated, and managed by different stakeholders, each with their own personal objectives, interests, and preferences, which may not necessarily be aligned with one another or that of the system itself. Therefore, distribution refers to the physical placement of a system's components, whereas decentralisation refers to <strong>a)</strong> the diversity of ownership and control over a system's constituents, and <strong>b)</strong> the absence of a central point of authority between them.</p>
+<p><strong>Example:</strong> To better illustrate the distinction between centralised and decentralised systems, consider another example: search and discoverability in a commerce environment. In a centralised system (say amazon.com), there is a single search service -- provided, owned and run by the commerce company itself -- which takes care of all search related functionality for every product within their domain. So to be discoverable in this system, all sellers must register their products with this particular service. However in a decentralised system, there may not necessarily be a single search service provider. There may be multiple such services, run by different, perhaps competing entities. Each seller has the freedom to register with (i.e. make themselves known to) one or a handful of services. On the buyers side, the more services they contact and query, the higher their chances of finding the product they are looking for. </p>
+<h2 id="conflicting-environment">Conflicting Environment</h2>
+<p>As discussed above, the notion of decentralisation extends as far as ownership and control. Therefore, the different components that make up a decentralised system may each be owned by a different entity, designed according to very different principles and standards, with heterogeneous software and hardware, and each with internal objectives that may be fundamentally inconsistent, worst yet contradictory, with those of others. </p>
+<p>As such, a distinctive characteristic of a multi-agent environment, is that it is inhabited by more than one agent (as the name suggests), where each agent may be owned potentially by a different stakeholder (individual, company, government). Since by design, each agent represents and looks after the interests of its owner(s), and because different stakeholders may have unaligned, conflicting, or contradictory interests, it is very common to have multi-agent systems in which the agents' objectives, values and preferences are unaligned, conflicting, or contradictory.</p>
+<p><strong>In practice:</strong> There are practical implications that follow from the above when it comes to designing an agent. For example, it is not rational for an agent to automatically rely on the information it receives from other agents. The information could be:</p>
+<ul>
+<li>Incomplete: what is unrevealed may have been deemed private for strategic reasons. </li>
+<li>Uncertain: it may be the result of an inaccurate prediction. </li>
+<li>Incorrect: it could be an outright lie, due to the adversarial nature of the environment.</li>
+</ul>
+<p>Therefore one can argue, that there is a degree of uncertainty attached to almost all information an agent receives or infers in a multi-agent system. It wouldn't then be illogical for an agent to take a sceptical approach: treating everything as uncertain, unless proved otherwise.</p>
+<h2 id="asynchronisation">Asynchronisation</h2>
+<p>The conflicting nature of multi-agent systems, consisting of self-interested autonomous agents, points to <em>asynchronisation</em> as the preferred method of designing and managing processes and interactions.</p>
+<p><strong>Synchronisation vs asynchronisation:</strong> In general, asynchronisation refers to the decoupling of events that do interact with one another but do not occur at predetermined intervals, not necessarily relying on each other's existence to function. This is in contrast with <em>synchronous</em> systems in which processes are aware of one another, where one's execution depends in some way on the other.</p>
+<p><strong>Asynchronisation in MAS:</strong> In the context of multi-agent systems, the decentralised and potentially conflicting nature of the environment creates uncertainty over the behaviour of the whole system, in particular of other agents. For example, suppose an agent <em>i</em> sends a message requesting some resources from an agent <em>j</em>. Since MAS often tends to be distributed, there is the usual uncertainties with communication over a network: <em>j</em> may never receive <em>i</em>'s request, or may receive it after a long delay. Furthermore, <em>j</em> could receive the request in time and respond immediately, but as mentioned in the last section, its answer might be incomplete (gives only some of the requested resources), uncertain (promises to give the resources, but cannot be fully trusted), or incorrect (sends a wrong resource). In addition, since agents are self-interested, <em>j</em> may <em>decide</em> to reply much later, to the point that the resource is no longer useful to agent <em>i</em>, or <em>j</em> may simply decide not to respond at all. There might be a myriad of reasons why it may choose to do that; it could be because <em>j</em> assigns a low priority to answering <em>i</em> over its other tasks. But that's beside the point. The take away is that agents' autonomy strongly influences what can be expected of them, and of an environment inhabited by them. As such, developing for a system whose constituents are autonomous, e.g. agents in a multi-agent system, is fundamentally different from one whose constituents aren't, e.g. objects in an object-oriented system.</p>
+<p><strong>Objects vs agents:</strong> In object-oriented systems, objects are entities that encapsulate state and perform actions, i.e. call methods, on this state. In object-oriented languages, like C++ and Java, it is common practice to declare methods as public, so they can be invoked by other objects in the system whenever they wish. This implies that an object does not control its own behaviour. If an object’s method is public, the object has no control over whether or not that method is executed.  </p>
+<p>We cannot take for granted that an agent <em>j</em> will execute an action (the equivalent of a method in object-oriented systems) just because another agent <em>i</em> wants it to; this action may not be in the best interests of agent <em>i</em>. So we do not think of agents as invoking methods on one another, rather as <em>requesting</em> actions. If <em>i</em> requests <em>j</em> to perform an action, then <em>j</em> may or may not perform the action. It may choose to do it later or do it in exchange for something. The locus of control is therefore different in object-oriented and agent-oriented systems. In the former, the decision lies with the object invoking the method, whereas in the latter, the decision lies with the agent receiving the request. This distinction could be summarised by the following slogan (from <a href="https://www.wiley.com/en-gb/An+Introduction+to+MultiAgent+Systems%2C+2nd+Edition-p-9781119959519" target="_blank">An Introduction to MultiAgent Systems</a> by <a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/" target="_blank">Michael Wooldridge</a>):</p>
+<blockquote>
+<p>objects do it for free; agents do it because they want to.</p>
+</blockquote>
+<p>All of this makes asynchronisation the preferred method for designing agent processes and interactions. An agent's interactions should be independent of each other, as much as possible, and of the agent's decision making processes and actions. This means the success or failure of, or delay in any single interaction does not block the agent's other tasks. </p>
+<h2 id="complex-incomplete-inconsistent-and-uncertain">Complex, Incomplete, Inconsistent and Uncertain</h2>
+<p>The forth characteristic(s) relate to the environment in which agents are expected to operate in, and these have been mentioned a number of times in the previous sections. </p>
+<p>The environment agents are suited for typically tend to be complex, to the point that it is usually impossible for any single agent to perceive the whole of the environment on its own. This means that at any point in time, any agent has a limited knowledge about the state of the environment. In other words, the agents;' information tend to be incomplete due to the complexity and sophistication of the world in which they reside. </p>
+<p>Consider an agent which represents a driverless vehicle. The complexity of the problem of driving on the road makes it impossible for a single vehicle to have an accurate and up-to-date knowledge of the overall state of the world . This means that an agent's model of the world is at best uncertain. For instance, the vehicle, through its sensor may detect green light at a junction, and by being aware of what it means, it may infer that it is safe to cross a junction. However, that simply may not be true as another car in the opposite direction may still cross the junction violating their red light. Therefore, there is uncertainty associated with the knowledge "it is safe to cross the road because the light is green", and the agent must recognise that. </p>
+<p>Furthermore, the often conflicting nature of the environment means information obtained from multiple sources (agents) may be inconsistent. Again, this must be taken into consideration when designing an agent which is expected to operate successfully in a potentially conflicting environment. </p>
+<p><br/></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href=".." rel="prev" title="Welcome">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Welcome
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../quickstart/" rel="next" title="AEA quick start">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                AEA quick start
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../assets/javascripts/application.8e03edeb.js"></script>
+<script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+</body>
+</html>

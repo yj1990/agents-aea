@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/tac/" rel="canonical"/>
+<link href="https://docs.fetch.ai/ml-skills/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.5.1" name="generator"/>
-<title>TAC external app - Fetch.AI Developer Documentation</title>
+<title>ML skills - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#requirements" tabindex="1">
+<a class="md-skip" href="#dependencies" tabindex="1">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -58,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                TAC external app
+                ML skills
               
             </span>
 </div>
@@ -181,54 +181,127 @@
       Gym skill
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ml-skills/" title="ML skills">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        ML skills
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="ML skills">
       ML skills
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#launch-an-oef-node">
+    Launch an OEF node
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-1-no-ledger">
+    Demo 1 - no ledger:
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-data-provider-aea">
+    Create the data provider AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-the-ml_data_provider-skill">
+    Add the ml_data_provider skill
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-the-dependencies">
+    Install the dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-data-provider-aea">
+    Run the data provider AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-model-trainer-aea">
+    Create the model trainer AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-the-ml_train-skill-to-the-model-trainer-aea">
+    Add the ml_train skill to the model trainer AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-the-dependencies_1">
+    Install the dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-model-trainer-aea">
+    Run the model trainer AEA
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-2-ledger">
+    Demo 2 - ledger:
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs">
+    Update the AEA configs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fund-the-ml-model-trainer-aea">
+    Fund the ml model trainer AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-ml-model-trainer-aea-skills-config">
+    Update the ml model trainer AEA skills config
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-both-aeas">
+    Run both AEAs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clean-up">
+    Clean up
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication">
+    Communication
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../tac-skills/" title="TAC skills">
       TAC skills
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        TAC external app
-      </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="TAC external app">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tac/" title="TAC external app">
       TAC external app
     </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#quick-start">
-    Quick start
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#alternative-build-and-run">
-    Alternative build and run
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#launcher-gui">
-    Launcher GUI
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#possible-gotchas">
-    Possible gotchas
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../weather-skills/" title="Weather skills">
@@ -372,29 +445,102 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#quick-start">
-    Quick start
+<a class="md-nav__link" href="#launch-an-oef-node">
+    Launch an OEF node
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#alternative-build-and-run">
-    Alternative build and run
+<a class="md-nav__link" href="#demo-1-no-ledger">
+    Demo 1 - no ledger:
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-data-provider-aea">
+    Create the data provider AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#launcher-gui">
-    Launcher GUI
+<a class="md-nav__link" href="#add-the-ml_data_provider-skill">
+    Add the ml_data_provider skill
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#possible-gotchas">
-    Possible gotchas
+<a class="md-nav__link" href="#install-the-dependencies">
+    Install the dependencies
   </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-data-provider-aea">
+    Run the data provider AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-model-trainer-aea">
+    Create the model trainer AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-the-ml_train-skill-to-the-model-trainer-aea">
+    Add the ml_train skill to the model trainer AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-the-dependencies_1">
+    Install the dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-model-trainer-aea">
+    Run the model trainer AEA
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-2-ledger">
+    Demo 2 - ledger:
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs">
+    Update the AEA configs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fund-the-ml-model-trainer-aea">
+    Fund the ml model trainer AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-ml-model-trainer-aea-skills-config">
+    Update the ml model trainer AEA skills config
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-both-aeas">
+    Run both AEAs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clean-up">
+    Clean up
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication">
+    Communication
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -403,62 +549,115 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>TAC external app</h1>
-<p>TAC has its own <a href="https://github.com/fetchai/agents-tac" target="_blank">repo</a>. </p>
-<p>Follow the instructions below to build and run the TAC demo.</p>
-<h2 id="requirements">Requirements</h2>
-<p>Make sure you are running <a href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>.</p>
-<h2 id="quick-start">Quick start</h2>
-<p>Clone the repo to include sub-modules.</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:fetchai/agents-tac.git --recursive <span class="o">&amp;&amp;</span> <span class="nb">cd</span> agents-tac
-</pre></div>
-<p>Check you have <code>pipenv</code>.</p>
-<div class="highlight"><pre><span></span>which pipenv
-</pre></div>
-<p>If you don't have it, install it. Instructions are <a href="https://pypi.org/project/pipenv/" target="_blank">here</a>.</p>
-<p>Create and launch a virtual environment.</p>
-<div class="highlight"><pre><span></span>pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-</pre></div>
-<p>Install the dependencies.</p>
-<div class="highlight"><pre><span></span>pipenv install
-</pre></div>
-<p>Install the package.
-<div class="highlight"><pre><span></span>python setup.py install
+<h1>ML skills</h1>
+<p>The AEA ml skills demonstrate an interaction between two AEAs trading data.</p>
+<p>There are two types of agents:</p>
+<ul>
+<li>The ml data provider which sells training data.</li>
+<li>The ml model trainer which trains a model</li>
+</ul>
+<h3 id="dependencies">Dependencies</h3>
+<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
+<h2 id="launch-an-oef-node">Launch an OEF node</h2>
+<p>In a separate terminal, launch a local OEF node (for search and discovery).
+<div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
 </pre></div></p>
-<p>Run the launch script. This may take a while.</p>
-<div class="highlight"><pre><span></span>python scripts/launch.py
+<p>Keep it running for all the following demos.</p>
+<h2 id="demo-1-no-ledger">Demo 1 - no ledger:</h2>
+<h3 id="create-the-data-provider-aea">Create the data provider AEA</h3>
+<p>In the root directory, create the data provider AEA.
+<div class="highlight"><pre><span></span>aea create ml_data_provider
+</pre></div></p>
+<h3 id="add-the-ml_data_provider-skill">Add the <code>ml_data_provider</code> skill</h3>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ml_data_provider
+aea add skill ml_data_provider
 </pre></div>
-<p>The <a href="https://github.com/facebookresearch/visdom" target="_blank">visdom</a> server is now running.</p>
-<p>The controller GUI at <a href="http://localhost:8097" target="_blank">http://localhost:8097</a> provides real time insights.</p>
-<p>In the Environment tab, make sure you have the <code>tac_controller</code> environment selected.</p>
-<p><center><img alt="AEA Visdom UI" src="../assets/visdom_ui.png"/></center></p>
-<h2 id="alternative-build-and-run">Alternative build and run</h2>
-<p>In a new terminal window, clone the repo, build the sandbox, and launch it.</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:fetchai/agents-tac.git --recursive <span class="o">&amp;&amp;</span> <span class="nb">cd</span> agents-tac
-pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-python setup.py install
-<span class="nb">cd</span> sandbox <span class="o">&amp;&amp;</span> docker-compose build
-docker-compose up
+<h3 id="install-the-dependencies">Install the dependencies</h3>
+<p>The ml data provider uses <code>tensorflow</code> and <code>numpy</code>.
+<div class="highlight"><pre><span></span>aea install
+</pre></div></p>
+<h3 id="run-the-data-provider-aea">Run the data provider AEA</h3>
+<div class="highlight"><pre><span></span>aea run
 </pre></div>
-<p>In a new terminal window, enter the virtual environment, and connect a template agent to the sandbox.</p>
-<p><div class="highlight"><pre><span></span>pipenv shell
-python templates/v1/basic.py --name my_agent --dashboard
+<h3 id="create-the-model-trainer-aea">Create the model trainer AEA</h3>
+<p>In a separate terminal, in the root directory, create the model trainer AEA.
+<div class="highlight"><pre><span></span>aea create ml_model_trainer
+</pre></div></p>
+<h3 id="add-the-ml_train-skill-to-the-model-trainer-aea">Add the <code>ml_train</code> skill to the model trainer AEA</h3>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ml_model_trainer
+aea add skill ml_train
 </pre></div>
-<!-- Issue: https://github.com/fetchai/agents-tac/issues/389 --></p>
-<p>Click through to the <a href="http://localhost:8097" target="_blank">controller GUI</a>.</p>
-<h2 id="launcher-gui">Launcher GUI</h2>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
+<h3 id="install-the-dependencies_1">Install the dependencies</h3>
+<p>The ml data provider uses <code>tensorflow</code> and <code>numpy</code>.
+<div class="highlight"><pre><span></span>aea install
+</pre></div></p>
+<h3 id="run-the-model-trainer-aea">Run the model trainer AEA</h3>
+<div class="highlight"><pre><span></span>aea run
+</pre></div>
+<p>After some time, you should see the AEAs transact and the model trainer train its model.</p>
+<h2 id="demo-2-ledger">Demo 2 - ledger:</h2>
+<p>We will now run the same demo but with a real ledger transaction on test net.</p>
+<h3 id="update-the-aea-configs">Update the AEA configs</h3>
+<p>Both in <code>ml_model_trainer/aea-config.yaml</code> and
+<code>ml_data_provider/aea-config.yaml</code>, replace <code>ledger_apis: []</code> with the following.</p>
+<div class="highlight"><pre><span></span><span class="nt">ledger_apis</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">ledger_api</span><span class="p">:</span>
+      <span class="nt">ledger</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
+      <span class="nt">addr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">alpha.fetch-ai.com</span>
+      <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+</pre></div>
+<h3 id="fund-the-ml-model-trainer-aea">Fund the ml model trainer AEA</h3>
+<p>Create some wealth for your ml model trainer on the Fetch.ai <code>testnet</code>. (It takes a while).
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ..
+python scripts/fetchai_wealth_generation.py --private-key ml_model_trainer/fet_private_key.txt --amount <span class="m">10000000</span> --addr alpha.fetch-ai.com --port <span class="m">80</span>
+<span class="nb">cd</span> ml_model_trainer
+</pre></div></p>
+<h3 id="update-the-ml-model-trainer-aea-skills-config">Update the ml model trainer AEA skills config</h3>
+<p>We tell the ml model trainer skill to use the ledger, by updating the following field in <code>ml_model_trainer/skills/ml_train/skill.yaml</code>:
+<div class="highlight"><pre><span></span>is_ledger_tx: True
+</pre></div></p>
+<h3 id="run-both-aeas">Run both AEAs</h3>
+<p>From their respective directories, run both AEAs
+<div class="highlight"><pre><span></span>aea run
+</pre></div></p>
+<h3 id="clean-up">Clean up</h3>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ..
+aea delete ml_data_provider
+aea delete ml_model_trainer
+</pre></div>
+<h3 id="communication">Communication</h3>
+<p>This diagram shows the communication between the two agents.</p>
+<div class="mermaid">
+    sequenceDiagram
+        participant ml_model_trainer
+        participant ml_data_provider
+        participant Search
+        participant Ledger
+
+        activate ml_model_trainer
+        activate ml_data_provider
+        activate Search
+        activate Ledger
+
+        ml_data_provider-&gt;&gt;Search: register_service
+        ml_model_trainer-&gt;&gt;Search: search
+        Search--&gt;&gt;ml_model_trainer: list_of_agents
+        ml_model_trainer-&gt;&gt;ml_data_provider: call_for_terms
+        ml_data_provider-&gt;&gt;ml_model_trainer: terms
+        ml_model_trainer-&gt;&gt;Ledger: request_transaction
+        ml_model_trainer-&gt;&gt;ml_data_provider: accept (incl transaction_hash)
+        ml_data_provider-&gt;&gt;Ledger: check_transaction_status
+        ml_data_provider-&gt;&gt;ml_model_trainer: data
+        loop train
+            ml_model_trainer-&gt;&gt;ml_model_trainer: tran_model
+        end
+
+        deactivate ml_model_trainer
+        deactivate ml_data_provider
+        deactivate Search
+        deactivate Ledger
+
 </div>
-<h2 id="possible-gotchas">Possible gotchas</h2>
-<p>Stop all running containers before restart.</p>
-<div class="highlight"><pre><span></span>docker stop <span class="k">$(</span>docker ps -q<span class="k">)</span>
-</pre></div>
-<p>To remove all images, run the following command.</p>
-<div class="highlight"><pre><span></span><span class="c1"># mac</span>
-docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span> docker system prune -a
-</pre></div>
-<p><br/></p>
 </article>
 </div>
 </div>
@@ -466,7 +665,7 @@ docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../tac-skills/" rel="prev" title="TAC skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../gym-skill/" rel="prev" title="Gym skill">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -475,17 +674,17 @@ docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                TAC skills
+                Gym skill
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../weather-skills/" rel="next" title="Weather skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../tac-skills/" rel="next" title="TAC skills">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Weather skills
+                TAC skills
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
