@@ -164,13 +164,13 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../car-park/" title="Car park agent">
+<a class="md-nav__link" href="../car-park-skills/" title="Car park agent">
       Car park agent
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gym-plugin/" title="Gym demo">
-      Gym demo
+<a class="md-nav__link" href="../gym-example/" title="Gym example">
+      Gym example
     </a>
 </li>
 <li class="md-nav__item">
@@ -271,8 +271,13 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../scaffolding/" title="Scaffolding">
-      Scaffolding
+<a class="md-nav__link" href="../scaffolding/" title="Scaffolding packages">
+      Scaffolding packages
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generator/" title="Generating protocols">
+      Generating protocols
     </a>
 </li>
 <li class="md-nav__item">
@@ -281,12 +286,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-8" id="nav-1-8-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-9" id="nav-1-8-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-8-9">
       CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-8">
+<label class="md-nav__title" for="nav-1-8-9">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -332,20 +337,22 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <h1>Step by step</h1>
-<ol>
-<li>There are a number of ways to build an agent.</li>
+<p>There are a number of ways to build an agent:
 <ul>
-<li>We recommended you build an AEA project with the CLI tool as mentioned in the <a href="../quickstart/" target="_blank">quick start</a> guide. See information on the CLI tool <a href="../cli-how-to/" target="_blank">here</a>.</li>
-<li>[Coming soon!] Using the CLI <code>fetch</code> command, pull in an already built project and run as normal.</li>
-<li>The last option is to install the AEA without the CLI tool with <code>pip install aea</code> and, from there, import classes directly. See the guide for this <a href="../hacking-an-agent/" target="_blank">here</a>.</li>
+<li>We recommended you build an AEA project step-by-step with the CLI tool as demonstrated in the <a href="../quickstart/" target="_blank">quick start</a> guide. See information on the CLI tool <a href="../cli-how-to/" target="_blank">here</a> and read on below.</li>
+<li>Using the CLI <code>aea fetch</code> command, pull in an already built project and run as is or extend it to your needs.</li>
+<li>The last option is to install the AEA without the CLI tool with <code>pip install aea</code> and, from there, import classes directly. See the guide for programmatically building an agent like this <a href="../hacking-an-agent/" target="_blank">here</a>.</li>
 </ul>
-<!-- maybe make it so the links open in the same page -->
-<li>Set up your <a href="../skill/">skills</a>.</li>
-<li>Code the <a href="../protocol/">protocols</a>.</li>
-<li>Add the <a href="../connection/">connections</a>.</li>
-<li>Scaffold any of the above resources with the <a href="../scaffolding/">scaffolding tool</a>. <a href="../skill-guide/">This guide</a> shows you step by step how to develop a skill.</li>
-<li>Now, build and run your agent using the <a href="../quickstart/">quick start guide</a>.</li>
-</ol>
+<!-- maybe make it so the links open in the same page --></p>
+<p>Building an agent step by step:
+<ol>
+<li>Set up your agent project.</li>
+<li>Add the right <a href="../connection/">connections</a> for your usecase.</li>
+<li>Add or code the <a href="../protocol/">protocols</a> you require.</li>
+<li>Add or code the <a href="../skill/">skills</a> you need. <a href="../skill-guide/">This guide</a> shows you step by step how to develop a skill.</li>
+<li>Where required, scaffold any of the above resources with the <a href="../scaffolding/">scaffolding tool</a> or generate a protocol with the <a href="../generator/">protocol generator</a>.</li>
+<li>Now, run your agent.</li>
+</ol></p>
 <p><br/></p>
 </article>
 </div>

@@ -164,13 +164,13 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../car-park/" title="Car park agent">
+<a class="md-nav__link" href="../car-park-skills/" title="Car park agent">
       Car park agent
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gym-plugin/" title="Gym demo">
-      Gym demo
+<a class="md-nav__link" href="../gym-example/" title="Gym example">
+      Gym example
     </a>
 </li>
 <li class="md-nav__item">
@@ -270,8 +270,13 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../scaffolding/" title="Scaffolding">
-      Scaffolding
+<a class="md-nav__link" href="../scaffolding/" title="Scaffolding packages">
+      Scaffolding packages
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generator/" title="Generating protocols">
+      Generating protocols
     </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
@@ -281,12 +286,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-8" id="nav-1-8-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-9" id="nav-1-8-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-8-9">
       CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-8">
+<label class="md-nav__title" for="nav-1-8-9">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -339,24 +344,27 @@
 <span class="nb">cd</span> my_agent
 </pre></div>
 <p>The <code>aea-config.yaml</code> file should look like this.</p>
-<div class="highlight"><pre><span></span><span class="nt">aea_version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.6</span>
+<div class="highlight"><pre><span></span><span class="nt">aea_version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.16</span>
 <span class="nt">agent_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_agent</span>
-<span class="nt">authors</span><span class="p">:</span> <span class="s">''</span>
+<span class="nt">author</span><span class="p">:</span> <span class="s">''</span>
 <span class="nt">connections</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">oef</span>
-<span class="nt">default_connection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">oef</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/stub:0.1.0</span>
+<span class="nt">default_connection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/stub:0.1.0</span>
+<span class="nt">default_ledger</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
+<span class="nt">description</span><span class="p">:</span> <span class="s">''</span>
+<span class="nt">fingerprint</span><span class="p">:</span> <span class="s">''</span>
+<span class="nt">ledger_apis</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
 <span class="nt">license</span><span class="p">:</span> <span class="s">''</span>
-<span class="nt">private_key_pem_path</span><span class="p">:</span> <span class="s">''</span>
-<span class="nt">protocols</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">registry_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">../packages</span>
-<span class="nt">skills</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">error</span>
-<span class="nt">url</span><span class="p">:</span> <span class="s">''</span>
-<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">logging_config</span><span class="p">:</span>
   <span class="nt">disable_existing_loggers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
   <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">private_key_paths</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">protocols</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/default:0.1.0</span>
+<span class="nt">registry_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">../packages</span>
+<span class="nt">skills</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/error:0.1.0</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>
 </pre></div>
 <p>By updating the <code>logging_config</code> section, you can configure the loggers of your application.</p>
 <p>The format of this section is specified in the <a href="https://docs.python.org/3/library/logging.config.html" target="_blank"><code>logging.config</code></a> module.</p>
@@ -365,7 +373,7 @@ you'll find the definition of the configuration dictionary schema.</p>
 <p>Below is an example of the <code>logging_config</code> value.</p>
 <div class="highlight"><pre><span></span><span class="nt">logging_config</span><span class="p">:</span>
   <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-  <span class="nt">disable_existing_loggers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="nt">disable_existing_loggers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
   <span class="nt">formatters</span><span class="p">:</span>
     <span class="nt">standard</span><span class="p">:</span>
       <span class="nt">format</span><span class="p">:</span> <span class="s">'%(asctime)s</span><span class="nv"> </span><span class="s">[%(levelname)s]</span><span class="nv"> </span><span class="s">%(name)s:</span><span class="nv"> </span><span class="s">%(message)s'</span>
@@ -385,7 +393,7 @@ you'll find the definition of the configuration dictionary schema.</p>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">logfile</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">console</span>
       <span class="nt">level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DEBUG</span>
-      <span class="nt">propagate</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">propagate</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
 </pre></div>
 <p>This configuration will set up a logger with name <code>aea</code>. It prints both on console and on file with a format specified by the <code>standard</code> formatter.</p>
 <p><br/></p>
@@ -396,7 +404,7 @@ you'll find the definition of the configuration dictionary schema.</p>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../scaffolding/" rel="prev" title="Scaffolding">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../generator/" rel="prev" title="Generating protocols">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -405,7 +413,7 @@ you'll find the definition of the configuration dictionary schema.</p>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Scaffolding
+                Generating protocols
               </span>
 </div>
 </a>

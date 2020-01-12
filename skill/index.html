@@ -167,13 +167,13 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../car-park/" title="Car park agent">
+<a class="md-nav__link" href="../car-park-skills/" title="Car park agent">
       Car park agent
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gym-plugin/" title="Gym demo">
-      Gym demo
+<a class="md-nav__link" href="../gym-example/" title="Gym example">
+      Gym example
     </a>
 </li>
 <li class="md-nav__item">
@@ -326,8 +326,13 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../scaffolding/" title="Scaffolding">
-      Scaffolding
+<a class="md-nav__link" href="../scaffolding/" title="Scaffolding packages">
+      Scaffolding packages
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generator/" title="Generating protocols">
+      Generating protocols
     </a>
 </li>
 <li class="md-nav__item">
@@ -336,12 +341,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-8" id="nav-1-8-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-9" id="nav-1-8-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-8-9">
       CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-8">
+<label class="md-nav__title" for="nav-1-8-9">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -456,9 +461,9 @@
 <p>Then there is a specific method that the framework requires for each class.</p>
 <h3 id="handlerspy"><code>handlers.py</code></h3>
 <p>There can be none, one or more <code>Handler</code> class per skill.</p>
-<p><code>Handler</code> classes can receive <code>Envelope</code> objects of one protocol type only. However, <code>Handler</code> classes can send <code>Envelope</code> objects of any type of protocol they require.</p>
+<p><code>Handler</code> classes can receive <code>Message</code> objects of one protocol type only. However, <code>Handler</code> classes can send <code>Envelope</code> objects of any type of protocol they require.</p>
 <ul>
-<li><code>handle_envelope(self, Envelope)</code>: is where the skill receives a message contained within an <code>Envelope</code> and decides what to do with it.</li>
+<li><code>handle(self, message: Message)</code>: is where the skill receives a <code>Message</code> of the specified protocol and decides what to do with it.</li>
 </ul>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
@@ -468,7 +473,7 @@
 <p>Conceptually, a <code>Behaviour</code>  class contains the business logic specific to initial actions initiated by the agent rather than reactions to other events.</p>
 <p>There can be one or more <code>Behaviour</code> classes per skill. The developer must create a subclass from the abstract class <code>Behaviour</code> to create a new <code>Behaviour</code>.</p>
 <ul>
-<li><code>act(self)</code>: is how the framework calls the <code>Behaviour</code> code. </li>
+<li><code>act(self)</code>: is how the framework calls the <code>Behaviour</code> code.</li>
 </ul>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
@@ -497,35 +502,29 @@
 <p>Each skill has a <code>skill.yaml</code> configuration file which lists all <code>Behaviour</code>, <code>Handler</code>, and <code>Task</code> objects pertaining to the skill.</p>
 <p>It also details the protocol types used in the skill and points to shared modules, i.e. modules of type <code>SharedClass</code>, which allow custom classes within the skill to be accessible in the skill context.</p>
 <div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo</span>
-<span class="nt">authors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fetch.ai Limited</span>
+<span class="nt">authors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
 <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>
 <span class="nt">license</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Apache 2.0</span>
-<span class="nt">url</span><span class="p">:</span> <span class="s">""</span>
 <span class="nt">behaviours</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">behaviour</span><span class="p">:</span>
-      <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EchoBehaviour</span>
-      <span class="nt">args</span><span class="p">:</span>
-        <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bar</span>
+  <span class="nt">echo</span><span class="p">:</span>
+    <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EchoBehaviour</span>
+    <span class="nt">args</span><span class="p">:</span>
+      <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bar</span>
 <span class="nt">handlers</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">handler</span><span class="p">:</span>
-      <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EchoHandler</span>
-      <span class="nt">args</span><span class="p">:</span>
-        <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bar</span>
-        <span class="nt">bar</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
+  <span class="nt">echo</span><span class="p">:</span>
+    <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EchoHandler</span>
+    <span class="nt">args</span><span class="p">:</span>
+      <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bar</span>
+      <span class="nt">bar</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
 <span class="nt">tasks</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">task</span><span class="p">:</span>
-      <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EchoTask</span>
-      <span class="nt">args</span><span class="p">:</span>
-        <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bar</span>
-        <span class="nt">bar</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
-<span class="nt">shared_classes</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
-<span class="nt">dependencies</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">dependency</span><span class="p">:</span>
-      <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EchoDependency</span>
-      <span class="nt">args</span><span class="p">:</span>
-        <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bar</span>
-        <span class="nt">bar</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
-<span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">"default"</span><span class="p p-Indicator">]</span>
+  <span class="nt">echo</span><span class="p">:</span>
+    <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EchoTask</span>
+    <span class="nt">args</span><span class="p">:</span>
+      <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bar</span>
+      <span class="nt">bar</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
+<span class="nt">shared_classes</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
+<span class="nt">dependencies</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
+<span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">"fetchai/default:0.1.0"</span><span class="p p-Indicator">]</span>
 </pre></div>
 <h2 id="error-skill">Error skill</h2>
 <p>All top level AEA <code>skills</code> directories receive a default <code>error</code> skill that contains error handling code for a number of scenarios:</p>

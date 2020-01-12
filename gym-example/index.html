@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/trust/" rel="canonical"/>
+<link href="https://docs.fetch.ai/gym-example/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.5.1" name="generator"/>
-<title>Trust issues - Fetch.AI Developer Documentation</title>
+<title>Gym example - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,6 +37,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#preparation-instructions" tabindex="1">
+        Skip to content
+      </a>
 <header class="md-header" data-md-component="header">
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
@@ -55,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                Trust issues
+                Gym example
               
             </span>
 </div>
@@ -120,8 +123,8 @@
       Version
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-5">
       The AEA universe
     </label>
@@ -145,17 +148,16 @@
       Relation to OEF and Ledger
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./" title="Trust issues">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../trust/" title="Trust issues">
       Trust issues
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-6">
       Demos
     </label>
@@ -169,10 +171,47 @@
       Car park agent
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../gym-example/" title="Gym example">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Gym example
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Gym example">
       Gym example
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation-instructions">
+    Preparation instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-instructions">
+    Demo instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-example">
+    Run the example
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gym-skill/" title="Gym skill">
@@ -334,14 +373,84 @@
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation-instructions">
+    Preparation instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-instructions">
+    Demo instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-example">
+    Run the example
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>Trust issues</h1>
-<p>AEA applications operate within different orders of trustlessness.</p>
-<p>For example, using the AEA weather skills demo without ledger payments means that clients must trust that any data the weather station sends is sufficient, including no data at all. Similarly, the weather station must trust the weather clients to send payment via some mechanism.</p>
-<p>A step up, if you run the weather skills demo with a ledger (Fetch.ai or Ethereum) then the clients must again trust the weather station to send sufficient data. However, all payment transactions are executed via the public ledger. This means the weather station no longer needs to trust the weather clients as it can observe the transactions taking place on the public ledger.</p>
-<p>We can expand trustlessness even further by incorporating a third-party as an arbitrator or some escrow contract. However, in the weather skills demo there are limits to trustlessness as the station ultimately offers unverifiable data.</p>
-<p>Finally, in the case of (non-fungible) token transactions where there is an atomic swap, full trustlessness is apparent. This is demonstrated in the TAC.</p>
+<h1>Gym example</h1>
+<p>The <code>gym</code> example demonstrates the AEA framework's flexibility with respect to Reinforcement Learning using OpenAI's <code>gym</code> framework.</p>
+<p>There is no immediate use case for this example as you can train an RL agent without the AEA proxy layer just fine (and faster). </p>
+<p>However, the example decouples the RL agent from the <code>gym.Env</code> allowing them to run in separate execution environments, potentially owned by different entities.</p>
+<h2 id="preparation-instructions">Preparation instructions</h2>
+<h3 id="dependencies">Dependencies</h3>
+<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
+<p>Install the <code>gym</code> and <code>numpy</code> library.</p>
+<div class="highlight"><pre><span></span>pip install numpy gym
+</pre></div>
+<h2 id="demo-instructions">Demo instructions</h2>
+<h3 id="run-the-example">Run the example</h3>
+<div class="highlight"><pre><span></span>python examples/gym_ex/train.py
+</pre></div>
+<p>Notice the usual RL setup, i.e. the fit method of the RL agent has the typical signature and a familiar implementation. </p>
+<p>Note how <code>train.py</code> demonstrates how easy it is to use an AEA agent as a proxy layer between an OpenAI <code>gym.Env</code> and a standard RL agent.</p>
+<p>It is just one line of code to introduce the proxy agent and proxy environment!</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gyms.env</span> <span class="kn">import</span> <span class="n">BanditNArmedRandom</span>
+<span class="kn">from</span> <span class="nn">proxy.env</span> <span class="kn">import</span> <span class="n">ProxyEnv</span>
+<span class="kn">from</span> <span class="nn">rl.agent</span> <span class="kn">import</span> <span class="n">RLAgent</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">NB_GOODS</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">NB_PRICES_PER_GOOD</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">NB_STEPS</span> <span class="o">=</span> <span class="mi">4000</span>
+
+    <span class="c1"># Use any gym.Env compatible environment:</span>
+    <span class="n">gym_env</span> <span class="o">=</span> <span class="n">BanditNArmedRandom</span><span class="p">(</span><span class="n">nb_bandits</span><span class="o">=</span><span class="n">NB_GOODS</span><span class="p">,</span> <span class="n">nb_prices_per_bandit</span><span class="o">=</span><span class="n">NB_PRICES_PER_GOOD</span><span class="p">)</span>
+
+    <span class="c1"># Pass the gym environment to a proxy environment:</span>
+    <span class="n">proxy_env</span> <span class="o">=</span> <span class="n">ProxyEnv</span><span class="p">(</span><span class="n">gym_env</span><span class="p">)</span>
+
+    <span class="c1"># Use any RL agent compatible with the gym environment and call the fit method:</span>
+    <span class="n">rl_agent</span> <span class="o">=</span> <span class="n">RLAgent</span><span class="p">(</span><span class="n">nb_goods</span><span class="o">=</span><span class="n">NB_GOODS</span><span class="p">)</span>
+    <span class="n">rl_agent</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">env</span><span class="o">=</span><span class="n">proxy_env</span><span class="p">,</span> <span class="n">nb_steps</span><span class="o">=</span><span class="n">NB_STEPS</span><span class="p">)</span>
+</pre></div>
 <p><br/></p>
 </article>
 </div>
@@ -350,7 +459,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../oef-ledger/" rel="prev" title="Relation to OEF and Ledger">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../car-park-skills/" rel="prev" title="Car park agent">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -359,17 +468,17 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Relation to OEF and Ledger
+                Car park agent
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../car-park-skills/" rel="next" title="Car park agent">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../gym-skill/" rel="next" title="Gym skill">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Car park agent
+                Gym skill
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
