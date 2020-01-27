@@ -1,5 +1,5 @@
 
-<!DOCTYPE doctype html>
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
@@ -19,12 +19,12 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.0.4, mkdocs-material-4.5.1" name="generator"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
 <title>Commands - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 <link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
 <link href="../css/my-styles.css" rel="stylesheet"/>
@@ -108,31 +108,59 @@
       Welcome
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
-      Agent-oriented development
-    </a>
-</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" id="nav-1-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-2">
+      Getting started
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-2">
+        Getting started
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../quickstart/" title="AEA quick start">
       AEA quick start
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../version/" title="Version">
-      Version
+<a class="md-nav__link" href="../steps/" title="Build an AEA step by step">
+      Build an AEA step by step
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill-guide/" title="Build a skill for an AEA">
+      Build a skill for an AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build-aea-programmatically/" title="Build an AEA programmatically">
+      Build an AEA programmatically
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs Agents">
+      AEAs vs Agents
+    </a>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-3">
       The AEA universe
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-5">
+<label class="md-nav__title" for="nav-1-3">
         The AEA universe
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
+      Agent-oriented development
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../vision/" title="Vision">
       Vision
@@ -157,13 +185,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-6">
-      Demos
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4">
+      Demo guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-6">
-        Demos
+<label class="md-nav__title" for="nav-1-4">
+        Demo guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -205,12 +233,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" id="nav-1-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-7">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5">
       Architecture
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-7">
+<label class="md-nav__title" for="nav-1-5">
         Architecture
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -238,28 +266,23 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8">
-      Developer guide
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6">
+      Developer guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-8">
-        Developer guide
+<label class="md-nav__title" for="nav-1-6">
+        Developer guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../steps/" title="Step by step">
-      Step by step
+<a class="md-nav__link" href="../version/" title="Version">
+      Version
     </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../skill/" title="Skill">
       Skill
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../skill-guide/" title="Build your own skill">
-      Build your own skill
     </a>
 </li>
 <li class="md-nav__item">
@@ -288,12 +311,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-9" id="nav-1-8-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-9">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6-8" id="nav-1-6-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6-8">
       CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-9">
+<label class="md-nav__title" for="nav-1-6-8">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -313,12 +336,17 @@
       GUI
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wealth/" title="Generating wealth">
+      Generating wealth
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../hacking-an-agent/" title="Build an AEA using code API">
-      Build an AEA using code API
+<a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
+      Build an AEA on a Raspberry Pi
     </a>
 </li>
 <li class="md-nav__item">
@@ -358,7 +386,7 @@
 <tbody>
 <tr>
 <td><code>add connection/protocol/skill [name]</code></td>
-<td>Add connection, protocol, or skill, called <code>[name]</code>, to the agent.</td>
+<td>Add connection, protocol, or skill, called <code>[name]</code>, to the AEA.</td>
 </tr>
 <tr>
 <td><code>add-key default/fetchai/ethereum file</code></td>
@@ -373,8 +401,8 @@
 <td>Reads the config specified in <code>[path]</code> and prints its target.</td>
 </tr>
 <tr>
-<td><code>config set [path]</code></td>
-<td>Sets a new value for the target of the <code>[path]</code>.</td>
+<td><code>config set [path] [--type TYPE]</code></td>
+<td>Sets a new value for the target of the <code>[path]</code>. Optionally cast to type.</td>
 </tr>
 <tr>
 <td><code>delete NAME</code></td>
@@ -397,6 +425,18 @@
 <td>Generate private keys.</td>
 </tr>
 <tr>
+<td><code>generate-wealth fetchai/ethereum</code></td>
+<td>Generate wealth for address on test network.</td>
+</tr>
+<tr>
+<td><code>get-address fetchai/ethereum</code></td>
+<td>Get the address associated with the private key.</td>
+</tr>
+<tr>
+<td><code>get-wealth fetchai/ethereum</code></td>
+<td>Get the wealth associated with the private key.</td>
+</tr>
+<tr>
 <td><code>install [-r &lt;requirements_file&gt;]</code></td>
 <td>Install the dependencies. (With <code>--install-deps</code> to install dependencies.)</td>
 </tr>
@@ -406,7 +446,7 @@
 </tr>
 <tr>
 <td><code>publish</code></td>
-<td>Publish agent to registry. Needs to be executed from an agent project.</td>
+<td>Publish the AEA to registry. Needs to be executed from an AEA project.</td>
 </tr>
 <tr>
 <td><code>push connection/protocol/skill [name]</code></td>
@@ -414,11 +454,11 @@
 </tr>
 <tr>
 <td><code>remove connection/protocol/skill [name]</code></td>
-<td>Remove connection, protocol, or skill, called <code>[name]</code>, from agent.</td>
+<td>Remove connection, protocol, or skill, called <code>[name]</code>, from AEA.</td>
 </tr>
 <tr>
 <td><code>run {using [connections, ...]}</code></td>
-<td>Run the agent on the Fetch.ai network with default or specified connections.</td>
+<td>Run the AEA on the Fetch.ai network with default or specified connections.</td>
 </tr>
 <tr>
 <td><code>search protocols/connections/skills</code></td>
@@ -437,7 +477,7 @@
 <!--
 Command  | Description
 ---------| -----------------------------------------------------------------
-`deploy {using [connection, ...]}`  | Deploy the agent to a server and run it on the Fetch.ai network with default or specified connections.
+`deploy {using [connection, ...]}`  | Deploy the AEA to a server and run it on the Fetch.ai network with default or specified connections.
  -->
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -493,7 +533,7 @@ Command  | Description
 </div>
 </footer>
 </div>
-<script src="../assets/javascripts/application.8e03edeb.js"></script>
+<script src="../assets/javascripts/application.808e90bb.js"></script>
 <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>

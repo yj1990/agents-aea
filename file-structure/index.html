@@ -1,5 +1,5 @@
 
-<!DOCTYPE doctype html>
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
@@ -19,12 +19,12 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.0.4, mkdocs-material-4.5.1" name="generator"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
 <title>File structure - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 <link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
 <link href="../css/my-styles.css" rel="stylesheet"/>
@@ -105,31 +105,59 @@
       Welcome
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
-      Agent-oriented development
-    </a>
-</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" id="nav-1-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-2">
+      Getting started
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-2">
+        Getting started
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../quickstart/" title="AEA quick start">
       AEA quick start
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../version/" title="Version">
-      Version
+<a class="md-nav__link" href="../steps/" title="Build an AEA step by step">
+      Build an AEA step by step
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill-guide/" title="Build a skill for an AEA">
+      Build a skill for an AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build-aea-programmatically/" title="Build an AEA programmatically">
+      Build an AEA programmatically
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs Agents">
+      AEAs vs Agents
+    </a>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-3">
       The AEA universe
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-5">
+<label class="md-nav__title" for="nav-1-3">
         The AEA universe
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
+      Agent-oriented development
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../vision/" title="Vision">
       Vision
@@ -154,13 +182,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-6">
-      Demos
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4">
+      Demo guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-6">
-        Demos
+<label class="md-nav__title" for="nav-1-4">
+        Demo guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -202,12 +230,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" id="nav-1-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-7">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5">
       Architecture
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-7">
+<label class="md-nav__title" for="nav-1-5">
         Architecture
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -236,28 +264,23 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8">
-      Developer guide
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6">
+      Developer guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-8">
-        Developer guide
+<label class="md-nav__title" for="nav-1-6">
+        Developer guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../steps/" title="Step by step">
-      Step by step
+<a class="md-nav__link" href="../version/" title="Version">
+      Version
     </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../skill/" title="Skill">
       Skill
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../skill-guide/" title="Build your own skill">
-      Build your own skill
     </a>
 </li>
 <li class="md-nav__item">
@@ -286,12 +309,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-9" id="nav-1-8-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6-8" id="nav-1-6-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6-8">
       CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-9">
+<label class="md-nav__title" for="nav-1-6-8">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -310,12 +333,17 @@
       GUI
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wealth/" title="Generating wealth">
+      Generating wealth
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../hacking-an-agent/" title="Build an AEA using code API">
-      Build an AEA using code API
+<a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
+      Build an AEA on a Raspberry Pi
     </a>
 </li>
 <li class="md-nav__item">
@@ -337,12 +365,12 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <h1>File structure</h1>
-<p>The file structure of an agent is fixed.</p>
-<p>The top level directory has the agent's name. Below is a <code>yaml</code> configuration file, then directories containing the connections, protocols, and skills developed by the developer. The connections, protocols and skills from other authors are located in <code>vendors</code> and sorted by author. Finally, there are files containing the private keys of the agent.</p>
+<p>The file structure of an AEA is fixed.</p>
+<p>The top level directory has the AEA's name. Below is a <code>yaml</code> configuration file, then directories containing the connections, protocols, and skills developed by the developer. The connections, protocols and skills from other authors are located in <code>vendor</code> and sorted by author. Finally, there are files containing the private keys of the AEA.</p>
 <p>The developer can create new directories where necessary but the core structure must remain the same.</p>
-<p>The CLI tool provides a way to scaffold new connections, protocols and skills in the required directory structure for agents. See the instructions for that <a href="../scaffolding/">here</a>.</p>
-<div class="highlight"><pre><span></span>agent_name/
-  aea-config.yaml       YAML configuration of the agent
+<p>The CLI tool provides a way to scaffold new connections, protocols and skills in the required directory structure for AEAs. See the instructions for that <a href="../scaffolding/">here</a>.</p>
+<div class="highlight"><pre><span></span>aea_name/
+  aea-config.yaml       YAML configuration of the AEA
   private_key.pem       The private key file
   connections/          Directory containing all the own connections
     connection_1/       First connection
@@ -356,14 +384,14 @@
     skill_1/            First skill
     ...                 ...
     skill_k/            kth skill
-  vendors/
-    author_1/
-      connections/
-        ...
-      protocols/
-        ...
-      skills/
-        ...
+  vendor/               Directory containing all the added resources authored by other developers
+    author_1/           Directory containing all the resources added from author_1
+      connections/      Directory containing all the added connections from author_1
+        ...             ...
+      protocols/        Directory containing all the added protocols from author_1
+        ...             ...
+      skills/           Directory containing all the added skills from author_1
+        ...             ...
 </pre></div>
 <p><br/></p>
 </article>
@@ -386,13 +414,13 @@
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../steps/" rel="next" title="Step by step">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../version/" rel="next" title="Version">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Step by step
+                Version
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -415,7 +443,7 @@
 </div>
 </footer>
 </div>
-<script src="../assets/javascripts/application.8e03edeb.js"></script>
+<script src="../assets/javascripts/application.808e90bb.js"></script>
 <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>

@@ -1,5 +1,5 @@
 
-<!DOCTYPE doctype html>
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
@@ -19,12 +19,12 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.0.4, mkdocs-material-4.5.1" name="generator"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
 <title>AEA quick start - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 <link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
 <link href="../css/my-styles.css" rel="stylesheet"/>
@@ -108,11 +108,16 @@
       Welcome
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
-      Agent-oriented development
-    </a>
-</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" id="nav-1-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-2">
+      Getting started
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-2">
+        Getting started
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -169,8 +174,8 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-a-new-agent">
-    Create a new agent
+<a class="md-nav__link" href="#create-a-new-aea">
+    Create a new AEA
   </a>
 </li>
 <li class="md-nav__item">
@@ -187,13 +192,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#option-2-fetch-the-entire-agent">
-    Option 2 - Fetch the entire agent
+<a class="md-nav__link" href="#option-2-fetch-the-entire-aea">
+    Option 2 - Fetch the entire AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#run-the-agent">
-    Run the agent
+<a class="md-nav__link" href="#run-the-aea">
+    Run the AEA
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -206,33 +211,56 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stop-the-agent">
-    Stop the agent
+<a class="md-nav__link" href="#stop-the-aea">
+    Stop the AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#delete-the-agent">
-    Delete the agent
+<a class="md-nav__link" href="#delete-the-aea">
+    Delete the AEA
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../version/" title="Version">
-      Version
+<a class="md-nav__link" href="../steps/" title="Build an AEA step by step">
+      Build an AEA step by step
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill-guide/" title="Build a skill for an AEA">
+      Build a skill for an AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build-aea-programmatically/" title="Build an AEA programmatically">
+      Build an AEA programmatically
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs Agents">
+      AEAs vs Agents
+    </a>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-3">
       The AEA universe
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-5">
+<label class="md-nav__title" for="nav-1-3">
         The AEA universe
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
+      Agent-oriented development
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../vision/" title="Vision">
       Vision
@@ -257,13 +285,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-6">
-      Demos
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4">
+      Demo guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-6">
-        Demos
+<label class="md-nav__title" for="nav-1-4">
+        Demo guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -305,12 +333,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" id="nav-1-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-7">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5">
       Architecture
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-7">
+<label class="md-nav__title" for="nav-1-5">
         Architecture
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -338,28 +366,23 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8">
-      Developer guide
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6">
+      Developer guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-8">
-        Developer guide
+<label class="md-nav__title" for="nav-1-6">
+        Developer guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../steps/" title="Step by step">
-      Step by step
+<a class="md-nav__link" href="../version/" title="Version">
+      Version
     </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../skill/" title="Skill">
       Skill
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../skill-guide/" title="Build your own skill">
-      Build your own skill
     </a>
 </li>
 <li class="md-nav__item">
@@ -388,12 +411,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-9" id="nav-1-8-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6-8" id="nav-1-6-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6-8">
       CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-9">
+<label class="md-nav__title" for="nav-1-6-8">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -412,12 +435,17 @@
       GUI
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wealth/" title="Generating wealth">
+      Generating wealth
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../hacking-an-agent/" title="Build an AEA using code API">
-      Build an AEA using code API
+<a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
+      Build an AEA on a Raspberry Pi
     </a>
 </li>
 <li class="md-nav__item">
@@ -487,8 +515,8 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-a-new-agent">
-    Create a new agent
+<a class="md-nav__link" href="#create-a-new-aea">
+    Create a new AEA
   </a>
 </li>
 <li class="md-nav__item">
@@ -505,13 +533,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#option-2-fetch-the-entire-agent">
-    Option 2 - Fetch the entire agent
+<a class="md-nav__link" href="#option-2-fetch-the-entire-aea">
+    Option 2 - Fetch the entire AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#run-the-agent">
-    Run the agent
+<a class="md-nav__link" href="#run-the-aea">
+    Run the AEA
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -524,13 +552,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stop-the-agent">
-    Stop the agent
+<a class="md-nav__link" href="#stop-the-aea">
+    Stop the AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#delete-the-agent">
-    Delete the agent
+<a class="md-nav__link" href="#delete-the-aea">
+    Delete the AEA
   </a>
 </li>
 </ul>
@@ -543,8 +571,8 @@
 <h1>AEA quick start</h1>
 <h2 id="preliminaries">Preliminaries</h2>
 <p>Create and enter into a new working directory.</p>
-<div class="highlight"><pre><span></span>mkdir my_aea/
-<span class="nb">cd</span> my_aea/
+<div class="highlight"><pre><span></span>mkdir my_aea_projects/
+<span class="nb">cd</span> my_aea_projects/
 </pre></div>
 <p>We highly recommend using a virtual environment to ensure consistency across dependencies.</p>
 <p>Check that you have <a href="https://github.com/pypa/pipenv"><code>pipenv</code></a>.</p>
@@ -570,9 +598,6 @@ You can install the <code>svn</code> command with (<code>brew install subversion
 <p>The following installs the entire AEA package which also includes a command-line interface (CLI).</p>
 <div class="highlight"><pre><span></span>pip install aea<span class="o">[</span>all<span class="o">]</span>
 </pre></div>
-<p>However, you can run this demo by installing the base AEA, including the CLI extension, alone.</p>
-<div class="highlight"><pre><span></span>pip install aea<span class="o">[</span>cli<span class="o">]</span>
-</pre></div>
 <h3 id="known-issues">Known issues</h3>
 <p>If the installation steps fail, it might be a dependency issue. </p>
 <p>The following hints can help:</p>
@@ -589,63 +614,68 @@ You can install the <code>svn</code> command with (<code>brew install subversion
 <h2 id="echo-skill-demo">Echo skill demo</h2>
 <p>The echo skill is a simple demo that introduces you to the main business logic components of an AEA.</p>
 <h2 id="option-1-step-by-step">Option 1 - Step-by-step</h2>
-<h3 id="create-a-new-agent">Create a new agent</h3>
-<p>First create a new agent project and enter it.
-<div class="highlight"><pre><span></span>aea create my_first_agent
-<span class="nb">cd</span> my_first_agent
+<h3 id="create-a-new-aea">Create a new AEA</h3>
+<p>First, create a new AEA project and enter it.
+<div class="highlight"><pre><span></span>aea create my_first_aea
+<span class="nb">cd</span> my_first_aea
 </pre></div></p>
 <h3 id="add-the-echo-skill">Add the echo skill</h3>
+<p>Second, add the echo skill to the project.
 <div class="highlight"><pre><span></span>aea add skill fetchai/echo:0.1.0
-</pre></div>
-<p>This copies the <code>echo</code> skill code containing the "behaviours", "handlers", and "tasks" into the skill, ready to run. The full identifier of the skill <code>fetchai/echo:0.1.0</code> consists of the name of the author of the skill, followed by the skill name and its version.</p>
+</pre></div></p>
+<p>This copies the <code>echo</code> skill code containing the "behaviours", "handlers", and "tasks" into the skill, ready to run. The identifier of the skill <code>fetchai/echo:0.1.0</code> consists of the name of the author of the skill, followed by the skill name and its version.</p>
 <h3 id="add-a-stub-connection">Add a stub connection</h3>
 <p>AEAs use messages for communication. We use a stub connection to send messages to and receive messages from the AEA.</p>
-<p>The stub conection is already added to the agent by default.</p>
-<p>A stub connection provides an I/O reader and writer. </p>
-<p>It uses two files for communication: one for incoming messages and the other for outgoing messages. Each line contains an encoded envelope.</p>
-<p>The AEA waits for new messages posted to the file <code>my_first_agent/input_file</code>, and adds a response to the file <code>my_first_agent/output_file</code>.</p>
+<p>The stub connection is already added to the AEA by default.</p>
+<p>A stub connection provides an I/O reader and writer. It uses two files for communication: one for incoming messages and the other for outgoing messages. Each line contains an encoded envelope.</p>
+<p>The AEA waits for new messages posted to the file <code>my_first_aea/input_file</code>, and adds a response to the file <code>my_first_aea/output_file</code>.</p>
 <p>The format of each line is the following:</p>
 <div class="highlight"><pre><span></span>TO,SENDER,PROTOCOL_ID,ENCODED_MESSAGE
 </pre></div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span>recipient_agent,sender_agent,default,<span class="o">{</span><span class="s2">"type"</span>: <span class="s2">"bytes"</span>, <span class="s2">"content"</span>: <span class="s2">"aGVsbG8="</span><span class="o">}</span>
+<div class="highlight"><pre><span></span>recipient_aea,sender_aea,fetchai/default:0.1.0,<span class="o">{</span><span class="s2">"type"</span>: <span class="s2">"bytes"</span>, <span class="s2">"content"</span>: <span class="s2">"aGVsbG8="</span><span class="o">}</span>
 </pre></div>
-<h2 id="option-2-fetch-the-entire-agent">Option 2 - Fetch the entire agent</h2>
+<h2 id="option-2-fetch-the-entire-aea">Option 2 - Fetch the entire AEA</h2>
 <p>The preceding three steps can be executed at once with the command
-<div class="highlight"><pre><span></span>aea fetch fetchai/my_first_agent:0.1.0
-<span class="nb">cd</span> my_first_agent
+<div class="highlight"><pre><span></span>aea fetch fetchai/my_first_aea:0.1.0
+<span class="nb">cd</span> my_first_aea
 </pre></div></p>
-<h2 id="run-the-agent">Run the agent</h2>
-<p>Run the agent with the default <code>stub</code> connection.</p>
+<h2 id="run-the-aea">Run the AEA</h2>
+<p>Run the AEA with the default <code>stub</code> connection.</p>
 <div class="highlight"><pre><span></span>aea run
 </pre></div>
 <p>or </p>
-<div class="highlight"><pre><span></span>aea run --connections stub
+<div class="highlight"><pre><span></span>aea run --connections fetchai/stub:0.1.0
 </pre></div>
 <p>You will see the echo task running in the terminal window.</p>
-<p><center><img alt="The echo call and response log" src="../assets/echo.png"/></center></p>
+<div class="highlight"><pre><span></span>info: Echo Behaviour: act method called.
+info: Echo Task: execute method called.
+info: Echo Behaviour: act method called.
+info: Echo Task: execute method called.
+info: Echo Behaviour: act method called.
+info: Echo Task: execute method called.
+</pre></div>
 <p>The framework first calls the <code>setup</code> method on the <code>Handler</code>, <code>Behaviour</code>, and <code>Task</code> code in that order; after which it repeatedly calls the <code>Behaviour</code> and <code>Task</code> methods, <code>act</code> and <code>execute</code>. This is the main agent loop in action.</p>
 <p>Let's look at the <code>Handler</code> in more depth.</p>
 <h3 id="add-a-message-to-the-input-file">Add a message to the input file</h3>
 <p>From a different terminal and same directory, we send the AEA a message wrapped in an envelope via the input file.</p>
-<div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">'my_first_agent,sender_agent,default,{"type": "bytes", "content": "aGVsbG8="}'</span> &gt;&gt; input_file
+<div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.1.0,{"type": "bytes", "content": "aGVsbG8="}'</span> &gt;&gt; input_file
 </pre></div>
 <p>You will see the <code>Echo Handler</code> dealing with the envelope and responding with the same message to the <code>output_file</code>, and also decoding the Base64 encrypted message in this case.</p>
 <div class="highlight"><pre><span></span>info: Echo Task: execute method called.
 info: Echo Behaviour: act method called.
-info: Echo Handler: <span class="nv">message</span><span class="o">=</span>Message<span class="o">(</span><span class="nv">type</span><span class="o">=</span>bytes <span class="nv">content</span><span class="o">=</span>b<span class="s1">'hello'</span><span class="o">)</span>, <span class="nv">sender</span><span class="o">=</span>sender_agent
+info: Echo Handler: <span class="nv">message</span><span class="o">=</span>Message<span class="o">(</span><span class="nv">type</span><span class="o">=</span>bytes <span class="nv">content</span><span class="o">=</span>b<span class="s1">'hello'</span><span class="o">)</span>, <span class="nv">sender</span><span class="o">=</span>sender_aea
 info: Echo Task: execute method called.
 info: Echo Behaviour: act method called.
 info: Echo Task: execute method called.
 info: Echo Behaviour: act method called.
 info: Echo Task: execute method called.
 </pre></div>
-<p><center><img alt="Stub connection input and output" src="../assets/input-output.png"/></center></p>
-<h2 id="stop-the-agent">Stop the agent</h2>
-<p>Stop the agent by pressing <code>CTRL C</code></p>
-<h2 id="delete-the-agent">Delete the agent</h2>
-<p>Delete the agent from the parent directory (<code>cd ..</code> to go to the parent directory).</p>
-<div class="highlight"><pre><span></span>aea delete my_first_agent
+<h2 id="stop-the-aea">Stop the AEA</h2>
+<p>Stop the AEA by pressing <code>CTRL C</code></p>
+<h2 id="delete-the-aea">Delete the AEA</h2>
+<p>Delete the AEA from the parent directory (<code>cd ..</code> to go to the parent directory).</p>
+<div class="highlight"><pre><span></span>aea delete my_first_aea
 </pre></div>
 <p><br/></p>
 </article>
@@ -655,7 +685,7 @@ info: Echo Task: execute method called.
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../agent-oriented-development/" rel="prev" title="Agent-oriented development">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href=".." rel="prev" title="Welcome">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -664,17 +694,17 @@ info: Echo Task: execute method called.
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Agent-oriented development
+                Welcome
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../version/" rel="next" title="Version">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../steps/" rel="next" title="Build an AEA step by step">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Version
+                Build an AEA step by step
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -697,7 +727,7 @@ info: Echo Task: execute method called.
 </div>
 </footer>
 </div>
-<script src="../assets/javascripts/application.8e03edeb.js"></script>
+<script src="../assets/javascripts/application.808e90bb.js"></script>
 <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>

@@ -1,5 +1,5 @@
 
-<!DOCTYPE doctype html>
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
@@ -19,12 +19,12 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.0.4, mkdocs-material-4.5.1" name="generator"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
 <title>Weather skills - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 <link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
 <link href="../css/my-styles.css" rel="stylesheet"/>
@@ -108,31 +108,59 @@
       Welcome
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
-      Agent-oriented development
-    </a>
-</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" id="nav-1-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-2">
+      Getting started
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-2">
+        Getting started
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../quickstart/" title="AEA quick start">
       AEA quick start
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../version/" title="Version">
-      Version
+<a class="md-nav__link" href="../steps/" title="Build an AEA step by step">
+      Build an AEA step by step
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill-guide/" title="Build a skill for an AEA">
+      Build a skill for an AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build-aea-programmatically/" title="Build an AEA programmatically">
+      Build an AEA programmatically
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs Agents">
+      AEAs vs Agents
+    </a>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-3">
       The AEA universe
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-5">
+<label class="md-nav__title" for="nav-1-3">
         The AEA universe
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
+      Agent-oriented development
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../vision/" title="Vision">
       Vision
@@ -157,13 +185,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-6">
-      Demos
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4">
+      Demo guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-6">
-        Demos
+<label class="md-nav__title" for="nav-1-4">
+        Demo guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -380,12 +408,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" id="nav-1-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-7">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5">
       Architecture
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-7">
+<label class="md-nav__title" for="nav-1-5">
         Architecture
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -413,28 +441,23 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8">
-      Developer guide
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6">
+      Developer guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-8">
-        Developer guide
+<label class="md-nav__title" for="nav-1-6">
+        Developer guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../steps/" title="Step by step">
-      Step by step
+<a class="md-nav__link" href="../version/" title="Version">
+      Version
     </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../skill/" title="Skill">
       Skill
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../skill-guide/" title="Build your own skill">
-      Build your own skill
     </a>
 </li>
 <li class="md-nav__item">
@@ -463,12 +486,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-9" id="nav-1-8-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6-8" id="nav-1-6-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6-8">
       CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-9">
+<label class="md-nav__title" for="nav-1-6-8">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -487,12 +510,17 @@
       GUI
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wealth/" title="Generating wealth">
+      Generating wealth
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../hacking-an-agent/" title="Build an AEA using code API">
-      Build an AEA using code API
+<a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
+      Build an AEA on a Raspberry Pi
     </a>
 </li>
 <li class="md-nav__item">
@@ -717,7 +745,7 @@ aea add skill fetchai/weather_station:0.1.0
 aea install
 </pre></div>
 <h3 id="run-the-weather-station-aea">Run the weather station AEA</h3>
-<div class="highlight"><pre><span></span>aea run --connections oef
+<div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
 </pre></div>
 <h3 id="create-the-weather-client-aea">Create the weather client AEA</h3>
 <p>In a new terminal window, return to the root directory and create the weather client AEA.
@@ -730,12 +758,12 @@ aea add skill fetchai/weather_client:0.1.0
 aea install
 </pre></div>
 <h3 id="run-the-weather-client-aea">Run the weather client AEA</h3>
-<div class="highlight"><pre><span></span>aea run --connections oef
+<div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
 </pre></div>
 <h3 id="observe-the-logs-of-both-aeas">Observe the logs of both AEAs</h3>
 <p><center><img alt="Weather station logs" src="../assets/weather-station-logs.png"/></center></p>
 <p><center><img alt="Weather client logs" src="../assets/weather-client-logs.png"/></center></p>
-<p>To stop an agent use <code>CTRL + C</code>.</p>
+<p>To stop an AEA use <code>CTRL + C</code>.</p>
 <h3 id="delete-the-aeas">Delete the AEAs</h3>
 <p>When you're done, go up a level and delete the AEAs.</p>
 <div class="highlight"><pre><span></span><span class="nb">cd</span> ..
@@ -743,7 +771,7 @@ aea delete my_weather_station
 aea delete my_weather_client
 </pre></div>
 <h2 id="communication">Communication</h2>
-<p>This diagram shows the communication between the various entities as data is successfully sold by the car park agent to the client. </p>
+<p>This diagram shows the communication between the various entities as data is successfully sold by the car park AEA to the client. </p>
 <div class="mermaid">
     sequenceDiagram
         participant Search
@@ -797,25 +825,22 @@ aea add-key fetchai fet_private_key.txt
 <code>my_weather_client/aea-config.yaml</code>, replace <code>ledger_apis: {}</code> with the following.</p>
 <div class="highlight"><pre><span></span><span class="nt">ledger_apis</span><span class="p">:</span>
   <span class="nt">fetchai</span><span class="p">:</span>
-    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">alpha.fetch-ai.com</span>
-    <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+    <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
 </pre></div>
 <h3 id="fund-the-weather-client-aea">Fund the weather client AEA</h3>
 <p>Create some wealth for your weather client on the Fetch.ai <code>testnet</code>. (It takes a while).
-<div class="highlight"><pre><span></span><span class="nb">cd</span> ..
-python scripts/fetchai_wealth_generation.py --private-key my_weather_client/fet_private_key.txt --amount <span class="m">10000000</span> --addr alpha.fetch-ai.com --port <span class="m">80</span>
-<span class="nb">cd</span> my_weather_client
+<div class="highlight"><pre><span></span>aea generate-wealth fetchai
 </pre></div></p>
 <h3 id="update-the-skill-configs">Update the skill configs</h3>
 <p>Tell the weather client skill of the weather client that we want to settle the transaction on the ledger:
-<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> skills.weather_client.shared_classes.strategy.args.is_ledger_tx True
+<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.shared_classes.strategy.args.is_ledger_tx True --type bool
 </pre></div></p>
 <p>Similarly, for the weather station skill of the weather station:
-<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> skills.weather_station.shared_classes.strategy.args.is_ledger_tx True
+<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.weather_station.shared_classes.strategy.args.is_ledger_tx True --type bool
 </pre></div></p>
 <h3 id="run-the-aeas">Run the AEAs</h3>
 <p>Run both AEAs from their respective terminals.
-<div class="highlight"><pre><span></span>aea run --connections oef
+<div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
 </pre></div></p>
 <p>You will see that the AEAs negotiate and then transact using the Fetch.ai <code>testnet</code>.</p>
 <h3 id="delete-the-aeas_1">Delete the AEAs</h3>
@@ -861,9 +886,9 @@ ledger_id: <span class="s1">'ethereum'</span>
 is_ledger_tx: True
 </pre></div>
 An other way to update the skill config is via the <code>aea config get/set</code> command.
-<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> skills.weather_station.shared_classes.strategy.args.currency_id ETH
-aea config <span class="nb">set</span> skills.weather_station.shared_classes.strategy.args.ledger_id ethereum
-aea config <span class="nb">set</span> skills.weather_station.shared_classes.strategy.args.is_ledger_tx True
+<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.weather_station.shared_classes.strategy.args.currency_id ETH
+aea config <span class="nb">set</span> vendor.fetchai.skills.weather_station.shared_classes.strategy.args.ledger_id ethereum
+aea config <span class="nb">set</span> vendor.fetchai.skills.weather_station.shared_classes.strategy.args.is_ledger_tx True --type bool
 </pre></div></p>
 <p>In the weather client skill config (<code>my_weather_client/skills/weather_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.
 <div class="highlight"><pre><span></span>max_buyer_tx_fee: <span class="m">20000</span>
@@ -872,17 +897,22 @@ ledger_id: <span class="s1">'ethereum'</span>
 is_ledger_tx: True
 </pre></div>
 An other way to update the skill config is via the <code>aea config get/set</code> command.
-<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> skills.weather_client.shared_classes.strategy.args.max_buyer_tx_fee <span class="m">10000</span>
-aea config <span class="nb">set</span> skills.weather_client.shared_classes.strategy.args.currency_id ETH
-aea config <span class="nb">set</span> skills.weather_client.shared_classes.strategy.args.ledger_id ethereum
-aea config <span class="nb">set</span> skills.weather_client.shared_classes.strategy.args.is_ledger_tx True
+<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.shared_classes.strategy.args.max_buyer_tx_fee <span class="m">10000</span> --type int
+aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.shared_classes.strategy.args.currency_id ETH
+aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.shared_classes.strategy.args.ledger_id ethereum
+aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.shared_classes.strategy.args.is_ledger_tx True --type bool
 </pre></div></p>
 <h3 id="fund-the-weather-client-aea_1">Fund the weather client AEA</h3>
 <p>Create some wealth for your weather client on the Ethereum Ropsten test net.</p>
 <p>Go to the <a href="https://faucet.metamask.io/" target="_blank">MetaMask Faucet</a> and request some test ETH for the account your weather client AEA is using (you need to first load your AEAs private key into MetaMask). Your private key is at <code>my_weather_client/eth_private_key.txt</code>.</p>
 <h3 id="run-the-aeas_1">Run the AEAs</h3>
+<p>You can change the end point's address and port by modifying the connection's yaml file (my_weather_station/connection/oef/connection.yaml)</p>
+<p>Under config locate :</p>
+<p><div class="highlight"><pre><span></span>addr: <span class="si">${</span><span class="nv">OEF_ADDR</span><span class="p">: 127.0.0.1</span><span class="si">}</span>
+</pre></div>
+ and replace it with your ip (The ip of the machine that runs the oef image.)</p>
 <p>Run both AEAs, from their respective terminals.
-<div class="highlight"><pre><span></span>aea run --connections oef
+<div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
 </pre></div>
 You will see that the AEAs negotiate and then transact using the Ethereum <code>testnet</code>.</p>
 <h3 id="delete-the-aeas_2">Delete the AEAs</h3>
@@ -892,7 +922,7 @@ aea delete my_weather_station
 aea delete my_weather_client
 </pre></div>
 <h2 id="communication_1">Communication</h2>
-<p>This diagram shows the communication between the various entities as data is successfully sold by the weather station agent to the client. </p>
+<p>This diagram shows the communication between the various entities as data is successfully sold by the weather station AEA to the client. </p>
 <div class="mermaid">
     sequenceDiagram
         participant Search
@@ -914,6 +944,7 @@ aea delete my_weather_client
         Weather_AEA-&gt;&gt;Client_AEA: match_accept
         Client_AEA-&gt;&gt;Blockchain: transfer_funds
         Client_AEA-&gt;&gt;Weather_AEA: send_transaction_hash
+        Weather_AEA-&gt;&gt;Blockchain: check_transaction_status
         Weather_AEA-&gt;&gt;Client_AEA: send_data
 
         deactivate Client_AEA
@@ -971,7 +1002,7 @@ aea delete my_weather_client
 </div>
 </footer>
 </div>
-<script src="../assets/javascripts/application.8e03edeb.js"></script>
+<script src="../assets/javascripts/application.808e90bb.js"></script>
 <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>

@@ -1,5 +1,5 @@
 
-<!DOCTYPE doctype html>
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
@@ -19,12 +19,12 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.0.4, mkdocs-material-4.5.1" name="generator"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
 <title>Core components - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 <link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
 <link href="../css/my-styles.css" rel="stylesheet"/>
@@ -108,31 +108,59 @@
       Welcome
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
-      Agent-oriented development
-    </a>
-</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" id="nav-1-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-2">
+      Getting started
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-2">
+        Getting started
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../quickstart/" title="AEA quick start">
       AEA quick start
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../version/" title="Version">
-      Version
+<a class="md-nav__link" href="../steps/" title="Build an AEA step by step">
+      Build an AEA step by step
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill-guide/" title="Build a skill for an AEA">
+      Build a skill for an AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build-aea-programmatically/" title="Build an AEA programmatically">
+      Build an AEA programmatically
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs Agents">
+      AEAs vs Agents
+    </a>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-3">
       The AEA universe
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-5">
+<label class="md-nav__title" for="nav-1-3">
         The AEA universe
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
+      Agent-oriented development
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../vision/" title="Vision">
       Vision
@@ -157,13 +185,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-6">
-      Demos
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4">
+      Demo guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-6">
-        Demos
+<label class="md-nav__title" for="nav-1-4">
+        Demo guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -205,12 +233,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" id="nav-1-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-7">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5">
       Architecture
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-7">
+<label class="md-nav__title" for="nav-1-5">
         Architecture
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -319,28 +347,23 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8">
-      Developer guide
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6">
+      Developer guides
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-8">
-        Developer guide
+<label class="md-nav__title" for="nav-1-6">
+        Developer guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../steps/" title="Step by step">
-      Step by step
+<a class="md-nav__link" href="../version/" title="Version">
+      Version
     </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../skill/" title="Skill">
       Skill
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../skill-guide/" title="Build your own skill">
-      Build your own skill
     </a>
 </li>
 <li class="md-nav__item">
@@ -369,12 +392,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-9" id="nav-1-8-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6-8" id="nav-1-6-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-6-8">
       CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-9">
+<label class="md-nav__title" for="nav-1-6-8">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -393,12 +416,17 @@
       GUI
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wealth/" title="Generating wealth">
+      Generating wealth
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../hacking-an-agent/" title="Build an AEA using code API">
-      Build an AEA using code API
+<a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
+      Build an AEA on a Raspberry Pi
     </a>
 </li>
 <li class="md-nav__item">
@@ -507,15 +535,15 @@
 <p>The <code>Multiplexer</code> is responsible for maintaining potentially multiple connections.</p>
 <h3 id="connection">Connection</h3>
 <p>Connections wrap an external SDK or API and manage messaging. As such, they allow the agent to connect to an external service with an exposed Python SDK/API.</p>
-<p>The module <code>connections/base.py</code> contains the abstract class which define a <code>Connection</code>. A <code>Connection</code> acts as a bridge to the SDK or API to be wrapped, and is responsible for translating between the framework specific <code>Envelope</code> with its contained <code>Message</code> and the external service.</p>
-<p>The framework provides one default connections.</p>
+<p>The module <code>connections/base.py</code> contains the abstract class which defines a <code>Connection</code>. A <code>Connection</code> acts as a bridge to the SDK or API to be wrapped, and is, where necessary, responsible for translating between the framework specific <code>Envelope</code> with its contained <code>Message</code> and the external service.</p>
+<p>The framework provides one default connection:</p>
 <ul>
 <li><code>stub</code>: implements an I/O reader and writer to send messages to the agent from a local file.</li>
 </ul>
 <h3 id="inbox-and-outbox">InBox and OutBox</h3>
 <p>The <code>InBox</code> and <code>OutBox</code> are, respectively, queues for incoming and outgoing <code>Envelopes</code>. They are needed to separate the thread which runs the <code>Multiplexer</code> from the thread which runs the main agent loop.</p>
 <h3 id="envelope">Envelope</h3>
-<p>An <code>Envelope</code> is the core object with which agents communicate. It travels from <code>OutBox</code> to another agent. <code>Envelope</code> objects sent from other agents arrive in the <code>InBox</code> via a connection. An <code>Envelope</code> is a vehicle for messages with five attribute parameters:</p>
+<p>An <code>Envelope</code> is the core object with which agents communicate. It travels from <code>OutBox</code> to another agent or gets translated in the <code>Connection</code> to an external service or protocol. <code>Envelope</code> objects sent from other agents arrive in the <code>InBox</code> via a <code>Connection</code>. An <code>Envelope</code> is a vehicle for messages with five attribute parameters:</p>
 <ul>
 <li>
 <p><code>to</code>: defines the destination address.</p>
@@ -544,42 +572,46 @@
 <p>Additional protocols can be added as packages, including:</p>
 <ul>
 <li><code>oef</code>: this protocol provides the AEA protocol implementation for communication with the OEF including an <code>OEFMessage</code> class for hooking up to OEF services and search agents. Utility classes are available in the <code>models.py</code> module which provides OEF specific requirements, such as classes, needed to perform querying on the OEF, such as <code>Description</code>, <code>Query</code>, and <code>Constraint</code>, to name a few.</li>
-<li><code>fipa</code>: this protocol provides classes and functions necessary for communication between AEAs via the <a href="http://www.fipa.org/repository/aclspecs.html">FIPA</a> Agent Communication Language. For example, the <code>FIPAMessage</code> class provides negotiation terms such as <code>cfp</code>, <code>propose</code>, <code>decline</code>, <code>accept</code> and <code>match_accept</code>.</li>
+<li><code>fipa</code>: this protocol provides classes and functions necessary for communication between AEAs via a variant of the <a href="http://www.fipa.org/repository/aclspecs.html">FIPA</a> Agent Communication Language. For example, the <code>FIPAMessage</code> class provides negotiation terms such as <code>cfp</code>, <code>propose</code>, <code>decline</code>, <code>accept</code> and <code>match_accept</code>.</li>
 </ul>
 <h3 id="skill">Skill</h3>
-<p>Skills are a result of the framework's extensibility. They are self-contained capabilities that agents can dynamically take on board, 
+<p>Skills are a result of the framework's extensibility. They are self-contained capabilities that AEAs can dynamically take on board, 
 in order to expand their effectiveness in different situations. 
-A skill can be given permission to read the internal state of the the agent, and suggest action(s) to the agent according to its specific logic. 
-As such, more than one skill could exist per protocol, competing with each other in suggesting to the agent the best course of actions to take. </p>
-<p>For instance, an agent who is trading goods, could subscribe to more than one skill, where each skill corresponds to a different trading strategy. 
-The skills could then read the internal state of the agent, and independently suggest profitable transactions. </p>
+A skill can be given permission to read the internal state of the the AEA, and suggest action(s) to the AEA according to its specific logic. 
+As such, more than one skill could exist per protocol, competing with each other in suggesting to the AEA the best course of actions to take. </p>
+<p>For instance, an AEA who is trading goods, could subscribe to more than one skill, where each skill corresponds to a different trading strategy. 
+The skills could then read the internal state of the AEA, and independently suggest profitable transactions. </p>
 <p>A skill encapsulates implementations of the abstract base classes <code>Handler</code>, <code>Behaviour</code>, and <code>Task</code>:</p>
 <ul>
-<li><code>Handler</code>: each skill has none, one or more <code>Handler</code> objects, each responsible for the registered messaging protocol. Handlers implement agents' reactive behaviour. If the agent understands the protocol referenced in a received <code>Envelope</code>, the <code>Handler</code> reacts appropriately to the corresponding message. Each <code>Handler</code> is responsible for only one protocol. A <code>Handler</code> is also capable of dealing with internal messages.</li>
-<li><code>Behaviour</code>: none, one or more <code>Behaviours</code> encapsulate actions that cause interactions with other agents initiated by the agent. Behaviours implement agents' proactiveness.</li>
-<li><code>Task</code>: none, one or more <code>Tasks</code> encapsulate background work internal to the agent.</li>
+<li><code>Handler</code>: each skill has none, one or more <code>Handler</code> objects, each responsible for the registered messaging protocol. Handlers implement AEAs' reactive behaviour. If the AEA understands the protocol referenced in a received <code>Envelope</code>, the <code>Handler</code> reacts appropriately to the corresponding message. Each <code>Handler</code> is responsible for only one protocol. A <code>Handler</code> is also capable of dealing with internal messages.</li>
+<li><code>Behaviour</code>: none, one or more <code>Behaviours</code> encapsulate actions that cause interactions with other agents initiated by the AEA. Behaviours implement AEAs' pro-activeness.</li>
+<li><code>Task</code>: none, one or more <code>Tasks</code> encapsulate background work internal to the AEA.</li>
 </ul>
-<p>Skills further allow for <code>SharedClasses</code>.</p>
+<p>Skills further allow for <code>SharedClasses</code>. Classes sub-classed from the <code>SharedClass</code> can be accessed via the <code>SkillContext</code>.</p>
 <h2 id="agent">Agent</h2>
 <h3 id="main-loop">Main loop</h3>
 <p>The <code>_run_main_loop()</code> function in the <code>Agent</code> class performs a series of activities while the <code>Agent</code> state is not stopped.</p>
 <ul>
-<li><code>act()</code>: this function calls the <code>act()</code> function of all registered Behaviours.</li>
+<li><code>act()</code>: this function calls the <code>act()</code> function of all active registered Behaviours.</li>
 <li><code>react()</code>: this function grabs all Envelopes waiting in the <code>InBox</code> queue and calls the <code>handle()</code> function for the Handlers currently registered against the protocol of the <code>Envelope</code>.</li>
 <li><code>update()</code>: this function loops through all the Tasks and executes them.</li>
 </ul>
 <h2 id="decision-maker">Decision maker</h2>
 <p>The <code>DecisionMaker</code> component manages global agent state updates proposed by the skills and processes the resulting ledger transactions.</p>
-<p>It is responsible for the agent's crypto-economic security and goal management, and it contains the preference and ownership representation of the agent.</p>
+<p>It is responsible for the AEA's crypto-economic security and goal management, and it contains the preference and ownership representation of the AEA.</p>
 <h3 id="transactionmessage-and-stateupdatemessage">TransactionMessage and StateUpdateMessage</h3>
 <p>Skills communicate with the decision maker via <code>InternalMessages</code>. There exist two types of these: <code>TransactionMessage</code> and <code>StateUpdateMessage</code>.</p>
 <p>The <code>StateUpdateMessage</code> is used to initialize the decision maker with preferences and ownership states. It can also be used to update the ownership states in the decision maker if the settlement of transaction takes place off chain.</p>
 <p>The <code>TransactionMessage</code> is used by a skill to propose a transaction to the decision maker. The performative <code>TransactionMessage.Performative.PROPOSE_FOR_SETTLEMENT</code> is used by a skill to propose a transaction which the decision maker is supposed to settle on chain. The performative <code>TransactionMessage.Performative.PROPOSE_FOR_SIGNING</code> is used by the skill to propose a transaction which the decision maker is supposed to sign and which will be settled later.</p>
 <p>The decision maker processes messages and can accept or reject them.</p>
-<p>For examples how to use these concepts have a look at the <code>tac_</code> skills. These functionalities are experimental and subject to change.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For examples how to use these concepts have a look at the `tac_` skills. These functionalities are experimental and subject to change.
+</p>
+</div>
 <h2 id="filter">Filter</h2>
 <p><code>Filter</code> routes messages to the correct <code>Handler</code> via <code>Resource</code>. It also holds a reference to the currently active <code>Behaviour</code> and <code>Task</code> instances.</p>
-<p>By default for every skill, each <code>Handler</code>, <code>Behaviour</code> and <code>Task</code> is registered in the <code>Filter</code>. However, note that skills can de-register and re-register themselves.</p>
+<p>By default for every skill, each <code>Handler</code>, <code>Behaviour</code> and <code>Task</code> is registered in the <code>Filter</code>. However, note that skills can de-active and re-activate themselves.</p>
 <p>The <code>Filter</code> also routes internal messages from the <code>DecisionMaker</code> to the respective <code>Handler</code> in the skills.</p>
 <h2 id="resource">Resource</h2>
 <p>The <code>Resource</code> component is made up of <code>Registries</code> for each type of resource (e.g. <code>Protocol</code>, <code>Handler</code>, <code>Behaviour</code>, <code>Task</code>). </p>
@@ -641,7 +673,7 @@ The skills could then read the internal state of the agent, and independently su
 </div>
 </footer>
 </div>
-<script src="../assets/javascripts/application.8e03edeb.js"></script>
+<script src="../assets/javascripts/application.808e90bb.js"></script>
 <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>

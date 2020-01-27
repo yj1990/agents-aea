@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/oef-ledger/" rel="canonical"/>
+<link href="https://docs.fetch.ai/wealth/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
-<title>Relation to OEF and Ledger - Fetch.AI Developer Documentation</title>
+<title>Generating wealth - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,6 +37,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#using-a-faucet-website" tabindex="1">
+        Skip to content
+      </a>
 <header class="md-header" data-md-component="header">
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
@@ -55,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                Relation to OEF and Ledger
+                Generating wealth
               
             </span>
 </div>
@@ -143,8 +146,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-3">
       The AEA universe
     </label>
@@ -168,9 +171,8 @@
       Application areas
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./" title="Relation to OEF and Ledger">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../oef-ledger/" title="Relation to OEF and Ledger">
       Relation to OEF and Ledger
     </a>
 </li>
@@ -263,8 +265,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" id="nav-1-6" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-6">
       Developer guides
     </label>
@@ -308,8 +310,8 @@
       Logging
     </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6-8" id="nav-1-6-8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6-8" id="nav-1-6-8" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-6-8">
       CLI
     </label>
@@ -333,10 +335,29 @@
       GUI
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../wealth/" title="Generating wealth">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Generating wealth
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Generating wealth">
       Generating wealth
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-a-faucet-website">
+    Using a faucet website
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-cli">
+    Using the cli
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -362,11 +383,86 @@
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-a-faucet-website">
+    Using a faucet website
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-cli">
+    Using the cli
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>Relation to OEF and Ledger</h1>
-<p>In the AEA framework universe, agents run alongside OEF search and discovery nodes which are running against the Fetch.ai ledger and external ledger systems.</p>
-<p><center><img alt="The AEA, OEF, and Ledger systems" src="../assets/oef-ledger.png"/></center></p>
+<h1>Generating wealth</h1>
+<p>To fund an AEA for testing on a test-net you need to request some test tokens from a faucet.</p>
+<p>Add a private key to the agent:
+<div class="highlight"><pre><span></span>aea generate-key fetchai
+aea add-key fetchai fet_private_key.txt
+</pre></div>
+or
+<div class="highlight"><pre><span></span>aea generate-key ethereum
+aea add-key ethereum eth_private_key.txt
+</pre></div></p>
+<p>Ensure the ledger apis are set in the aea config:
+<div class="highlight"><pre><span></span>ledger_apis:
+  fetchai:
+    network: testnet
+</pre></div>
+for fetchai or
+<div class="highlight"><pre><span></span>ledger_apis:
+  fetchai:
+    host: testnet.fetch-ai.com
+    port: <span class="m">80</span>
+</pre></div>
+or 
+<div class="highlight"><pre><span></span>ledger_apis:
+  ethereum:
+    address: https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe
+    chain_id: <span class="m">3</span>
+</pre></div>
+or both
+<div class="highlight"><pre><span></span>ledger_apis:
+  ethereum:
+    address: https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe
+    chain_id: <span class="m">3</span>
+  fetchai:
+    network: testnet
+</pre></div></p>
+<h2 id="using-a-faucet-website">Using a faucet website</h2>
+<p>First, print the address:
+<div class="highlight"><pre><span></span>aea get-address fetchai
+</pre></div>
+or 
+<div class="highlight"><pre><span></span>aea get-address ethereum
+</pre></div></p>
+<p>This will print the address to the console. Copy the address into the clipboard and request test tokens from the faucet <a href="https://explore-testnet.fetch.ai/tokentap" target="_blank">here for Fetch.ai</a> or <a href="https://faucet.metamask.io/" target="_blank">here for Ethereum</a>. It will take a while for the tokens to become available.</p>
+<p>Second, after some time, check the wealth associated with the address:
+<div class="highlight"><pre><span></span>aea get-wealth fetchai
+</pre></div>
+or
+<div class="highlight"><pre><span></span>aea get-wealth ethereum
+</pre></div></p>
+<h2 id="using-the-cli">Using the cli</h2>
+<p>Simply generate wealth via the cli:
+<div class="highlight"><pre><span></span>aea generate-wealth fetchai
+</pre></div>
+or 
+<div class="highlight"><pre><span></span>aea generate-wealth ethereum
+</pre></div></p>
+<p><br/></p>
 </article>
 </div>
 </div>
@@ -374,7 +470,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../app-areas/" rel="prev" title="Application areas">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../cli-gui/" rel="prev" title="GUI">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -383,17 +479,17 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Application areas
+                GUI
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../trust/" rel="next" title="Trust issues">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../raspberry-set-up/" rel="next" title="Build an AEA on a Raspberry Pi">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Trust issues
+                Build an AEA on a Raspberry Pi
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
