@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/weather-skills/" rel="canonical"/>
+<link href="https://docs.fetch.ai/generic-skills/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
-<title>Weather skills - Fetch.AI Developer Documentation</title>
+<title>Generic skills - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -58,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                Weather skills
+                Generic skills
               
             </span>
 </div>
@@ -189,8 +189,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-4">
       Demo guides
     </label>
@@ -229,13 +229,36 @@
       TAC external app
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../weather-skills/" title="Weather skills">
+      Weather skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../thermometer-skills/" title="Thermometer skills">
+      Thermometer skills
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5">
+      Use cases
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-5">
+        Use cases
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-        Weather skills
+        Generic skills
       </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Weather skills">
-      Weather skills
+<a class="md-nav__link md-nav__link--active" href="./" title="Generic skills">
+      Generic skills
     </a>
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">Table of contents</label>
@@ -269,73 +292,19 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#demo-instructions-1-no-ledger-payment">
-    Demo instructions 1: no ledger payment
+<a class="md-nav__link" href="#demo-ledger-payment">
+    Demo: Ledger payment
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-weather-station-aea">
-    Create the weather station AEA
+<a class="md-nav__link" href="#create-the-seller-aea-ledger-version">
+    Create the seller AEA (ledger version)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#add-the-oef-connection-and-the-weather-station-skill">
-    Add the oef connection and the weather station skill
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#run-the-weather-station-aea">
-    Run the weather station AEA
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-weather-client-aea">
-    Create the weather client AEA
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#add-the-oef-connection-and-the-weather-client-skill">
-    Add the oef connection and the weather client skill
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#run-the-weather-client-aea">
-    Run the weather client AEA
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#observe-the-logs-of-both-aeas">
-    Observe the logs of both AEAs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#delete-the-aeas">
-    Delete the AEAs
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#communication">
-    Communication
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#demo-instructions-2-ledger-payment">
-    Demo instructions 2: Ledger payment
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-weather-station-ledger-version">
-    Create the weather station (ledger version)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-weather-client-ledger-version">
-    Create the weather client (ledger version)
+<a class="md-nav__link" href="#create-the-buyer-client-ledger-version">
+    Create the buyer client (ledger version)
   </a>
 </li>
 <li class="md-nav__item">
@@ -344,14 +313,17 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#fund-the-weather-client-aea">
-    Fund the weather client AEA
+<a class="md-nav__link" href="#update-the-seller-aea-skill-configs">
+    Update the seller AEA skill configs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#update-the-skill-configs">
-    Update the skill configs
+<a class="md-nav__link" href="#fund-the-buyer-aea">
+    Fund the buyer AEA
   </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#run-the-aeas">
@@ -359,43 +331,17 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#delete-the-aeas_1">
+<a class="md-nav__link" href="#delete-the-aeas">
     Delete the AEAs
   </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#communication_1">
+<a class="md-nav__link" href="#communication">
     Communication
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../thermometer-skills/" title="Thermometer skills">
-      Thermometer skills
-    </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5">
-      Use cases
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-5">
-        Use cases
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
-      Generic skills
-    </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../orm-integration-to-generic/" title="ORM integration">
@@ -595,73 +541,19 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#demo-instructions-1-no-ledger-payment">
-    Demo instructions 1: no ledger payment
+<a class="md-nav__link" href="#demo-ledger-payment">
+    Demo: Ledger payment
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-weather-station-aea">
-    Create the weather station AEA
+<a class="md-nav__link" href="#create-the-seller-aea-ledger-version">
+    Create the seller AEA (ledger version)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#add-the-oef-connection-and-the-weather-station-skill">
-    Add the oef connection and the weather station skill
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#run-the-weather-station-aea">
-    Run the weather station AEA
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-weather-client-aea">
-    Create the weather client AEA
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#add-the-oef-connection-and-the-weather-client-skill">
-    Add the oef connection and the weather client skill
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#run-the-weather-client-aea">
-    Run the weather client AEA
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#observe-the-logs-of-both-aeas">
-    Observe the logs of both AEAs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#delete-the-aeas">
-    Delete the AEAs
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#communication">
-    Communication
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#demo-instructions-2-ledger-payment">
-    Demo instructions 2: Ledger payment
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-weather-station-ledger-version">
-    Create the weather station (ledger version)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-weather-client-ledger-version">
-    Create the weather client (ledger version)
+<a class="md-nav__link" href="#create-the-buyer-client-ledger-version">
+    Create the buyer client (ledger version)
   </a>
 </li>
 <li class="md-nav__item">
@@ -670,14 +562,17 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#fund-the-weather-client-aea">
-    Fund the weather client AEA
+<a class="md-nav__link" href="#update-the-seller-aea-skill-configs">
+    Update the seller AEA skill configs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#update-the-skill-configs">
-    Update the skill configs
+<a class="md-nav__link" href="#fund-the-buyer-aea">
+    Fund the buyer AEA
   </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#run-the-aeas">
@@ -685,15 +580,12 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#delete-the-aeas_1">
+<a class="md-nav__link" href="#delete-the-aeas">
     Delete the AEAs
   </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#communication_1">
+<a class="md-nav__link" href="#communication">
     Communication
   </a>
 </li>
@@ -704,111 +596,47 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>Weather skills</h1>
-<p>The AEA weather skills demonstrate an interaction between two AEAs.</p>
+<h1>Generic skills</h1>
+<p>The AEA generic buyer and seller skills demonstrate an interaction between two AEAs.</p>
 <ul>
-<li>The provider of weather data (the weather station).</li>
-<li>The buyer of weather data (the weather client).</li>
+<li>The provider of a service in the form of data for sale.</li>
+<li>The buyer of a service.</li>
 </ul>
 <h2 id="preparation-instructions">Preparation instructions</h2>
 <h3 id="dependencies">Dependencies</h3>
 <p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
 <h2 id="discussion">Discussion</h2>
-<p>The scope of the specific demo is to demonstrate how to create a simple AEA with the usage of the AEA framework and a database. The weather_station AEA
-will read data from the database, that is populated with readings from a weather station, based on the requested dates and will deliver the data to the client upon payment.
-This demo does not utilize a smart contract. As a result, we interact with a ledger only to complete a transaction.</p>
-<p>You can use this AEA as an example of how to read data from a database and advertise these to possible clients.  </p>
+<p>The scope of the specific demo is to demonstrate how to create an easy configurable AEA. The seller AEA
+will sell the service specified in the <code>skill.yaml</code> file and deliver it upon payment by the buyer. Adding a database or hardware sensor for loading the data is out of the scope of this demo.
+As a result, the AEA can provide data that are listed in the <code>skill.yaml</code> file.
+This demo does not utilize a smart contract. We interact with a ledger only to complete a transaction.</p>
+<p>Moreover, this example provides a way to customise the skill code and connect a database or sensor. 
+You can modify the <code>has_data_source</code> variable in <code>skill.yaml</code> file of the generic_seller skill to True. Then you have to implement the method <code>collect_from_data_source(self)</code> inside the strategy.py file. </p>
 <h3 id="launch-an-oef-node">Launch an OEF node</h3>
 <p>In a separate terminal, launch a local OEF node (for search and discovery).
 <div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
 </pre></div></p>
 <p>Keep it running for all the following demos.</p>
-<h2 id="demo-instructions-1-no-ledger-payment">Demo instructions 1: no ledger payment</h2>
-<p>The AEAs negotiate and then transfer the data. No payment takes place. This demo serves as a demonstration of the negotiation steps.</p>
-<h3 id="create-the-weather-station-aea">Create the weather station AEA</h3>
-<p>In the root directory, create the weather station AEA.
-<div class="highlight"><pre><span></span>aea create my_weather_station
-</pre></div></p>
-<h3 id="add-the-oef-connection-and-the-weather-station-skill">Add the oef connection and the weather station skill</h3>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> my_weather_station
-aea add connection fetchai/oef:0.1.0
-aea add skill fetchai/weather_station:0.1.0
-aea install
-</pre></div>
-<h3 id="run-the-weather-station-aea">Run the weather station AEA</h3>
-<div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
-</pre></div>
-<h3 id="create-the-weather-client-aea">Create the weather client AEA</h3>
-<p>In a new terminal window, return to the root directory and create the weather client AEA.
-<div class="highlight"><pre><span></span>aea create my_weather_client
-</pre></div></p>
-<h3 id="add-the-oef-connection-and-the-weather-client-skill">Add the oef connection and the weather client skill</h3>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> my_weather_client
-aea add connection fetchai/oef:0.1.0
-aea add skill fetchai/weather_client:0.1.0
-aea install
-</pre></div>
-<h3 id="run-the-weather-client-aea">Run the weather client AEA</h3>
-<div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
-</pre></div>
-<h3 id="observe-the-logs-of-both-aeas">Observe the logs of both AEAs</h3>
-<p><center><img alt="Weather station logs" src="../assets/weather-station-logs.png"/></center></p>
-<p><center><img alt="Weather client logs" src="../assets/weather-client-logs.png"/></center></p>
-<p>To stop an AEA use <code>CTRL + C</code>.</p>
-<h3 id="delete-the-aeas">Delete the AEAs</h3>
-<p>When you're done, go up a level and delete the AEAs.</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> ..
-aea delete my_weather_station
-aea delete my_weather_client
-</pre></div>
-<h2 id="communication">Communication</h2>
-<p>This diagram shows the communication between the various entities as data is successfully sold by the car park AEA to the client. </p>
-<div class="mermaid">
-    sequenceDiagram
-        participant Search
-        participant Client_AEA
-        participant Weather_AEA
-
-        activate Client_AEA
-        activate Search
-        activate Weather_AEA
-
-        Weather_AEA-&gt;&gt;Search: register_service
-        Client_AEA-&gt;&gt;Search: search
-        Search--&gt;&gt;Client_AEA: list_of_agents
-        Client_AEA-&gt;&gt;Weather_AEA: call_for_proposal
-        Weather_AEA-&gt;&gt;Client_AEA: propose
-        Client_AEA-&gt;&gt;Weather_AEA: accept
-        Weather_AEA-&gt;&gt;Client_AEA: match_accept
-        Client_AEA-&gt;&gt;Weather_AEA: Inform funds transfered 
-        Weather_AEA-&gt;&gt;Client_AEA: send_data
-
-        deactivate Client_AEA
-        deactivate Search
-        deactivate Weather_AEA
-
-</div>
-<p>Note that the client informs the weather station that funds have been transfereed, but in this example no funds actually get transfered.</p>
-<h2 id="demo-instructions-2-ledger-payment">Demo instructions 2: Ledger payment</h2>
-<p>A demo to run the same scenario but with a true ledger transaction on Fetch.ai <code>testnet</code> or Ethereum <code>ropsten</code> network. This demo assumes the buyer
+<h2 id="demo-ledger-payment">Demo: Ledger payment</h2>
+<p>A demo to run a scenario with a true ledger transaction on Fetch.ai <code>testnet</code> network or Ethereum <code>ropsten</code> network. This demo assumes the buyer
 trusts the seller AEA to send the data upon successful payment.</p>
-<h3 id="create-the-weather-station-ledger-version">Create the weather station (ledger version)</h3>
-<p>Create the AEA that will provide weather measurements.</p>
-<div class="highlight"><pre><span></span>aea create my_weather_station
-<span class="nb">cd</span> my_weather_station
+<h3 id="create-the-seller-aea-ledger-version">Create the seller AEA (ledger version)</h3>
+<p>Create the AEA that will provide data.</p>
+<div class="highlight"><pre><span></span>aea create my_seller_aea
+<span class="nb">cd</span> my_seller_aea
 aea add connection fetchai/oef:0.1.0
-aea add skill fetchai/weather_station:0.1.0
+aea add skill fetchai/generic_seller:0.1.0
 aea install
 </pre></div>
-<h3 id="create-the-weather-client-ledger-version">Create the weather client (ledger version)</h3>
-<p>In another terminal, create the AEA that will query the weather station.</p>
-<div class="highlight"><pre><span></span>aea create my_weather_client
-<span class="nb">cd</span> my_weather_client
+<h3 id="create-the-buyer-client-ledger-version">Create the buyer client (ledger version)</h3>
+<p>In another terminal, create the AEA that will query the seller AEA.</p>
+<div class="highlight"><pre><span></span>aea create my_buyer_aea
+<span class="nb">cd</span> my_buyer_aea
 aea add connection fetchai/oef:0.1.0
-aea add skill fetchai/weather_client:0.1.0
+aea add skill fetchai/generic_buyer:0.1.0
 aea install
 </pre></div>
-<p>Additionally, create the private key for the weather_client AEA based on the network you want to transact.</p>
+<p>Additionally, create the private key for the buyer AEA based on the network you want to transact.</p>
 <p>To generate and add a key for Fetch.ai use:
 <div class="highlight"><pre><span></span>aea generate-key fetchai
 aea add-key fetchai fet_private_key.txt
@@ -819,8 +647,8 @@ aea add-key ethereum eth_private_key.txt
 </pre></div></p>
 <h3 id="update-the-aea-configs">Update the AEA configs</h3>
 <p>Both in <code>my_seller_aea/aea-config.yaml</code> and
-<code>my_buyer_aea/aea-config.yaml</code>, replace <code>ledger_apis: {}</code> with the following based on the network you want to connect.</p>
-<p>To connect to Fetch.ai:</p>
+<code>my_buyer_aea/aea-config.yaml</code>, replace <code>ledger_apis: {}</code> with the following based on the network you want to connect</p>
+<p>To connect to Fetchai:</p>
 <div class="highlight"><pre><span></span><span class="nt">ledger_apis</span><span class="p">:</span>
   <span class="nt">fetchai</span><span class="p">:</span>
     <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
@@ -832,16 +660,8 @@ aea add-key ethereum eth_private_key.txt
     <span class="nt">chain_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
     <span class="nt">gas_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
 </pre></div></p>
-<h3 id="fund-the-weather-client-aea">Fund the weather client AEA</h3>
-<p>Create some wealth for your weather client  based on the network you want to transact with: </p>
-<p>On the Fetch.ai <code>testnet</code> network.
-<div class="highlight"><pre><span></span>aea generate-wealth fetchai
-</pre></div></p>
-<p>On the Ethereum <code>ropsten</code> . (It takes a while).
-<div class="highlight"><pre><span></span>aea generate-wealth ethereum
-</pre></div></p>
-<h3 id="update-the-skill-configs">Update the skill configs</h3>
-<p>In <code>my_weather_station/vendor/fetchai/weather_station/skill.yaml</code>, under strategy amend the <code>currency_id</code> and <code>ledger_id</code> as follows:</p>
+<h3 id="update-the-seller-aea-skill-configs">Update the seller AEA skill configs</h3>
+<p>In <code>my_seller_aea/vendor/fetchai/generi_seller/skill.yaml</code>, replace the <code>data_for_sale</code>, <code>search_schema</code>, and <code>search_data</code> with your data:
 <div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
 <span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
 <span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
@@ -849,17 +669,33 @@ aea add-key ethereum eth_private_key.txt
 <span class="p">|</span>  strategy:                        <span class="p">|</span>  strategy:                       <span class="p">|</span>
 <span class="p">|</span>     class_name: Strategy          <span class="p">|</span>     class_name: Strategy         <span class="p">|</span>
 <span class="p">|</span>    args:                          <span class="p">|</span>    args:                         <span class="p">|</span>
-<span class="p">|</span>      date_one: <span class="s2">"1/10/2019"</span>        <span class="p">|</span>      date_one: <span class="s2">"1/10/2019"</span>       <span class="p">|</span>
-<span class="p">|</span>      date_two: <span class="s2">"1/12/2019"</span>        <span class="p">|</span>      date_two: <span class="s2">"1/12/2019"</span>       <span class="p">|</span>
-<span class="p">|</span>      price_per_row: <span class="m">1</span>             <span class="p">|</span>      price_per_row: <span class="m">1</span>            <span class="p">|</span>
+<span class="p">|</span>      total_price: <span class="m">10</span>              <span class="p">|</span>      total_price: <span class="m">10</span>             <span class="p">|</span>
 <span class="p">|</span>      seller_tx_fee: <span class="m">0</span>             <span class="p">|</span>      seller_tx_fee: <span class="m">0</span>            <span class="p">|</span>
 <span class="p">|</span>      currency_id: <span class="s1">'FET'</span>           <span class="p">|</span>      currency_id: <span class="s1">'ETH'</span>          <span class="p">|</span>
 <span class="p">|</span>      ledger_id: <span class="s1">'fetchai'</span>         <span class="p">|</span>      ledger_id: <span class="s1">'ethereum'</span>       <span class="p">|</span>
 <span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
+<span class="p">|</span>      has_data_source: False       <span class="p">|</span>      has_data_source: False      <span class="p">|</span>
+<span class="p">|</span>      data_for_sale:               <span class="p">|</span>      data_for_sale:              <span class="p">|</span>
+<span class="p">|</span>        wind: <span class="m">10</span>                   <span class="p">|</span>        wind: <span class="m">10</span>                  <span class="p">|</span>
+<span class="p">|</span>        pressure: <span class="m">20</span>               <span class="p">|</span>        pressure: <span class="m">20</span>              <span class="p">|</span>
+<span class="p">|</span>        temperature: <span class="m">26</span>            <span class="p">|</span>        temperature: <span class="m">26</span>           <span class="p">|</span>
+<span class="p">|</span>      search_schema:               <span class="p">|</span>      search_schema:              <span class="p">|</span>
+<span class="p">|</span>        attribute_one:             <span class="p">|</span>        attribute_one:            <span class="p">|</span>
+<span class="p">|</span>          name: country            <span class="p">|</span>          name: country           <span class="p">|</span>
+<span class="p">|</span>          type: str                <span class="p">|</span>          type: str               <span class="p">|</span>
+<span class="p">|</span>          is_required: True        <span class="p">|</span>          is_required: True       <span class="p">|</span>
+<span class="p">|</span>        attribute_two:             <span class="p">|</span>        attribute_two:            <span class="p">|</span>
+<span class="p">|</span>          name: city               <span class="p">|</span>          name: city              <span class="p">|</span>
+<span class="p">|</span>          type: str                <span class="p">|</span>          type: str               <span class="p">|</span>
+<span class="p">|</span>          is_required: True        <span class="p">|</span>          is_required: True       <span class="p">|</span>
+<span class="p">|</span>      search_data:                 <span class="p">|</span>      search_data:                <span class="p">|</span>
+<span class="p">|</span>        country: UK                <span class="p">|</span>        country: UK               <span class="p">|</span>
+<span class="p">|</span>        city: Cambridge            <span class="p">|</span>        city: Cambridge           <span class="p">|</span>
 <span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
 </pre></div>
-<p>In the weather client skill config (<code>my_weather_client/skills/weather_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.</p>
-<p><div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
+The <code>search_schema</code> and the <code>search_data</code> are used to register the service in the OEF and make your agent discoverable. The name of each attribute must be a key in the <code>search_data</code> dictionary.</p>
+<p>In the generic buyer skill config (<code>my_buyer_aea/skills/generic_buyer/skill.yaml</code>) under strategy change the <code>currency_id</code>,<code>ledger_id</code>, and at the bottom of the file the <code>ledgers</code>.</p>
+<div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
 <span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
 <span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
 <span class="p">|</span>models:                            <span class="p">|</span>models:                           <span class="p">|</span>              
@@ -871,55 +707,68 @@ aea add-key ethereum eth_private_key.txt
 <span class="p">|</span>      currency_id: <span class="s1">'FET'</span>           <span class="p">|</span>      currency_id: <span class="s1">'ETH'</span>          <span class="p">|</span>
 <span class="p">|</span>      ledger_id: <span class="s1">'fetchai'</span>         <span class="p">|</span>      ledger_id: <span class="s1">'ethereum'</span>       <span class="p">|</span>
 <span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
+<span class="p">|</span>      search_query:                <span class="p">|</span>      search_query:               <span class="p">|</span>
+<span class="p">|</span>        search_term: country       <span class="p">|</span>        search_term: country      <span class="p">|</span>
+<span class="p">|</span>        search_value: UK           <span class="p">|</span>        search_value: UK          <span class="p">|</span>
+<span class="p">|</span>        constraint_type: <span class="s1">'=='</span>      <span class="p">|</span>        constraint_type: <span class="s1">'=='</span>     <span class="p">|</span>
 <span class="p">|</span>ledgers: <span class="o">[</span><span class="s1">'fetchai'</span><span class="o">]</span>               <span class="p">|</span>ledgers: <span class="o">[</span><span class="s1">'ethereum'</span><span class="o">]</span>             <span class="p">|</span>
 <span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
 </pre></div>
-An other way to update the skill config is via the <code>aea config get/set</code> command.
-<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.models.strategy.args.max_buyer_tx_fee <span class="m">10000</span> --type int
-aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.models.strategy.args.currency_id ETH
-aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.models.strategy.args.ledger_id ethereum
-aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.models.strategy.args.is_ledger_tx True --type bool
+<h3 id="fund-the-buyer-aea">Fund the buyer AEA</h3>
+<p>To create some wealth for your buyer AEA based on the network you want to transact with:</p>
+<p>On the Fetch.ai <code>testnet</code> network.
+<div class="highlight"><pre><span></span>aea generate-wealth fetchai
 </pre></div></p>
-<h3 id="run-the-aeas">Run the AEAs</h3>
-<p>Run both AEAs from their respective terminals.
-<div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
+<p>On the Ethereum <code>rospten</code> network.
+<div class="highlight"><pre><span></span>aea generate-wealth ethereum
 </pre></div></p>
-<p>You will see that the AEAs negotiate and then transact using the Fetch.ai <code>testnet</code>.</p>
-<h3 id="delete-the-aeas_1">Delete the AEAs</h3>
-<p>When you're done, go up a level and delete the AEAs.</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> ..
-aea delete my_weather_station
-aea delete my_weather_client
+<h2 id="run-the-aeas">Run the AEAs</h2>
+<p>You can change the end point's address and port by modifying the connection's yaml file (my_seller_aea/connection/oef/connection.yaml)</p>
+<p>Under config locate :</p>
+<p><div class="highlight"><pre><span></span>addr: <span class="si">${</span><span class="nv">OEF_ADDR</span><span class="p">: 127.0.0.1</span><span class="si">}</span>
 </pre></div>
-<h2 id="communication_1">Communication</h2>
-<p>This diagram shows the communication between the various entities as data is successfully sold by the weather station AEA to the client. </p>
+ and replace it with your ip (The ip of the machine that runs the oef image.)</p>
+<p>Run both AEAs from their respective terminals</p>
+<p><div class="highlight"><pre><span></span>aea add connection fetchai/oef:0.1.0
+aea install
+aea run --connections fetchai/oef:0.1.0
+</pre></div>
+You will see that the AEAs negotiate and then transact using the Fetch.ai testnet.</p>
+<h2 id="delete-the-aeas">Delete the AEAs</h2>
+<p>When you're done, go up a level and delete the AEAs.
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ..
+aea delete my_seller_aea
+aea delete my_buyer_aea
+</pre></div></p>
+<h2 id="communication">Communication</h2>
+<p>This diagram shows the communication between the various entities as data is successfully sold by the seller AEA to the buyer. </p>
 <div class="mermaid">
     sequenceDiagram
         participant Search
-        participant Client_AEA
-        participant Weather_AEA
+        participant Buyer_AEA
+        participant Seller_AEA
         participant Blockchain
 
-        activate Client_AEA
+        activate Buyer_AEA
         activate Search
-        activate Weather_AEA
+        activate Seller_AEA
         activate Blockchain
 
-        Weather_AEA-&gt;&gt;Search: register_service
-        Client_AEA-&gt;&gt;Search: search
+        Seller_AEA-&gt;&gt;Search: register_service
+        Buyer_AEA-&gt;&gt;Search: search
         Search--&gt;&gt;Client_AEA: list_of_agents
-        Client_AEA-&gt;&gt;Weather_AEA: call_for_proposal
-        Weather_AEA-&gt;&gt;Client_AEA: propose
-        Client_AEA-&gt;&gt;Weather_AEA: accept
-        Weather_AEA-&gt;&gt;Client_AEA: match_accept
-        Client_AEA-&gt;&gt;Blockchain: transfer_funds
-        Client_AEA-&gt;&gt;Weather_AEA: send_transaction_hash
-        Weather_AEA-&gt;&gt;Blockchain: check_transaction_status
-        Weather_AEA-&gt;&gt;Client_AEA: send_data
+        Buyer_AEA-&gt;&gt;Seller_AEA: call_for_proposal
+        Seller_AEA-&gt;&gt;Buyer_AEA: propose
+        Buyer_AEA-&gt;&gt;Seller_AEA: accept
+        Seller_AEA-&gt;&gt;Buyer_AEA: match_accept
+        Buyer_AEA-&gt;&gt;Blockchain: transfer_funds
+        Buyer_AEA-&gt;&gt;Seller_AEA: send_transaction_hash
+        Seller_AEA-&gt;&gt;Blockchain: check_transaction_status
+        Seller_AEA-&gt;&gt;Buyer_AEA: send_data
 
-        deactivate Client_AEA
+        deactivate Buyer_AEA
         deactivate Search
-        deactivate Weather_AEA
+        deactivate Seller_AEA
         deactivate Blockchain
 
 </div>
@@ -930,7 +779,7 @@ aea delete my_weather_client
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../tac/" rel="prev" title="TAC external app">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../thermometer-skills/" rel="prev" title="Thermometer skills">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -939,17 +788,17 @@ aea delete my_weather_client
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                TAC external app
+                Thermometer skills
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../thermometer-skills/" rel="next" title="Thermometer skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../orm-integration-to-generic/" rel="next" title="ORM integration">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Thermometer skills
+                ORM integration
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
