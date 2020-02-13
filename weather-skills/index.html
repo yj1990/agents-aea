@@ -285,6 +285,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs">
+    Update the AEA configs
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#run-the-weather-station-aea">
     Run the weather station AEA
   </a>
@@ -297,6 +302,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#add-the-oef-connection-and-the-weather-client-skill">
     Add the oef connection and the weather client skill
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs_1">
+    Update the AEA configs
   </a>
 </li>
 <li class="md-nav__item">
@@ -339,7 +349,7 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#update-the-aea-configs">
+<a class="md-nav__link" href="#update-the-aea-configs_2">
     Update the AEA configs
   </a>
 </li>
@@ -400,6 +410,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../orm-integration-to-generic/" title="ORM integration">
       ORM integration
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
+      Frontend intergration
     </a>
 </li>
 </ul>
@@ -552,6 +567,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../questions-and-answers/" title="Q&amp;A">
+      Q&amp;A
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -611,6 +631,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs">
+    Update the AEA configs
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#run-the-weather-station-aea">
     Run the weather station AEA
   </a>
@@ -623,6 +648,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#add-the-oef-connection-and-the-weather-client-skill">
     Add the oef connection and the weather client skill
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs_1">
+    Update the AEA configs
   </a>
 </li>
 <li class="md-nav__item">
@@ -665,7 +695,7 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#update-the-aea-configs">
+<a class="md-nav__link" href="#update-the-aea-configs_2">
     Update the AEA configs
   </a>
 </li>
@@ -735,6 +765,11 @@ aea add connection fetchai/oef:0.1.0
 aea add skill fetchai/weather_station:0.1.0
 aea install
 </pre></div>
+<h3 id="update-the-aea-configs">Update the AEA configs</h3>
+<p>In the terminal change the configuration:
+<div class="highlight"><pre><span></span>aea config set vendor.fetchai.skills.weather_station.models.strategy.args.is_ledger_tx False --type bool
+</pre></div>
+The <code>is_ledger_tx</code> will prevent the AEA to communicate with a ledger.</p>
 <h3 id="run-the-weather-station-aea">Run the weather station AEA</h3>
 <div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
 </pre></div>
@@ -748,6 +783,11 @@ aea add connection fetchai/oef:0.1.0
 aea add skill fetchai/weather_client:0.1.0
 aea install
 </pre></div>
+<h3 id="update-the-aea-configs_1">Update the AEA configs</h3>
+<p>In the terminal change the configuration:
+<div class="highlight"><pre><span></span>aea config set vendor.fetchai.skills.weather_client.models.strategy.args.is_ledger_tx False --type bool
+</pre></div>
+The <code>is_ledger_tx</code> will prevent the AEA to communicate with a ledger.</p>
 <h3 id="run-the-weather-client-aea">Run the weather client AEA</h3>
 <div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
 </pre></div>
@@ -817,7 +857,7 @@ aea add-key fetchai fet_private_key.txt
 <div class="highlight"><pre><span></span>aea generate-key ethereum
 aea add-key ethereum eth_private_key.txt
 </pre></div></p>
-<h3 id="update-the-aea-configs">Update the AEA configs</h3>
+<h3 id="update-the-aea-configs_2">Update the AEA configs</h3>
 <p>Both in <code>my_seller_aea/aea-config.yaml</code> and
 <code>my_buyer_aea/aea-config.yaml</code>, replace <code>ledger_apis: {}</code> with the following based on the network you want to connect.</p>
 <p>To connect to Fetch.ai:</p>
@@ -841,7 +881,7 @@ aea add-key ethereum eth_private_key.txt
 <div class="highlight"><pre><span></span>aea generate-wealth ethereum
 </pre></div></p>
 <h3 id="update-the-skill-configs">Update the skill configs</h3>
-<p>In <code>my_weather_station/vendor/fetchai/weather_station/skill.yaml</code>, under strategy amend the <code>currency_id</code> and <code>ledger_id</code> as follows:</p>
+<p>In <code>my_weather_station/vendor/fetchai/skills/weather_station/skill.yaml</code>, under strategy amend the <code>currency_id</code> and <code>ledger_id</code> as follows:</p>
 <div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
 <span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
 <span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
@@ -858,7 +898,7 @@ aea add-key ethereum eth_private_key.txt
 <span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
 <span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
 </pre></div>
-<p>In the weather client skill config (<code>my_weather_client/skills/weather_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.</p>
+<p>In the weather client skill config (<code>my_weather_client/vendor/fetchai/skills/weather_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.</p>
 <p><div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
 <span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
 <span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>

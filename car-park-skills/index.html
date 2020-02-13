@@ -348,6 +348,11 @@
       ORM integration
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
+      Frontend intergration
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -497,6 +502,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../questions-and-answers/" title="Q&amp;A">
+      Q&amp;A
+    </a>
 </li>
 </ul>
 </nav>
@@ -674,7 +684,7 @@ aea add-key ethereum eth_private_key.txt
 <div class="highlight"><pre><span></span>aea generate-wealth ethereum
 </pre></div></p>
 <h3 id="update-the-skill-configs">Update the skill configs</h3>
-<p>In the thermometer skill config (<code>car_detector/skills/carpark_detection/skill.yaml</code>) under strategy, amend the <code>currency_id</code>, <code>ledger_id</code>, and <code>db_is_rel_to_cwd</code> as follows.</p>
+<p>In the thermometer skill config (<code>car_detector/vendor/fetchai/skills/carpark_detection/skill.yaml</code>) under strategy, amend the <code>currency_id</code>, <code>ledger_id</code>, and <code>db_is_rel_to_cwd</code> as follows.</p>
 <div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
 <span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
 <span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
@@ -696,7 +706,7 @@ aea add-key ethereum eth_private_key.txt
 aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_detection.models.strategy.args.ledger_id ethereum
 aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_detection.models.strategy.args.db_is_rel_to_cwd False --type bool
 </pre></div></p>
-<p>In the carpark data buyer skill config (<code>car_data_buyer/skills/carpark_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.</p>
+<p>In the carpark data buyer skill config (<code>car_data_buyer/vendor/fetchai/skills/carpark_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.</p>
 <div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
 <span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
 <span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>

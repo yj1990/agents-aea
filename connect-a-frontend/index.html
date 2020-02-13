@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/oef-ledger/" rel="canonical"/>
+<link href="https://docs.fetch.ai/connect-a-frontend/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
-<title>Relation to OEF and Ledger - Fetch.AI Developer Documentation</title>
+<title>Frontend intergration - Fetch.AI Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,6 +37,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#case-1" tabindex="1">
+        Skip to content
+      </a>
 <header class="md-header" data-md-component="header">
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
@@ -55,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                Relation to OEF and Ledger
+                Frontend intergration
               
             </span>
 </div>
@@ -148,8 +151,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-3">
       The AEA universe
     </label>
@@ -173,9 +176,8 @@
       Application areas
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./" title="Relation to OEF and Ledger">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../oef-ledger/" title="Relation to OEF and Ledger">
       Relation to OEF and Ledger
     </a>
 </li>
@@ -240,8 +242,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-5">
       Use cases
     </label>
@@ -260,10 +262,34 @@
       ORM integration
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Frontend intergration
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Frontend intergration">
       Frontend intergration
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#case-1">
+    Case 1
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#case-2">
+    Case 2
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+    Conclusion
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -428,20 +454,48 @@
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#case-1">
+    Case 1
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#case-2">
+    Case 2
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+    Conclusion
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>Relation to OEF and Ledger</h1>
-<p>The 'Open Economic Framework' (OEF) is a node that enables us to search, discover and communicate with possible clients or services. 
-For the AEAs to be able to find each other, one must register as a service and the other must query the OEF node for a service. </p>
-<p>Currently, you need to run your own OEF node for local development and testing.</p>
-<p>To start an OEF node follow the <a href="../quickstart/#preliminaries">Preliminaries</a> sections from the AEA quick start. Then run:</p>
-<div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
-</pre></div>
-<p>We will soon make a public OEF network available.</p>
-<p>Ledgers enable the AEAs to complete a transaction and transfer funds to each other. Another way the AEA framework uses 
-the ledgers are to interact with smart contracts.</p>
-<p>In the AEA framework universe, agents register in a search and discovery service (OEF) that enables the agents to find each other and can use the ledger to complete transactions. The following diagram illustrates the relation to the OEF and a Ledger.</p>
-<p><center><img alt="The AEA, OEF, and Ledger systems" src="../assets/oef-ledger.png"/></center></p>
+<h1>Frontend intergration</h1>
+<p>This demo will discuss the options we have to connect a frontend to the AEA. The following diagram illustrates 
+the two options we are going to discuss.</p>
+<p><center><img alt="How to connect frontend to your AEA" src="../assets/http-integration.png"/></center> </p>
+<h2 id="case-1">Case 1</h2>
+<p>The first option we have is to create a <code>Connection</code> that will handle the incoming requests from the rest API. In this scenario,
+the rest API communicates with the AEA and requests are handled by the HTTP Connection package. 
+The rest API should send CRUD requests to the HTTP Connection which translates these into Envelopes to be consumed by the correct skill.</p>
+<h2 id="case-2">Case 2</h2>
+<p>The other option would be to create a stand-alone <code>Multiplexer</code> with an <code>OEF</code> connection.In this scenario, the frontend needs to incorporate a Multiplexer with an OEF connection. 
+Then the OEF messaging relay can be used to send envelopes from the AEA to the frontend.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The major difference between these two approaches is that in the first case we should know the IP of the AEA to be able to communicate. 
+In case 2 though, the whole communication is handled by the OEF.</p>
 </article>
 </div>
 </div>
@@ -449,7 +503,7 @@ the ledgers are to interact with smart contracts.</p>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../app-areas/" rel="prev" title="Application areas">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../orm-integration-to-generic/" rel="prev" title="ORM integration">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -458,17 +512,17 @@ the ledgers are to interact with smart contracts.</p>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Application areas
+                ORM integration
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../trust/" rel="next" title="Trust issues">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../thermometer-skills-step-by-step/" rel="next" title="Thermometer skills step by step">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Trust issues
+                Thermometer skills step by step
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
