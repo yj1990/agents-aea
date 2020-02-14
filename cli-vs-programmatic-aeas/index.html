@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/tac/" rel="canonical"/>
+<link href="https://docs.fetch.ai/cli-vs-programmatic-aeas/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
-<title>TAC external app - AEA Developer Documentation</title>
+<title>CLI vs programmatic AEAs - AEA Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#requirements" tabindex="1">
+<a class="md-skip" href="#preparation-instructions" tabindex="1">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -58,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                TAC external app
+                CLI vs programmatic AEAs
               
             </span>
 </div>
@@ -194,8 +194,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-4">
       Demo guides
     </label>
@@ -229,44 +229,10 @@
       TAC skills
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        TAC external app
-      </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="TAC external app">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tac/" title="TAC external app">
       TAC external app
     </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#quick-start">
-    Quick start
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#alternative-build-and-run">
-    Alternative build and run
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#launcher-gui">
-    Launcher GUI
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#possible-gotchas">
-    Possible gotchas
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../weather-skills/" title="Weather skills">
@@ -281,8 +247,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-5">
       Use cases
     </label>
@@ -306,10 +272,81 @@
       Frontend intergration
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli-vs-programmatic-aeas/" title="CLI vs programmatic AEAs">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        CLI vs programmatic AEAs
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="CLI vs programmatic AEAs">
       CLI vs programmatic AEAs
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation-instructions">
+    Preparation instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discussion">
+    Discussion
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#launch-an-oef-node">
+    Launch an OEF node
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-instructions">
+    Demo instructions:
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-weather-station-aea">
+    Create the weather station AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs">
+    Update the AEA configs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-weather-station-aea">
+    Run the weather station AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-weather-client-aea">
+    Create the weather client AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-weather-station-aea_1">
+    Run the weather station AEA
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -496,29 +533,66 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
+<a class="md-nav__link" href="#preparation-instructions">
+    Preparation instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discussion">
+    Discussion
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#launch-an-oef-node">
+    Launch an OEF node
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-instructions">
+    Demo instructions:
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-weather-station-aea">
+    Create the weather station AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#quick-start">
-    Quick start
+<a class="md-nav__link" href="#update-the-aea-configs">
+    Update the AEA configs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#alternative-build-and-run">
-    Alternative build and run
+<a class="md-nav__link" href="#run-the-weather-station-aea">
+    Run the weather station AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#launcher-gui">
-    Launcher GUI
+<a class="md-nav__link" href="#create-the-weather-client-aea">
+    Create the weather client AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#possible-gotchas">
-    Possible gotchas
+<a class="md-nav__link" href="#run-the-weather-station-aea_1">
+    Run the weather station AEA
   </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -527,62 +601,197 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>TAC external app</h1>
-<p>TAC has its own <a href="https://github.com/fetchai/agents-tac" target="_blank">repo</a>. </p>
-<p>Follow the instructions below to build and run the TAC demo.</p>
-<h2 id="requirements">Requirements</h2>
-<p>Make sure you are running <a href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>.</p>
-<h2 id="quick-start">Quick start</h2>
-<p>Clone the repo to include sub-modules.</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:fetchai/agents-tac.git --recursive <span class="o">&amp;&amp;</span> <span class="nb">cd</span> agents-tac
-</pre></div>
-<p>Check you have <code>pipenv</code>.</p>
-<div class="highlight"><pre><span></span>which pipenv
-</pre></div>
-<p>If you don't have it, install it. Instructions are <a href="https://pypi.org/project/pipenv/" target="_blank">here</a>.</p>
-<p>Create and launch a virtual environment.</p>
-<div class="highlight"><pre><span></span>pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-</pre></div>
-<p>Install the dependencies.</p>
-<div class="highlight"><pre><span></span>pipenv install
-</pre></div>
-<p>Install the package.
-<div class="highlight"><pre><span></span>python setup.py install
+<h1>CLI vs programmatic AEAs</h1>
+<p>The AEA framework enables us to create agents either from the CLI tool or programmatically.</p>
+<p>The following demo demonstrates an interaction between two AEAs.</p>
+<p>The provider of weather data (managed with the CLI).
+The buyer of weather data (managed programmatically).</p>
+<h2 id="preparation-instructions">Preparation instructions</h2>
+<h3 id="dependencies">Dependencies</h3>
+<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
+<h2 id="discussion">Discussion</h2>
+<p>The scope of the specific demo is to demonstrate how a CLI based AEA can interact with a programmatically managed AEA. In order 
+to achieve this we are going to use the weather station skills. 
+This demo does not utilize a smart contract or a ledger interaction. </p>
+<h3 id="launch-an-oef-node">Launch an OEF node</h3>
+<p>In a separate terminal, launch a local OEF node (for search and discovery).
+<div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
 </pre></div></p>
-<p>Run the launch script. This may take a while.</p>
-<div class="highlight"><pre><span></span>python scripts/launch.py
+<p>Keep it running for the entire demo.</p>
+<h2 id="demo-instructions">Demo instructions:</h2>
+<p>If you want to create the weather station AEA step by step you can follow this guide <a href="/weather-skills/">here</a></p>
+<h3 id="create-the-weather-station-aea">Create the weather station AEA</h3>
+<p>Fetch the weather station AEA with the following command :</p>
+<p><code>aea fetch fetchai/weather_station:0.1.0</code></p>
+<h3 id="update-the-aea-configs">Update the AEA configs</h3>
+<p>In the terminal change the configuration:
+<div class="highlight"><pre><span></span>aea config set vendor.fetchai.skills.weather_station.models.strategy.args.is_ledger_tx False --type bool
 </pre></div>
-<p>The <a href="https://github.com/facebookresearch/visdom" target="_blank">visdom</a> server is now running.</p>
-<p>The controller GUI at <a href="http://localhost:8097" target="_blank">http://localhost:8097</a> provides real time insights.</p>
-<p>In the Environment tab, make sure you have the <code>tac_controller</code> environment selected.</p>
-<p><center><img alt="AEA Visdom UI" src="../assets/visdom_ui.png"/></center></p>
-<h2 id="alternative-build-and-run">Alternative build and run</h2>
-<p>In a new terminal window, clone the repo, build the sandbox, and launch it.</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:fetchai/agents-tac.git --recursive <span class="o">&amp;&amp;</span> <span class="nb">cd</span> agents-tac
-pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-python setup.py install
-<span class="nb">cd</span> sandbox <span class="o">&amp;&amp;</span> docker-compose build
-docker-compose up
+The <code>is_ledger_tx</code> will prevent the AEA to communicate with a ledger.</p>
+<h3 id="run-the-weather-station-aea">Run the weather station AEA</h3>
+<div class="highlight"><pre><span></span>aea run --connections fetchai/oef:0.1.0
 </pre></div>
-<p>In a new terminal window, enter the virtual environment, and connect a template agent to the sandbox.</p>
-<p><div class="highlight"><pre><span></span>pipenv shell
-python templates/v1/basic.py --name my_agent --dashboard
+<h3 id="create-the-weather-client-aea">Create the weather client AEA</h3>
+<p>Since we want to show the interaction between a programmatically created AEA with a CLI based AEA we are going to write some code for the client.</p>
+<p>Create a new python file and name it <code>weather_client.py</code> and add the following code</p>
+<details><summary>Weather client full code.</summary>
+<div class="highlight"><pre><span></span>import logging
+import os
+import time
+from threading import Thread
+from typing import cast
+
+import yaml
+
+from aea import AEA_DIR
+from aea.aea import AEA
+from aea.configurations.base import ProtocolConfig, PublicId
+from aea.crypto.fetchai import FETCHAI
+from aea.crypto.helpers import FETCHAI_PRIVATE_KEY_FILE, _create_fetchai_private_key
+from aea.crypto.ledger_apis import LedgerApis
+from aea.crypto.wallet import Wallet
+from aea.identity.base import Identity
+from aea.protocols.base import Protocol
+from aea.protocols.default.serialization import DefaultSerializer
+from aea.registries.base import Resources
+from aea.skills.base import Skill
+
+from packages.fetchai.connections.oef.connection import OEFConnection
+from packages.fetchai.protocols.fipa.serialization import FIPASerializer
+from packages.fetchai.protocols.oef.serialization import OEFSerializer
+from packages.fetchai.skills.weather_client.strategy import Strategy
+
+HOST = "127.0.0.1"
+PORT = 10000
+ROOT_DIR = os.getcwd()
+
+# Not sure what level of logging to specify to get the logging to be displayed?
+logger = logging.getLogger("aea")
+logging.basicConfig(level=logging.INFO)
+
+
+def run():
+    # Create a private key
+    _create_fetchai_private_key()
+
+    # Set up the wallet, identity, oef connection, ledger and (empty) resources
+    wallet = Wallet({FETCHAI: FETCHAI_PRIVATE_KEY_FILE})
+    identity = Identity("my_aea", address=wallet.addresses.get(FETCHAI))
+    oef_connection = OEFConnection(
+        address=identity.address, oef_addr=HOST, oef_port=PORT
+    )
+    ledger_apis = LedgerApis({}, FETCHAI)
+    resources = Resources()
+
+    # create the AEA
+    my_aea = AEA(
+        identity, [oef_connection], wallet, ledger_apis, resources  # stub_connection,
+    )
+
+    # Add the default protocol (which is part of the AEA distribution)
+    default_protocol_configuration = ProtocolConfig.from_json(
+        yaml.safe_load(
+            open(os.path.join(AEA_DIR, "protocols", "default", "protocol.yaml"))
+        )
+    )
+    default_protocol = Protocol(
+        PublicId.from_str("fetchai/default:0.1.0"),
+        DefaultSerializer(),
+        default_protocol_configuration,
+    )
+    resources.protocol_registry.register(
+        PublicId.from_str("fetchai/default:0.1.0"), default_protocol
+    )
+
+    # Add the oef protocol (which is a package)
+    oef_protocol_configuration = ProtocolConfig.from_json(
+        yaml.safe_load(
+            open(
+                os.path.join(
+                    os.getcwd(),
+                    "packages",
+                    "fetchai",
+                    "protocols",
+                    "oef",
+                    "protocol.yaml",
+                )
+            )
+        )
+    )
+    oef_protocol = Protocol(
+        PublicId.from_str("fetchai/oef:0.1.0"),
+        OEFSerializer(),
+        oef_protocol_configuration,
+    )
+    resources.protocol_registry.register(
+        PublicId.from_str("fetchai/oef:0.1.0"), oef_protocol
+    )
+
+    # Add the fipa protocol (which is a package)
+    fipa_protocol_configuration = ProtocolConfig.from_json(
+        yaml.safe_load(
+            open(
+                os.path.join(
+                    ROOT_DIR,
+                    "packages",
+                    "fetchai",
+                    "protocols",
+                    "fipa",
+                    "protocol.yaml",
+                )
+            )
+        )
+    )
+    fipa_protocol = Protocol(
+        PublicId.from_str("fetchai/fipa:0.1.0"),
+        FIPASerializer(),
+        fipa_protocol_configuration,
+    )
+    resources.protocol_registry.register(
+        PublicId.from_str("fetchai/fipa:0.1.0"), fipa_protocol
+    )
+
+    # Add the error and weather_station skills
+    error_skill = Skill.from_dir(
+        os.path.join(AEA_DIR, "skills", "error"), my_aea.context
+    )
+    weather_skill = Skill.from_dir(
+        os.path.join(ROOT_DIR, "packages", "fetchai", "skills", "weather_client"),
+        my_aea.context,
+    )
+
+    strategy = cast(Strategy, weather_skill.models.get('strategy'))
+    strategy.is_ledger_tx = False
+    strategy.max_buyer_tx_fee = 100
+    strategy.max_row_price = 40
+
+    for skill in [error_skill, weather_skill]:
+        resources.add_skill(skill)
+
+    # Set the AEA running in a different thread
+    logger.info("STARTING AEA NOW!")
+    t = Thread(target=my_aea.start)
+    t.start()
+
+    # Let it run long enought to interact with the weather station
+    time.sleep(25)
+
+    # Shut down the AEA
+    logger.info("STOPPING AEA NOW!")
+    my_aea.stop()
+    t.join()
+
+
+if __name__ == "__main__":
+    run()
 </pre></div>
-<!-- Issue: https://github.com/fetchai/agents-tac/issues/389 --></p>
-<p>Click through to the <a href="http://localhost:8097" target="_blank">controller GUI</a>.</p>
-<h2 id="launcher-gui">Launcher GUI</h2>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-</div>
-<h2 id="possible-gotchas">Possible gotchas</h2>
-<p>Stop all running containers before restart.</p>
-<div class="highlight"><pre><span></span>docker stop <span class="k">$(</span>docker ps -q<span class="k">)</span>
-</pre></div>
-<p>To remove all images, run the following command.</p>
-<div class="highlight"><pre><span></span><span class="c1"># mac</span>
-docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span> docker system prune -a
-</pre></div>
-<p><br/></p>
+</details>
+<p>For more details on how to create an agent programmatically follow this guide <a href="/build-aea-programmatically/">here</a></p>
+<h3 id="run-the-weather-station-aea_1">Run the weather station AEA</h3>
+<p>In a new terminal window, navigate to the folder that you created the script and run:
+<div class="highlight"><pre><span></span>python weather_client.py
+</pre></div></p>
+<p>You should see both AEAs interacting now.</p>
 </article>
 </div>
 </div>
@@ -590,7 +799,7 @@ docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../tac-skills/" rel="prev" title="TAC skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../connect-a-frontend/" rel="prev" title="Frontend intergration">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -599,17 +808,17 @@ docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                TAC skills
+                Frontend intergration
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../weather-skills/" rel="next" title="Weather skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../thermometer-skills-step-by-step/" rel="next" title="Thermometer skills step by step">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Weather skills
+                Thermometer skills step by step
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

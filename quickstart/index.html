@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
-<title>AEA quick start - Fetch.AI Developer Documentation</title>
+<title>AEA quick start - AEA Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -44,7 +44,7 @@
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="Fetch.AI Developer Documentation">
+<a class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
 <i class="md-icon">code</i>
 </a>
 </div>
@@ -54,7 +54,7 @@
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
 <span class="md-header-nav__topic">
-              Fetch.AI Developer Documentation
+              AEA Developer Documentation
             </span>
 <span class="md-header-nav__topic">
               
@@ -74,7 +74,7 @@
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
 <a class="md-tabs__link md-tabs__link--active" href="..">
-          Autonomous Economic Agent Framework
+          AEA Framework
         </a>
 </li>
 </ul>
@@ -87,20 +87,20 @@
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title md-nav__title--site" for="__drawer">
-<a class="md-nav__button md-logo" href="https://docs.fetch.ai/" title="Fetch.AI Developer Documentation">
+<a class="md-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
 <i class="md-icon">code</i>
 </a>
-    Fetch.AI Developer Documentation
+    AEA Developer Documentation
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
 <label class="md-nav__link" for="nav-1">
-      Autonomous Economic Agent Framework
+      AEA Framework
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
 <label class="md-nav__title" for="nav-1">
-        Autonomous Economic Agent Framework
+        AEA Framework
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -173,32 +173,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#option-1-step-by-step">
-    Option 1 - Step-by-step
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#create-a-new-aea">
-    Create a new AEA
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#add-the-echo-skill">
-    Add the echo skill
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#add-a-stub-connection">
-    Add a stub connection
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#option-2-fetch-the-entire-aea">
-    Option 2 - Fetch the entire AEA
+<a class="md-nav__link" href="#usage-of-the-stub-connection">
+    Usage of the stub connection
   </a>
 </li>
 <li class="md-nav__item">
@@ -229,8 +205,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../aea-vs-mvc/" title="AEA and Web Frameworks">
-      AEA and Web Frameworks
+<a class="md-nav__link" href="../aea-vs-mvc/" title="AEA and web frameworks">
+      AEA and web frameworks
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build-aea-step-by-step/" title="Build an AEA with the CLI">
+      Build an AEA with the CLI
     </a>
 </li>
 <li class="md-nav__item">
@@ -244,8 +225,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs Agents">
-      AEAs vs Agents
+<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs agents">
+      AEAs vs agents
     </a>
 </li>
 </ul>
@@ -367,6 +348,11 @@
       Frontend intergration
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-vs-programmatic-aeas/" title="CLI vs programmatic AEAs">
+      CLI vs programmatic AEAs
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -424,10 +410,48 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-8">
-      Developer guides
+      CLI
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
 <label class="md-nav__title" for="nav-1-8">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-how-to/" title="Installation">
+      Installation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-commands/" title="Commands">
+      Commands
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../package-imports/" title="Package structure">
+      Package structure
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-gui/" title="GUI">
+      GUI
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wealth/" title="Generating wealth">
+      Generating wealth
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-9" id="nav-1-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-9">
+      Developer guides
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-9">
         Developer guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -466,52 +490,29 @@
       Logging
     </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8-8" id="nav-1-8-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-8-8">
-      CLI
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-8-8">
-        CLI
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli-how-to/" title="CLI tool">
-      CLI tool
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli-commands/" title="Commands">
-      Commands
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli-gui/" title="GUI">
-      GUI
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../wealth/" title="Generating wealth">
-      Generating wealth
-    </a>
-</li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
       Build an AEA on a Raspberry Pi
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../integration/" title="Integrate with third parties">
-      Integrate with third parties
+<a class="md-nav__link" href="../integration/" title="Using public ledgers">
+      Using public ledgers
     </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../multiplexer-standalone/" title="Use multiplexer stand-alone">
       Use multiplexer stand-alone
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../standalone-transaction/" title="Create stand-alone transaction">
+      Create stand-alone transaction
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../decision-maker-transaction/" title="Create decision-maker transaction">
+      Create decision-maker transaction
     </a>
 </li>
 </ul>
@@ -575,32 +576,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#option-1-step-by-step">
-    Option 1 - Step-by-step
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#create-a-new-aea">
-    Create a new AEA
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#add-the-echo-skill">
-    Add the echo skill
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#add-a-stub-connection">
-    Add a stub connection
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#option-2-fetch-the-entire-aea">
-    Option 2 - Fetch the entire AEA
+<a class="md-nav__link" href="#usage-of-the-stub-connection">
+    Usage of the stub connection
   </a>
 </li>
 <li class="md-nav__item">
@@ -635,6 +612,9 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <h1>AEA quick start</h1>
+<p>If you want to create Autonomous Economic Agents (AEAs) that can act independently of constant user input and autonomously execute actions to achieve their objective,
+you can use the Fetch.ai AEA framework. </p>
+<p>This example will take you through the simplest AEA in order to make you familiar with the framework.</p>
 <h2 id="preliminaries">Preliminaries</h2>
 <p>Create and enter into a new working directory.</p>
 <div class="highlight"><pre><span></span>mkdir my_aea_projects/
@@ -651,8 +631,6 @@
 <h3 id="installing-docker">Installing docker</h3>
 <p>At some point, you will need <a href="https://www.docker.com/">Docker</a> installed on your machine 
 (e.g. to run an OEF Node).</p>
-<p>If you don't have it, please check the official documentation <a href="https://docs.docker.com/install/">here</a> 
-and follow the instructions for your platform.</p>
 <h3 id="download-the-scripts-and-packages-directories">Download the scripts and packages directories</h3>
 <p>Download folders containing examples, scripts and packages:
 <div class="highlight"><pre><span></span>svn <span class="nb">export</span> https://github.com/fetchai/agents-aea.git/trunk/examples
@@ -664,6 +642,9 @@ You can install the <code>svn</code> command with (<code>brew install subversion
 <p>The following installs the entire AEA package which also includes a command-line interface (CLI).</p>
 <div class="highlight"><pre><span></span>pip install aea<span class="o">[</span>all<span class="o">]</span>
 </pre></div>
+<p>If you are using <code>zsh</code> rather than <code>bash</code> type 
+<div class="highlight"><pre><span></span>pip install <span class="s1">'aea[all]'</span>
+</pre></div></p>
 <h3 id="known-issues">Known issues</h3>
 <p>If the installation steps fail, it might be a dependency issue. </p>
 <p>The following hints can help:</p>
@@ -678,34 +659,23 @@ You can install the <code>svn</code> command with (<code>brew install subversion
 </li>
 </ul>
 <h2 id="echo-skill-demo">Echo skill demo</h2>
-<p>The echo skill is a simple demo that introduces you to the main business logic components of an AEA.</p>
-<h2 id="option-1-step-by-step">Option 1 - Step-by-step</h2>
-<h3 id="create-a-new-aea">Create a new AEA</h3>
-<p>First, create a new AEA project and enter it.
-<div class="highlight"><pre><span></span>aea create my_first_aea
-<span class="nb">cd</span> my_first_aea
-</pre></div></p>
-<h3 id="add-the-echo-skill">Add the echo skill</h3>
-<p>Second, add the echo skill to the project.
-<div class="highlight"><pre><span></span>aea add skill fetchai/echo:0.1.0
-</pre></div></p>
-<p>This copies the <code>echo</code> skill code containing the "behaviours", "handlers", and "tasks" into the skill, ready to run. The identifier of the skill <code>fetchai/echo:0.1.0</code> consists of the name of the author of the skill, followed by the skill name and its version.</p>
-<h3 id="add-a-stub-connection">Add a stub connection</h3>
-<p>AEAs use messages for communication. We use a stub connection to send messages to and receive messages from the AEA.</p>
-<p>The stub connection is already added to the AEA by default.</p>
-<p>A stub connection provides an I/O reader and writer. It uses two files for communication: one for incoming messages and the other for outgoing messages. Each line contains an encoded envelope.</p>
-<p>The AEA waits for new messages posted to the file <code>my_first_aea/input_file</code>, and adds a response to the file <code>my_first_aea/output_file</code>.</p>
-<p>The format of each line is the following:</p>
-<div class="highlight"><pre><span></span>TO,SENDER,PROTOCOL_ID,ENCODED_MESSAGE
-</pre></div>
-<p>For example:</p>
-<div class="highlight"><pre><span></span>recipient_aea,sender_aea,fetchai/default:0.1.0,<span class="o">{</span><span class="s2">"type"</span>: <span class="s2">"bytes"</span>, <span class="s2">"content"</span>: <span class="s2">"aGVsbG8="</span><span class="o">}</span>
-</pre></div>
-<h2 id="option-2-fetch-the-entire-aea">Option 2 - Fetch the entire AEA</h2>
-<p>The preceding three steps can be executed at once with the command
+<p>The echo skill is a simple demo that introduces you to the main business logic components of an AEA. 
+The fastest way to create your first AEA is to fetch it! </p>
+<p>If you want to follow a step by step guide we show you how to do it at the end of the file.</p>
 <div class="highlight"><pre><span></span>aea fetch fetchai/my_first_aea:0.1.0
 <span class="nb">cd</span> my_first_aea
-</pre></div></p>
+</pre></div>
+<h2 id="usage-of-the-stub-connection">Usage of the stub connection</h2>
+<p>AEAs use messages for communication. We use a stub connection to send messages to and receive messages from the AEA.        </p>
+<p>The stub connection is already added to the AEA by default.     </p>
+<p>A stub connection provides an I/O reader and writer. It uses two files for communication: one for incoming messages and the other for outgoing messages. Each line contains an encoded envelope.        </p>
+<p>The AEA waits for new messages posted to the file <code>my_first_aea/input_file</code>, and adds a response to the file <code>my_first_aea/output_file</code>.        </p>
+<p>The format of each line is the following:       </p>
+<div class="highlight"><pre><span></span>TO,SENDER,PROTOCOL_ID,ENCODED_MESSAGE       
+</pre></div>
+<p>For example:        </p>
+<div class="highlight"><pre><span></span>recipient_aea,sender_aea,fetchai/default:0.1.0,<span class="o">{</span><span class="s2">"type"</span>: <span class="s2">"bytes"</span>, <span class="s2">"content"</span>: <span class="s2">"aGVsbG8="</span><span class="o">}</span>
+</pre></div>
 <h2 id="run-the-aea">Run the AEA</h2>
 <p>Run the AEA with the default <code>stub</code> connection.</p>
 <div class="highlight"><pre><span></span>aea run
@@ -743,7 +713,32 @@ info: Echo Task: execute method called.
 <p>Delete the AEA from the parent directory (<code>cd ..</code> to go to the parent directory).</p>
 <div class="highlight"><pre><span></span>aea delete my_first_aea
 </pre></div>
+<p>For more detailed analysis of the core components of the framework, please check the following:</p>
+<ul>
+<li><a href="/aea/core-components/">Core components</a></li>
+</ul>
+<p>For more demos, use cases or step by step guides, please check the following:</p>
+<ul>
+<li><a href="/aea/generic-skills">Generic skill use case</a></li>
+<li><a href="/aea/weather-skills/">Weather skill demo</a> </li>
+<li><a href="/aea/thermometer-skills-step-by-step/"> Thermometer step by step guide </a></li>
+</ul>
 <p><br/></p>
+<details><summary>Step by step install</summary>
+<b> Create a new AEA </b>
+<br/>        
+First, create a new AEA project and enter it.       
+<div class="highlight"><pre><span></span>aea create my_first_aea     
+<span class="nb">cd</span> my_first_aea     
+</pre></div>
+<br/>
+<b>Add the echo skill</b>
+<br/>    
+Second, add the echo skill to the project.      
+<div class="highlight"><pre><span></span>aea add skill fetchai/echo:0.1.0        
+</pre></div>
+This copies the `echo` skill code containing the "behaviours", "handlers", and "tasks" into the skill, ready to run. The identifier of the skill `fetchai/echo:0.1.0` consists of the name of the author of the skill, followed by the skill name and its version.      
+</details>
 </article>
 </div>
 </div>
@@ -764,13 +759,13 @@ info: Echo Task: execute method called.
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../aea-vs-mvc/" rel="next" title="AEA and Web Frameworks">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../aea-vs-mvc/" rel="next" title="AEA and web frameworks">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                AEA and Web Frameworks
+                AEA and web frameworks
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

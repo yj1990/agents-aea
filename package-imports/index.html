@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/tac/" rel="canonical"/>
+<link href="https://docs.fetch.ai/package-imports/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
-<title>TAC external app - AEA Developer Documentation</title>
+<title>Package structure - AEA Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#requirements" tabindex="1">
+<a class="md-skip" href="#create-a-package" tabindex="1">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -58,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                TAC external app
+                Package structure
               
             </span>
 </div>
@@ -194,8 +194,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-4">
       Demo guides
     </label>
@@ -229,44 +229,10 @@
       TAC skills
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        TAC external app
-      </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="TAC external app">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tac/" title="TAC external app">
       TAC external app
     </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#quick-start">
-    Quick start
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#alternative-build-and-run">
-    Alternative build and run
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#launcher-gui">
-    Launcher GUI
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#possible-gotchas">
-    Possible gotchas
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../weather-skills/" title="Weather skills">
@@ -365,8 +331,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" id="nav-1-8" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-8">
       CLI
     </label>
@@ -385,10 +351,34 @@
       Commands
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../package-imports/" title="Package structure">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Package structure
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Package structure">
       Package structure
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-package">
+    Create a package
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#difference-of-vendor-and-own-packages">
+    Difference of vendor and own packages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#name-and-author">
+    Name and author
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../cli-gui/" title="GUI">
@@ -496,28 +486,18 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
+<a class="md-nav__link" href="#create-a-package">
+    Create a package
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#quick-start">
-    Quick start
+<a class="md-nav__link" href="#difference-of-vendor-and-own-packages">
+    Difference of vendor and own packages
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#alternative-build-and-run">
-    Alternative build and run
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#launcher-gui">
-    Launcher GUI
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#possible-gotchas">
-    Possible gotchas
+<a class="md-nav__link" href="#name-and-author">
+    Name and author
   </a>
 </li>
 </ul>
@@ -527,62 +507,38 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>TAC external app</h1>
-<p>TAC has its own <a href="https://github.com/fetchai/agents-tac" target="_blank">repo</a>. </p>
-<p>Follow the instructions below to build and run the TAC demo.</p>
-<h2 id="requirements">Requirements</h2>
-<p>Make sure you are running <a href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>.</p>
-<h2 id="quick-start">Quick start</h2>
-<p>Clone the repo to include sub-modules.</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:fetchai/agents-tac.git --recursive <span class="o">&amp;&amp;</span> <span class="nb">cd</span> agents-tac
+<h1>Package structure</h1>
+<p>An agent that is generated from the AEA framework is a modular system with different skills, connections, and protocols.
+When we create a new agent with the command <code>aea create my_aea</code> we create the file structure that looks like the following :
+- connections
+- protocols
+- skills
+- vendor
+- aea-config.yaml</p>
+<p>The <code>vendor</code> folder contains the packages from the registry which have been developed by other authors or ourselves and are namespaced by author name. 
+The packages we developed as part of the given AEA project are in the respective connections, protocols, and skills folders.</p>
+<p>To use a package, the <code>public_id</code> for the package must be listed in the <code>aea-config.yaml</code> file.
+<div class="highlight"><pre><span></span><span class="nt">connections</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/stub:0.1.0</span>
 </pre></div>
-<p>Check you have <code>pipenv</code>.</p>
-<div class="highlight"><pre><span></span>which pipenv
-</pre></div>
-<p>If you don't have it, install it. Instructions are <a href="https://pypi.org/project/pipenv/" target="_blank">here</a>.</p>
-<p>Create and launch a virtual environment.</p>
-<div class="highlight"><pre><span></span>pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-</pre></div>
-<p>Install the dependencies.</p>
-<div class="highlight"><pre><span></span>pipenv install
-</pre></div>
-<p>Install the package.
-<div class="highlight"><pre><span></span>python setup.py install
-</pre></div></p>
-<p>Run the launch script. This may take a while.</p>
-<div class="highlight"><pre><span></span>python scripts/launch.py
-</pre></div>
-<p>The <a href="https://github.com/facebookresearch/visdom" target="_blank">visdom</a> server is now running.</p>
-<p>The controller GUI at <a href="http://localhost:8097" target="_blank">http://localhost:8097</a> provides real time insights.</p>
-<p>In the Environment tab, make sure you have the <code>tac_controller</code> environment selected.</p>
-<p><center><img alt="AEA Visdom UI" src="../assets/visdom_ui.png"/></center></p>
-<h2 id="alternative-build-and-run">Alternative build and run</h2>
-<p>In a new terminal window, clone the repo, build the sandbox, and launch it.</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:fetchai/agents-tac.git --recursive <span class="o">&amp;&amp;</span> <span class="nb">cd</span> agents-tac
-pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-python setup.py install
-<span class="nb">cd</span> sandbox <span class="o">&amp;&amp;</span> docker-compose build
-docker-compose up
-</pre></div>
-<p>In a new terminal window, enter the virtual environment, and connect a template agent to the sandbox.</p>
-<p><div class="highlight"><pre><span></span>pipenv shell
-python templates/v1/basic.py --name my_agent --dashboard
-</pre></div>
-<!-- Issue: https://github.com/fetchai/agents-tac/issues/389 --></p>
-<p>Click through to the <a href="http://localhost:8097" target="_blank">controller GUI</a>.</p>
-<h2 id="launcher-gui">Launcher GUI</h2>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-</div>
-<h2 id="possible-gotchas">Possible gotchas</h2>
-<p>Stop all running containers before restart.</p>
-<div class="highlight"><pre><span></span>docker stop <span class="k">$(</span>docker ps -q<span class="k">)</span>
-</pre></div>
-<p>To remove all images, run the following command.</p>
-<div class="highlight"><pre><span></span><span class="c1"># mac</span>
-docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span> docker system prune -a
-</pre></div>
-<p><br/></p>
+The above shows a part of the <code>aea-config.yaml</code>. If you see the connections, you will see that we follow a pattern of <code>author/name_package:version</code> to identify each package. The author that we are using is the author of the package and not 
+the author that shows the <code>aea-config.yaml</code> file. This indicates, that we are using a package that is made by Fetch.ai and is located inside the <code>vendor/fetchai/connections</code> folder.</p>
+<p>The way we import packages inside the agent is in the form of <code>packages.author.package_type.package_name.module_name</code>. So for the above example, 
+the import path is <code>packages.fetchai.connections.stub.module_name</code>. </p>
+<p>The framework loads the modules from the local agent project and adds them to Python's sys.modules under the respective path.</p>
+<h2 id="create-a-package">Create a package</h2>
+<p>If you want to create a package, you can use <code>aea scaffold connection/skill/protocol name</code> and this will create the package
+and put it inside the respective folder based on the command for example if we <code>scaffold</code> skill with the name <code>my_skill</code>
+it will be located inside the folder skills in the root directory of the agent (<code>my_aea/skills/my_skill</code>). On the other hand,
+if you use a package from the registry or the packages folder that comes along with the AEA framework, you will be able to locate
+the package under the folder <code>vendor</code>. To sum up, the packages you have developed in the context of the given AEA project should be in the root folders and all the other packages under
+the <code>vendor</code> folder.</p>
+<h2 id="difference-of-vendor-and-own-packages">Difference of vendor and own packages</h2>
+<p>The main difference of the packages that are located under the <code>vendor</code> folder and your own is that these packages are located under the vendor folder based on the author. For example, all the packages that we are using are under the folder <code>vendor/fetchai</code>
+Your packages exist in the root directory of your <code>aea</code>.</p>
+<h2 id="name-and-author">Name and author</h2>
+<p>When you create a package, you must change the author name in the package to match your author handle. You can find these inside
+the <code>.yaml</code> file of your newly created package.</p>
 </article>
 </div>
 </div>
@@ -590,7 +546,7 @@ docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../tac-skills/" rel="prev" title="TAC skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../cli-commands/" rel="prev" title="Commands">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -599,17 +555,17 @@ docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                TAC skills
+                Commands
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../weather-skills/" rel="next" title="Weather skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../cli-gui/" rel="next" title="GUI">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Weather skills
+                GUI
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

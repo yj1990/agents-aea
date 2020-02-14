@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/tac/" rel="canonical"/>
+<link href="https://docs.fetch.ai/standalone-transaction/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
-<title>TAC external app - AEA Developer Documentation</title>
+<title>Create stand-alone transaction - AEA Developer Documentation</title>
 <link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#requirements" tabindex="1">
+<a class="md-skip" href="#create-the-private-keys" tabindex="1">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -58,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                TAC external app
+                Create stand-alone transaction
               
             </span>
 </div>
@@ -194,8 +194,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-4">
       Demo guides
     </label>
@@ -229,44 +229,10 @@
       TAC skills
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        TAC external app
-      </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="TAC external app">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tac/" title="TAC external app">
       TAC external app
     </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#quick-start">
-    Quick start
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#alternative-build-and-run">
-    Alternative build and run
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#launcher-gui">
-    Launcher GUI
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#possible-gotchas">
-    Possible gotchas
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../weather-skills/" title="Weather skills">
@@ -403,8 +369,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-9" id="nav-1-9" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-9" id="nav-1-9" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-9">
       Developer guides
     </label>
@@ -463,10 +429,44 @@
       Use multiplexer stand-alone
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../standalone-transaction/" title="Create stand-alone transaction">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Create stand-alone transaction
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Create stand-alone transaction">
       Create stand-alone transaction
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-private-keys">
+    Create the private keys
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-wallets">
+    Create the wallets
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-ledgerapis">
+    Create LedgerApis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generate-wealth">
+    Generate wealth
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#send-transaction">
+    Send transaction
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../decision-maker-transaction/" title="Create decision-maker transaction">
@@ -496,28 +496,28 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-    Requirements
+<a class="md-nav__link" href="#create-the-private-keys">
+    Create the private keys
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#quick-start">
-    Quick start
+<a class="md-nav__link" href="#create-the-wallets">
+    Create the wallets
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#alternative-build-and-run">
-    Alternative build and run
+<a class="md-nav__link" href="#create-ledgerapis">
+    Create LedgerApis
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#launcher-gui">
-    Launcher GUI
+<a class="md-nav__link" href="#generate-wealth">
+    Generate wealth
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#possible-gotchas">
-    Possible gotchas
+<a class="md-nav__link" href="#send-transaction">
+    Send transaction
   </a>
 </li>
 </ul>
@@ -527,62 +527,113 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>TAC external app</h1>
-<p>TAC has its own <a href="https://github.com/fetchai/agents-tac" target="_blank">repo</a>. </p>
-<p>Follow the instructions below to build and run the TAC demo.</p>
-<h2 id="requirements">Requirements</h2>
-<p>Make sure you are running <a href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>.</p>
-<h2 id="quick-start">Quick start</h2>
-<p>Clone the repo to include sub-modules.</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:fetchai/agents-tac.git --recursive <span class="o">&amp;&amp;</span> <span class="nb">cd</span> agents-tac
+<h1>Create stand-alone transaction</h1>
+<p>In this guide, we will generate some wealth for the <code>Fetch.ai testnet</code> and create a standalone transaction. After the completion of the transaction,
+we get the transaction digest. With this we can search for the transaction on the <a href="https://explore-testnet.fetch.ai">block explorer</a></p>
+<h2 id="create-the-private-keys">Create the private keys</h2>
+<p>Firstly, we will create the private key files.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aea.crypto.helpers</span> <span class="kn">import</span> <span class="n">_create_fetchai_private_key</span>
+
+<span class="n">FETCHAI_PRIVATE_KEY_FILE_1</span> <span class="o">=</span> <span class="s2">"fet_private_key_1.txt"</span>
+<span class="n">FETCHAI_PRIVATE_KEY_FILE_2</span> <span class="o">=</span> <span class="s2">"fet_private_key_2.txt"</span>
+<span class="c1"># Create a private keys</span>
+<span class="n">_create_fetchai_private_key</span><span class="p">(</span><span class="n">private_key_file</span><span class="o">=</span><span class="n">FETCHAI_PRIVATE_KEY_FILE_1</span><span class="p">)</span>
+<span class="n">_create_fetchai_private_key</span><span class="p">(</span><span class="n">private_key_file</span><span class="o">=</span><span class="n">FETCHAI_PRIVATE_KEY_FILE_2</span><span class="p">)</span>
 </pre></div>
-<p>Check you have <code>pipenv</code>.</p>
-<div class="highlight"><pre><span></span>which pipenv
+<h2 id="create-the-wallets">Create the wallets</h2>
+<p>Once we created the private keys we need to generate the wallets.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aea.crypto.fetchai</span> <span class="kn">import</span> <span class="n">FETCHAI</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.wallet</span> <span class="kn">import</span> <span class="n">Wallet</span>
+
+<span class="n">FETCHAI_PRIVATE_KEY_FILE_1</span> <span class="o">=</span> <span class="s2">"fet_private_key_1.txt"</span>
+<span class="n">FETCHAI_PRIVATE_KEY_FILE_2</span> <span class="o">=</span> <span class="s2">"fet_private_key_2.txt"</span>
+
+<span class="c1"># Set up the wallets</span>
+<span class="n">wallet_1</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE_1</span><span class="p">})</span>
+<span class="n">wallet_2</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE_2</span><span class="p">})</span>
 </pre></div>
-<p>If you don't have it, install it. Instructions are <a href="https://pypi.org/project/pipenv/" target="_blank">here</a>.</p>
-<p>Create and launch a virtual environment.</p>
-<div class="highlight"><pre><span></span>pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-</pre></div>
-<p>Install the dependencies.</p>
-<div class="highlight"><pre><span></span>pipenv install
-</pre></div>
-<p>Install the package.
-<div class="highlight"><pre><span></span>python setup.py install
+<h2 id="create-ledgerapis">Create LedgerApis</h2>
+<p>We need to create the LedgerApis object in order to be able to interact with the Fetch.ai <code>testnet</code>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aea.crypto.ledger_apis</span> <span class="kn">import</span> <span class="n">LedgerApis</span>
+
+<span class="c1"># Set up the LedgerApis</span>
+<span class="n">ledger_apis</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="p">{</span><span class="s1">'network'</span><span class="p">:</span> <span class="s1">'testnet'</span><span class="p">}},</span> <span class="n">FETCHAI</span><span class="p">)</span>
 </pre></div></p>
-<p>Run the launch script. This may take a while.</p>
-<div class="highlight"><pre><span></span>python scripts/launch.py
+<h2 id="generate-wealth">Generate wealth</h2>
+<p>Since we want to send funds from <code>wallet_1</code> to <code>wallet_2</code>, we need to generate some wealth for the <code>wallet_1</code>. We can
+do this with the following code
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aea.crypto.helpers</span> <span class="kn">import</span> <span class="n">_try_generate_testnet_wealth</span>
+
+<span class="c1"># Generate some wealth</span>
+<span class="n">_try_generate_testnet_wealth</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">,</span> <span class="n">wallet_1</span><span class="o">.</span><span class="n">addresses</span><span class="p">[</span><span class="n">FETCHAI</span><span class="p">])</span>
+</pre></div></p>
+<h2 id="send-transaction">Send transaction</h2>
+<p>Finally, we create a transaction that sends the funds to the <code>wallet_2</code></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aea.crypto.ledger_apis</span> <span class="kn">import</span> <span class="n">LedgerApis</span>
+
+<span class="c1"># Create the transaction and send it to the ledger.</span>
+<span class="n">ledger_api</span> <span class="o">=</span> <span class="n">ledger_apis</span><span class="o">.</span><span class="n">apis</span><span class="p">[</span><span class="n">FETCHAI</span><span class="p">]</span>
+<span class="n">tx_nonce</span> <span class="o">=</span> <span class="n">ledger_api</span><span class="o">.</span><span class="n">generate_tx_nonce</span><span class="p">(</span><span class="n">wallet_2</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+                                        <span class="n">wallet_1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">))</span>
+<span class="n">legdder_api</span><span class="o">.</span><span class="n">send_transaction</span><span class="p">(</span><span class="n">crypto</span><span class="o">=</span><span class="n">wallet_1</span><span class="o">.</span><span class="n">crypto_objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+                             <span class="n">destination_address</span><span class="o">=</span><span class="n">wallet_2</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+                             <span class="n">amount</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                             <span class="n">tx_fee</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                             <span class="n">tx_nonce</span><span class="o">=</span><span class="n">tx_nonce</span><span class="p">,</span>
+                             <span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"The transaction digest is </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tx_digest</span><span class="p">))</span>
 </pre></div>
-<p>The <a href="https://github.com/facebookresearch/visdom" target="_blank">visdom</a> server is now running.</p>
-<p>The controller GUI at <a href="http://localhost:8097" target="_blank">http://localhost:8097</a> provides real time insights.</p>
-<p>In the Environment tab, make sure you have the <code>tac_controller</code> environment selected.</p>
-<p><center><img alt="AEA Visdom UI" src="../assets/visdom_ui.png"/></center></p>
-<h2 id="alternative-build-and-run">Alternative build and run</h2>
-<p>In a new terminal window, clone the repo, build the sandbox, and launch it.</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:fetchai/agents-tac.git --recursive <span class="o">&amp;&amp;</span> <span class="nb">cd</span> agents-tac
-pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-python setup.py install
-<span class="nb">cd</span> sandbox <span class="o">&amp;&amp;</span> docker-compose build
-docker-compose up
+<details><summary>Stand-alone transaction full code</summary>
+<div class="highlight"><pre><span></span>import logging
+import os
+from aea.crypto.fetchai import FETCHAI
+from aea.crypto.helpers import _create_fetchai_private_key
+from aea.crypto.ledger_apis import LedgerApis
+from aea.crypto.wallet import Wallet
+from aea.crypto.helpers import _try_generate_testnet_wealth
+
+ROOT_DIR = os.getcwd()
+
+logger = logging.getLogger("aea")
+logging.basicConfig(level=logging.INFO)
+
+FETCHAI_PRIVATE_KEY_FILE_1 = "fet_private_key_1.txt"
+FETCHAI_PRIVATE_KEY_FILE_2 = "fet_private_key_2.txt"
+
+def run():
+    # Create a private keys
+    _create_fetchai_private_key(private_key_file=FETCHAI_PRIVATE_KEY_FILE_1)
+    _create_fetchai_private_key(private_key_file=FETCHAI_PRIVATE_KEY_FILE_2)
+
+    # Set up the wallets
+    wallet_1 = Wallet({FETCHAI: FETCHAI_PRIVATE_KEY_FILE_1})
+    wallet_2 = Wallet({FETCHAI: FETCHAI_PRIVATE_KEY_FILE_2})
+
+    # Set up the LedgerApis
+    ledger_apis = LedgerApis({FETCHAI: {'network': 'testnet'}}, FETCHAI)
+
+    # Generate some wealth
+    _try_generate_testnet_wealth(FETCHAI, wallet_1.addresses[FETCHAI])
+
+    logger.info("Sending amount to {}".format(wallet_2.addresses.get(FETCHAI)))
+
+    # Create the transaction and send it to the ledger.
+    ledger_api = ledger_apis.apis[FETCHAI]
+    tx_nonce = ledger_api.generate_tx_nonce(wallet_2.addresses.get(FETCHAI),
+                                            wallet_1.addresses.get(FETCHAI))
+    legdder_api.send_transaction(crypto=wallet_1.crypto_objects.get(FETCHAI),
+                                 destination_address=wallet_2.addresses.get(FETCHAI),
+                                 amount=1,
+                                 tx_fee=1,
+                                 tx_nonce=tx_nonce,
+                                 )
+    logger.info("The transaction digest is {}".format(tx_digest))
+
+
+if __name__ == "__main__":
+    run()
 </pre></div>
-<p>In a new terminal window, enter the virtual environment, and connect a template agent to the sandbox.</p>
-<p><div class="highlight"><pre><span></span>pipenv shell
-python templates/v1/basic.py --name my_agent --dashboard
-</pre></div>
-<!-- Issue: https://github.com/fetchai/agents-tac/issues/389 --></p>
-<p>Click through to the <a href="http://localhost:8097" target="_blank">controller GUI</a>.</p>
-<h2 id="launcher-gui">Launcher GUI</h2>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-</div>
-<h2 id="possible-gotchas">Possible gotchas</h2>
-<p>Stop all running containers before restart.</p>
-<div class="highlight"><pre><span></span>docker stop <span class="k">$(</span>docker ps -q<span class="k">)</span>
-</pre></div>
-<p>To remove all images, run the following command.</p>
-<div class="highlight"><pre><span></span><span class="c1"># mac</span>
-docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span> docker system prune -a
-</pre></div>
-<p><br/></p>
+</details>
 </article>
 </div>
 </div>
@@ -590,7 +641,7 @@ docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../tac-skills/" rel="prev" title="TAC skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../multiplexer-standalone/" rel="prev" title="Use multiplexer stand-alone">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -599,17 +650,17 @@ docker ps -q <span class="p">|</span> xargs docker stop <span class="p">;</span>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                TAC skills
+                Use multiplexer stand-alone
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../weather-skills/" rel="next" title="Weather skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../decision-maker-transaction/" rel="next" title="Create decision-maker transaction">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Weather skills
+                Create decision-maker transaction
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
