@@ -709,7 +709,7 @@ aea add-key ethereum eth_private_key.txt
 <div class="highlight"><pre><span></span>aea generate-wealth ethereum
 </pre></div></p>
 <h3 id="update-the-skill-configs">Update the skill configs</h3>
-<p>In the thermometer skill config (<code>car_detector/vendor/fetchai/skills/carpark_detection/skill.yaml</code>) under strategy, amend the <code>currency_id</code>, <code>ledger_id</code>, and <code>db_is_rel_to_cwd</code> as follows.</p>
+<p>In the carpark detection skill config (<code>car_detector/vendor/fetchai/skills/carpark_detection/skill.yaml</code>) under strategy, amend the <code>currency_id</code>, <code>ledger_id</code>, and <code>db_is_rel_to_cwd</code> as follows.</p>
 <div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
 <span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
 <span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
@@ -751,7 +751,7 @@ aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_detection.m
 <span class="p">|</span>ledgers: <span class="o">[</span><span class="s1">'fetchai'</span><span class="o">]</span>               <span class="p">|</span>ledgers: <span class="o">[</span><span class="s1">'ethereum'</span><span class="o">]</span>             <span class="p">|</span>
 <span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
 </pre></div>
-<p>An other way to update the skill config is via the <code>aea config get/set</code> command.
+<p>Another way to update the skill config is via the <code>aea config get/set</code> command.
 <div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_client.models.strategy.args.max_buyer_tx_fee <span class="m">6000</span> --type int
 aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_client.models.strategy.args.currency_id ETH
 aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_client.models.strategy.args.ledger_id ethereum

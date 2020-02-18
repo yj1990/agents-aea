@@ -625,7 +625,7 @@ This demo does not utilize a smart contract or a ledger interaction. </p>
 <p><code>aea fetch fetchai/weather_station:0.1.0</code></p>
 <h3 id="update-the-aea-configs">Update the AEA configs</h3>
 <p>In the terminal change the configuration:
-<div class="highlight"><pre><span></span>aea config set vendor.fetchai.skills.weather_station.models.strategy.args.is_ledger_tx False --type bool
+<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.weather_station.models.strategy.args.is_ledger_tx False --type bool
 </pre></div>
 The <code>is_ledger_tx</code> will prevent the AEA to communicate with a ledger.</p>
 <h3 id="run-the-weather-station-aea">Run the weather station AEA</h3>
@@ -635,155 +635,155 @@ The <code>is_ledger_tx</code> will prevent the AEA to communicate with a ledger.
 <p>Since we want to show the interaction between a programmatically created AEA with a CLI based AEA we are going to write some code for the client.</p>
 <p>Create a new python file and name it <code>weather_client.py</code> and add the following code</p>
 <details><summary>Weather client full code.</summary>
-<div class="highlight"><pre><span></span>import logging
-import os
-import time
-from threading import Thread
-from typing import cast
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">cast</span>
 
-import yaml
+<span class="kn">import</span> <span class="nn">yaml</span>
 
-from aea import AEA_DIR
-from aea.aea import AEA
-from aea.configurations.base import ProtocolConfig, PublicId
-from aea.crypto.fetchai import FETCHAI
-from aea.crypto.helpers import FETCHAI_PRIVATE_KEY_FILE, _create_fetchai_private_key
-from aea.crypto.ledger_apis import LedgerApis
-from aea.crypto.wallet import Wallet
-from aea.identity.base import Identity
-from aea.protocols.base import Protocol
-from aea.protocols.default.serialization import DefaultSerializer
-from aea.registries.base import Resources
-from aea.skills.base import Skill
+<span class="kn">from</span> <span class="nn">aea</span> <span class="kn">import</span> <span class="n">AEA_DIR</span>
+<span class="kn">from</span> <span class="nn">aea.aea</span> <span class="kn">import</span> <span class="n">AEA</span>
+<span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">ProtocolConfig</span><span class="p">,</span> <span class="n">PublicId</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.fetchai</span> <span class="kn">import</span> <span class="n">FETCHAI</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.helpers</span> <span class="kn">import</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">,</span> <span class="n">_create_fetchai_private_key</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.ledger_apis</span> <span class="kn">import</span> <span class="n">LedgerApis</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.wallet</span> <span class="kn">import</span> <span class="n">Wallet</span>
+<span class="kn">from</span> <span class="nn">aea.identity.base</span> <span class="kn">import</span> <span class="n">Identity</span>
+<span class="kn">from</span> <span class="nn">aea.protocols.base</span> <span class="kn">import</span> <span class="n">Protocol</span>
+<span class="kn">from</span> <span class="nn">aea.protocols.default.serialization</span> <span class="kn">import</span> <span class="n">DefaultSerializer</span>
+<span class="kn">from</span> <span class="nn">aea.registries.base</span> <span class="kn">import</span> <span class="n">Resources</span>
+<span class="kn">from</span> <span class="nn">aea.skills.base</span> <span class="kn">import</span> <span class="n">Skill</span>
 
-from packages.fetchai.connections.oef.connection import OEFConnection
-from packages.fetchai.protocols.fipa.serialization import FIPASerializer
-from packages.fetchai.protocols.oef.serialization import OEFSerializer
-from packages.fetchai.skills.weather_client.strategy import Strategy
+<span class="kn">from</span> <span class="nn">packages.fetchai.connections.oef.connection</span> <span class="kn">import</span> <span class="n">OEFConnection</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.protocols.fipa.serialization</span> <span class="kn">import</span> <span class="n">FIPASerializer</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.protocols.oef.serialization</span> <span class="kn">import</span> <span class="n">OEFSerializer</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.skills.weather_client.strategy</span> <span class="kn">import</span> <span class="n">Strategy</span>
 
-HOST = "127.0.0.1"
-PORT = 10000
-ROOT_DIR = os.getcwd()
+<span class="n">HOST</span> <span class="o">=</span> <span class="s2">"127.0.0.1"</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">ROOT_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 
-# Not sure what level of logging to specify to get the logging to be displayed?
-logger = logging.getLogger("aea")
-logging.basicConfig(level=logging.INFO)
-
-
-def run():
-    # Create a private key
-    _create_fetchai_private_key()
-
-    # Set up the wallet, identity, oef connection, ledger and (empty) resources
-    wallet = Wallet({FETCHAI: FETCHAI_PRIVATE_KEY_FILE})
-    identity = Identity("my_aea", address=wallet.addresses.get(FETCHAI))
-    oef_connection = OEFConnection(
-        address=identity.address, oef_addr=HOST, oef_port=PORT
-    )
-    ledger_apis = LedgerApis({}, FETCHAI)
-    resources = Resources()
-
-    # create the AEA
-    my_aea = AEA(
-        identity, [oef_connection], wallet, ledger_apis, resources  # stub_connection,
-    )
-
-    # Add the default protocol (which is part of the AEA distribution)
-    default_protocol_configuration = ProtocolConfig.from_json(
-        yaml.safe_load(
-            open(os.path.join(AEA_DIR, "protocols", "default", "protocol.yaml"))
-        )
-    )
-    default_protocol = Protocol(
-        PublicId.from_str("fetchai/default:0.1.0"),
-        DefaultSerializer(),
-        default_protocol_configuration,
-    )
-    resources.protocol_registry.register(
-        PublicId.from_str("fetchai/default:0.1.0"), default_protocol
-    )
-
-    # Add the oef protocol (which is a package)
-    oef_protocol_configuration = ProtocolConfig.from_json(
-        yaml.safe_load(
-            open(
-                os.path.join(
-                    os.getcwd(),
-                    "packages",
-                    "fetchai",
-                    "protocols",
-                    "oef",
-                    "protocol.yaml",
-                )
-            )
-        )
-    )
-    oef_protocol = Protocol(
-        PublicId.from_str("fetchai/oef:0.1.0"),
-        OEFSerializer(),
-        oef_protocol_configuration,
-    )
-    resources.protocol_registry.register(
-        PublicId.from_str("fetchai/oef:0.1.0"), oef_protocol
-    )
-
-    # Add the fipa protocol (which is a package)
-    fipa_protocol_configuration = ProtocolConfig.from_json(
-        yaml.safe_load(
-            open(
-                os.path.join(
-                    ROOT_DIR,
-                    "packages",
-                    "fetchai",
-                    "protocols",
-                    "fipa",
-                    "protocol.yaml",
-                )
-            )
-        )
-    )
-    fipa_protocol = Protocol(
-        PublicId.from_str("fetchai/fipa:0.1.0"),
-        FIPASerializer(),
-        fipa_protocol_configuration,
-    )
-    resources.protocol_registry.register(
-        PublicId.from_str("fetchai/fipa:0.1.0"), fipa_protocol
-    )
-
-    # Add the error and weather_station skills
-    error_skill = Skill.from_dir(
-        os.path.join(AEA_DIR, "skills", "error"), my_aea.context
-    )
-    weather_skill = Skill.from_dir(
-        os.path.join(ROOT_DIR, "packages", "fetchai", "skills", "weather_client"),
-        my_aea.context,
-    )
-
-    strategy = cast(Strategy, weather_skill.models.get('strategy'))
-    strategy.is_ledger_tx = False
-    strategy.max_buyer_tx_fee = 100
-    strategy.max_row_price = 40
-
-    for skill in [error_skill, weather_skill]:
-        resources.add_skill(skill)
-
-    # Set the AEA running in a different thread
-    logger.info("STARTING AEA NOW!")
-    t = Thread(target=my_aea.start)
-    t.start()
-
-    # Let it run long enought to interact with the weather station
-    time.sleep(25)
-
-    # Shut down the AEA
-    logger.info("STOPPING AEA NOW!")
-    my_aea.stop()
-    t.join()
+<span class="c1"># Not sure what level of logging to specify to get the logging to be displayed?</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">"aea"</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 
 
-if __name__ == "__main__":
-    run()
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="c1"># Create a private key</span>
+    <span class="n">_create_fetchai_private_key</span><span class="p">()</span>
+
+    <span class="c1"># Set up the wallet, identity, oef connection, ledger and (empty) resources</span>
+    <span class="n">wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">})</span>
+    <span class="n">identity</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span><span class="s2">"my_aea"</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="n">wallet</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">))</span>
+    <span class="n">oef_connection</span> <span class="o">=</span> <span class="n">OEFConnection</span><span class="p">(</span>
+        <span class="n">address</span><span class="o">=</span><span class="n">identity</span><span class="o">.</span><span class="n">address</span><span class="p">,</span> <span class="n">oef_addr</span><span class="o">=</span><span class="n">HOST</span><span class="p">,</span> <span class="n">oef_port</span><span class="o">=</span><span class="n">PORT</span>
+    <span class="p">)</span>
+    <span class="n">ledger_apis</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="p">({},</span> <span class="n">FETCHAI</span><span class="p">)</span>
+    <span class="n">resources</span> <span class="o">=</span> <span class="n">Resources</span><span class="p">()</span>
+
+    <span class="c1"># create the AEA</span>
+    <span class="n">my_aea</span> <span class="o">=</span> <span class="n">AEA</span><span class="p">(</span>
+        <span class="n">identity</span><span class="p">,</span> <span class="p">[</span><span class="n">oef_connection</span><span class="p">],</span> <span class="n">wallet</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span>  <span class="c1"># stub_connection,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Add the default protocol (which is part of the AEA distribution)</span>
+    <span class="n">default_protocol_configuration</span> <span class="o">=</span> <span class="n">ProtocolConfig</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span>
+        <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"protocols"</span><span class="p">,</span> <span class="s2">"default"</span><span class="p">,</span> <span class="s2">"protocol.yaml"</span><span class="p">))</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">default_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="p">(</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/default:0.1.0"</span><span class="p">),</span>
+        <span class="n">DefaultSerializer</span><span class="p">(),</span>
+        <span class="n">default_protocol_configuration</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">resources</span><span class="o">.</span><span class="n">protocol_registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/default:0.1.0"</span><span class="p">),</span> <span class="n">default_protocol</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Add the oef protocol (which is a package)</span>
+    <span class="n">oef_protocol_configuration</span> <span class="o">=</span> <span class="n">ProtocolConfig</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span>
+        <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span>
+                    <span class="s2">"packages"</span><span class="p">,</span>
+                    <span class="s2">"fetchai"</span><span class="p">,</span>
+                    <span class="s2">"protocols"</span><span class="p">,</span>
+                    <span class="s2">"oef"</span><span class="p">,</span>
+                    <span class="s2">"protocol.yaml"</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">oef_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="p">(</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/oef:0.1.0"</span><span class="p">),</span>
+        <span class="n">OEFSerializer</span><span class="p">(),</span>
+        <span class="n">oef_protocol_configuration</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">resources</span><span class="o">.</span><span class="n">protocol_registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/oef:0.1.0"</span><span class="p">),</span> <span class="n">oef_protocol</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Add the fipa protocol (which is a package)</span>
+    <span class="n">fipa_protocol_configuration</span> <span class="o">=</span> <span class="n">ProtocolConfig</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span>
+        <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="n">ROOT_DIR</span><span class="p">,</span>
+                    <span class="s2">"packages"</span><span class="p">,</span>
+                    <span class="s2">"fetchai"</span><span class="p">,</span>
+                    <span class="s2">"protocols"</span><span class="p">,</span>
+                    <span class="s2">"fipa"</span><span class="p">,</span>
+                    <span class="s2">"protocol.yaml"</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">fipa_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="p">(</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/fipa:0.1.0"</span><span class="p">),</span>
+        <span class="n">FIPASerializer</span><span class="p">(),</span>
+        <span class="n">fipa_protocol_configuration</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">resources</span><span class="o">.</span><span class="n">protocol_registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/fipa:0.1.0"</span><span class="p">),</span> <span class="n">fipa_protocol</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Add the error and weather_station skills</span>
+    <span class="n">error_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"error"</span><span class="p">),</span> <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span>
+    <span class="p">)</span>
+    <span class="n">weather_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ROOT_DIR</span><span class="p">,</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"weather_client"</span><span class="p">),</span>
+        <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">strategy</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Strategy</span><span class="p">,</span> <span class="n">weather_skill</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"strategy"</span><span class="p">))</span>
+    <span class="n">strategy</span><span class="o">.</span><span class="n">is_ledger_tx</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">strategy</span><span class="o">.</span><span class="n">max_buyer_tx_fee</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">strategy</span><span class="o">.</span><span class="n">max_row_price</span> <span class="o">=</span> <span class="mi">40</span>
+
+    <span class="k">for</span> <span class="n">skill</span> <span class="ow">in</span> <span class="p">[</span><span class="n">error_skill</span><span class="p">,</span> <span class="n">weather_skill</span><span class="p">]:</span>
+        <span class="n">resources</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">skill</span><span class="p">)</span>
+
+    <span class="c1"># Set the AEA running in a different thread</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"STARTING AEA NOW!"</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">my_aea</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="c1"># Let it run long enought to interact with the weather station</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+
+    <span class="c1"># Shut down the AEA</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"STOPPING AEA NOW!"</span><span class="p">)</span>
+    <span class="n">my_aea</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">()</span>
 </pre></div>
 </details>
 <p>For more details on how to create an agent programmatically follow this guide <a href="/build-aea-programmatically/">here</a></p>

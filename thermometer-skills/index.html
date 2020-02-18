@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#preparation-instructions" tabindex="1">
+<a class="md-skip" href="#discussion" tabindex="1">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -251,6 +251,11 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#discussion">
+    Discussion
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#preparation-instructions">
     Preparation instructions
   </a>
@@ -261,15 +266,6 @@
     Dependencies
   </a>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#discussion">
-    Discussion
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#launch-an-oef-node">
     Launch an OEF node
@@ -557,6 +553,11 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#discussion">
+    Discussion
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#preparation-instructions">
     Preparation instructions
   </a>
@@ -567,15 +568,6 @@
     Dependencies
   </a>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#discussion">
-    Discussion
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#launch-an-oef-node">
     Launch an OEF node
@@ -655,16 +647,16 @@
 <li>The provider of thermometer data (the thermometer).</li>
 <li>The buyer of thermometer data (the thermometer_client).</li>
 </ul>
-<h2 id="preparation-instructions">Preparation instructions</h2>
-<h3 id="dependencies">Dependencies</h3>
-<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
-<h2 id="discussion">Discussion</h2>
+<h3 id="discussion">Discussion</h3>
 <p>The scope of the specific demo is to demonstrate how to create a very simple AEA with the usage of the AEA framework, a Raspberry Pi, and a thermometer sensor. The thermometer AEA
 will read data from the sensor each time a client requests and will deliver to the client upon payment. To keep the demo simple we avoided the usage of a database since this would increase the complexity. As a result, the AEA can provide only one reading from the sensor.
 This demo does not utilise a smart contract. As a result, we interact with a ledger only to complete a transaction.</p>
 <p>Since the AEA framework enables us to use third-party libraries hosted on PyPI we can directly reference the external dependencies.
 The <code>aea install</code> command will install each dependency that the specific AEA needs and is listed in the skill's YAML file. 
 The AEA must run inside a Raspberry Pi or any other Linux system, and the sensor must be connected to the USB port.</p>
+<h2 id="preparation-instructions">Preparation instructions</h2>
+<h3 id="dependencies">Dependencies</h3>
+<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
 <h3 id="launch-an-oef-node">Launch an OEF node</h3>
 <p>In a separate terminal, launch a local OEF node (for search and discovery).
 <div class="highlight"><pre><span></span>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json

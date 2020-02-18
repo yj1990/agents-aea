@@ -683,29 +683,22 @@ The fastest way to create your first AEA is to fetch it! </p>
 <p>or </p>
 <div class="highlight"><pre><span></span>aea run --connections fetchai/stub:0.1.0
 </pre></div>
-<p>You will see the echo task running in the terminal window.</p>
+<p>You will see the echo skill running in the terminal window.</p>
 <div class="highlight"><pre><span></span>info: Echo Behaviour: act method called.
-info: Echo Task: execute method called.
 info: Echo Behaviour: act method called.
-info: Echo Task: execute method called.
 info: Echo Behaviour: act method called.
-info: Echo Task: execute method called.
 </pre></div>
-<p>The framework first calls the <code>setup</code> method on the <code>Handler</code>, <code>Behaviour</code>, and <code>Task</code> code in that order; after which it repeatedly calls the <code>Behaviour</code> and <code>Task</code> methods, <code>act</code> and <code>execute</code>. This is the main agent loop in action.</p>
+<p>The framework first calls the <code>setup</code> method on the <code>Handler</code>, and <code>Behaviour</code> code in that order; after which it repeatedly calls the Behaviour method act. This is the main agent loop in action.</p>
 <p>Let's look at the <code>Handler</code> in more depth.</p>
 <h3 id="add-a-message-to-the-input-file">Add a message to the input file</h3>
 <p>From a different terminal and same directory, we send the AEA a message wrapped in an envelope via the input file.</p>
 <div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.1.0,{"type": "bytes", "content": "aGVsbG8="}'</span> &gt;&gt; input_file
 </pre></div>
 <p>You will see the <code>Echo Handler</code> dealing with the envelope and responding with the same message to the <code>output_file</code>, and also decoding the Base64 encrypted message in this case.</p>
-<div class="highlight"><pre><span></span>info: Echo Task: execute method called.
-info: Echo Behaviour: act method called.
+<div class="highlight"><pre><span></span>info: Echo Behaviour: act method called.
 info: Echo Handler: <span class="nv">message</span><span class="o">=</span>Message<span class="o">(</span><span class="nv">type</span><span class="o">=</span>bytes <span class="nv">content</span><span class="o">=</span>b<span class="s1">'hello'</span><span class="o">)</span>, <span class="nv">sender</span><span class="o">=</span>sender_aea
-info: Echo Task: execute method called.
 info: Echo Behaviour: act method called.
-info: Echo Task: execute method called.
 info: Echo Behaviour: act method called.
-info: Echo Task: execute method called.
 </pre></div>
 <h2 id="stop-the-aea">Stop the AEA</h2>
 <p>Stop the AEA by pressing <code>CTRL C</code></p>
@@ -737,7 +730,7 @@ First, create a new AEA project and enter it.
 Second, add the echo skill to the project.      
 <div class="highlight"><pre><span></span>aea add skill fetchai/echo:0.1.0        
 </pre></div>
-This copies the `echo` skill code containing the "behaviours", "handlers", and "tasks" into the skill, ready to run. The identifier of the skill `fetchai/echo:0.1.0` consists of the name of the author of the skill, followed by the skill name and its version.      
+This copies the `echo` skill code containing the "behaviours", and "handlers" into the skill, ready to run. The identifier of the skill `fetchai/echo:0.1.0` consists of the name of the author of the skill, followed by the skill name and its version.       
 </details>
 </article>
 </div>

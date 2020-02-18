@@ -625,22 +625,22 @@ So let's create these dependencies before we instantiate the AEA.</p>
 <span class="n">INPUT_FILE</span> <span class="o">=</span> <span class="s2">"input.txt"</span>
 <span class="n">OUTPUT_FILE</span> <span class="o">=</span> <span class="s2">"output.txt"</span>
 
- <span class="n">tx_handler</span> <span class="o">=</span> <span class="n">TransactionHandler</span><span class="p">(</span><span class="n">skill_context</span><span class="o">=</span><span class="s1">'skill_context'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"fake_skill"</span><span class="p">)</span>
- <span class="n">resources</span> <span class="o">=</span> <span class="n">Resources</span><span class="p">()</span>
- <span class="n">resources</span><span class="o">.</span><span class="n">handler_registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
-    <span class="p">(</span><span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/fake_skill:0.1.0"</span><span class="p">),</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/internal:0.1.0"</span><span class="p">)),</span> <span class="n">tx_handler</span><span class="p">)</span>
+<span class="n">tx_handler</span> <span class="o">=</span> <span class="n">TransactionHandler</span><span class="p">(</span><span class="n">skill_context</span><span class="o">=</span><span class="s1">'skill_context'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"fake_skill"</span><span class="p">)</span>
+<span class="n">resources</span> <span class="o">=</span> <span class="n">Resources</span><span class="p">()</span>
+<span class="n">resources</span><span class="o">.</span><span class="n">handler_registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+   <span class="p">(</span><span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/fake_skill:0.1.0"</span><span class="p">),</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/internal:0.1.0"</span><span class="p">)),</span> <span class="n">tx_handler</span><span class="p">)</span>
 
- <span class="n">stub_connection</span> <span class="o">=</span> <span class="n">StubConnection</span><span class="p">(</span>
-    <span class="n">input_file_path</span><span class="o">=</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="n">output_file_path</span><span class="o">=</span><span class="n">OUTPUT_FILE</span>
- <span class="p">)</span>
+<span class="n">stub_connection</span> <span class="o">=</span> <span class="n">StubConnection</span><span class="p">(</span>
+   <span class="n">input_file_path</span><span class="o">=</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="n">output_file_path</span><span class="o">=</span><span class="n">OUTPUT_FILE</span>
+<span class="p">)</span>
 
- <span class="n">identity_1</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">"my_aea"</span><span class="p">,</span>
-    <span class="n">address</span><span class="o">=</span><span class="n">wallet_1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
-    <span class="n">default_address_key</span><span class="o">=</span><span class="n">FETCHAI</span><span class="p">,</span>
- <span class="p">)</span>
+<span class="n">identity_1</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span>
+   <span class="n">name</span><span class="o">=</span><span class="s2">"my_aea"</span><span class="p">,</span>
+   <span class="n">address</span><span class="o">=</span><span class="n">wallet_1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+   <span class="n">default_address_key</span><span class="o">=</span><span class="n">FETCHAI</span><span class="p">,</span>
+<span class="p">)</span>
 
- <span class="n">my_aea</span> <span class="o">=</span> <span class="n">AEA</span><span class="p">(</span><span class="n">identity_1</span><span class="p">,</span> <span class="p">[</span><span class="n">stub_connection</span><span class="p">],</span> <span class="n">wallet_1</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span><span class="p">)</span>
+<span class="n">my_aea</span> <span class="o">=</span> <span class="n">AEA</span><span class="p">(</span><span class="n">identity_1</span><span class="p">,</span> <span class="p">[</span><span class="n">stub_connection</span><span class="p">],</span> <span class="n">wallet_1</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span><span class="p">)</span>
 </pre></div>
 <h2 id="create-an-identity-for-counterparty">Create an identity for counterparty</h2>
 <p>We need to create an identity for the counterparty since the only one who must have access to the wallet is the decision-maker.
@@ -695,17 +695,13 @@ So let's create these dependencies before we instantiate the AEA.</p>
 </pre></div></p>
 <h2 id="more-details">More details</h2>
 <p>To be able to register a handler that reads the internal messages, we have to create a class at the end of the file with the name TransactionHandler
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">cast</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">cast</span>
 
 <span class="kn">from</span> <span class="nn">aea.decision_maker.messages.transaction</span> <span class="kn">import</span> <span class="n">TransactionMessage</span>
 <span class="kn">from</span> <span class="nn">aea.protocols.base</span> <span class="kn">import</span> <span class="n">Message</span>
 
 <span class="kn">from</span> <span class="nn">aea.skills.base</span> <span class="kn">import</span> <span class="n">Handler</span>
 
-
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">"aea"</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">TransactionHandler</span><span class="p">(</span><span class="n">Handler</span><span class="p">):</span>
     <span class="sd">"""Implement the transaction handler."""</span>
@@ -724,18 +720,18 @@ So let's create these dependencies before we instantiate the AEA.</p>
 <span class="sd">        :return: None</span>
 <span class="sd">        """</span>
         <span class="n">tx_msg_response</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">TransactionMessage</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">tx_msg_response</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">tx_msg_response</span><span class="p">)</span>
         <span class="k">if</span> <span class="p">(</span>
             <span class="n">tx_msg_response</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
             <span class="ow">and</span> <span class="n">tx_msg_response</span><span class="o">.</span><span class="n">performative</span>
             <span class="o">==</span> <span class="n">TransactionMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">SUCCESSFUL_SETTLEMENT</span>
         <span class="p">):</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
                 <span class="s2">"Transaction was successful."</span>
             <span class="p">)</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">tx_msg_response</span><span class="o">.</span><span class="n">tx_digest</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">tx_msg_response</span><span class="o">.</span><span class="n">tx_digest</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
                 <span class="s2">"Transaction was not successful."</span>
             <span class="p">)</span>
 
@@ -748,152 +744,152 @@ So let's create these dependencies before we instantiate the AEA.</p>
         <span class="k">pass</span>
 </pre></div></p>
 <details><summary>Transaction via decision-maker full code</summary>
-<div class="highlight"><pre><span></span>import logging
-import time
-from threading import Thread
-from typing import Optional, cast, Dict, Any
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">cast</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span>
 
-from aea.identity.base import Identity
-from aea.aea import AEA
-from aea.configurations.base import PublicId, ProtocolId
-from aea.connections.stub.connection import StubConnection
-from aea.crypto.fetchai import FETCHAI
-from aea.crypto.helpers import _create_fetchai_private_key, _try_generate_testnet_wealth
-from aea.crypto.ledger_apis import LedgerApis
-from aea.crypto.wallet import Wallet
-from aea.decision_maker.messages.transaction import TransactionMessage
-from aea.protocols.base import Message
+<span class="kn">from</span> <span class="nn">aea.identity.base</span> <span class="kn">import</span> <span class="n">Identity</span>
+<span class="kn">from</span> <span class="nn">aea.aea</span> <span class="kn">import</span> <span class="n">AEA</span>
+<span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">PublicId</span><span class="p">,</span> <span class="n">ProtocolId</span>
+<span class="kn">from</span> <span class="nn">aea.connections.stub.connection</span> <span class="kn">import</span> <span class="n">StubConnection</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.fetchai</span> <span class="kn">import</span> <span class="n">FETCHAI</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.helpers</span> <span class="kn">import</span> <span class="n">_create_fetchai_private_key</span><span class="p">,</span> <span class="n">_try_generate_testnet_wealth</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.ledger_apis</span> <span class="kn">import</span> <span class="n">LedgerApis</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.wallet</span> <span class="kn">import</span> <span class="n">Wallet</span>
+<span class="kn">from</span> <span class="nn">aea.decision_maker.messages.transaction</span> <span class="kn">import</span> <span class="n">TransactionMessage</span>
+<span class="kn">from</span> <span class="nn">aea.protocols.base</span> <span class="kn">import</span> <span class="n">Message</span>
 
-from aea.registries.base import Resources
-from aea.skills.base import Handler
+<span class="kn">from</span> <span class="nn">aea.registries.base</span> <span class="kn">import</span> <span class="n">Resources</span>
+<span class="kn">from</span> <span class="nn">aea.skills.base</span> <span class="kn">import</span> <span class="n">Handler</span>
 
-logger = logging.getLogger("aea")
-logging.basicConfig(level=logging.INFO)
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">"aea"</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 
-FETCHAI_PRIVATE_KEY_FILE_1 = "fet_private_key_1.txt"
-FETCHAI_PRIVATE_KEY_FILE_2 = "fet_private_key_2.txt"
+<span class="n">FETCHAI_PRIVATE_KEY_FILE_1</span> <span class="o">=</span> <span class="s2">"fet_private_key_1.txt"</span>
+<span class="n">FETCHAI_PRIVATE_KEY_FILE_2</span> <span class="o">=</span> <span class="s2">"fet_private_key_2.txt"</span>
 
-ROOT_DIR = "./"
-INPUT_FILE = "input.txt"
-OUTPUT_FILE = "output.txt"
-
-
-def run():
-    # Create a private keys
-    _create_fetchai_private_key(private_key_file=FETCHAI_PRIVATE_KEY_FILE_1)
-    _create_fetchai_private_key(private_key_file=FETCHAI_PRIVATE_KEY_FILE_2)
-
-    # Set up the wallets
-    wallet_1 = Wallet({FETCHAI: FETCHAI_PRIVATE_KEY_FILE_1})
-    wallet_2 = Wallet({FETCHAI: FETCHAI_PRIVATE_KEY_FILE_2})
-
-    # Generate some wealth
-    _try_generate_testnet_wealth(FETCHAI, wallet_1.addresses[FETCHAI])
-
-    # Set up the LedgerApis
-    ledger_apis = LedgerApis({FETCHAI: {'network': 'testnet'}}, FETCHAI)
-
-    tx_handler = TransactionHandler(skill_context='skill_context', name="fake_skill")
-    resources = Resources()
-    resources.handler_registry.register(
-        (PublicId.from_str("fetchai/fake_skill:0.1.0"), PublicId.from_str("fetchai/internal:0.1.0")), tx_handler)
-
-    stub_connection = StubConnection(
-        input_file_path=INPUT_FILE, output_file_path=OUTPUT_FILE
-    )
-
-    identity_1 = Identity(
-        name="my_aea",
-        address=wallet_1.addresses.get(FETCHAI),
-        default_address_key=FETCHAI,
-    )
-
-    identity_2 = Identity(
-        name="my_aea_2",
-        address=wallet_2.addresses.get(FETCHAI),
-        default_address_key=FETCHAI,
-    )
-
-    # create the AEA
-
-    my_aea = AEA(identity_1, [stub_connection], wallet_1, ledger_apis, resources)
-    ledger_api = ledger_apis.apis[FETCHAI]
-    tx_nonce = ledger_api.generate_tx_nonce(identity_1.addresses.get(FETCHAI),
-                                            identity_2.addresses.get(FETCHAI))
-
-    tx_msg = TransactionMessage(
-        performative=TransactionMessage.Performative.PROPOSE_FOR_SETTLEMENT,
-        skill_callback_ids=[PublicId("fetchai", "fake_skill", "0.1.0")],
-        tx_id="transaction0",
-        tx_sender_addr=identity_1.addresses.get(FETCHAI),
-        tx_counterparty_addr=identity_2.addresses.get(FETCHAI),
-        tx_amount_by_currency_id={'FET': -1},
-        tx_sender_fee=1,
-        tx_counterparty_fee=0,
-        tx_quantities_by_good_id={},
-        ledger_id=FETCHAI,
-        info={"some_info_key": "some_info_value"},
-        tx_nonce=tx_nonce,
-        )
-    my_aea.context.decision_maker_message_queue.put_nowait(tx_msg)
-
-    # Set the AEA running in a different thread
-    logger.info("STARTING AEA NOW!")
-    t = Thread(target=my_aea.start)
-    t.start()
-
-    # Let it run long enough to interact with the weather station
-    time.sleep(5)
-
-    # Shut down the AEA
-    logger.info("STOPPING AEA NOW!")
-    my_aea.stop()
-    t.join()
+<span class="n">ROOT_DIR</span> <span class="o">=</span> <span class="s2">"./"</span>
+<span class="n">INPUT_FILE</span> <span class="o">=</span> <span class="s2">"input.txt"</span>
+<span class="n">OUTPUT_FILE</span> <span class="o">=</span> <span class="s2">"output.txt"</span>
 
 
-class TransactionHandler(Handler):
-    """Implement the transaction handler."""
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="c1"># Create a private keys</span>
+    <span class="n">_create_fetchai_private_key</span><span class="p">(</span><span class="n">private_key_file</span><span class="o">=</span><span class="n">FETCHAI_PRIVATE_KEY_FILE_1</span><span class="p">)</span>
+    <span class="n">_create_fetchai_private_key</span><span class="p">(</span><span class="n">private_key_file</span><span class="o">=</span><span class="n">FETCHAI_PRIVATE_KEY_FILE_2</span><span class="p">)</span>
 
-    SUPPORTED_PROTOCOL = TransactionMessage.protocol_id  # type: Optional[ProtocolId]
+    <span class="c1"># Set up the wallets</span>
+    <span class="n">wallet_1</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE_1</span><span class="p">})</span>
+    <span class="n">wallet_2</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE_2</span><span class="p">})</span>
 
-    def setup(self) -&gt; None:
-        """Implement the setup for the handler."""
-        pass
+    <span class="c1"># Generate some wealth</span>
+    <span class="n">_try_generate_testnet_wealth</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">,</span> <span class="n">wallet_1</span><span class="o">.</span><span class="n">addresses</span><span class="p">[</span><span class="n">FETCHAI</span><span class="p">])</span>
 
-    def handle(self, message: Message) -&gt; None:
-        """
-        Implement the reaction to a message.
+    <span class="c1"># Set up the LedgerApis</span>
+    <span class="n">ledger_apis</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="p">{</span><span class="s1">'network'</span><span class="p">:</span> <span class="s1">'testnet'</span><span class="p">}},</span> <span class="n">FETCHAI</span><span class="p">)</span>
 
-        :param message: the message
-        :return: None
-        """
-        tx_msg_response = cast(TransactionMessage, message)
-        logger.info(tx_msg_response)
-        if (
-            tx_msg_response is not None
-            and tx_msg_response.performative
-            == TransactionMessage.Performative.SUCCESSFUL_SETTLEMENT
-        ):
-            logger.info(
-                "Transaction was successful."
-            )
-            logger.info(tx_msg_response.tx_digest)
-        else:
-            logger.info(
-                "Transaction was not successful."
-            )
+    <span class="n">tx_handler</span> <span class="o">=</span> <span class="n">TransactionHandler</span><span class="p">(</span><span class="n">skill_context</span><span class="o">=</span><span class="s1">'skill_context'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"fake_skill"</span><span class="p">)</span>
+    <span class="n">resources</span> <span class="o">=</span> <span class="n">Resources</span><span class="p">()</span>
+    <span class="n">resources</span><span class="o">.</span><span class="n">handler_registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/fake_skill:0.1.0"</span><span class="p">),</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/internal:0.1.0"</span><span class="p">)),</span> <span class="n">tx_handler</span><span class="p">)</span>
 
-    def teardown(self) -&gt; None:
-        """
-        Implement the handler teardown.
+    <span class="n">stub_connection</span> <span class="o">=</span> <span class="n">StubConnection</span><span class="p">(</span>
+        <span class="n">input_file_path</span><span class="o">=</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="n">output_file_path</span><span class="o">=</span><span class="n">OUTPUT_FILE</span>
+    <span class="p">)</span>
 
-        :return: None
-        """
-        pass
+    <span class="n">identity_1</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"my_aea"</span><span class="p">,</span>
+        <span class="n">address</span><span class="o">=</span><span class="n">wallet_1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+        <span class="n">default_address_key</span><span class="o">=</span><span class="n">FETCHAI</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">identity_2</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"my_aea_2"</span><span class="p">,</span>
+        <span class="n">address</span><span class="o">=</span><span class="n">wallet_2</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+        <span class="n">default_address_key</span><span class="o">=</span><span class="n">FETCHAI</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># create the AEA</span>
+
+    <span class="n">my_aea</span> <span class="o">=</span> <span class="n">AEA</span><span class="p">(</span><span class="n">identity_1</span><span class="p">,</span> <span class="p">[</span><span class="n">stub_connection</span><span class="p">],</span> <span class="n">wallet_1</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span><span class="p">)</span>
+    <span class="n">ledger_api</span> <span class="o">=</span> <span class="n">ledger_apis</span><span class="o">.</span><span class="n">apis</span><span class="p">[</span><span class="n">FETCHAI</span><span class="p">]</span>
+    <span class="n">tx_nonce</span> <span class="o">=</span> <span class="n">ledger_api</span><span class="o">.</span><span class="n">generate_tx_nonce</span><span class="p">(</span><span class="n">identity_1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+                                            <span class="n">identity_2</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">))</span>
+
+    <span class="n">tx_msg</span> <span class="o">=</span> <span class="n">TransactionMessage</span><span class="p">(</span>
+        <span class="n">performative</span><span class="o">=</span><span class="n">TransactionMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">PROPOSE_FOR_SETTLEMENT</span><span class="p">,</span>
+        <span class="n">skill_callback_ids</span><span class="o">=</span><span class="p">[</span><span class="n">PublicId</span><span class="p">(</span><span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"fake_skill"</span><span class="p">,</span> <span class="s2">"0.1.0"</span><span class="p">)],</span>
+        <span class="n">tx_id</span><span class="o">=</span><span class="s2">"transaction0"</span><span class="p">,</span>
+        <span class="n">tx_sender_addr</span><span class="o">=</span><span class="n">identity_1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+        <span class="n">tx_counterparty_addr</span><span class="o">=</span><span class="n">identity_2</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+        <span class="n">tx_amount_by_currency_id</span><span class="o">=</span><span class="p">{</span><span class="s1">'FET'</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="n">tx_sender_fee</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">tx_counterparty_fee</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">tx_quantities_by_good_id</span><span class="o">=</span><span class="p">{},</span>
+        <span class="n">ledger_id</span><span class="o">=</span><span class="n">FETCHAI</span><span class="p">,</span>
+        <span class="n">info</span><span class="o">=</span><span class="p">{</span><span class="s2">"some_info_key"</span><span class="p">:</span> <span class="s2">"some_info_value"</span><span class="p">},</span>
+        <span class="n">tx_nonce</span><span class="o">=</span><span class="n">tx_nonce</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">decision_maker_message_queue</span><span class="o">.</span><span class="n">put_nowait</span><span class="p">(</span><span class="n">tx_msg</span><span class="p">)</span>
+
+    <span class="c1"># Set the AEA running in a different thread</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"STARTING AEA NOW!"</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">my_aea</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="c1"># Let it run long enough to interact with the weather station</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="c1"># Shut down the AEA</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"STOPPING AEA NOW!"</span><span class="p">)</span>
+    <span class="n">my_aea</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 
 
-if __name__ == "__main__":
-    run()
+<span class="k">class</span> <span class="nc">TransactionHandler</span><span class="p">(</span><span class="n">Handler</span><span class="p">):</span>
+    <span class="sd">"""Implement the transaction handler."""</span>
+
+    <span class="n">SUPPORTED_PROTOCOL</span> <span class="o">=</span> <span class="n">TransactionMessage</span><span class="o">.</span><span class="n">protocol_id</span>  <span class="c1"># type: Optional[ProtocolId]</span>
+
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""Implement the setup for the handler."""</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Implement the reaction to a message.</span>
+
+<span class="sd">        :param message: the message</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        """</span>
+        <span class="n">tx_msg_response</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">TransactionMessage</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">tx_msg_response</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">tx_msg_response</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="n">tx_msg_response</span><span class="o">.</span><span class="n">performative</span>
+            <span class="o">==</span> <span class="n">TransactionMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">SUCCESSFUL_SETTLEMENT</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">"Transaction was successful."</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">tx_msg_response</span><span class="o">.</span><span class="n">tx_digest</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">"Transaction was not successful."</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Implement the handler teardown.</span>
+
+<span class="sd">        :return: None</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">()</span>
 </pre></div>
 </details>
 </article>

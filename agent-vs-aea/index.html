@@ -612,51 +612,51 @@
         <span class="k">pass</span>
 </pre></div></p>
 <h2 id="instantiate-an-agent">Instantiate an <code>Agent</code></h2>
-<div class="highlight"><pre><span></span><span class="c1"># Ensure the input and output files do not exist initially</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Ensure the input and output files do not exist initially</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">)</span>
 
-<span class="c1"># Create an addresses identity:</span>
-<span class="n">identity</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"my_agent"</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="s2">"some_address"</span><span class="p">)</span>
+    <span class="c1"># Create an addresses identity:</span>
+    <span class="n">identity</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"my_agent"</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="s2">"some_address"</span><span class="p">)</span>
 
-<span class="c1"># Set up the stub connection</span>
-<span class="n">stub_connection</span> <span class="o">=</span> <span class="n">StubConnection</span><span class="p">(</span>
-    <span class="n">input_file_path</span><span class="o">=</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="n">output_file_path</span><span class="o">=</span><span class="n">OUTPUT_FILE</span>
-<span class="p">)</span>
+    <span class="c1"># Set up the stub connection</span>
+    <span class="n">stub_connection</span> <span class="o">=</span> <span class="n">StubConnection</span><span class="p">(</span>
+        <span class="n">input_file_path</span><span class="o">=</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="n">output_file_path</span><span class="o">=</span><span class="n">OUTPUT_FILE</span>
+    <span class="p">)</span>
 
-<span class="c1"># Create our Agent</span>
-<span class="n">my_agent</span> <span class="o">=</span> <span class="n">MyAgent</span><span class="p">(</span><span class="n">identity</span><span class="p">,</span> <span class="p">[</span><span class="n">stub_connection</span><span class="p">])</span>
+    <span class="c1"># Create our Agent</span>
+    <span class="n">my_agent</span> <span class="o">=</span> <span class="n">MyAgent</span><span class="p">(</span><span class="n">identity</span><span class="p">,</span> <span class="p">[</span><span class="n">stub_connection</span><span class="p">])</span>
 </pre></div>
 <h2 id="start-the-agent">Start the agent</h2>
 <p>We run the agent from a different thread so that we can still use the main thread to pass it messages.
-<div class="highlight"><pre><span></span><span class="c1"># Set the agent running in a different thread</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">my_agent</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Set the agent running in a different thread</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">my_agent</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-<span class="c1"># Wait for everything to start up</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="c1"># Wait for everything to start up</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div></p>
 <h2 id="send-and-receive-an-envelope">Send and receive an envelope</h2>
 <p>We use the input and output text files to send an envelope to our agent and receive a response
-<div class="highlight"><pre><span></span><span class="c1"># Create a message inside an envelope and get the stub connection to pass it into the agent</span>
-<span class="n">message_text</span> <span class="o">=</span> <span class="s1">'my_agent,other_agent,fetchai/default:0.1.0,{"type": "bytes", "content": "aGVsbG8="}'</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">message_text</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Create a message inside an envelope and get the stub connection to pass it into the agent</span>
+    <span class="n">message_text</span> <span class="o">=</span> <span class="s1">'my_agent,other_agent,fetchai/default:0.1.0,{"type": "bytes", "content": "aGVsbG8="}'</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">message_text</span><span class="p">)</span>
 
-<span class="c1"># Wait for the envelope to get processed</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># Wait for the envelope to get processed</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># Read the output envelope generated by the agent</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"output message: "</span> <span class="o">+</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+    <span class="c1"># Read the output envelope generated by the agent</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"output message: "</span> <span class="o">+</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
 </pre></div></p>
 <h2 id="shutdown">Shutdown</h2>
 <p>Finally stop our agent and wait for it to finish
-<div class="highlight"><pre><span></span><span class="c1"># Shut down the agent</span>
-<span class="n">my_agent</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Shut down the agent</span>
+    <span class="n">my_agent</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 </pre></div></p>
 <h2 id="your-turn">Your turn</h2>
 <p>Now it is your turn to develop a simple agent with the <code>Agent</code> class.</p>

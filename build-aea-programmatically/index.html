@@ -611,91 +611,94 @@
 </pre></div></p>
 <h2 id="create-a-private-key">Create a private key</h2>
 <p>We need a private key to populate the AEA's wallet.
-<div class="highlight"><pre><span></span><span class="c1"># Create a private key</span>
-<span class="n">_create_default_private_key</span><span class="p">()</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Create a private key</span>
+    <span class="n">_create_fetchai_private_key</span><span class="p">()</span>
 </pre></div></p>
 <h2 id="clearing-the-input-and-output-files">Clearing the input and output files</h2>
 <p>We will use the stub connection to pass envelopes in and out of the AEA. Ensure that any input and output text files are removed before we start.
-<div class="highlight"><pre><span></span><span class="c1"># Ensure the input and output files do not exist initially</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Ensure the input and output files do not exist initially</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">)</span>
 </pre></div></p>
 <h2 id="initialise-the-aea">Initialise the AEA</h2>
 <p>We use the private key file we created to initialise a wallet, we also create the stub connection, tell it what Ledger APIs we are going to use (none in this example) and create a resources object containing skills, protocols and connections (this is initially empty). </p>
 <p>Then we pass all of this into the AEA constructor to create our AEA.
-<div class="highlight"><pre><span></span><span class="c1"># Set up the wallet, stub connection, ledger and (empty) resources</span>
-<span class="n">wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">})</span>
-<span class="n">stub_connection</span> <span class="o">=</span> <span class="n">StubConnection</span><span class="p">(</span>
-    <span class="n">input_file_path</span><span class="o">=</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="n">output_file_path</span><span class="o">=</span><span class="n">OUTPUT_FILE</span>
-<span class="p">)</span>
-<span class="n">ledger_apis</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="p">({</span><span class="s1">'fetchai'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'network'</span><span class="p">:</span> <span class="s1">'testnet'</span><span class="p">}},</span> <span class="s1">'fetchai'</span><span class="p">)</span>
-<span class="n">resources</span> <span class="o">=</span> <span class="n">Resources</span><span class="p">()</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Set up the Wallet, stub connection, ledger and (empty) resources</span>
+    <span class="n">wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">})</span>
+    <span class="n">stub_connection</span> <span class="o">=</span> <span class="n">StubConnection</span><span class="p">(</span>
+        <span class="n">input_file_path</span><span class="o">=</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="n">output_file_path</span><span class="o">=</span><span class="n">OUTPUT_FILE</span>
+    <span class="p">)</span>
+    <span class="n">ledger_apis</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="p">({</span><span class="s2">"fetchai"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"network"</span><span class="p">:</span> <span class="s2">"testnet"</span><span class="p">}},</span> <span class="s2">"fetchai"</span><span class="p">)</span>
+    <span class="n">resources</span> <span class="o">=</span> <span class="n">Resources</span><span class="p">()</span>
+    <span class="c1"># Create an identity</span>
+    <span class="n">identity</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"my_aea"</span><span class="p">,</span>
+        <span class="n">address</span><span class="o">=</span><span class="n">wallet</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+        <span class="n">default_address_key</span><span class="o">=</span><span class="n">FETCHAI</span><span class="p">,</span>
+    <span class="p">)</span>
 
-<span class="c1"># Create an identity</span>
-<span class="n">identity</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"my_aea"</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="n">wallet</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span> <span class="n">default_address_key</span><span class="o">=</span><span class="n">FETCHAI</span><span class="p">,)</span>
-
-<span class="c1"># Create our AEA</span>
-<span class="n">my_aea</span> <span class="o">=</span> <span class="n">AEA</span><span class="p">(</span><span class="n">identity</span><span class="p">,</span> <span class="p">[</span><span class="n">stub_connection</span><span class="p">],</span> <span class="n">wallet</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span><span class="p">)</span>
+    <span class="c1"># Create our AEA</span>
+    <span class="n">my_aea</span> <span class="o">=</span> <span class="n">AEA</span><span class="p">(</span><span class="n">identity</span><span class="p">,</span> <span class="p">[</span><span class="n">stub_connection</span><span class="p">],</span> <span class="n">wallet</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span><span class="p">)</span>
 </pre></div></p>
 <p>Create the default protocol and add it to the AEA.
-<div class="highlight"><pre><span></span><span class="c1"># Add the default protocol (which is part of the AEA distribution)</span>
-<span class="n">default_protocol_configuration</span> <span class="o">=</span> <span class="n">ProtocolConfig</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span>
-    <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span>
-        <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"protocols"</span><span class="p">,</span> <span class="s2">"default"</span><span class="p">,</span> <span class="s2">"protocol.yaml"</span><span class="p">))</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Add the default protocol (which is part of the AEA distribution)</span>
+    <span class="n">default_protocol_configuration</span> <span class="o">=</span> <span class="n">ProtocolConfig</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span>
+        <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"protocols"</span><span class="p">,</span> <span class="s2">"default"</span><span class="p">,</span> <span class="s2">"protocol.yaml"</span><span class="p">))</span>
+        <span class="p">)</span>
     <span class="p">)</span>
-<span class="p">)</span>
-<span class="n">default_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="p">(</span>
-    <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/default:0.1.0"</span><span class="p">),</span>
-    <span class="n">DefaultSerializer</span><span class="p">(),</span>
-    <span class="n">default_protocol_configuration</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">resources</span><span class="o">.</span><span class="n">protocol_registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
-    <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/default:0.1.0"</span><span class="p">),</span> <span class="n">default_protocol</span>
-<span class="p">)</span>
+    <span class="n">default_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="p">(</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/default:0.1.0"</span><span class="p">),</span>
+        <span class="n">DefaultSerializer</span><span class="p">(),</span>
+        <span class="n">default_protocol_configuration</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">resources</span><span class="o">.</span><span class="n">protocol_registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/default:0.1.0"</span><span class="p">),</span> <span class="n">default_protocol</span>
+    <span class="p">)</span>
 </pre></div></p>
 <p>Create the error skill (needed by all AEAs) and the echo skill which will bounce our messages back to us, and add them both to the AEA.
-<div class="highlight"><pre><span></span><span class="c1"># Add the error skill (from the local packages dir) and the echo skill (which is part of the AEA distribution)</span>
-<span class="n">echo_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ROOT_DIR</span><span class="p">,</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"echo"</span><span class="p">),</span>
-    <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">resources</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">echo_skill</span><span class="p">)</span>
-<span class="n">error_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"error"</span><span class="p">),</span> <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span>
-<span class="p">)</span>
-<span class="n">resources</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">error_skill</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Add the error skill (from the local packages dir) and the echo skill (which is part of the AEA distribution)</span>
+    <span class="n">echo_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ROOT_DIR</span><span class="p">,</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"echo"</span><span class="p">),</span> <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">resources</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">echo_skill</span><span class="p">)</span>
+    <span class="n">error_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"error"</span><span class="p">),</span> <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span>
+    <span class="p">)</span>
+    <span class="n">resources</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">error_skill</span><span class="p">)</span>
 </pre></div></p>
 <h2 id="start-the-aea">Start the AEA</h2>
 <p>We run the AEA from a different thread so that we can still use the main thread to pass it messages.
-<div class="highlight"><pre><span></span><span class="c1"># Set the AEA running in a different thread</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">my_aea</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Set the AEA running in a different thread</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">my_aea</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-<span class="c1"># Wait for everything to start up</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="c1"># Wait for everything to start up</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div></p>
 <h2 id="send-and-receive-an-envelope">Send and receive an envelope</h2>
 <p>We use the input and output text files to send an envelope to our AEA and receive a response (from the echo skill)
-<div class="highlight"><pre><span></span><span class="c1"># Create a message inside an envelope and get the stub connection to pass it on to the echo skill</span>
-<span class="n">message_text</span> <span class="o">=</span> <span class="s1">'my_aea,other_agent,fetchai/default:0.1.0,{"type": "bytes", "content": "aGVsbG8="}'</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">message_text</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"input message: "</span> <span class="o">+</span> <span class="n">message_text</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Create a message inside an envelope and get the stub connection to pass it on to the echo skill</span>
+    <span class="n">message_text</span> <span class="o">=</span> <span class="s1">'my_aea,other_agent,fetchai/default:0.1.0,{"type": "bytes", "content": "aGVsbG8="}'</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">message_text</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"input message: "</span> <span class="o">+</span> <span class="n">message_text</span><span class="p">)</span>
 
-<span class="c1"># Wait for the envelope to get processed</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="c1"># Wait for the envelope to get processed</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 
-<span class="c1"># Read the output envelope generated by the echo skill</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"output message: "</span> <span class="o">+</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+    <span class="c1"># Read the output envelope generated by the echo skill</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"output message: "</span> <span class="o">+</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
 </pre></div></p>
 <h2 id="shutdown">Shutdown</h2>
 <p>Finally stop our AEA and wait for it to finish
-<div class="highlight"><pre><span></span><span class="c1"># Shut down the AEA</span>
-<span class="n">my_aea</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-<span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+<div class="highlight"><pre><span></span>    <span class="c1"># Shut down the AEA</span>
+    <span class="n">my_aea</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div></p>
 <h2 id="running-the-aea">Running the AEA</h2>
 <p>If you now run this python script file, you should see this output:</p>
@@ -741,12 +744,12 @@ output message: other_agent,my_aea,fetchai/default:0.1.0,{"type": "bytes", "cont
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">)</span>
 
-    <span class="c1"># set up the Wallet, stub connection, ledger and (empty) resources</span>
+    <span class="c1"># Set up the Wallet, stub connection, ledger and (empty) resources</span>
     <span class="n">wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">})</span>
     <span class="n">stub_connection</span> <span class="o">=</span> <span class="n">StubConnection</span><span class="p">(</span>
         <span class="n">input_file_path</span><span class="o">=</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="n">output_file_path</span><span class="o">=</span><span class="n">OUTPUT_FILE</span>
     <span class="p">)</span>
-    <span class="n">ledger_apis</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="p">({},</span> <span class="n">FETCHAI</span><span class="p">)</span>
+    <span class="n">ledger_apis</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="p">({</span><span class="s2">"fetchai"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"network"</span><span class="p">:</span> <span class="s2">"testnet"</span><span class="p">}},</span> <span class="s2">"fetchai"</span><span class="p">)</span>
     <span class="n">resources</span> <span class="o">=</span> <span class="n">Resources</span><span class="p">()</span>
     <span class="c1"># Create an identity</span>
     <span class="n">identity</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span>
@@ -775,8 +778,7 @@ output message: other_agent,my_aea,fetchai/default:0.1.0,{"type": "bytes", "cont
 
     <span class="c1"># Add the error skill (from the local packages dir) and the echo skill (which is part of the AEA distribution)</span>
     <span class="n">echo_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ROOT_DIR</span><span class="p">,</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"echo"</span><span class="p">),</span> 
-        <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ROOT_DIR</span><span class="p">,</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"echo"</span><span class="p">),</span> <span class="n">my_aea</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">resources</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">echo_skill</span><span class="p">)</span>
     <span class="n">error_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>

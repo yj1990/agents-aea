@@ -596,20 +596,24 @@ The following is an example protocol specification:</p>
 <li><code>description</code>: A short description of the protocol</li>
 </ul>
 <p>Each field is a key/value pair, where both the key and the value are yaml strings. Every field is mandatory. </p>
-<p>Furthermore, the protocol specification must describe the syntax of valid messages according to this protocol.
+<p>In addition to the above basic information, a protocol specification must describe the syntax of valid messages according to this protocol.
 Therefore, there is another mandatory field: <code>speech-acts</code>, which defines the set of performatives valid under this protocol, and a set of contents (i.e. parameters) for each performative.  </p>
 <p>The format of the <code>speech-act</code> is as follows:
-<code>speech-act</code> is a dictionary, where each key is a unique <strong>performative</strong> (yaml string), and the value is a <strong>content</strong> dictionary. If a performative <code>perm</code> does not have any content, then its content dictionary is empty, e.g. simply denoted as <code>perm: {}</code>.</p>
-<p>Each content dictionary is composed of key/value pairs, where each key is the name of a content (yaml string) and the value is its <a href="../generator/#types">type</a> (yaml string).  </p>
+<code>speech-act</code> is a dictionary, where each key is a unique <strong>performative</strong> (yaml string), and the value is a <strong>content</strong> dictionary. If a performative does not have any content, then its content dictionary is empty, e.g. <code>accept</code>, <code>decline</code> and <code>match_accept</code> in the above protocol specification.</p>
+<p>Each content dictionary is composed of key/value pairs, where each key is the name of a content (yaml string) and the value is its <a href="../generator/#types">type</a> (yaml string). For example, the <code>query</code> performative has one content whose name is <code>query</code> and whose type is <code>ct:DataModel</code>.  </p>
 <h3 id="types">Types</h3>
 <p>The specific types which could be assigned to contents in a protocol specification are described in the table below.</p>
-<p>Types are either user defined (i.e. custom type) or primitive. </p>
-<p>Custom types are prepended with "ct:" and their format is described using regular expression in the table below. </p>
-<p>Primitive types are prepended with "pt:". </p>
-<p>There are different categories of primitive types, e.g. &lt;PT&gt; such as int and bool, &lt;PCT&gt; such as sets and lists, and so on. </p>
-<p>Primitive types have a compositional format. For example, consider sets under &lt;PCT&gt;, i.e. unordered, immutable collections with no duplicate elements. Sets must describe the type of their elements in square brackets and these could either be &lt;PT&gt; (e.g. <code>pt:int</code>, <code>pt:bool</code>) or &lt;CT&gt; (i.e. a custom type). Therefore, when describing the format of types in the table below, <code>/</code> between two type categories <code>T1</code> and <code>T2</code> means "or", i.e. "either a <code>T1</code> or a <code>T2</code> type".</p>
-<p>Multi types are an "or" separated set of sub-types. A multi type <code>pt:int or pt:float</code> means the type is either <code>pt:int</code> or <code>pt:float</code>.</p>
-<p>An optional type for a content indicates that the content is optional, but if it is present, its type must match what is described in the square brackets. </p>
+<p>Types are either user defined (i.e. custom types) or primitive: </p>
+<ul>
+<li>Custom types are prepended with <code>ct:</code> and their format is described using regular expression in the table below. </li>
+<li>Primitive types are prepended with <code>pt:</code>. There are different categories of primitive types, e.g. &lt;PT&gt; such as integers and booleans, &lt;PCT&gt; such as sets and lists, and so on. Primitive types are compositional: <ul>
+<li>For example, consider <code>pt:set</code> under &lt;PCT&gt;, i.e. an unordered collection of elements without duplicates. A <code>pt:set</code> describes the type of its elements (called "sub-type") in square brackets. The sub-type of a <code>pt:set</code> could either be a &lt;PT&gt; (e.g. <code>pt:int</code>, <code>pt:bool</code>) or &lt;CT&gt; (i.e. a custom type). </li>
+<li>In describing the format of types, <code>/</code> between two sub-types should be treated as "or". For example, the sub-type of a <code>pt:set</code> is either a &lt;PT&gt; or a &lt;CT&gt;.</li>
+</ul>
+</li>
+</ul>
+<p>A multi type denotes an "or" separated set of sub-types, e.g. <code>pt:union[pt:str, pt:int]</code> as the type of a content <code>c</code> means <code>c</code> is either a <code>pt:int</code> or a <code>pt:float</code>.</p>
+<p>An optional type for a content denotes that the content's existence is optional, but if it is present, its type must match <code>pt:optional</code>'s sub-type. </p>
 <table>
 <thead>
 <tr>
@@ -624,7 +628,7 @@ Therefore, there is another mandatory field: <code>speech-acts</code>, which def
 <tr>
 <td>Custom types</td>
 <td>&lt;CT&gt;</td>
-<td>ct:RegExp(^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$)</td>
+<td>ct:RegExp(^[A-Z][a-zA-Z0-9]*$)</td>
 <td>ct:DataModel</td>
 <td>Custom Class</td>
 </tr>
@@ -687,8 +691,8 @@ Therefore, there is another mandatory field: <code>speech-acts</code>, which def
 <tr>
 <td>Multi types</td>
 <td>&lt;MT&gt;</td>
-<td>&lt;PT&gt;/&lt;CT&gt;/&lt;PCT&gt;/&lt;PMT&gt; or ... or &lt;PT&gt;/&lt;CT&gt;/&lt;PCT&gt;/&lt;PMT&gt;</td>
-<td>pt:str or pt:list[ct:Error]</td>
+<td>pt:union[&lt;PT&gt;/&lt;CT&gt;/&lt;PCT&gt;/&lt;PMT&gt;, ..., &lt;PT&gt;/&lt;CT&gt;/&lt;PCT&gt;/&lt;PMT&gt;]</td>
+<td>pt:union[pt:str, pt:list[ct:Error]]</td>
 <td>Union</td>
 </tr>
 <tr>

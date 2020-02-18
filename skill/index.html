@@ -567,7 +567,7 @@
 <article class="md-content__inner md-typeset">
 <h1>Skill</h1>
 <p>An AEA developer writes skills that the framework can call.</p>
-<p>When you add a skill with the CLI, a directory is created which includes modules for the <code>Behaviour,</code> <code>Task</code>, and <code>Handler</code> classes as well as a configuration file <code>skill.yaml</code>.</p>
+<p>When you add a skill with the CLI, a directory is created which includes modules for the <code>Behaviour</code>, <code>Task</code>, and <code>Handler</code> classes as well as a configuration file <code>skill.yaml</code>.</p>
 <h2 id="context">Context</h2>
 <p>The skill has a <code>SkillContext</code> object which is shared by all <code>Handler</code>, <code>Behaviour</code>, and <code>Task</code> objects. The skill context also has a link to the <code>AgentContext</code>. The <code>AgentContext</code> provides read access to AEA specific information like the public key and address of the AEA, its preferences and ownership state. It also provides access to the <code>OutBox</code>.</p>
 <p>This means it is possible to, at any point, grab the <code>context</code> and have access to the code in other parts of the skill and the AEA.</p>
