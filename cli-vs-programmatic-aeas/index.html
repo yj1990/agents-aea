@@ -685,7 +685,7 @@ The <code>is_ledger_tx</code> will prevent the AEA to communicate with a ledger.
 
     <span class="c1"># create the AEA</span>
     <span class="n">my_aea</span> <span class="o">=</span> <span class="n">AEA</span><span class="p">(</span>
-        <span class="n">identity</span><span class="p">,</span> <span class="p">[</span><span class="n">oef_connection</span><span class="p">],</span> <span class="n">wallet</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span>  <span class="c1"># stub_connection,</span>
+        <span class="n">identity</span><span class="p">,</span> <span class="p">[</span><span class="n">oef_connection</span><span class="p">],</span> <span class="n">wallet</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span><span class="p">,</span>  <span class="c1"># stub_connection,</span>
     <span class="p">)</span>
 
     <span class="c1"># Add the default protocol (which is part of the AEA distribution)</span>
@@ -769,17 +769,18 @@ The <code>is_ledger_tx</code> will prevent the AEA to communicate with a ledger.
         <span class="n">resources</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="n">skill</span><span class="p">)</span>
 
     <span class="c1"># Set the AEA running in a different thread</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"STARTING AEA NOW!"</span><span class="p">)</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">my_aea</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"STARTING AEA NOW!"</span><span class="p">)</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">my_aea</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-    <span class="c1"># Let it run long enought to interact with the weather station</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-
-    <span class="c1"># Shut down the AEA</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"STOPPING AEA NOW!"</span><span class="p">)</span>
-    <span class="n">my_aea</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+        <span class="c1"># Let it run long enough to interact with the weather station</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c1"># Shut down the AEA</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"STOPPING AEA NOW!"</span><span class="p">)</span>
+        <span class="n">my_aea</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
