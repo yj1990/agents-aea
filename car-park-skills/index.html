@@ -710,21 +710,21 @@ aea add-key ethereum eth_private_key.txt
 </pre></div></p>
 <h3 id="update-the-skill-configs">Update the skill configs</h3>
 <p>In the carpark detection skill config (<code>car_detector/vendor/fetchai/skills/carpark_detection/skill.yaml</code>) under strategy, amend the <code>currency_id</code>, <code>ledger_id</code>, and <code>db_is_rel_to_cwd</code> as follows.</p>
-<div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
-<span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
-<span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
-<span class="p">|</span>models:                            <span class="p">|</span>models:                           <span class="p">|</span>              
-<span class="p">|</span>  strategy:                        <span class="p">|</span>  strategy:                       <span class="p">|</span>
-<span class="p">|</span>     class_name: Strategy          <span class="p">|</span>     class_name: Strategy         <span class="p">|</span>
-<span class="p">|</span>    args:                          <span class="p">|</span>    args:                         <span class="p">|</span>
-<span class="p">|</span>      data_price_fet: <span class="m">2000</span>         <span class="p">|</span>      data_price_fet: <span class="m">2000</span>        <span class="p">|</span>
-<span class="p">|</span>      db_is_rel_to_cwd: False      <span class="p">|</span>      db_is_rel_to_cwd: False     <span class="p">|</span>
-<span class="p">|</span>      db_rel_dir: ../temp_files    <span class="p">|</span>      db_rel_dir: ../temp_files   <span class="p">|</span>
-<span class="p">|</span>      currency_id: <span class="s1">'FET'</span>           <span class="p">|</span>      currency_id: <span class="s1">'ETH'</span>          <span class="p">|</span>
-<span class="p">|</span>      ledger_id: <span class="s1">'fetchai'</span>         <span class="p">|</span>      ledger_id: <span class="s1">'ethereum'</span>       <span class="p">|</span>
-<span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
-<span class="p">|</span>      seller_tx_fee: <span class="m">0</span>             <span class="p">|</span>      seller_tx_fee: <span class="m">0</span>            <span class="p">|</span>
-<span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
+<div class="highlight"><pre><span></span><span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span>
+<span class="p p-Indicator">|</span><span class="err">         FETCHAI                   |           ETHEREUM               |</span>
+<span class="p p-Indicator">|</span><span class="err">-----------------------------------|----------------------------------|</span>
+<span class="nt">|models</span><span class="p">:</span>                            <span class="nt">|models</span><span class="p">:</span>                           <span class="p p-Indicator">|</span>              
+<span class="nt">|  strategy</span><span class="p">:</span>                        <span class="nt">|  strategy</span><span class="p">:</span>                       <span class="p p-Indicator">|</span>
+<span class="nt">|     class_name</span><span class="p">:</span> <span class="nt">Strategy          |     class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Strategy         |</span>
+<span class="nt">|    args</span><span class="p">:</span>                          <span class="nt">|    args</span><span class="p">:</span>                         <span class="p p-Indicator">|</span>
+<span class="nt">|      data_price_fet</span><span class="p">:</span> <span class="nt">2000         |      data_price_fet</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2000        |</span>
+<span class="nt">|      db_is_rel_to_cwd</span><span class="p">:</span> <span class="nt">False      |      db_is_rel_to_cwd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False     |</span>
+<span class="nt">|      db_rel_dir</span><span class="p">:</span> <span class="nt">../temp_files    |      db_rel_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">../temp_files   |</span>
+<span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'FET'</span>           <span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'ETH'</span>          <span class="p p-Indicator">|</span>
+<span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'fetchai'</span>         <span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'ethereum'</span>       <span class="p p-Indicator">|</span>
+<span class="nt">|      is_ledger_tx</span><span class="p">:</span> <span class="nt">True           |      is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True          |</span>
+<span class="nt">|      seller_tx_fee</span><span class="p">:</span> <span class="nt">0             |      seller_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0            |</span>
+<span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span> 
 </pre></div>
 <p>An other way to update the skill config is via the <code>aea config get/set</code> command.
 <div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_detection.models.strategy.args.currency_id ETH
@@ -732,24 +732,24 @@ aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_detection.m
 aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_detection.models.strategy.args.db_is_rel_to_cwd False --type bool
 </pre></div></p>
 <p>In the carpark data buyer skill config (<code>car_data_buyer/vendor/fetchai/skills/carpark_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.</p>
-<div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
-<span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
-<span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
-<span class="p">|</span>models:                            <span class="p">|</span>models:                           <span class="p">|</span>              
-<span class="p">|</span>  strategy:                        <span class="p">|</span>  strategy:                       <span class="p">|</span>
-<span class="p">|</span>     class_name: Strategy          <span class="p">|</span>     class_name: Strategy         <span class="p">|</span>
-<span class="p">|</span>    args:                          <span class="p">|</span>    args:                         <span class="p">|</span>
-<span class="p">|</span>      country: UK                  <span class="p">|</span>      country: UK                 <span class="p">|</span>
-<span class="p">|</span>      search_interval: <span class="m">120</span>         <span class="p">|</span>      search_interval: <span class="m">120</span>        <span class="p">|</span>
-<span class="p">|</span>      no_find_search_interval: <span class="m">5</span>   <span class="p">|</span>      no_find_search_interval: <span class="m">5</span>  <span class="p">|</span>
-<span class="p">|</span>      max_price: <span class="m">40000</span>             <span class="p">|</span>      max_price: <span class="m">40000</span>            <span class="p">|</span>
-<span class="p">|</span>      max_detection_age: <span class="m">36000000</span>  <span class="p">|</span>      max_detection_age: <span class="m">36000000</span> <span class="p">|</span>
-<span class="p">|</span>      currency_id: <span class="s1">'FET'</span>           <span class="p">|</span>      currency_id: <span class="s1">'ETH'</span>          <span class="p">|</span>
-<span class="p">|</span>      ledger_id: <span class="s1">'fetchai'</span>         <span class="p">|</span>      ledger_id: <span class="s1">'ethereum'</span>       <span class="p">|</span>
-<span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
-<span class="p">|</span>      max_buyer_tx_fee: <span class="m">6000</span>       <span class="p">|</span>      max_buyer_tx_fee: <span class="m">6000</span>      <span class="p">|</span>
-<span class="p">|</span>ledgers: <span class="o">[</span><span class="s1">'fetchai'</span><span class="o">]</span>               <span class="p">|</span>ledgers: <span class="o">[</span><span class="s1">'ethereum'</span><span class="o">]</span>             <span class="p">|</span>
-<span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
+<div class="highlight"><pre><span></span><span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span>
+<span class="p p-Indicator">|</span><span class="err">         FETCHAI                   |           ETHEREUM               |</span>
+<span class="p p-Indicator">|</span><span class="err">-----------------------------------|----------------------------------|</span>
+<span class="nt">|models</span><span class="p">:</span>                            <span class="nt">|models</span><span class="p">:</span>                           <span class="p p-Indicator">|</span>              
+<span class="nt">|  strategy</span><span class="p">:</span>                        <span class="nt">|  strategy</span><span class="p">:</span>                       <span class="p p-Indicator">|</span>
+<span class="nt">|     class_name</span><span class="p">:</span> <span class="nt">Strategy          |     class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Strategy         |</span>
+<span class="nt">|    args</span><span class="p">:</span>                          <span class="nt">|    args</span><span class="p">:</span>                         <span class="p p-Indicator">|</span>
+<span class="nt">|      country</span><span class="p">:</span> <span class="nt">UK                  |      country</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">UK                 |</span>
+<span class="nt">|      search_interval</span><span class="p">:</span> <span class="nt">120         |      search_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">120        |</span>
+<span class="nt">|      no_find_search_interval</span><span class="p">:</span> <span class="nt">5   |      no_find_search_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5  |</span>
+<span class="nt">|      max_price</span><span class="p">:</span> <span class="nt">40000             |      max_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">40000            |</span>
+<span class="nt">|      max_detection_age</span><span class="p">:</span> <span class="nt">36000000  |      max_detection_age</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">36000000 |</span>
+<span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'FET'</span>           <span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'ETH'</span>          <span class="p p-Indicator">|</span>
+<span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'fetchai'</span>         <span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'ethereum'</span>       <span class="p p-Indicator">|</span>
+<span class="nt">|      is_ledger_tx</span><span class="p">:</span> <span class="nt">True           |      is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True          |</span>
+<span class="nt">|      max_buyer_tx_fee</span><span class="p">:</span> <span class="nt">6000       |      max_buyer_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6000      |</span>
+<span class="nt">|ledgers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai'</span><span class="p p-Indicator">]</span>               <span class="nt">|ledgers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'ethereum'</span><span class="p p-Indicator">]</span>             <span class="p p-Indicator">|</span>
+<span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span> 
 </pre></div>
 <p>Another way to update the skill config is via the <code>aea config get/set</code> command.
 <div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.carpark_client.models.strategy.args.max_buyer_tx_fee <span class="m">6000</span> --type int

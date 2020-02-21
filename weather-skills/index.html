@@ -792,7 +792,7 @@ aea install
 </pre></div>
 <h3 id="update-the-aea-configs">Update the AEA configs</h3>
 <p>In the terminal change the configuration:
-<div class="highlight"><pre><span></span>aea config set vendor.fetchai.skills.weather_station.models.strategy.args.is_ledger_tx False --type bool
+<div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.weather_station.models.strategy.args.is_ledger_tx False --type bool
 </pre></div>
 The <code>is_ledger_tx</code> will prevent the AEA to communicate with a ledger.</p>
 <h3 id="run-the-weather-station-aea">Run the weather station AEA</h3>
@@ -907,37 +907,37 @@ aea add-key ethereum eth_private_key.txt
 </pre></div></p>
 <h3 id="update-the-skill-configs">Update the skill configs</h3>
 <p>In <code>my_weather_station/vendor/fetchai/skills/weather_station/skill.yaml</code>, under strategy amend the <code>currency_id</code> and <code>ledger_id</code> as follows:</p>
-<div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
-<span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
-<span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
-<span class="p">|</span>models:                            <span class="p">|</span>models:                           <span class="p">|</span>              
-<span class="p">|</span>  strategy:                        <span class="p">|</span>  strategy:                       <span class="p">|</span>
-<span class="p">|</span>     class_name: Strategy          <span class="p">|</span>     class_name: Strategy         <span class="p">|</span>
-<span class="p">|</span>    args:                          <span class="p">|</span>    args:                         <span class="p">|</span>
-<span class="p">|</span>      date_one: <span class="s2">"1/10/2019"</span>        <span class="p">|</span>      date_one: <span class="s2">"1/10/2019"</span>       <span class="p">|</span>
-<span class="p">|</span>      date_two: <span class="s2">"1/12/2019"</span>        <span class="p">|</span>      date_two: <span class="s2">"1/12/2019"</span>       <span class="p">|</span>
-<span class="p">|</span>      price_per_row: <span class="m">1</span>             <span class="p">|</span>      price_per_row: <span class="m">1</span>            <span class="p">|</span>
-<span class="p">|</span>      seller_tx_fee: <span class="m">0</span>             <span class="p">|</span>      seller_tx_fee: <span class="m">0</span>            <span class="p">|</span>
-<span class="p">|</span>      currency_id: <span class="s1">'FET'</span>           <span class="p">|</span>      currency_id: <span class="s1">'ETH'</span>          <span class="p">|</span>
-<span class="p">|</span>      ledger_id: <span class="s1">'fetchai'</span>         <span class="p">|</span>      ledger_id: <span class="s1">'ethereum'</span>       <span class="p">|</span>
-<span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
-<span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
+<div class="highlight"><pre><span></span><span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span>
+<span class="p p-Indicator">|</span><span class="err">         FETCHAI                   |           ETHEREUM               |</span>
+<span class="p p-Indicator">|</span><span class="err">-----------------------------------|----------------------------------|</span>
+<span class="nt">|models</span><span class="p">:</span>                            <span class="nt">|models</span><span class="p">:</span>                           <span class="p p-Indicator">|</span>              
+<span class="nt">|  strategy</span><span class="p">:</span>                        <span class="nt">|  strategy</span><span class="p">:</span>                       <span class="p p-Indicator">|</span>
+<span class="nt">|     class_name</span><span class="p">:</span> <span class="nt">Strategy          |     class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Strategy         |</span>
+<span class="nt">|    args</span><span class="p">:</span>                          <span class="nt">|    args</span><span class="p">:</span>                         <span class="p p-Indicator">|</span>
+<span class="nt">|      date_one</span><span class="p">:</span> <span class="s">"1/10/2019"</span>        <span class="nt">|      date_one</span><span class="p">:</span> <span class="s">"1/10/2019"</span>       <span class="p p-Indicator">|</span>
+<span class="nt">|      date_two</span><span class="p">:</span> <span class="s">"1/12/2019"</span>        <span class="nt">|      date_two</span><span class="p">:</span> <span class="s">"1/12/2019"</span>       <span class="p p-Indicator">|</span>
+<span class="nt">|      price_per_row</span><span class="p">:</span> <span class="nt">1             |      price_per_row</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1            |</span>
+<span class="nt">|      seller_tx_fee</span><span class="p">:</span> <span class="nt">0             |      seller_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0            |</span>
+<span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'FET'</span>           <span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'ETH'</span>          <span class="p p-Indicator">|</span>
+<span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'fetchai'</span>         <span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'ethereum'</span>       <span class="p p-Indicator">|</span>
+<span class="nt">|      is_ledger_tx</span><span class="p">:</span> <span class="nt">True           |      is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True          |</span>
+<span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span> 
 </pre></div>
 <p>In the weather client skill config (<code>my_weather_client/vendor/fetchai/skills/weather_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.</p>
-<p><div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
-<span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
-<span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
-<span class="p">|</span>models:                            <span class="p">|</span>models:                           <span class="p">|</span>              
-<span class="p">|</span>  strategy:                        <span class="p">|</span>  strategy:                       <span class="p">|</span>
-<span class="p">|</span>     class_name: Strategy          <span class="p">|</span>     class_name: Strategy         <span class="p">|</span>
-<span class="p">|</span>    args:                          <span class="p">|</span>    args:                         <span class="p">|</span>
-<span class="p">|</span>      max_price: <span class="m">4</span>                 <span class="p">|</span>      max_price: <span class="m">40</span>               <span class="p">|</span>
-<span class="p">|</span>      max_buyer_tx_fee: <span class="m">1</span>          <span class="p">|</span>      max_buyer_tx_fee: <span class="m">200000</span>    <span class="p">|</span>
-<span class="p">|</span>      currency_id: <span class="s1">'FET'</span>           <span class="p">|</span>      currency_id: <span class="s1">'ETH'</span>          <span class="p">|</span>
-<span class="p">|</span>      ledger_id: <span class="s1">'fetchai'</span>         <span class="p">|</span>      ledger_id: <span class="s1">'ethereum'</span>       <span class="p">|</span>
-<span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
-<span class="p">|</span>ledgers: <span class="o">[</span><span class="s1">'fetchai'</span><span class="o">]</span>               <span class="p">|</span>ledgers: <span class="o">[</span><span class="s1">'ethereum'</span><span class="o">]</span>             <span class="p">|</span>
-<span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
+<p><div class="highlight"><pre><span></span><span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span>
+<span class="p p-Indicator">|</span><span class="err">         FETCHAI                   |           ETHEREUM               |</span>
+<span class="p p-Indicator">|</span><span class="err">-----------------------------------|----------------------------------|</span>
+<span class="nt">|models</span><span class="p">:</span>                            <span class="nt">|models</span><span class="p">:</span>                           <span class="p p-Indicator">|</span>              
+<span class="nt">|  strategy</span><span class="p">:</span>                        <span class="nt">|  strategy</span><span class="p">:</span>                       <span class="p p-Indicator">|</span>
+<span class="nt">|     class_name</span><span class="p">:</span> <span class="nt">Strategy          |     class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Strategy         |</span>
+<span class="nt">|    args</span><span class="p">:</span>                          <span class="nt">|    args</span><span class="p">:</span>                         <span class="p p-Indicator">|</span>
+<span class="nt">|      max_price</span><span class="p">:</span> <span class="nt">4                 |      max_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">40               |</span>
+<span class="nt">|      max_buyer_tx_fee</span><span class="p">:</span> <span class="nt">1          |      max_buyer_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200000    |</span>
+<span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'FET'</span>           <span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'ETH'</span>          <span class="p p-Indicator">|</span>
+<span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'fetchai'</span>         <span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'ethereum'</span>       <span class="p p-Indicator">|</span>
+<span class="nt">|      is_ledger_tx</span><span class="p">:</span> <span class="nt">True           |      is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True          |</span>
+<span class="nt">|ledgers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai'</span><span class="p p-Indicator">]</span>               <span class="nt">|ledgers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'ethereum'</span><span class="p p-Indicator">]</span>             <span class="p p-Indicator">|</span>
+<span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span> 
 </pre></div>
 An other way to update the skill config is via the <code>aea config get/set</code> command.
 <div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.weather_client.models.strategy.args.max_buyer_tx_fee <span class="m">10000</span> --type int

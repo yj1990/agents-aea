@@ -846,42 +846,42 @@ aea add-key ethereum eth_private_key.txt
 </pre></div></p>
 <h3 id="update-the-skill-configs">Update the skill configs</h3>
 <p>In the ml data provider skill config (<code>ml_data_provider/skills/ml_data_provider/skill.yaml</code>) under strategy, amend the <code>currency_id</code> and <code>ledger_id</code> as follows.</p>
-<div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
-<span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
-<span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
-<span class="p">|</span>models:                            <span class="p">|</span>models:                           <span class="p">|</span>              
-<span class="p">|</span>  strategy:                        <span class="p">|</span>  strategy:                       <span class="p">|</span>
-<span class="p">|</span>     class_name: Strategy          <span class="p">|</span>     class_name: Strategy         <span class="p">|</span>
-<span class="p">|</span>    args:                          <span class="p">|</span>    args:                         <span class="p">|</span>
-<span class="p">|</span>      price_per_data_batch: <span class="m">100</span>    <span class="p">|</span>      price_per_data_batch: <span class="m">100</span>   <span class="p">|</span>
-<span class="p">|</span>      batch_size: <span class="m">2</span>                <span class="p">|</span>      batch_size: <span class="m">2</span>               <span class="p">|</span>
-<span class="p">|</span>      seller_tx_fee: <span class="m">0</span>             <span class="p">|</span>      seller_tx_fee: <span class="m">0</span>            <span class="p">|</span>
-<span class="p">|</span>      buyer_tx_fee: <span class="m">10</span>             <span class="p">|</span>      buyer_tx_fee: <span class="m">10</span>            <span class="p">|</span>
-<span class="p">|</span>      dataset_id: <span class="s1">'fmnist'</span>         <span class="p">|</span>      dataset_id: <span class="s1">'fmnist'</span>        <span class="p">|</span>
-<span class="p">|</span>      currency_id: <span class="s1">'FET'</span>           <span class="p">|</span>      currency_id: <span class="s1">'ETH'</span>          <span class="p">|</span>
-<span class="p">|</span>      ledger_id: <span class="s1">'fetchai'</span>         <span class="p">|</span>      ledger_id: <span class="s1">'ethereum'</span>       <span class="p">|</span>
-<span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
-<span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
+<div class="highlight"><pre><span></span><span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span>
+<span class="p p-Indicator">|</span><span class="err">         FETCHAI                   |           ETHEREUM               |</span>
+<span class="p p-Indicator">|</span><span class="err">-----------------------------------|----------------------------------|</span>
+<span class="nt">|models</span><span class="p">:</span>                            <span class="nt">|models</span><span class="p">:</span>                           <span class="p p-Indicator">|</span>              
+<span class="nt">|  strategy</span><span class="p">:</span>                        <span class="nt">|  strategy</span><span class="p">:</span>                       <span class="p p-Indicator">|</span>
+<span class="nt">|     class_name</span><span class="p">:</span> <span class="nt">Strategy          |     class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Strategy         |</span>
+<span class="nt">|    args</span><span class="p">:</span>                          <span class="nt">|    args</span><span class="p">:</span>                         <span class="p p-Indicator">|</span>
+<span class="nt">|      price_per_data_batch</span><span class="p">:</span> <span class="nt">100    |      price_per_data_batch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100   |</span>
+<span class="nt">|      batch_size</span><span class="p">:</span> <span class="nt">2                |      batch_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2               |</span>
+<span class="nt">|      seller_tx_fee</span><span class="p">:</span> <span class="nt">0             |      seller_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0            |</span>
+<span class="nt">|      buyer_tx_fee</span><span class="p">:</span> <span class="nt">10             |      buyer_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10            |</span>
+<span class="nt">|      dataset_id</span><span class="p">:</span> <span class="s">'fmnist'</span>         <span class="nt">|      dataset_id</span><span class="p">:</span> <span class="s">'fmnist'</span>        <span class="p p-Indicator">|</span>
+<span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'FET'</span>           <span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'ETH'</span>          <span class="p p-Indicator">|</span>
+<span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'fetchai'</span>         <span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'ethereum'</span>       <span class="p p-Indicator">|</span>
+<span class="nt">|      is_ledger_tx</span><span class="p">:</span> <span class="nt">True           |      is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True          |</span>
+<span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span> 
 </pre></div>
 <p>Another way to update the skill config is via the <code>aea config get/set</code> command.
 <div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.ml_data_provider.models.strategy.args.currency_id ETH
 aea config <span class="nb">set</span> vendor.fetchai.skills.ml_data_provider.models.strategy.args.ledger_id ethereum
 </pre></div></p>
 <p>In the ml model trainer skill config (<code>ml_model_trainer/skills/ml_train/skill.yaml</code>) under strategy, amend the <code>currency_id</code> and <code>ledger_id</code> as follows.</p>
-<div class="highlight"><pre><span></span><span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span>
-<span class="p">|</span>         FETCHAI                   <span class="p">|</span>           ETHEREUM               <span class="p">|</span>
-<span class="p">|</span>-----------------------------------<span class="p">|</span>----------------------------------<span class="p">|</span>
-<span class="p">|</span>models:                            <span class="p">|</span>models:                           <span class="p">|</span>              
-<span class="p">|</span>  strategy:                        <span class="p">|</span>  strategy:                       <span class="p">|</span>
-<span class="p">|</span>     class_name: Strategy          <span class="p">|</span>     class_name: Strategy         <span class="p">|</span>
-<span class="p">|</span>    args:                          <span class="p">|</span>    args:                         <span class="p">|</span>
-<span class="p">|</span>      dataset_id: <span class="s1">'fmnist'</span>         <span class="p">|</span>      dataset_id: <span class="s1">'fmnist'</span>        <span class="p">|</span>
-<span class="p">|</span>      max_unit_price: <span class="m">70</span>           <span class="p">|</span>      max_unit_price: <span class="m">70</span>          <span class="p">|</span>
-<span class="p">|</span>      max_buyer_tx_fee: <span class="m">20</span>         <span class="p">|</span>      max_buyer_tx_fee: <span class="m">20</span>        <span class="p">|</span>
-<span class="p">|</span>      currency_id: <span class="s1">'FET'</span>           <span class="p">|</span>      currency_id: <span class="s1">'ETH'</span>          <span class="p">|</span>
-<span class="p">|</span>      ledger_id: <span class="s1">'fetchai'</span>         <span class="p">|</span>      ledger_id: <span class="s1">'ethereum'</span>       <span class="p">|</span>
-<span class="p">|</span>      is_ledger_tx: True           <span class="p">|</span>      is_ledger_tx: True          <span class="p">|</span>
-<span class="p">|</span>----------------------------------------------------------------------<span class="p">|</span> 
+<div class="highlight"><pre><span></span><span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span>
+<span class="p p-Indicator">|</span><span class="err">         FETCHAI                   |           ETHEREUM               |</span>
+<span class="p p-Indicator">|</span><span class="err">-----------------------------------|----------------------------------|</span>
+<span class="nt">|models</span><span class="p">:</span>                            <span class="nt">|models</span><span class="p">:</span>                           <span class="p p-Indicator">|</span>              
+<span class="nt">|  strategy</span><span class="p">:</span>                        <span class="nt">|  strategy</span><span class="p">:</span>                       <span class="p p-Indicator">|</span>
+<span class="nt">|     class_name</span><span class="p">:</span> <span class="nt">Strategy          |     class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Strategy         |</span>
+<span class="nt">|    args</span><span class="p">:</span>                          <span class="nt">|    args</span><span class="p">:</span>                         <span class="p p-Indicator">|</span>
+<span class="nt">|      dataset_id</span><span class="p">:</span> <span class="s">'fmnist'</span>         <span class="nt">|      dataset_id</span><span class="p">:</span> <span class="s">'fmnist'</span>        <span class="p p-Indicator">|</span>
+<span class="nt">|      max_unit_price</span><span class="p">:</span> <span class="nt">70           |      max_unit_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">70          |</span>
+<span class="nt">|      max_buyer_tx_fee</span><span class="p">:</span> <span class="nt">20         |      max_buyer_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">20        |</span>
+<span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'FET'</span>           <span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'ETH'</span>          <span class="p p-Indicator">|</span>
+<span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'fetchai'</span>         <span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'ethereum'</span>       <span class="p p-Indicator">|</span>
+<span class="nt">|      is_ledger_tx</span><span class="p">:</span> <span class="nt">True           |      is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True          |</span>
+<span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span> 
 </pre></div>
 <p>Another way to update the skill config is via the <code>aea config get/set</code> command.
 <div class="highlight"><pre><span></span>aea config <span class="nb">set</span> vendor.fetchai.skills.ml_train.models.strategy.args.max_buyer_tx_fee <span class="m">10000</span> --type int
