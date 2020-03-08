@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/trust/" rel="canonical"/>
+<link href="https://docs.fetch.ai/identity/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
-<title>Trust issues - AEA Developer Documentation</title>
+<title>Identity - AEA Developer Documentation</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -55,7 +55,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                Trust issues
+                Identity
               
             </span>
 </div>
@@ -183,14 +183,14 @@
       Relation to OEF and Ledger
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../identity/" title="Identity">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./" title="Identity">
       Identity
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./" title="Trust issues">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../trust/" title="Trust issues">
       Trust issues
     </a>
 </li>
@@ -465,13 +465,14 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>Trust issues</h1>
-<p>AEA applications operate within different orders of trustlessness.</p>
-<p>For example, using the AEA weather skills demo without ledger payments means that clients must trust that any data the weather station sends is sufficient, including no data at all. Similarly, the weather station must trust the weather clients to send payment via some mechanism.</p>
-<p>A step up, if you run the weather skills demo with a ledger (Fetch.ai or Ethereum) then the clients must again trust the weather station to send sufficient data. However, all payment transactions are executed via the public ledger. This means the weather station no longer needs to trust the weather clients as it can observe the transactions taking place on the public ledger.</p>
-<p>We can expand trustlessness even further by incorporating a third-party as an arbitrator or some escrow contract. However, in the weather skills demo there are limits to trustlessness as the station ultimately offers unverifiable data.</p>
-<p>Finally, in the case of (non-fungible) token transactions where there is an atomic swap, full trustlessness is apparent. This is demonstrated in the TAC.</p>
-<p><br/></p>
+<h1>Identity</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is incomplete and will soon be updated.
+</p>
+</div>
+<p>The AEAs currently use the addresses associated with their private-public key pairs to identify themselves.</p>
+<p>To learn how to generate a private-public key pair check out <a href="../cli-commands">this section</a>.</p>
 </article>
 </div>
 </div>
@@ -479,7 +480,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../identity/" rel="prev" title="Identity">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../oef-ledger/" rel="prev" title="Relation to OEF and Ledger">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -488,17 +489,17 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Identity
+                Relation to OEF and Ledger
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../car-park-skills/" rel="next" title="Car park skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../trust/" rel="next" title="Trust issues">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Car park skills
+                Trust issues
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

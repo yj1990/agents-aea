@@ -19,10 +19,10 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>Logging - AEA Developer Documentation</title>
-<link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
-<script src="../assets/javascripts/modernizr.268332fc.js"></script>
+<link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
+<script src="../assets/javascripts/modernizr.86422ebf.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
@@ -41,7 +41,7 @@
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
+<a aria-label="AEA Developer Documentation" class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
 <i class="md-icon">code</i>
 </a>
 </div>
@@ -181,6 +181,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../oef-ledger/" title="Relation to OEF and Ledger">
       Relation to OEF and Ledger
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identity/" title="Identity">
+      Identity
     </a>
 </li>
 <li class="md-nav__item">
@@ -437,6 +442,11 @@
       Create decision-maker transaction
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../deployment/" title="Deployment">
+      Deployment
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -459,11 +469,11 @@
 <p>The AEA framework supports flexible logging capabilities with the standard <a href="https://docs.python.org/3/library/logging.html" target="_blank">Python logging library</a>.</p>
 <p>In this tutorial, we configure logging for an AEA.</p>
 <p>First of all, create your AEA.</p>
-<div class="highlight"><pre><span></span>aea create my_aea
+<div class="highlight"><pre><span></span><code>aea create my_aea
 <span class="nb">cd</span> my_aea
-</pre></div>
+</code></pre></div>
 <p>The <code>aea-config.yaml</code> file should look like this.</p>
-<div class="highlight"><pre><span></span><span class="nt">aea_version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.2.1</span>
+<div class="highlight"><pre><span></span><code><span class="nt">aea_version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.2.1</span>
 <span class="nt">agent_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_aea</span>
 <span class="nt">author</span><span class="p">:</span> <span class="s">''</span>
 <span class="nt">connections</span><span class="p">:</span>
@@ -484,13 +494,13 @@
 <span class="nt">skills</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/error:0.1.0</span>
 <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>
-</pre></div>
+</code></pre></div>
 <p>By updating the <code>logging_config</code> section, you can configure the loggers of your application.</p>
 <p>The format of this section is specified in the <a href="https://docs.python.org/3/library/logging.config.html" target="_blank"><code>logging.config</code></a> module.</p>
 <p>At <a href="https://docs.python.org/3/library/logging.config.html#configuration-dictionary-schema" target="_blank">this section</a> 
 you'll find the definition of the configuration dictionary schema.</p>
 <p>Below is an example of the <code>logging_config</code> value.</p>
-<div class="highlight"><pre><span></span><span class="nt">logging_config</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">logging_config</span><span class="p">:</span>
   <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
   <span class="nt">disable_existing_loggers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
   <span class="nt">formatters</span><span class="p">:</span>
@@ -513,7 +523,7 @@ you'll find the definition of the configuration dictionary schema.</p>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">console</span>
       <span class="nt">level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DEBUG</span>
       <span class="nt">propagate</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-</pre></div>
+</code></pre></div>
 <p>This configuration will set up a logger with name <code>aea</code>. It prints both on console and on file with a format specified by the <code>standard</code> formatter.</p>
 <p><br/></p>
 </article>
@@ -556,17 +566,17 @@ you'll find the definition of the configuration dictionary schema.</p>
 <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" rel="noopener" target="_blank">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
           Material for MkDocs</a>
 </div>
 </div>
 </div>
 </footer>
 </div>
-<script src="../assets/javascripts/application.808e90bb.js"></script>
-<script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+<script src="../assets/javascripts/application.c33a9706.js"></script>
+<script>app.initialize({version:"1.1",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>
