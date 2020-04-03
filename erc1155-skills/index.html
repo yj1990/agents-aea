@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/file-structure/" rel="canonical"/>
+<link href="https://docs.fetch.ai/erc1155-skills/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
-<title>File structure - AEA Developer Documentation</title>
+<title>ERC1155 deploy and interact - AEA Developer Documentation</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,6 +37,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#preparation-instructions" tabindex="0">
+        Skip to content
+      </a>
 <header class="md-header" data-md-component="header">
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
@@ -55,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                File structure
+                ERC1155 deploy and interact
               
             </span>
 </div>
@@ -285,15 +288,15 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../thermometer-skills-step-by-step/" title="Thermometer skills step by step">
-      Thermometer skills step by step
+<a class="md-nav__link" href="../thermometer-skills-step-by-step/" title="Thermometer skills step-by-step">
+      Thermometer skills step-by-step
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-3" id="nav-1-4-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-3" id="nav-1-4-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-4-3">
       Use case components
     </label>
@@ -317,6 +320,92 @@
       Frontend intergration
     </a>
 </li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        ERC1155 deploy and interact
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="ERC1155 deploy and interact">
+      ERC1155 deploy and interact
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation-instructions">
+    Preparation instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discussion">
+    Discussion
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#launch-an-oef-node">
+    Launch an OEF node
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+    Demo
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-deployer-aea">
+    Create the deployer AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-client-aea">
+    Create the client AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs">
+    Update the AEA configs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fund-the-aeas">
+    Fund the AEAs
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-aeas">
+    Run the AEAs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delete-the-aeas">
+    Delete the AEAs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication">
+    Communication
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../http-connection-and-skill/" title="HTTP Connection">
       HTTP Connection
@@ -325,8 +414,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-4" id="nav-1-4-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-4" id="nav-1-4-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-4-4">
       Architecture
     </label>
@@ -348,12 +437,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../core-components/" title="Core components">
       Core components
-    </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./" title="File structure">
-      File structure
     </a>
 </li>
 </ul>
@@ -380,8 +463,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../package-imports/" title="Package structure">
-      Package structure
+<a class="md-nav__link" href="../package-imports/" title="File structure">
+      File structure
     </a>
 </li>
 <li class="md-nav__item">
@@ -472,6 +555,11 @@
       Deployment
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../known-limits/" title="Known limitations">
+      Known limitations
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -491,23 +579,33 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../api/aea_builder/" title="AEA Builder">
+      AEA Builder
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../api/agent/" title="Agent">
       Agent
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-3" id="nav-1-4-7-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-4" id="nav-1-4-7-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-4">
       Configurations
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-3">
+<label class="md-nav__title" for="nav-1-4-7-4">
         Configurations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/configurations/base/" title="Base">
       Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/configurations/components/" title="Components">
+      Components
     </a>
 </li>
 <li class="md-nav__item">
@@ -519,12 +617,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-4" id="nav-1-4-7-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-5" id="nav-1-4-7-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-5">
       Connections
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-4">
+<label class="md-nav__title" for="nav-1-4-7-5">
         Connections
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -547,17 +645,40 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-6" id="nav-1-4-7-6" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-6">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-7" id="nav-1-4-7-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-7">
+      Contracts
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-7-7">
+        Contracts
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/contracts/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/contracts/ethereum/" title="Ethereum">
+      Ethereum
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-8" id="nav-1-4-7-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-8">
       Crypto
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-6">
+<label class="md-nav__title" for="nav-1-4-7-8">
         Crypto
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../api/crytpo/base/" title="Base">
+<a class="md-nav__link" href="../api/crypto/base/" title="Base">
       Base
     </a>
 </li>
@@ -585,22 +706,68 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-7" id="nav-1-4-7-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-7">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-9" id="nav-1-4-7-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-9">
+      Decision Maker
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-7-9">
+        Decision Maker
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-9-2" id="nav-1-4-7-9-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-9-2">
+      Messages
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-7-9-2">
+        Messages
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/messages/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/messages/state_update/" title="State Update">
+      State Update
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/messages/transaction/" title="Transaction">
+      Transaction
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-10" id="nav-1-4-7-10" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-10">
       Helpers
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-7">
+<label class="md-nav__title" for="nav-1-4-7-10">
         Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-7-1" id="nav-1-4-7-7-1" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-7-1">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-10-1" id="nav-1-4-7-10-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-10-1">
       Dialogue
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-7-7-1">
+<label class="md-nav__title" for="nav-1-4-7-10-1">
         Dialogue
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -613,12 +780,48 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-7-2" id="nav-1-4-7-7-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-7-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-10-2" id="nav-1-4-7-10-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-10-2">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-7-10-2">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/ipfs/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-10-3" id="nav-1-4-7-10-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-10-3">
+      Preferences
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-7-10-3">
+        Preferences
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/preference_representations/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-10-4" id="nav-1-4-7-10-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-10-4">
       Search
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-7-7-2">
+<label class="md-nav__title" for="nav-1-4-7-10-4">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -638,49 +841,23 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-8" id="nav-1-4-7-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-8">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/identity/base/" title="Identity">
       Identity
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-8">
-        Identity
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/identity/base/" title="Base">
-      Base
     </a>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-9" id="nav-1-4-7-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-9">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/mail/base/" title="Mail">
       Mail
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-9">
-        Mail
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/mail/base/" title="Base">
-      Base
     </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-10" id="nav-1-4-7-10" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-10">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-13" id="nav-1-4-7-13" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-13">
       Protocols
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-10">
+<label class="md-nav__title" for="nav-1-4-7-13">
         Protocols
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -689,16 +866,26 @@
       Base
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/generator/" title="Generator">
+      Generator
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-10-2" id="nav-1-4-7-10-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-10-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-13-3" id="nav-1-4-7-13-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-13-3">
       Default Protocol
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-7-10-2">
+<label class="md-nav__title" for="nav-1-4-7-13-3">
         Default Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/default/custom_types/" title="Custom Types">
+      Custom Types
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/protocols/default/message/" title="Message">
       Message
@@ -715,31 +902,18 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-11" id="nav-1-4-7-11" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-11">
-      Registries
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-11">
-        Registries
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../api/registries/base/" title="Base">
-      Base
+<a class="md-nav__link" href="../api/registries/resources/" title="Resources">
+      Resources
     </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-12" id="nav-1-4-7-12" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-7-12">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7-15" id="nav-1-4-7-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7-15">
       Skills
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-7-12">
+<label class="md-nav__title" for="nav-1-4-7-15">
         Skills
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -785,38 +959,226 @@
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation-instructions">
+    Preparation instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discussion">
+    Discussion
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#launch-an-oef-node">
+    Launch an OEF node
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+    Demo
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-deployer-aea">
+    Create the deployer AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-the-client-aea">
+    Create the client AEA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-aea-configs">
+    Update the AEA configs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fund-the-aeas">
+    Fund the AEAs
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-aeas">
+    Run the AEAs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delete-the-aeas">
+    Delete the AEAs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication">
+    Communication
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>File structure</h1>
-<p>The file structure of an AEA is fixed.</p>
-<p>The top level directory has the AEA's name. Below is a <code>yaml</code> configuration file, then directories containing the connections, protocols, and skills developed by the developer. The connections, protocols and skills from other authors are located in <code>vendor</code> and sorted by author. Finally, there are files containing the private keys of the AEA.</p>
-<p>The developer can create new directories where necessary but the core structure must remain the same.</p>
-<p>The CLI tool provides a way to scaffold new connections, protocols and skills in the required directory structure for AEAs. See the instructions for that <a href="../scaffolding/">here</a>.</p>
-<div class="highlight"><pre><span></span><code>aea_name/
-  aea-config.yaml       YAML configuration of the AEA
-  private_key.pem       The private key file
-  connections/          Directory containing all the own connections
-    connection_1/       First connection
-    ...                 ...
-    connection_n/       nth connection
-  protocols/            Directory containing all own protocols
-    protocol_1/         First protocol
-    ...                 ...
-    protocol_m/         mth protocol 
-  skills/               Directory containing all the own skills
-    skill_1/            First skill
-    ...                 ...
-    skill_k/            kth skill
-  vendor/               Directory containing all the added resources authored by other developers
-    author_1/           Directory containing all the resources added from author_1
-      connections/      Directory containing all the added connections from author_1
-        ...             ...
-      protocols/        Directory containing all the added protocols from author_1
-        ...             ...
-      skills/           Directory containing all the added skills from author_1
-        ...             ...
+<h1>ERC1155 deploy and interact</h1>
+<p>The AEA <code>erc1155_deploy</code> and <code>erc1155_client</code> skills demonstrate an interaction between two AEAs with the usage of a smart contract.</p>
+<ul>
+<li>The <code>erc1155_deploy</code> skill deploys the smart contract, creates and mints items. </li>
+<li>The <code>erc1155_client</code> skill signs a transaction to complete a trustless trade with the counterparty.</li>
+</ul>
+<h2 id="preparation-instructions">Preparation instructions</h2>
+<h3 id="dependencies">Dependencies</h3>
+<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
+<h2 id="discussion">Discussion</h2>
+<p>The scope of the specific demo is to demonstrate how to deploy a smart contract and interact with it. For the specific use-case, we create two AEAs one that deploys and creates tokens inside the smart contract and the other that signs a transaction so we can complete an atomic swap. The smart contract we are using is an ERC1155 smart contract
+with a one-step atomic swap functionality. That means the trade between the two AEAs can be trustless.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This demo serves demonstrative purposes only. Since the AEA deploying the contract also has the ability to mint tokens, in reality the transfer of tokens from the AEA signing the transaction is worthless.</p>
+</div>
+<h3 id="launch-an-oef-node">Launch an OEF node</h3>
+<p>In a separate terminal, launch a local OEF node (for search and discovery).
+<div class="highlight"><pre><span></span><code>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
+</code></pre></div></p>
+<p>Keep it running for all the following demos.</p>
+<h2 id="demo">Demo</h2>
+<h3 id="create-the-deployer-aea">Create the deployer AEA</h3>
+<p>Create the AEA that will deploy the contract.</p>
+<div class="highlight"><pre><span></span><code>aea create erc1155_deployer
+<span class="nb">cd</span> erc1155_deployer
+aea add connection fetchai/oef:0.1.0
+aea add skill fetchai/erc1155_deploy:0.1.0
+aea add contract fetchai/erc1155:0.1.0
+aea install
 </code></pre></div>
-<p><br/></p>
+<p>Additionally, create the private key for the deployer AEA. Generate and add a key for Ethereum use:</p>
+<div class="highlight"><pre><span></span><code>aea generate-key ethereum
+aea add-key ethereum eth_private_key.txt
+</code></pre></div>
+<h3 id="create-the-client-aea">Create the client AEA</h3>
+<p>In another terminal, create the AEA that will sign the transaction.</p>
+<div class="highlight"><pre><span></span><code>aea create erc1155_client
+<span class="nb">cd</span> erc1155_client
+aea add connection fetchai/oef:0.1.0
+aea add skill fetchai/erc1155_client:0.1.0
+aea add contract fetchai/erc1155:0.1.0
+aea install
+</code></pre></div>
+<p>Additionally, create the private key for the client AEA. Generate and add a key for Ethereum use:</p>
+<div class="highlight"><pre><span></span><code>aea generate-key ethereum
+aea add-key ethereum eth_private_key.txt
+</code></pre></div>
+<h3 id="update-the-aea-configs">Update the AEA configs</h3>
+<p>Both in <code>my_erc1155_deploy/aea-config.yaml</code> and
+<code>my_erc1155_client/aea-config.yaml</code>, replace <code>ledger_apis: {}</code> with the following based on the network you want to connect</p>
+<p>Connect to Ethereum:
+<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
+  <span class="nt">ethereum</span><span class="p">:</span>
+    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe</span>
+    <span class="nt">chain_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+    <span class="nt">gas_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+</code></pre></div>
+And change the default ledger:
+<div class="highlight"><pre><span></span><code><span class="nt">default_ledger</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ethereum</span>
+</code></pre></div></p>
+<h3 id="fund-the-aeas">Fund the AEAs</h3>
+<p>To create some wealth for your AEAs for the Ethereum <code>ropsten</code> network. Note that this needs to be executed from each AEA folder:</p>
+<div class="highlight"><pre><span></span><code>aea generate-wealth ethereum
+</code></pre></div>
+<p>To check the wealth use (after some time for the wealth creation to be mined on Ropsten):</p>
+<div class="highlight"><pre><span></span><code>aea get-wealth ethereum
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no wealth appears after a while, then try funding the private key directly using a web faucet.</p>
+</div>
+<h2 id="run-the-aeas">Run the AEAs</h2>
+<p>First, run the deployer AEA.</p>
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.1.0
+</code></pre></div>
+<p>It will perform the following steps:
+- deploy the smart contract
+- create a batch of items in the smart contract
+- mint a batch of itemsin the smart contract</p>
+<p>At some point you should see the log output:
+<div class="highlight"><pre><span></span><code>Successfully minted items. Transaction digest: ...
+</code></pre></div></p>
+<p>Then, in the separate terminal run the client AEA.</p>
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.1.0
+</code></pre></div>
+<p>You will see that upon discovery the two AEAs exchange information about the transaction and the client at the end signs and sends the signature to the deployer AEA to send it to the network.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Transactions on Ropsten can take a significant amount of time! If you run the example a second time, and the previous transaction is still pending, it can lead to a failure.
+
+  The warning message `Cannot verify whether transaction improves utility. Assuming it does!` can be ignored.
+  </p>
+</div>
+<h2 id="delete-the-aeas">Delete the AEAs</h2>
+<p>When you're done, go up a level and delete the AEAs.
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ..
+aea delete erc1155_deployer
+aea delete erc1155_client
+</code></pre></div></p>
+<h2 id="communication">Communication</h2>
+<p>This diagram shows the communication between the various entities as data is successfully trustless trade. </p>
+<div class="mermaid">
+    sequenceDiagram
+        participant Search
+        participant Erc1155_contract
+        participant Client_AEA
+        participant Deployer_AEA
+        participant Blockchain
+
+        activate Deployer_AEA
+        activate Search
+        activate Client_AEA
+        activate Erc1155_contract
+        activate Blockchain
+
+        Deployer_AEA-&gt;&gt;Blockchain: deployes smart contract
+        Deployer_AEA-&gt;&gt;ERC1155_contract: creates tokens
+        Deployer_AEA-&gt;&gt;ERC1155_contract: mint tokens       
+        Deployer_AEA-&gt;&gt;Search: register_service
+        Client_AEA-&gt;&gt;Search: search
+        Search--&gt;&gt;Client_AEA: list_of_agents
+        Client_AEA-&gt;&gt;Deployer_AEA: call_for_proposal
+        Deployer_AEA-&gt;&gt;Client_AEA: inform_message
+        Client_AEA-&gt;&gt;Deployer_AEA: signature
+        Deployer_AEA-&gt;&gt;Blockchain: send_transaction
+        Client_AEA-&gt;&gt;ERC1155_contract: asks_balance
+
+        deactivate Deployer_AEA
+        deactivate Search
+        deactivate Client_AEA
+        deactivate ERC1155_contract
+        deactivate Blockchain
+
+</div>
 </article>
 </div>
 </div>
@@ -824,7 +1186,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../core-components/" rel="prev" title="Core components">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../connect-a-frontend/" rel="prev" title="Frontend intergration">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -833,17 +1195,17 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Core components
+                Frontend intergration
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../cli-how-to/" rel="next" title="Installation">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../http-connection-and-skill/" rel="next" title="HTTP Connection">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation
+                HTTP Connection
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
