@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Everything you need to know about Fetch.AI." name="description"/>
+<link href="https://docs.fetch.ai/aries-cloud-agent-example/" rel="canonical"/>
+<meta content="diarmid.campbell@fetch.ai" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<title>Identity - Aries Cloud Agent - AEA Developer Documentation</title>
+<link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
+<script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+<link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../css/my-styles.css" rel="stylesheet"/>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#discussion" tabindex="0">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a aria-label="AEA Developer Documentation" class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
+<i class="md-icon">code</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              AEA Developer Documentation
+            </span>
+<span class="md-header-nav__topic">
+              
+                Identity - Aries Cloud Agent
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="..">
+          AEA Framework
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" role="main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
+<i class="md-icon">code</i>
+</a>
+    AEA Developer Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      AEA Framework
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+        AEA Framework
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href=".." title="Welcome">
+      Welcome
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" id="nav-1-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-2">
+      Concepts
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-2">
+        Concepts
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
+      Agent-oriented development
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vision/" title="Vision">
+      Vision
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../app-areas/" title="Application areas">
+      Application areas
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../oef-ledger/" title="Relation to OEF and Ledger">
+      Relation to OEF and Ledger
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identity/" title="Identity">
+      Identity
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../trust/" title="Trust issues">
+      Trust issues
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-3">
+      Demos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-3">
+        Demos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../aries-cloud-agent-demo/" title="Aries Cloud Agents Demo">
+      Aries Cloud Agents Demo
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../car-park-skills/" title="Car park skills">
+      Car park skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
+      Generic skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gym-example/" title="Gym example">
+      Gym example
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gym-skill/" title="Gym skill">
+      Gym skill
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-skills/" title="ML skills">
+      ML skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tac-skills/" title="TAC skills">
+      TAC skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tac/" title="TAC external app">
+      TAC external app
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../weather-skills/" title="Weather skills">
+      Weather skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../thermometer-skills/" title="Thermometer skills">
+      Thermometer skills
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4">
+      Development
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-1-4">
+        Development
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-1" id="nav-1-4-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-1">
+      Getting started
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-4-1">
+        Getting started
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../steps/" title="Ways to build an AEA">
+      Ways to build an AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quickstart/" title="AEA quick start">
+      AEA quick start
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../aea-vs-mvc/" title="AEA and web frameworks">
+      AEA and web frameworks
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build-aea-step-by-step/" title="Build an AEA with the CLI">
+      Build an AEA with the CLI
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill-guide/" title="Build a skill for an AEA">
+      Build a skill for an AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build-aea-programmatically/" title="Build an AEA programmatically">
+      Build an AEA programmatically
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs agents">
+      AEAs vs agents
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-vs-programmatic-aeas/" title="CLI vs programmatic AEAs">
+      CLI vs programmatic AEAs
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-2" id="nav-1-4-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-2">
+      Step by step guides
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-4-2">
+        Step by step guides
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../thermometer-skills-step-by-step/" title="Thermometer skills step-by-step">
+      Thermometer skills step-by-step
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-3" id="nav-1-4-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-3">
+      Use case components
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-4-3">
+        Use case components
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
+      Generic skills
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../orm-integration/" title="ORM integration">
+      ORM integration
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
+      Frontend intergration
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../erc1155-skills/" title="ERC1155 deploy and interact">
+      ERC1155 deploy and interact
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../http-connection-and-skill/" title="HTTP Connection">
+      HTTP Connection
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Identity - Aries Cloud Agent
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Identity - Aries Cloud Agent">
+      Identity - Aries Cloud Agent
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discussion">
+    Discussion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation-instructions">
+    Preparation instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aca">
+    ACA
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-aca">
+    Install ACA
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-demo-test">
+    Run the demo test
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-code">
+    Demo code
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../p2p-connection/" title="P2P Connection">
+      P2P Connection
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-4" id="nav-1-4-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-4">
+      Architecture
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-4-4">
+        Architecture
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-principles/" title="Design principles">
+      Design principles
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../diagram/" title="Architectural diagram">
+      Architectural diagram
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../core-components/" title="Core components">
+      Core components
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-5" id="nav-1-4-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-5">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-4-5">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-how-to/" title="Installation">
+      Installation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-commands/" title="Commands">
+      Commands
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../package-imports/" title="File structure">
+      File structure
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli-gui/" title="GUI">
+      GUI
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wealth/" title="Generating wealth">
+      Generating wealth
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-6" id="nav-1-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-6">
+      Search &amp; Discovery
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-4-6">
+        Search &amp; Discovery
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../defining-data-models/" title="Defining Data Models">
+      Defining Data Models
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../query-language/" title="The Query Language">
+      The Query Language
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-7" id="nav-1-4-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-7">
+      Developer guides
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-4-7">
+        Developer guides
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../version/" title="Version">
+      Version
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skill/" title="Skill">
+      Skill
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../protocol/" title="Protocol">
+      Protocol
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../connection/" title="Connection">
+      Connection
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../scaffolding/" title="Scaffolding packages">
+      Scaffolding packages
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../protocol-generator/" title="Generating protocols">
+      Generating protocols
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../logging/" title="Logging">
+      Logging
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
+      Build an AEA on a Raspberry Pi
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ledger-integration/" title="Using public ledgers">
+      Using public ledgers
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multiplexer-standalone/" title="Use multiplexer stand-alone">
+      Use multiplexer stand-alone
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../standalone-transaction/" title="Create stand-alone transaction">
+      Create stand-alone transaction
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../decision-maker-transaction/" title="Create decision-maker transaction">
+      Create decision-maker transaction
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../deployment/" title="Deployment">
+      Deployment
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../known-limits/" title="Known limitations">
+      Known limitations
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../performance_benchmark/" title="Performance benchmark">
+      Performance benchmark
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9" id="nav-1-4-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9">
+      API
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-1-4-9">
+        API
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/aea/" title="AEA">
+      AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/aea_builder/" title="AEA Builder">
+      AEA Builder
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/agent/" title="Agent">
+      Agent
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-4" id="nav-1-4-9-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-4">
+      Configurations
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-9-4">
+        Configurations
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/configurations/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/configurations/components/" title="Components">
+      Components
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/configurations/loader/" title="Loader">
+      Loader
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-5" id="nav-1-4-9-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-5">
+      Connections
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-9-5">
+        Connections
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/connections/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/connections/stub/connection/" title="Stub Connection">
+      Stub Connection
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/context/base/" title="Context">
+      Context
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-7" id="nav-1-4-9-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-7">
+      Contracts
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-9-7">
+        Contracts
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/contracts/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/contracts/ethereum/" title="Ethereum">
+      Ethereum
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-8" id="nav-1-4-9-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-8">
+      Crypto
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-9-8">
+        Crypto
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/ethereum/" title="Ethereum">
+      Ethereum
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/fetchai/" title="Fetchai">
+      Fetchai
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/ledger_apis/" title="LedgerApis">
+      LedgerApis
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/wallet/" title="Wallet">
+      Wallet
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-9" id="nav-1-4-9-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-9">
+      Decision Maker
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-9-9">
+        Decision Maker
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-9-2" id="nav-1-4-9-9-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-9-2">
+      Messages
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-9-9-2">
+        Messages
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/messages/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/messages/state_update/" title="State Update">
+      State Update
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/messages/transaction/" title="Transaction">
+      Transaction
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10" id="nav-1-4-9-10" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-10">
+      Helpers
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-9-10">
+        Helpers
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-1" id="nav-1-4-9-10-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-10-1">
+      Dialogue
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-9-10-1">
+        Dialogue
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/dialogue/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-2" id="nav-1-4-9-10-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-10-2">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-9-10-2">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/ipfs/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-3" id="nav-1-4-9-10-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-10-3">
+      Preferences
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-9-10-3">
+        Preferences
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/preference_representations/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-4" id="nav-1-4-9-10-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-10-4">
+      Search
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-9-10-4">
+        Search
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/search/generic/" title="Generic">
+      Generic
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/search/models/" title="Models">
+      Models
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/identity/base/" title="Identity">
+      Identity
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/mail/base/" title="Mail">
+      Mail
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-13" id="nav-1-4-9-13" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-13">
+      Protocols
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-9-13">
+        Protocols
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/generator/" title="Generator">
+      Generator
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-13-3" id="nav-1-4-9-13-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-13-3">
+      Default Protocol
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-4-9-13-3">
+        Default Protocol
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/default/custom_types/" title="Custom Types">
+      Custom Types
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/default/message/" title="Message">
+      Message
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/default/serialization/" title="Serialization">
+      Serialization
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/registries/resources/" title="Resources">
+      Resources
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-15" id="nav-1-4-9-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-15">
+      Skills
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-4-9-15">
+        Skills
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/skills/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/skills/error/handlers/" title="Error Skill">
+      Error Skill
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/skills/behaviours/" title="Behaviors">
+      Behaviors
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/skills/tasks/" title="Task">
+      Task
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../questions-and-answers/" title="Q&amp;A">
+      Q&amp;A
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discussion">
+    Discussion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation-instructions">
+    Preparation instructions
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aca">
+    ACA
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-aca">
+    Install ACA
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-the-demo-test">
+    Run the demo test
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-code">
+    Demo code
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1>Identity - Aries Cloud Agent</h1>
+<p>Demonstrating interactions between AEAs and and an instance of Aries Cloud Agent (ACA).</p>
+<h3 id="discussion">Discussion</h3>
+<p>This demo illustrates how an AEA may connect to an Aries Cloud Agent (ACA). </p>
+<p>Hyperledger Aries Cloud Agent is a foundation for building self-sovereign identity/decentralized identity services using verifiable credentials. You can read more about Hyperledger <a href="https://www.hyperledger.org" target="_blank">here</a> and the Aries project <a href="https://github.com/hyperledger/aries-cloudagent-python" target="_blank">here</a>.</p>
+<p>In this demo, you will learn how an AEA could connect with an ACA, to send it administrative commands (e.g. issue verifiable credential to another AEA) and receive DID related notifications (e.g. receive a request for a credential proof from another AEA). </p>
+<h2 id="preparation-instructions">Preparation instructions</h2>
+<h3 id="dependencies">Dependencies</h3>
+<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
+<h2 id="aca">ACA</h2>
+<h3 id="install-aca">Install ACA</h3>
+<p>Install Aries cloud-agents (run <code>pip install aries-cloudagent</code> or see <a href="https://github.com/hyperledger/aries-cloudagent-python#install" target="_blank">here</a>) if you do not have it on your machine.</p>
+<h2 id="run-the-demo-test">Run the demo test</h2>
+<p>Run the following test file using PyTest:</p>
+<div class="highlight"><pre><span></span><code>PyTest tests/test_examples/test_http_client_connection_to_aries_cloud_agent.py
+</code></pre></div>
+<p>You should see that the two tests pass.</p>
+<h2 id="demo-code">Demo code</h2>
+<p>Take a look at the test file you ran above <code>tests/test_examples/test_http_client_connection_to_aries_cloud_agent.py</code>. </p>
+<p>The main class is <code>TestAEAToACA</code>. The <code>setup_class</code> method initialises the scenario. </p>
+<div class="highlight"><pre><span></span><code><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">asyncio</span>
+<span class="k">class</span> <span class="nc">TestAEAToACA</span><span class="p">:</span>
+    <span class="sd">"""End-to-end test for an AEA connecting to an ACA via the http client connection."""</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">setup_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="sd">"""Initialise the class."""</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">aca_admin_address</span> <span class="o">=</span> <span class="s2">"127.0.0.1"</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">aca_admin_port</span> <span class="o">=</span> <span class="mi">8020</span>
+</code></pre></div>
+<p>The address and port fields <code>cls.aca_admin_address</code> and <code>cls.aca_admin_port</code> specify where the ACA should listen to receive administrative commands from the AEA.</p>
+<p>The following runs an ACA:</p>
+<div class="highlight"><pre><span></span><code><span class="bp">cls</span><span class="o">.</span><span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>  <span class="c1"># nosec</span>
+            <span class="p">[</span>
+                <span class="s2">"aca-py"</span><span class="p">,</span>
+                <span class="s2">"start"</span><span class="p">,</span>
+                <span class="s2">"--admin"</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">aca_admin_address</span><span class="p">,</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">aca_admin_port</span><span class="p">),</span>
+                <span class="s2">"--admin-insecure-mode"</span><span class="p">,</span>
+                <span class="s2">"--inbound-transport"</span><span class="p">,</span>
+                <span class="s2">"http"</span><span class="p">,</span>
+                <span class="s2">"0.0.0.0"</span><span class="p">,</span>
+                <span class="s2">"8000"</span><span class="p">,</span>
+                <span class="s2">"--outbound-transport"</span><span class="p">,</span>
+                <span class="s2">"http"</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+</code></pre></div>
+<p>Now take a look at the following method. This is where the demo resides. It first creates an AEA programmatically.</p>
+<div class="highlight"><pre><span></span><code>    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">asyncio</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">test_end_to_end_aea_aca</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># AEA components</span>
+        <span class="n">ledger_apis</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="p">({},</span> <span class="n">FETCHAI</span><span class="p">)</span>
+        <span class="n">wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">({</span><span class="n">FETCHAI</span><span class="p">:</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">})</span>
+        <span class="n">identity</span> <span class="o">=</span> <span class="n">Identity</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">"my_aea_1"</span><span class="p">,</span>
+            <span class="n">address</span><span class="o">=</span><span class="n">wallet</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FETCHAI</span><span class="p">),</span>
+            <span class="n">default_address_key</span><span class="o">=</span><span class="n">FETCHAI</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">http_client_connection</span> <span class="o">=</span> <span class="n">HTTPClientConnection</span><span class="p">(</span>
+            <span class="n">address</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">aea_address</span><span class="p">,</span>
+            <span class="n">provider_address</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">aca_admin_address</span><span class="p">,</span>
+            <span class="n">provider_port</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">aca_admin_port</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">resources</span> <span class="o">=</span> <span class="n">Resources</span><span class="p">()</span>
+
+        <span class="c1"># create AEA</span>
+        <span class="n">aea</span> <span class="o">=</span> <span class="n">AEA</span><span class="p">(</span><span class="n">identity</span><span class="p">,</span> <span class="p">[</span><span class="n">http_client_connection</span><span class="p">],</span> <span class="n">wallet</span><span class="p">,</span> <span class="n">ledger_apis</span><span class="p">,</span> <span class="n">resources</span><span class="p">)</span>
+</code></pre></div>
+<p>It then adds the HTTP protocol to the AEA. THe HTTP protocol defines the format of HTTP interactions (e.g. HTTP Request and Response). </p>
+<div class="highlight"><pre><span></span><code>        <span class="c1"># Add http protocol to AEA resources</span>
+        <span class="n">http_protocol_configuration</span> <span class="o">=</span> <span class="n">ProtocolConfig</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span>
+            <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span>
+                <span class="nb">open</span><span class="p">(</span>
+                    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span>
+                        <span class="s2">"packages"</span><span class="p">,</span>
+                        <span class="s2">"fetchai"</span><span class="p">,</span>
+                        <span class="s2">"protocols"</span><span class="p">,</span>
+                        <span class="s2">"http"</span><span class="p">,</span>
+                        <span class="s2">"protocol.yaml"</span><span class="p">,</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">http_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="p">(</span><span class="n">http_protocol_configuration</span><span class="p">,</span> <span class="n">HttpSerializer</span><span class="p">())</span>
+        <span class="n">resources</span><span class="o">.</span><span class="n">add_protocol</span><span class="p">(</span><span class="n">http_protocol</span><span class="p">)</span>
+</code></pre></div>
+<p>Then, the request message and envelope is created:</p>
+<div class="highlight"><pre><span></span><code>        <span class="c1"># Request message &amp; envelope</span>
+        <span class="n">request_http_message</span> <span class="o">=</span> <span class="n">HttpMessage</span><span class="p">(</span>
+            <span class="n">dialogue_reference</span><span class="o">=</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">),</span>
+            <span class="n">target</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">message_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">performative</span><span class="o">=</span><span class="n">HttpMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">REQUEST</span><span class="p">,</span>
+            <span class="n">method</span><span class="o">=</span><span class="s2">"GET"</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">=</span><span class="s2">"http://</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}</span><span class="s2">/status"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">aca_admin_address</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">aca_admin_port</span>
+            <span class="p">),</span>
+            <span class="n">headers</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span>
+            <span class="n">version</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span>
+            <span class="n">bodyy</span><span class="o">=</span><span class="sa">b</span><span class="s2">""</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">request_envelope</span> <span class="o">=</span> <span class="n">Envelope</span><span class="p">(</span>
+            <span class="n">to</span><span class="o">=</span><span class="s2">"ACA"</span><span class="p">,</span>
+            <span class="n">sender</span><span class="o">=</span><span class="s2">"AEA"</span><span class="p">,</span>
+            <span class="n">protocol_id</span><span class="o">=</span><span class="n">HTTP_PROTOCOL_PUBLIC_ID</span><span class="p">,</span>
+            <span class="n">message</span><span class="o">=</span><span class="n">HttpSerializer</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">request_http_message</span><span class="p">),</span>
+        <span class="p">)</span>
+</code></pre></div>
+<p>Note that the <code>performative</code> is set to <code>HttpMessage.Performative.REQUEST</code>, the method <code>GET</code> corresponds with HTTP GET method, and <code>url</code> is where the request is sent. This is the location the ACA is listening for administrative commands. </p>
+<p>In the following part, the AEA is started in another thread <code>t_aea = Thread(target=aea.start)</code>, the HTTP request message created above is placed in the agent's outbox <code>aea.outbox.put(request_envelope)</code> to be sent to the ACA, and the received response is checked for success (e.g. <code>assert aea_handler.handled_message.status_text == "OK"</code>).</p>
+<div class="highlight"><pre><span></span><code>        <span class="c1"># start AEA thread</span>
+        <span class="n">t_aea</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">aea</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">t_aea</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+            <span class="n">aea</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">request_envelope</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="n">aea_handler</span><span class="o">.</span><span class="n">handled_message</span><span class="o">.</span><span class="n">performative</span>
+                <span class="o">==</span> <span class="n">HttpMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">RESPONSE</span>
+            <span class="p">)</span>
+            <span class="k">assert</span> <span class="n">aea_handler</span><span class="o">.</span><span class="n">handled_message</span><span class="o">.</span><span class="n">version</span> <span class="o">==</span> <span class="s2">""</span>
+            <span class="k">assert</span> <span class="n">aea_handler</span><span class="o">.</span><span class="n">handled_message</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+            <span class="k">assert</span> <span class="n">aea_handler</span><span class="o">.</span><span class="n">handled_message</span><span class="o">.</span><span class="n">status_text</span> <span class="o">==</span> <span class="s2">"OK"</span>
+            <span class="k">assert</span> <span class="n">aea_handler</span><span class="o">.</span><span class="n">handled_message</span><span class="o">.</span><span class="n">headers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">assert</span> <span class="n">aea_handler</span><span class="o">.</span><span class="n">handled_message</span><span class="o">.</span><span class="n">version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">aea</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="n">t_aea</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</code></pre></div>
+<p>Note that the response from the ACA is caught by the <code>AEAHandler</code> class which just saves the handled message.</p>
+<p>In the above interaction, and in general, the HTTP client connection the added to the AEA, takes care of the translation between messages and envelopes in the AEA world and the HTTP request/response format in the HTTP connection with the ACA.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../http-connection-and-skill/" rel="prev" title="HTTP Connection">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                HTTP Connection
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../p2p-connection/" rel="next" title="P2P Connection">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                P2P Connection
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" rel="noopener" target="_blank">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../assets/javascripts/application.c33a9706.js"></script>
+<script>app.initialize({version:"1.1",url:{base:".."}})</script>
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+</body>
+</html>
