@@ -574,7 +574,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../performance_benchmark/" title="Performance benchmark">
+<a class="md-nav__link" href="../performance-benchmark/" title="Performance benchmark">
       Performance benchmark
     </a>
 </li>
@@ -1099,22 +1099,22 @@ Follows an example of a custom behaviour:</p>
     <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">"""This method is called once, when the behaviour gets loaded."""</span>
 
-    <span class="k">def</span> <span class="nf">act</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="nf">act</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">"""This methods is called in every iteration of the agent main loop."""</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">"""This method is called once, when the behaviour is teared down."""</span>
 </code></pre></div>
 <p>If we want to register this behaviour dynamically, in any part of the skill code
 (i.e. wherever the skill context is available), we can write:</p>
-<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">new_behaviours</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">HelloWorldBehaviour</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">new_behaviours</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">HelloWorldBehaviour</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"hello_world"</span><span class="p">,</span> <span class="n">skill_context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">))</span>
 </code></pre></div>
-<p>Or, equivalently:
+<p>Or, equivalently to the previous two code blocks:
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">)</span>
 
-<span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">new_behaviours</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">OneShotBehaviour</span><span class="p">(</span><span class="n">act</span><span class="o">=</span><span class="n">hello</span><span class="p">))</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">new_behaviours</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">OneShotBehaviour</span><span class="p">(</span><span class="n">act</span><span class="o">=</span><span class="n">hello</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"hello_world"</span><span class="p">,</span> <span class="n">skill_context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">))</span>
 </code></pre></div></p>
 <p>The callable passed to the <code>act</code> parameter is equivalent to the implementation
 of the <code>act</code> method described above. </p>

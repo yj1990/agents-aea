@@ -535,7 +535,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../performance_benchmark/" title="Performance benchmark">
+<a class="md-nav__link" href="../performance-benchmark/" title="Performance benchmark">
       Performance benchmark
     </a>
 </li>
@@ -964,12 +964,13 @@
 <h2 id="steps">Steps</h2>
 <p>Create a new AEA:</p>
 <div class="highlight"><pre><span></span><code>aea create my_aea
+<span class="nb">cd</span> my_aea
 </code></pre></div>
 <p>Add the http server connection package</p>
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/http_server:0.1.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/http_server:0.2.0
 </code></pre></div>
 <p>Update the default connection:</p>
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_connection fetchai/http_server:0.1.0
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_connection fetchai/http_server:0.2.0
 </code></pre></div>
 <p>Modify the <code>api_spec_path</code>:</p>
 <div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.connections.http_server.config.api_spec_path <span class="s2">"../examples/http_ex/petstore.yaml"</span>
@@ -981,7 +982,7 @@
 <p>Write and add your skill:</p>
 <div class="highlight"><pre><span></span><code>aea scaffold skill http_echo
 </code></pre></div>
-<p>We will implement a simple http echo skill (modelled after the standard echo skill) which prints out the content of received envelopes.</p>
+<p>We will implement a simple http echo skill (modelled after the standard echo skill) which prints out the content of received messages and responds with success.</p>
 <p>First, we delete the <code>my_model.py</code> and <code>behaviour.py</code>. The server will be pyrely reactive, so we only require the <code>handlers.py</code> file. We update the <code>skill.yaml</code> accordingly, so set <code>models: {}</code> and <code>behaviours: {}</code>.</p>
 <p>Next we implement a basic handler which prints the received envelopes and responds:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
@@ -995,7 +996,7 @@
 
 
 <span class="k">class</span> <span class="nc">HttpHandler</span><span class="p">(</span><span class="n">Handler</span><span class="p">):</span>
-    <span class="sd">"""This class scaffolds a handler."""</span>
+    <span class="sd">"""This implements the echo handler."""</span>
 
     <span class="n">SUPPORTED_PROTOCOL</span> <span class="o">=</span> <span class="n">HttpMessage</span><span class="o">.</span><span class="n">protocol_id</span>
 

@@ -516,7 +516,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../performance_benchmark/" title="Performance benchmark">
+<a class="md-nav__link" href="../../../performance-benchmark/" title="Performance benchmark">
       Performance benchmark
     </a>
 </li>
@@ -818,8 +818,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#transaction_fees">
-    transaction_fees
+<a class="md-nav__link" href="#seller_transaction_fee">
+    seller_transaction_fee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#buyer_transaction_fee">
+    buyer_transaction_fee
   </a>
 </li>
 <li class="md-nav__item">
@@ -1349,8 +1354,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#transaction_fees">
-    transaction_fees
+<a class="md-nav__link" href="#seller_transaction_fee">
+    seller_transaction_fee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#buyer_transaction_fee">
+    buyer_transaction_fee
   </a>
 </li>
 <li class="md-nav__item">
@@ -1668,10 +1678,16 @@ Note, the agent is the sender of the transaction message by design.</p>
  <span class="o">|</span> <span class="n">utility_params_by_good_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">UtilityParams</span>
 </code></pre></div>
 <p>Get utility parameter for each good.</p>
-<p><a name=".aea.decision_maker.base.Preferences.transaction_fees"></a></p>
-<h4 id="transaction_fees">transaction<code>_</code>fees</h4>
+<p><a name=".aea.decision_maker.base.Preferences.seller_transaction_fee"></a></p>
+<h4 id="seller_transaction_fee">seller<code>_</code>transaction<code>_</code>fee</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">transaction_fees</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
+ <span class="o">|</span> <span class="n">seller_transaction_fee</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+</code></pre></div>
+<p>Get the transaction fee.</p>
+<p><a name=".aea.decision_maker.base.Preferences.buyer_transaction_fee"></a></p>
+<h4 id="buyer_transaction_fee">buyer<code>_</code>transaction<code>_</code>fee</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">buyer_transaction_fee</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
 </code></pre></div>
 <p>Get the transaction fee.</p>
 <p><a name=".aea.decision_maker.base.Preferences.logarithmic_utility"></a></p>
