@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>Thermometer skills - AEA Developer Documentation</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -197,13 +197,13 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tac/" title="TAC external app">
-      TAC external app
+<a class="md-nav__link" href="../tac-skills-contract/" title="TAC skills ledger-based">
+      TAC skills ledger-based
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../weather-skills/" title="Weather skills">
-      Weather skills
+<a class="md-nav__link" href="../tac/" title="TAC external app">
+      TAC external app
     </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
@@ -220,6 +220,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#discussion">
     Discussion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication">
+    Communication
   </a>
 </li>
 <li class="md-nav__item">
@@ -242,29 +247,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#demo-instructions-ledger-payment">
-    Demo instructions: Ledger payment
+<a class="md-nav__link" href="#demo-instructions">
+    Demo instructions
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-thermometer-aea">
-    Create the thermometer AEA
+<a class="md-nav__link" href="#create-thermometer-aea">
+    Create thermometer AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-thermometer-client">
-    Create the thermometer client
+<a class="md-nav__link" href="#create-thermometer-client">
+    Create thermometer client
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#update-the-aea-configs">
-    Update the AEA configs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fund-the-thermometer-client-aea">
-    Fund the thermometer client AEA
+<a class="md-nav__link" href="#generate-wealth-for-the-thermometer-client-aea">
+    Generate wealth for the thermometer client AEA
   </a>
 </li>
 <li class="md-nav__item">
@@ -273,25 +273,25 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#run-the-aeas">
-    Run the AEAs
+<a class="md-nav__link" href="#run-both-aeas">
+    Run both AEAs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#delete-the-aeas">
-    Delete the AEAs
+<a class="md-nav__link" href="#cleaning-up">
+    Cleaning up
   </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#communication">
-    Communication
-  </a>
-</li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../weather-skills/" title="Weather skills">
+      Weather skills
+    </a>
 </li>
 </ul>
 </nav>
@@ -545,6 +545,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../config/" title="Configurations">
+      Configurations
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../scaffolding/" title="Scaffolding packages">
       Scaffolding packages
     </a>
@@ -627,13 +632,18 @@
       Agent
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/agent_loop/" title="Agent Loop">
+      Agent Loop
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-4" id="nav-1-4-9-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-5" id="nav-1-4-9-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-5">
       Configurations
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-9-4">
+<label class="md-nav__title" for="nav-1-4-9-5">
         Configurations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -656,12 +666,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-5" id="nav-1-4-9-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-6" id="nav-1-4-9-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-6">
       Connections
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-9-5">
+<label class="md-nav__title" for="nav-1-4-9-6">
         Connections
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -684,12 +694,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-7" id="nav-1-4-9-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-7">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-8" id="nav-1-4-9-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-8">
       Contracts
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-9-7">
+<label class="md-nav__title" for="nav-1-4-9-8">
         Contracts
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -707,18 +717,23 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-8" id="nav-1-4-9-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-9" id="nav-1-4-9-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-9">
       Crypto
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-9-8">
+<label class="md-nav__title" for="nav-1-4-9-9">
         Crypto
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/base/" title="Base">
       Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/cosmos/" title="Cosmos">
+      Cosmos
     </a>
 </li>
 <li class="md-nav__item">
@@ -737,6 +752,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/registry/" title="Registry">
+      Registry
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/wallet/" title="Wallet">
       Wallet
     </a>
@@ -745,12 +765,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-9" id="nav-1-4-9-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10" id="nav-1-4-9-10" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-10">
       Decision Maker
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-9-9">
+<label class="md-nav__title" for="nav-1-4-9-10">
         Decision Maker
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -759,13 +779,18 @@
       Base
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/decision_maker/default/" title="Default">
+      Default
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-9-2" id="nav-1-4-9-9-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-9-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-3" id="nav-1-4-9-10-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-10-3">
       Messages
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-9-9-2">
+<label class="md-nav__title" for="nav-1-4-9-10-3">
         Messages
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -791,22 +816,32 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10" id="nav-1-4-9-10" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-10">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-11" id="nav-1-4-9-11" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-11">
       Helpers
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-9-10">
+<label class="md-nav__title" for="nav-1-4-9-11">
         Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/async_friendly_queue/" title="Async Friendly Queue">
+      Async Friendly Queue
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/base/" title="Base">
+      Base
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-1" id="nav-1-4-9-10-1" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-10-1">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-11-3" id="nav-1-4-9-11-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-11-3">
       Dialogue
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-9-10-1">
+<label class="md-nav__title" for="nav-1-4-9-11-3">
         Dialogue
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -818,13 +853,23 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/exception_policy/" title="Exception Policy">
+      Exception Policy
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/exec_timeout/" title="Exec Timeout">
+      Exec Timeout
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-2" id="nav-1-4-9-10-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-10-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-11-6" id="nav-1-4-9-11-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-11-6">
       IPFS
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-9-10-2">
+<label class="md-nav__title" for="nav-1-4-9-11-6">
         IPFS
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -837,12 +882,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-3" id="nav-1-4-9-10-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-10-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-11-7" id="nav-1-4-9-11-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-11-7">
       Preferences
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-9-10-3">
+<label class="md-nav__title" for="nav-1-4-9-11-7">
         Preferences
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -855,12 +900,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-10-4" id="nav-1-4-9-10-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-10-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-11-8" id="nav-1-4-9-11-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-11-8">
       Search
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-9-10-4">
+<label class="md-nav__title" for="nav-1-4-9-11-8">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -877,6 +922,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -891,12 +941,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-13" id="nav-1-4-9-13" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-13">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-14" id="nav-1-4-9-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-14">
       Protocols
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-9-13">
+<label class="md-nav__title" for="nav-1-4-9-14">
         Protocols
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -911,12 +961,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-13-3" id="nav-1-4-9-13-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-13-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-14-3" id="nav-1-4-9-14-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-14-3">
       Default Protocol
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-4-9-13-3">
+<label class="md-nav__title" for="nav-1-4-9-14-3">
         Default Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -947,12 +997,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-15" id="nav-1-4-9-15" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4-9-15">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-9-16" id="nav-1-4-9-16" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-4-9-16">
       Skills
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-4-9-15">
+<label class="md-nav__title" for="nav-1-4-9-16">
         Skills
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -978,6 +1028,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/generic/" title="Test Tools">
+      Test Tools
+    </a>
 </li>
 </ul>
 </nav>
@@ -1010,6 +1065,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#communication">
+    Communication
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#preparation-instructions">
     Preparation instructions
   </a>
@@ -1029,29 +1089,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#demo-instructions-ledger-payment">
-    Demo instructions: Ledger payment
+<a class="md-nav__link" href="#demo-instructions">
+    Demo instructions
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-thermometer-aea">
-    Create the thermometer AEA
+<a class="md-nav__link" href="#create-thermometer-aea">
+    Create thermometer AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-the-thermometer-client">
-    Create the thermometer client
+<a class="md-nav__link" href="#create-thermometer-client">
+    Create thermometer client
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#update-the-aea-configs">
-    Update the AEA configs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fund-the-thermometer-client-aea">
-    Fund the thermometer client AEA
+<a class="md-nav__link" href="#generate-wealth-for-the-thermometer-client-aea">
+    Generate wealth for the thermometer client AEA
   </a>
 </li>
 <li class="md-nav__item">
@@ -1060,22 +1115,17 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#run-the-aeas">
-    Run the AEAs
+<a class="md-nav__link" href="#run-both-aeas">
+    Run both AEAs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#delete-the-aeas">
-    Delete the AEAs
+<a class="md-nav__link" href="#cleaning-up">
+    Cleaning up
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#communication">
-    Communication
-  </a>
 </li>
 </ul>
 </nav>
@@ -1090,143 +1140,13 @@
 <li>The provider of thermometer data (the <code>thermometer</code>).</li>
 <li>The buyer of thermometer data (the <code>thermometer_client</code>).</li>
 </ul>
-<h3 id="discussion">Discussion</h3>
+<h2 id="discussion">Discussion</h2>
 <p>The scope of the specific demo is to demonstrate how to create a very simple AEA with the usage of the AEA framework, a Raspberry Pi, and a thermometer sensor. The thermometer AEA
 will read data from the sensor each time a client requests and will deliver to the client upon payment. To keep the demo simple we avoided the usage of a database since this would increase the complexity. As a result, the AEA can provide only one reading from the sensor.
 This demo does not utilise a smart contract. As a result, we interact with a ledger only to complete a transaction.</p>
 <p>Since the AEA framework enables us to use third-party libraries hosted on PyPI we can directly reference the external dependencies.
 The <code>aea install</code> command will install each dependency that the specific AEA needs and is listed in the skill's YAML file. 
 The AEA must run inside a Raspberry Pi or any other Linux system, and the sensor must be connected to the USB port.</p>
-<h2 id="preparation-instructions">Preparation instructions</h2>
-<h3 id="dependencies">Dependencies</h3>
-<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
-<h3 id="launch-an-oef-search-and-communication-node">Launch an OEF search and communication node</h3>
-<p>In a separate terminal, launch a local <a href="../oef-ledger">OEF search and communication node</a>.
-<div class="highlight"><pre><span></span><code>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
-</code></pre></div></p>
-<p>Keep it running for all the following demos.</p>
-<h2 id="demo-instructions-ledger-payment">Demo instructions: Ledger payment</h2>
-<p>A demo to run the thermometer scenario with a true ledger transaction on Fetch.ai <code>testnet</code> or Ethereum <code>ropsten</code> network. This demo assumes the buyer
-trusts the seller AEA to send the data upon successful payment.</p>
-<h3 id="create-the-thermometer-aea">Create the thermometer AEA</h3>
-<p>Create the AEA that will provide thermometer measurements.</p>
-<div class="highlight"><pre><span></span><code>aea create my_thermometer_aea
-<span class="nb">cd</span> my_thermometer_aea
-aea add connection fetchai/oef:0.2.0
-aea add skill fetchai/thermometer:0.2.0
-aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.2.0
-</code></pre></div>
-<p>Alternatively, you can fetch the entire AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/thermometer_aea:0.1.0 --alias my_thermometer_aea
-</code></pre></div></p>
-<h3 id="create-the-thermometer-client">Create the thermometer client</h3>
-<p>In another terminal, create the AEA that will query the thermometer AEA.</p>
-<div class="highlight"><pre><span></span><code>aea create my_thermometer_client
-<span class="nb">cd</span> my_thermometer_client
-aea add connection fetchai/oef:0.2.0
-aea add skill fetchai/thermometer_client:0.1.0
-aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.2.0
-</code></pre></div>
-<p>Alternatively, you can fetch the entire AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/thermometer_client:0.1.0 --alias my_thermometer_client
-</code></pre></div></p>
-<p>Additionally, create the private key for the weather_client AEA based on the network you want to transact.</p>
-<p>To generate and add a key for Fetch.ai use:
-<div class="highlight"><pre><span></span><code>aea generate-key fetchai
-aea add-key fetchai fet_private_key.txt
-</code></pre></div></p>
-<p>To generate and add a key for Ethereum use:
-<div class="highlight"><pre><span></span><code>aea generate-key ethereum
-aea add-key ethereum eth_private_key.txt
-</code></pre></div></p>
-<h3 id="update-the-aea-configs">Update the AEA configs</h3>
-<p>Both in <code>my_thermometer_aea/aea-config.yaml</code> and
-<code>my_thermometer_client/aea-config.yaml</code>, replace <code>ledger_apis: {}</code> with the following based on the network you want to connect.</p>
-<p>To connect to Fetchai:
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">fetchai</span><span class="p">:</span>
-    <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
-</code></pre></div></p>
-<p>To connect to Ethereum:
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">ethereum</span><span class="p">:</span>
-    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe</span>
-    <span class="nt">chain_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-    <span class="nt">gas_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
-</code></pre></div></p>
-<h3 id="fund-the-thermometer-client-aea">Fund the thermometer client AEA</h3>
-<p>Create some wealth for your weather client based on the network you want to transact with: </p>
-<p>On the Fetch.ai <code>testnet</code> network.
-<div class="highlight"><pre><span></span><code>aea generate-wealth fetchai
-</code></pre></div></p>
-<p>On the Ethereum <code>ropsten</code> . (It takes a while).
-<div class="highlight"><pre><span></span><code>aea generate-wealth ethereum
-</code></pre></div></p>
-<h3 id="update-the-skill-configs">Update the skill configs</h3>
-<p>In the thermometer skill config (<code>my_thermometer_aea/vendor/fetchai/skills/thermometer/skill.yaml</code>) under strategy, amend the <code>currency_id</code> and <code>ledger_id</code> as follows.</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span>
-<span class="p p-Indicator">|</span><span class="err">         FETCHAI                   |           ETHEREUM               |</span>
-<span class="p p-Indicator">|</span><span class="err">-----------------------------------|----------------------------------|</span>
-<span class="nt">|models</span><span class="p">:</span>                            <span class="nt">|models</span><span class="p">:</span>                           <span class="p p-Indicator">|</span>              
-<span class="nt">|  strategy</span><span class="p">:</span>                        <span class="nt">|  strategy</span><span class="p">:</span>                       <span class="p p-Indicator">|</span>
-<span class="nt">|     class_name</span><span class="p">:</span> <span class="nt">Strategy          |     class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Strategy         |</span>
-<span class="nt">|    args</span><span class="p">:</span>                          <span class="nt">|    args</span><span class="p">:</span>                         <span class="p p-Indicator">|</span>
-<span class="nt">|      price_per_row</span><span class="p">:</span> <span class="nt">1             |      price_per_row</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1            |</span>
-<span class="nt">|      seller_tx_fee</span><span class="p">:</span> <span class="nt">0             |      seller_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0            |</span>
-<span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'FET'</span>           <span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'ETH'</span>          <span class="p p-Indicator">|</span>
-<span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'fetchai'</span>         <span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'ethereum'</span>       <span class="p p-Indicator">|</span>
-<span class="nt">|      has_sensor</span><span class="p">:</span> <span class="nt">True             |      has_sensor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True            |</span>
-<span class="nt">|      is_ledger_tx</span><span class="p">:</span> <span class="nt">True           |      is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True          |</span>
-<span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span> 
-</code></pre></div>
-<p>An other way to update the skill config is via the <code>aea config get/set</code> command.
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer.models.strategy.args.currency_id ETH
-aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer.models.strategy.args.ledger_id ethereum
-</code></pre></div></p>
-<p>NOTE: If you are not using a Raspberry Pi make sure you set the <code>has_sensor</code> attribute to <code>False</code></p>
-<p>In the thermometer client skill config (<code>my_thermometer_client/vendor/fetchai/skills/thermometer_client/skill.yaml</code>) under strategy change the <code>currency_id</code> and <code>ledger_id</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span>
-<span class="p p-Indicator">|</span><span class="err">         FETCHAI                   |           ETHEREUM               |</span>
-<span class="p p-Indicator">|</span><span class="err">-----------------------------------|----------------------------------|</span>
-<span class="nt">|models</span><span class="p">:</span>                            <span class="nt">|models</span><span class="p">:</span>                           <span class="p p-Indicator">|</span>              
-<span class="nt">|  strategy</span><span class="p">:</span>                        <span class="nt">|  strategy</span><span class="p">:</span>                       <span class="p p-Indicator">|</span>
-<span class="nt">|     class_name</span><span class="p">:</span> <span class="nt">Strategy          |     class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Strategy         |</span>
-<span class="nt">|    args</span><span class="p">:</span>                          <span class="nt">|    args</span><span class="p">:</span>                         <span class="p p-Indicator">|</span>
-<span class="nt">|      max_price</span><span class="p">:</span> <span class="nt">4                 |      max_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">40               |</span>
-<span class="nt">|      max_buyer_tx_fee</span><span class="p">:</span> <span class="nt">1          |      max_buyer_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200000    |</span>
-<span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'FET'</span>           <span class="nt">|      currency_id</span><span class="p">:</span> <span class="s">'ETH'</span>          <span class="p p-Indicator">|</span>
-<span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'fetchai'</span>         <span class="nt">|      ledger_id</span><span class="p">:</span> <span class="s">'ethereum'</span>       <span class="p p-Indicator">|</span>
-<span class="nt">|      is_ledger_tx</span><span class="p">:</span> <span class="nt">True           |      is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True          |</span>
-<span class="nt">|ledgers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai'</span><span class="p p-Indicator">]</span>               <span class="nt">|ledgers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'ethereum'</span><span class="p p-Indicator">]</span>             <span class="p p-Indicator">|</span>
-<span class="p p-Indicator">|</span><span class="err">----------------------------------------------------------------------|</span> 
-</code></pre></div>
-<p>An other way to update the skill config is via the <code>aea config get/set</code> command.
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer_client.models.strategy.args.max_buyer_tx_fee <span class="m">10000</span> --type int
-aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer_client.models.strategy.args.currency_id ETH
-aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer_client.models.strategy.args.ledger_id ethereum
-</code></pre></div></p>
-<h3 id="run-the-aeas">Run the AEAs</h3>
-<p>Important: Your thermometer AEA must run on your Raspberry Pi and the sensor must be connected to the usb.</p>
-<p>You can change the end point's address and port by modifying the connection's yaml file (my_thermometer_aea/connection/oef/connection.yaml)</p>
-<p>Under config locate :</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">addr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${OEF_ADDR</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1}</span>
-</code></pre></div>
- and replace it with your ip (The ip of the machine that runs the oef image.)</p>
-<p>Run both AEAs from their respective terminals</p>
-<p><div class="highlight"><pre><span></span><code>aea add connection fetchai/oef:0.2.0
-aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.2.0
-aea run --connections fetchai/oef:0.2.0
-</code></pre></div>
-You will see that the AEAs negotiate and then transact using the Fetch.ai testnet.</p>
-<h3 id="delete-the-aeas">Delete the AEAs</h3>
-<p>When you're done, go up a level and delete the AEAs.
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ..
-aea delete my_thermometer_aea
-aea delete my_thermometer_client
-</code></pre></div></p>
 <h2 id="communication">Communication</h2>
 <p>This diagram shows the communication between the various entities as data is successfully sold by the thermometer AEA to the client. </p>
 <div class="mermaid">
@@ -1259,6 +1179,170 @@ aea delete my_thermometer_client
         deactivate Blockchain
 
 </div>
+<h2 id="preparation-instructions">Preparation instructions</h2>
+<h3 id="dependencies">Dependencies</h3>
+<p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
+<h3 id="launch-an-oef-search-and-communication-node">Launch an OEF search and communication node</h3>
+<p>In a separate terminal, launch a local <a href="../oef-ledger">OEF search and communication node</a>.
+<div class="highlight"><pre><span></span><code>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
+</code></pre></div></p>
+<p>Keep it running for all the following demos.</p>
+<h2 id="demo-instructions">Demo instructions</h2>
+<p>A demo to run the thermometer scenario with a true ledger transaction This demo assumes the buyer trusts the seller AEA to send the data upon successful payment.</p>
+<h3 id="create-thermometer-aea">Create thermometer AEA</h3>
+<p>First, fetch the thermometer AEA:
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/thermometer_aea:0.2.0 --alias my_thermometer_aea
+<span class="nb">cd</span> thermometer_aea
+aea install
+</code></pre></div></p>
+<details><summary>Alternatively, create from scratch.</summary>
+<p>
+
+The following steps create the thermometer AEA from scratch:
+<div class="highlight"><pre><span></span><code>aea create my_thermometer_aea
+<span class="nb">cd</span> my_thermometer_aea
+aea add connection fetchai/oef:0.3.0
+aea add skill fetchai/thermometer:0.3.0
+aea install
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.3.0
+</code></pre></div>
+
+In `my_thermometer_aea/aea-config.yaml` replace `ledger_apis: {}` with the following based on the network you want to connect. To connect to Fetchai:
+<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
+  <span class="nt">fetchai</span><span class="p">:</span>
+    <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
+</code></pre></div>
+</p>
+</details>
+<h3 id="create-thermometer-client">Create thermometer client</h3>
+<p>Then, fetch the thermometer client AEA:
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/thermometer_client:0.2.0 --alias my_thermometer_client
+<span class="nb">cd</span> my_thermometer_client
+aea install
+</code></pre></div></p>
+<details><summary>Alternatively, create from scratch.</summary>
+<p>
+
+The following steps create the thermometer client from scratch:
+<div class="highlight"><pre><span></span><code>aea create my_thermometer_client
+<span class="nb">cd</span> my_thermometer_client
+aea add connection fetchai/oef:0.3.0
+aea add skill fetchai/thermometer_client:0.2.0
+aea install
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.3.0
+</code></pre></div>
+
+In `my_thermometer_aea/aea-config.yaml` replace `ledger_apis: {}` with the following based on the network you want to connect.
+
+To connect to Fetchai:
+<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
+  <span class="nt">fetchai</span><span class="p">:</span>
+    <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
+</code></pre></div>
+</p>
+</details>
+<h3 id="generate-wealth-for-the-thermometer-client-aea">Generate wealth for the thermometer client AEA</h3>
+<p>The thermometer client needs to have some wealth to purchase the thermometer information.</p>
+<p>First, create the private key for the thermometer client AEA based on the network you want to transact. To generate and add a private-public key pair for Fetch.ai use:
+<div class="highlight"><pre><span></span><code>aea generate-key fetchai
+aea add-key fetchai fet_private_key.txt
+</code></pre></div></p>
+<p>Then, create some wealth for your thermometer client based on the network you want to transact with. On the Fetch.ai <code>testnet</code> network:
+<div class="highlight"><pre><span></span><code>aea generate-wealth fetchai
+</code></pre></div></p>
+<details><summary>Alternatively, create wealth for other test networks.</summary>
+<p>
+<strong>Ledger Config:</strong>
+<br/>
+
+In `my_thermometer_aea/aea-config.yaml` and `my_thermometer_client/aea-config.yaml` replace `ledger_apis: {}` with the following based on the network you want to connect.
+
+To connect to Ethereum:
+<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
+  <span class="nt">ethereum</span><span class="p">:</span>
+    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe</span>
+    <span class="nt">chain_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+    <span class="nt">gas_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+</code></pre></div>
+
+Alternatively, to connect to Cosmos:
+<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
+  <span class="nt">cosmos</span><span class="p">:</span>
+    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://aea-testnet.sandbox.fetch-ai.com:1317</span>
+</code></pre></div>
+<strong>Wealth:</strong>
+<br/>
+
+To generate and add a private-public key pair for Ethereum use:
+<div class="highlight"><pre><span></span><code>aea generate-key ethereum
+aea add-key ethereum eth_private_key.txt
+</code></pre></div>
+
+On the Ethereum `ropsten` network.
+<div class="highlight"><pre><span></span><code>aea generate-wealth ethereum
+</code></pre></div>
+
+Alternatively, to generate and add a private-public key pair for Cosmos use:
+<div class="highlight"><pre><span></span><code>aea generate-key cosmos
+aea add-key cosmos cosmos_private_key.txt
+</code></pre></div>
+
+On the Cosmos `testnet` network.
+<div class="highlight"><pre><span></span><code>aea generate-wealth cosmos
+</code></pre></div>
+</p>
+</details>
+<h3 id="update-the-skill-configs">Update the skill configs</h3>
+<p>The default skill configs assume that the transaction is settled against the fetchai ledger.</p>
+<details><summary>Alternatively, configure skills for other test networks.</summary>
+<p>
+<strong>Thermometer:</strong>
+<br/>
+Ensure you are in the thermometer project directory.
+
+For ethereum, update the skill config of the thermometer via the `aea config get/set` command like so:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer.models.strategy.args.currency_id ETH
+aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer.models.strategy.args.ledger_id ethereum
+</code></pre></div>
+
+Or for cosmos, like so:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer.models.strategy.args.currency_id ATOM
+aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer.models.strategy.args.ledger_id cosmos
+</code></pre></div>
+
+This updates the thermometer skill config (`my_thermometer_aea/vendor/fetchai/skills/thermometer/skill.yaml`).
+
+
+<strong>Thermometer client:</strong>
+<br/>
+Ensure you are in the thermometer client project directory.
+
+For ethereum, update the skill config of the thermometer via the `aea config get/set` command like so:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer_client.models.strategy.args.currency_id ETH
+aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer_client.models.strategy.args.ledger_id ethereum
+</code></pre></div>
+
+Or for cosmos, like so:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer_client.models.strategy.args.currency_id ATOM
+aea config <span class="nb">set</span> vendor.fetchai.skills.thermometer_client.models.strategy.args.ledger_id cosmos
+</code></pre></div>
+
+This updates the thermometer client skill config (`my_thermometer_client/vendor/fetchai/skills/thermometer_client/skill.yaml`).
+
+</p>
+</details>
+<h3 id="run-both-aeas">Run both AEAs</h3>
+<p>Finally, run both AEAs from their respective directories:
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.3.0
+</code></pre></div></p>
+<p>You can see that the AEAs find each other, negotiate and eventually trade.</p>
+<h3 id="cleaning-up">Cleaning up</h3>
+<p>When you're finished, delete your AEAs:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ..
+aea delete my_thermometer_aea
+aea delete my_thermometer_client
+</code></pre></div></p>
+<p><br/></p>
 </article>
 </div>
 </div>
@@ -1266,7 +1350,7 @@ aea delete my_thermometer_client
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../weather-skills/" rel="prev" title="Weather skills">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../tac/" rel="prev" title="TAC external app">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -1275,17 +1359,17 @@ aea delete my_thermometer_client
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Weather skills
+                TAC external app
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../steps/" rel="next" title="Ways to build an AEA">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../weather-skills/" rel="next" title="Weather skills">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Ways to build an AEA
+                Weather skills
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -1309,7 +1393,7 @@ aea delete my_thermometer_client
 </footer>
 </div>
 <script src="../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:".."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>
